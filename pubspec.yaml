@@ -1,0 +1,131 @@
+name: gst_app
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.8+9
+
+environment:
+  sdk: ">=2.10.0 <3.0.0"
+
+
+dependencies:
+  external_path:
+  flutter_vector_icons:
+  flutter_image_compress:
+  flutter_native_image:
+  flutter_luban:
+  mime:
+  chewie:
+  list_wheel_scroll_view_x:
+  video_player: ^2.4.2
+  vibration:
+  shake: ^2.1.0
+  glassmorphism:
+  permission_handler: ^4.2.0
+  pdf_merger:
+#  flutter_contacts:
+  google_fonts:
+  flutter:
+    sdk: flutter
+  numeric_keyboard:
+  flutter_staggered_grid_view: ^0.6.1
+  awesome_dialog: ^2.1.2
+  material_dialogs:
+  flutter_speed_dial: ^5.0.0+1
+  flutter_secure_storage: ^5.0.2
+  url_launcher: ^6.0.17
+  printing:
+  platform: ^3.0.0
+  pdf: ^3.6.50
+  search_choices: ^2.0.16
+#  searchable_dropdown: ^1.1.3
+  cupertino_icons: ^1.0.2
+  file_picker: ^4.2.6
+  sms_autofill: ^2.2.0
+#  mobile_number: ^1.0.4
+  http:
+  custom_searchable_dropdown: ^2.1.1
+  logger:
+  carousel_slider: ^4.0.0
+  animate_do: ^2.0.0
+  loading_indicator: ^3.0.2
+  dotted_border: ^2.0.0+1
+  dio: ^4.0.0
+  flutter_verification_code: ^1.1.0
+  intl: ^0.17.0
+  flutter_svg: ^1.0.3
+  provider: ^6.0.2
+  date_field: ^2.1.2
+  getwidget: ^2.0.4
+  font_awesome_flutter: ^9.1.0
+  floating_bottom_navigation_bar: ^1.4.1
+  image_picker: ^0.8.4+3
+  iconsax: ^0.0.8
+  open_file: ^3.2.1
+  get:
+  path_provider: ^2.0.8
+  open_document: ^1.0.4
+  flip_card: ^0.4.4
+  firebase_ml_vision: ^0.9.10
+  path:
+#    firebase_core: ^1.8.0
+#    firebase_auth: ^3.1.4
+#    google_sign_in: ^5.2.0
+#    firebase_messaging: ^10.0.9
+#    flutter_local_notifications: ^8.1.1+1
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_launcher_icons: "^0.9.2"
+  flutter_lints: ^1.0.4
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/itaxeasy.png"
+
+
+  flutter_lints: ^1.0.0
+
+
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+    - family: OpenSans
+      fonts:
+        - asset: assets/fonts/OpenSans-Regular.ttf
+          weight: 500
+        - asset: assets/fonts/OpenSans-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/OpenSans-Bold.ttf
+          weight: 700
+    - family: Lato
+      fonts:
+        - asset: assets/fonts/Lato-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Lato-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Lato-Bold.ttf
+          weight: 700
+
