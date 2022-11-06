@@ -416,86 +416,86 @@ class _EasyServicesInvestmentState extends State<EasyServicesInvestment>
                           ),
                         ),
                       ),
-                      Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30.0),
-                        ),
-                        shadowColor: KColors.icon,
-                        elevation: 2,
-                        child: Container(
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(30),
-                              gradient: LinearGradient(
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter,
-                                colors: [
-                                  Colors.blue.shade900,
-                                  Colors.blue.shade800
-                                ],
-                              )),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Icon(
-                                Icons.description_outlined,
-                                color: Colors.white,
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Text(
-                                "Sale",
-                                style: TextStyle(
-                                    fontFamily: "Poppins",
-                                    fontWeight: FontWeight.bold,
-                                    letterSpacing: 1.5,
-                                    fontSize: 20.5,
-                                    color: Colors.white),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30.0),
-                        ),
-                        shadowColor: KColors.icon,
-                        elevation: 2,
-                        child: Container(
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(30),
-                              gradient: LinearGradient(
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter,
-                                colors: [
-                                  Colors.blue.shade900,
-                                  Colors.blue.shade800
-                                ],
-                              )),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Icon(
-                                Icons.description_outlined,
-                                color: Colors.white,
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Text(
-                                "Purchase",
-                                style: TextStyle(
-                                    fontFamily: "Poppins",
-                                    fontWeight: FontWeight.bold,
-                                    letterSpacing: 1.5,
-                                    fontSize: 20.5,
-                                    color: Colors.white),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
+                      // Card(
+                      //   shape: RoundedRectangleBorder(
+                      //     borderRadius: BorderRadius.circular(30.0),
+                      //   ),
+                      //   shadowColor: KColors.icon,
+                      //   elevation: 2,
+                      //   child: Container(
+                      //     decoration: BoxDecoration(
+                      //         borderRadius: BorderRadius.circular(30),
+                      //         gradient: LinearGradient(
+                      //           begin: Alignment.topCenter,
+                      //           end: Alignment.bottomCenter,
+                      //           colors: [
+                      //             Colors.blue.shade900,
+                      //             Colors.blue.shade800
+                      //           ],
+                      //         )),
+                      //     child: Row(
+                      //       mainAxisAlignment: MainAxisAlignment.center,
+                      //       children: const [
+                      //         Icon(
+                      //           Icons.description_outlined,
+                      //           color: Colors.white,
+                      //         ),
+                      //         SizedBox(
+                      //           width: 10,
+                      //         ),
+                      //         Text(
+                      //           "Sale",
+                      //           style: TextStyle(
+                      //               fontFamily: "Poppins",
+                      //               fontWeight: FontWeight.bold,
+                      //               letterSpacing: 1.5,
+                      //               fontSize: 20.5,
+                      //               color: Colors.white),
+                      //         ),
+                      //       ],
+                      //     ),
+                      //   ),
+                      // ),
+                      // Card(
+                      //   shape: RoundedRectangleBorder(
+                      //     borderRadius: BorderRadius.circular(30.0),
+                      //   ),
+                      //   shadowColor: KColors.icon,
+                      //   elevation: 2,
+                      //   child: Container(
+                      //     decoration: BoxDecoration(
+                      //         borderRadius: BorderRadius.circular(30),
+                      //         gradient: LinearGradient(
+                      //           begin: Alignment.topCenter,
+                      //           end: Alignment.bottomCenter,
+                      //           colors: [
+                      //             Colors.blue.shade900,
+                      //             Colors.blue.shade800
+                      //           ],
+                      //         )),
+                      //     child: Row(
+                      //       mainAxisAlignment: MainAxisAlignment.center,
+                      //       children: const [
+                      //         Icon(
+                      //           Icons.description_outlined,
+                      //           color: Colors.white,
+                      //         ),
+                      //         SizedBox(
+                      //           width: 10,
+                      //         ),
+                      //         Text(
+                      //           "Purchase",
+                      //           style: TextStyle(
+                      //               fontFamily: "Poppins",
+                      //               fontWeight: FontWeight.bold,
+                      //               letterSpacing: 1.5,
+                      //               fontSize: 20.5,
+                      //               color: Colors.white),
+                      //         ),
+                      //       ],
+                      //     ),
+                      //   ),
+                      // ),
                       Card(
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0),
@@ -1020,182 +1020,182 @@ class _EasyServicesInvestmentState extends State<EasyServicesInvestment>
                   ),
                 ),
               ),
-              GestureDetector(
-                onTapDown: _tapDown5,
-                onTapUp: _tapUp5,
-                onTap: () {
-                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                    behavior: SnackBarBehavior.floating,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                    ),
-                    content: Text("Contact our Organization"),
-                  ));
-                  // Navigator.push(context, MaterialPageRoute(builder: (context)=>TradingAccount()));
-                },
-                child: Transform.scale(
-                  scale: _scale5,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white70,
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.grey,
-                              blurRadius: 8.0,
-                              offset: Offset(3, 3))
-                        ],
-                        border: Border.all(
-                          color: Colors.grey,
-                          width: 2,
-                        ),
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: Center(
-                          child: Card(
-                        color: Color.fromARGB(255, 210, 189, 214),
-                        elevation: 20,
-                        child: Container(
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              boxShadow: [
-                                BoxShadow(
-                                    color: Colors.white60,
-                                    blurRadius: 8.0,
-                                    offset: Offset(2, 2))
-                              ]),
-                          height: 100,
-                          width: 150,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                height: 55,
-                                width: 55,
-                                decoration: BoxDecoration(
-                                  // color: Colors.white70,
-                                  // border: Border.all(
-                                  //     //color: Colors.grey,
-                                  //     // width: 2,
-                                  //     ),
-                                  borderRadius: BorderRadius.circular(15.0),
-                                ),
-                                child: const Icon(
-                                  Icons.health_and_safety_outlined,
-                                  color: KColors.icon,
-                                  size: 30,
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 8,
-                              ),
-                              Text(
-                                "Sale",
-                                style: GoogleFonts.dmSans(
-                                  fontSize: 17,
-                                  fontWeight: FontWeight.bold,
-                                  color: const Color(0xFF000000),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      )),
-                    ),
-                  ),
-                ),
-              ),
-              GestureDetector(
-                onTapDown: _tapDown6,
-                onTapUp: _tapUp6,
-                onTap: () {
-                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                    behavior: SnackBarBehavior.floating,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                    ),
-                    content: Text("Contact our Organization"),
-                  ));
-                  // Navigator.push(context, MaterialPageRoute(builder: (context)=>EasyLinks()));
-                },
-                child: Transform.scale(
-                  scale: _scale6,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white70,
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.grey,
-                              blurRadius: 8.0,
-                              offset: Offset(3, 3))
-                        ],
-                        border: Border.all(
-                          color: Colors.grey,
-                          width: 2,
-                        ),
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: Center(
-                          child: Card(
-                        color: Color.fromARGB(255, 210, 189, 214),
-                        elevation: 20,
-                        child: Container(
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              boxShadow: [
-                                BoxShadow(
-                                    color: Colors.white60,
-                                    blurRadius: 8.0,
-                                    offset: Offset(2, 2))
-                              ]),
-                          height: 100,
-                          width: 150,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                height: 55,
-                                width: 55,
-                                decoration: BoxDecoration(
-                                  // color: Colors.white70,
-                                  // border: Border.all(
-                                  //     //color: Colors.grey,
-                                  //     // width: 2,
-                                  //     ),
-                                  borderRadius: BorderRadius.circular(15.0),
-                                ),
-                                child: const Icon(
-                                  Icons.local_atm_outlined,
-                                  color: KColors.icon,
-                                  size: 30,
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 8,
-                              ),
-                              Text(
-                                "Purchase",
-                                style: GoogleFonts.dmSans(
-                                  fontSize: 17,
-                                  fontWeight: FontWeight.bold,
-                                  color: const Color(0xFF000000),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      )),
-                    ),
-                  ),
-                ),
-              ),
+              // GestureDetector(
+              //   onTapDown: _tapDown5,
+              //   onTapUp: _tapUp5,
+              //   onTap: () {
+              //     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+              //       behavior: SnackBarBehavior.floating,
+              //       shape: RoundedRectangleBorder(
+              //         borderRadius: BorderRadius.all(Radius.circular(20)),
+              //       ),
+              //       content: Text("Contact our Organization"),
+              //     ));
+              //     // Navigator.push(context, MaterialPageRoute(builder: (context)=>TradingAccount()));
+              //   },
+              //   child: Transform.scale(
+              //     scale: _scale5,
+              //     child: Container(
+              //       decoration: BoxDecoration(
+              //         borderRadius: BorderRadius.circular(15),
+              //       ),
+              //       child: Container(
+              //         decoration: BoxDecoration(
+              //           color: Colors.white70,
+              //           boxShadow: [
+              //             BoxShadow(
+              //                 color: Colors.grey,
+              //                 blurRadius: 8.0,
+              //                 offset: Offset(3, 3))
+              //           ],
+              //           border: Border.all(
+              //             color: Colors.grey,
+              //             width: 2,
+              //           ),
+              //           borderRadius: BorderRadius.circular(15),
+              //         ),
+              //         child: Center(
+              //             child: Card(
+              //           color: Color.fromARGB(255, 210, 189, 214),
+              //           elevation: 20,
+              //           child: Container(
+              //             decoration: BoxDecoration(
+              //                 borderRadius: BorderRadius.circular(20),
+              //                 boxShadow: [
+              //                   BoxShadow(
+              //                       color: Colors.white60,
+              //                       blurRadius: 8.0,
+              //                       offset: Offset(2, 2))
+              //                 ]),
+              //             height: 100,
+              //             width: 150,
+              //             child: Column(
+              //               mainAxisAlignment: MainAxisAlignment.center,
+              //               children: [
+              //                 Container(
+              //                   height: 55,
+              //                   width: 55,
+              //                   decoration: BoxDecoration(
+              //                     // color: Colors.white70,
+              //                     // border: Border.all(
+              //                     //     //color: Colors.grey,
+              //                     //     // width: 2,
+              //                     //     ),
+              //                     borderRadius: BorderRadius.circular(15.0),
+              //                   ),
+              //                   child: const Icon(
+              //                     Icons.health_and_safety_outlined,
+              //                     color: KColors.icon,
+              //                     size: 30,
+              //                   ),
+              //                 ),
+              //                 const SizedBox(
+              //                   height: 8,
+              //                 ),
+              //                 Text(
+              //                   "Sale",
+              //                   style: GoogleFonts.dmSans(
+              //                     fontSize: 17,
+              //                     fontWeight: FontWeight.bold,
+              //                     color: const Color(0xFF000000),
+              //                   ),
+              //                 ),
+              //               ],
+              //             ),
+              //           ),
+              //         )),
+              //       ),
+              //     ),
+              //   ),
+              // ),
+              // GestureDetector(
+              //   onTapDown: _tapDown6,
+              //   onTapUp: _tapUp6,
+              //   onTap: () {
+              //     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+              //       behavior: SnackBarBehavior.floating,
+              //       shape: RoundedRectangleBorder(
+              //         borderRadius: BorderRadius.all(Radius.circular(20)),
+              //       ),
+              //       content: Text("Contact our Organization"),
+              //     ));
+              //     // Navigator.push(context, MaterialPageRoute(builder: (context)=>EasyLinks()));
+              //   },
+              //   child: Transform.scale(
+              //     scale: _scale6,
+              //     child: Container(
+              //       decoration: BoxDecoration(
+              //         borderRadius: BorderRadius.circular(15),
+              //       ),
+              //       child: Container(
+              //         decoration: BoxDecoration(
+              //           color: Colors.white70,
+              //           boxShadow: [
+              //             BoxShadow(
+              //                 color: Colors.grey,
+              //                 blurRadius: 8.0,
+              //                 offset: Offset(3, 3))
+              //           ],
+              //           border: Border.all(
+              //             color: Colors.grey,
+              //             width: 2,
+              //           ),
+              //           borderRadius: BorderRadius.circular(15),
+              //         ),
+              //         child: Center(
+              //             child: Card(
+              //           color: Color.fromARGB(255, 210, 189, 214),
+              //           elevation: 20,
+              //           child: Container(
+              //             decoration: BoxDecoration(
+              //                 borderRadius: BorderRadius.circular(20),
+              //                 boxShadow: [
+              //                   BoxShadow(
+              //                       color: Colors.white60,
+              //                       blurRadius: 8.0,
+              //                       offset: Offset(2, 2))
+              //                 ]),
+              //             height: 100,
+              //             width: 150,
+              //             child: Column(
+              //               mainAxisAlignment: MainAxisAlignment.center,
+              //               children: [
+              //                 Container(
+              //                   height: 55,
+              //                   width: 55,
+              //                   decoration: BoxDecoration(
+              //                     // color: Colors.white70,
+              //                     // border: Border.all(
+              //                     //     //color: Colors.grey,
+              //                     //     // width: 2,
+              //                     //     ),
+              //                     borderRadius: BorderRadius.circular(15.0),
+              //                   ),
+              //                   child: const Icon(
+              //                     Icons.local_atm_outlined,
+              //                     color: KColors.icon,
+              //                     size: 30,
+              //                   ),
+              //                 ),
+              //                 const SizedBox(
+              //                   height: 8,
+              //                 ),
+              //                 Text(
+              //                   "Purchase",
+              //                   style: GoogleFonts.dmSans(
+              //                     fontSize: 17,
+              //                     fontWeight: FontWeight.bold,
+              //                     color: const Color(0xFF000000),
+              //                   ),
+              //                 ),
+              //               ],
+              //             ),
+              //           ),
+              //         )),
+              //       ),
+              //     ),
+              //   ),
+              // ),
               GestureDetector(
                 onTapDown: _tapDown8,
                 onTapUp: _tapUp8,

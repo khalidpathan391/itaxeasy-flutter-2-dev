@@ -42,6 +42,20 @@ class _LoginPageState extends State<LoginPage> {
         : SafeArea(
             child: Scaffold(
               resizeToAvoidBottomInset: false,
+              appBar: AppBar(
+                backgroundColor: Colors.blue.shade900,
+                elevation: 0,
+                toolbarHeight: 290,
+                shape: RoundedRectangleBorder(
+                  borderRadius:
+                      BorderRadius.only(bottomRight: Radius.circular(200)),
+                ),
+                title: Text(
+                  'Welcome Back!!!\nLogin',
+                  style: GoogleFonts.dmSans(
+                      fontSize: 30, fontWeight: FontWeight.bold),
+                ),
+              ),
               // backgroundColor: ,
               body: SingleChildScrollView(
                 child: SafeArea(
@@ -53,28 +67,6 @@ class _LoginPageState extends State<LoginPage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Login',
-                                style: GoogleFonts.dmSans(
-                                    fontSize: 30, fontWeight: FontWeight.bold),
-                              ),
-                              const SizedBox(
-                                height: 20,
-                              ),
-                              Image.asset(
-                                'assets/images/accent.png',
-                                color: Colors.blue.shade900,
-                                width: 99,
-                                height: 4,
-                              ),
-                            ],
-                          ),
-                          const SizedBox(
-                            height: 48,
-                          ),
                           Padding(
                             padding: const EdgeInsets.only(
                                 top: 30, left: 10, bottom: 20, right: 10),

@@ -48,6 +48,18 @@ class _RegisterPageState extends State<RegisterPage> {
             child: Scaffold(
               resizeToAvoidBottomInset: false,
               backgroundColor: Colors.white,
+              appBar: AppBar(
+                backgroundColor: Colors.blue.shade900,
+                title: Text(
+                  'Registration\nForm ',
+                  style: GoogleFonts.dmSans(
+                      fontSize: 30, fontWeight: FontWeight.bold),
+                ),
+                toolbarHeight: 200,
+                shape: RoundedRectangleBorder(
+                    borderRadius:
+                        BorderRadius.only(bottomRight: Radius.circular(200))),
+              ),
               body: SingleChildScrollView(
                 reverse: true,
                 child: FadeInDown(
@@ -59,23 +71,6 @@ class _RegisterPageState extends State<RegisterPage> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          'Register ',
-                          style: GoogleFonts.dmSans(
-                              fontSize: 30, fontWeight: FontWeight.bold),
-                        ),
-                        const SizedBox(
-                          height: 15,
-                        ),
-                        Image.asset(
-                          'assets/images/accent.png',
-                          color: Colors.blue.shade900,
-                          width: 99,
-                          height: 4,
-                        ),
-                        const SizedBox(
-                          height: 48,
-                        ),
                         Column(
                           children: [
                             FadeInDown(

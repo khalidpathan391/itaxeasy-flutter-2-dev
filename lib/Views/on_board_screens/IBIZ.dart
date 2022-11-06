@@ -177,9 +177,6 @@ class _IBIZState extends State<IBIZ> {
                   ),
                 ),
               ),
-              SizedBox(
-                height: 25,
-              ),
               GestureDetector(
                 onTap: () {
                   Navigator.push(context,
@@ -268,8 +265,635 @@ class _IBIZState extends State<IBIZ> {
                   ),
                 ),
               ),
-              SizedBox(
-                height: 25,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => TradingAccount()));
+                },
+                child: Container(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 80,
+                        width: 110,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.blue.shade900,
+                        ),
+                        child: Container(
+                          width: 80,
+                          height: 70,
+                          decoration: BoxDecoration(
+                            color: Colors.white70,
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey,
+                                  blurRadius: 8.0,
+                                  offset: Offset(3, 3))
+                            ],
+                            border: Border.all(
+                              color: Colors.grey,
+                              width: 2,
+                            ),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Center(
+                              child: Card(
+                            color: Color.fromARGB(255, 210, 189, 214),
+                            elevation: 20,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.white60,
+                                        blurRadius: 8.0,
+                                        offset: Offset(5, 5))
+                                  ]),
+                              height: 80,
+                              width: 110,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.verified_sharp,
+                                    color: Colors.blue.shade900,
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text("Trading/Ac")
+                                ],
+                              ),
+                            ),
+                          )),
+                        ),
+                      ),
+                      SizedBox(
+                        width: width * .05,
+                      ),
+                      Container(
+                          width: 225,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Trading Account",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 25),
+                              ),
+                              Text("Get The Status of your Trading Account"),
+                            ],
+                          )),
+                    ],
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => TradingAccount()));
+                },
+                child: Container(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 80,
+                        width: 110,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.blue.shade900,
+                        ),
+                        child: Container(
+                          width: 80,
+                          height: 70,
+                          decoration: BoxDecoration(
+                            color: Colors.white70,
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey,
+                                  blurRadius: 8.0,
+                                  offset: Offset(3, 3))
+                            ],
+                            border: Border.all(
+                              color: Colors.grey,
+                              width: 2,
+                            ),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Center(
+                              child: Card(
+                            color: Color.fromARGB(255, 210, 189, 214),
+                            elevation: 20,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.white60,
+                                        blurRadius: 8.0,
+                                        offset: Offset(5, 5))
+                                  ]),
+                              height: 80,
+                              width: 110,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.verified_sharp,
+                                    color: Colors.blue.shade900,
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text("Trading/Ac")
+                                ],
+                              ),
+                            ),
+                          )),
+                        ),
+                      ),
+                      SizedBox(
+                        width: width * .05,
+                      ),
+                      Container(
+                          width: 225,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Trading Account",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 25),
+                              ),
+                              Text("Get The Status of your Trading Account"),
+                            ],
+                          )),
+                    ],
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => TradingAccount()));
+                },
+                child: Container(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 80,
+                        width: 110,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.blue.shade900,
+                        ),
+                        child: Container(
+                          width: 80,
+                          height: 70,
+                          decoration: BoxDecoration(
+                            color: Colors.white70,
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey,
+                                  blurRadius: 8.0,
+                                  offset: Offset(3, 3))
+                            ],
+                            border: Border.all(
+                              color: Colors.grey,
+                              width: 2,
+                            ),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Center(
+                              child: Card(
+                            color: Color.fromARGB(255, 210, 189, 214),
+                            elevation: 20,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.white60,
+                                        blurRadius: 8.0,
+                                        offset: Offset(5, 5))
+                                  ]),
+                              height: 80,
+                              width: 110,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.verified_sharp,
+                                    color: Colors.blue.shade900,
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text("Trading/Ac")
+                                ],
+                              ),
+                            ),
+                          )),
+                        ),
+                      ),
+                      SizedBox(
+                        width: width * .05,
+                      ),
+                      Container(
+                          width: 225,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Trading Account",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 25),
+                              ),
+                              Text("Get The Status of your Trading Account"),
+                            ],
+                          )),
+                    ],
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => TradingAccount()));
+                },
+                child: Container(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 80,
+                        width: 110,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.blue.shade900,
+                        ),
+                        child: Container(
+                          width: 80,
+                          height: 70,
+                          decoration: BoxDecoration(
+                            color: Colors.white70,
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey,
+                                  blurRadius: 8.0,
+                                  offset: Offset(3, 3))
+                            ],
+                            border: Border.all(
+                              color: Colors.grey,
+                              width: 2,
+                            ),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Center(
+                              child: Card(
+                            color: Color.fromARGB(255, 210, 189, 214),
+                            elevation: 20,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.white60,
+                                        blurRadius: 8.0,
+                                        offset: Offset(5, 5))
+                                  ]),
+                              height: 80,
+                              width: 110,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.verified_sharp,
+                                    color: Colors.blue.shade900,
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text("Trading/Ac")
+                                ],
+                              ),
+                            ),
+                          )),
+                        ),
+                      ),
+                      SizedBox(
+                        width: width * .05,
+                      ),
+                      Container(
+                          width: 225,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Trading Account",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 25),
+                              ),
+                              Text("Get The Status of your Trading Account"),
+                            ],
+                          )),
+                    ],
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => TradingAccount()));
+                },
+                child: Container(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 80,
+                        width: 110,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.blue.shade900,
+                        ),
+                        child: Container(
+                          width: 80,
+                          height: 70,
+                          decoration: BoxDecoration(
+                            color: Colors.white70,
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey,
+                                  blurRadius: 8.0,
+                                  offset: Offset(3, 3))
+                            ],
+                            border: Border.all(
+                              color: Colors.grey,
+                              width: 2,
+                            ),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Center(
+                              child: Card(
+                            color: Color.fromARGB(255, 210, 189, 214),
+                            elevation: 20,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.white60,
+                                        blurRadius: 8.0,
+                                        offset: Offset(5, 5))
+                                  ]),
+                              height: 80,
+                              width: 110,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.verified_sharp,
+                                    color: Colors.blue.shade900,
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text("Trading/Ac")
+                                ],
+                              ),
+                            ),
+                          )),
+                        ),
+                      ),
+                      SizedBox(
+                        width: width * .05,
+                      ),
+                      Container(
+                          width: 225,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Trading Account",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 25),
+                              ),
+                              Text("Get The Status of your Trading Account"),
+                            ],
+                          )),
+                    ],
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => TradingAccount()));
+                },
+                child: Container(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 80,
+                        width: 110,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.blue.shade900,
+                        ),
+                        child: Container(
+                          width: 80,
+                          height: 70,
+                          decoration: BoxDecoration(
+                            color: Colors.white70,
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey,
+                                  blurRadius: 8.0,
+                                  offset: Offset(3, 3))
+                            ],
+                            border: Border.all(
+                              color: Colors.grey,
+                              width: 2,
+                            ),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Center(
+                              child: Card(
+                            color: Color.fromARGB(255, 210, 189, 214),
+                            elevation: 20,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.white60,
+                                        blurRadius: 8.0,
+                                        offset: Offset(5, 5))
+                                  ]),
+                              height: 80,
+                              width: 110,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.verified_sharp,
+                                    color: Colors.blue.shade900,
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text("Trading/Ac")
+                                ],
+                              ),
+                            ),
+                          )),
+                        ),
+                      ),
+                      SizedBox(
+                        width: width * .05,
+                      ),
+                      Container(
+                          width: 225,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Trading Account",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 25),
+                              ),
+                              Text("Get The Status of your Trading Account"),
+                            ],
+                          )),
+                    ],
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => TradingAccount()));
+                },
+                child: Container(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 80,
+                        width: 110,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.blue.shade900,
+                        ),
+                        child: Container(
+                          width: 80,
+                          height: 70,
+                          decoration: BoxDecoration(
+                            color: Colors.white70,
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey,
+                                  blurRadius: 8.0,
+                                  offset: Offset(3, 3))
+                            ],
+                            border: Border.all(
+                              color: Colors.grey,
+                              width: 2,
+                            ),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Center(
+                              child: Card(
+                            color: Color.fromARGB(255, 210, 189, 214),
+                            elevation: 20,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.white60,
+                                        blurRadius: 8.0,
+                                        offset: Offset(5, 5))
+                                  ]),
+                              height: 80,
+                              width: 110,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.verified_sharp,
+                                    color: Colors.blue.shade900,
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text("Trading/Ac")
+                                ],
+                              ),
+                            ),
+                          )),
+                        ),
+                      ),
+                      SizedBox(
+                        width: width * .05,
+                      ),
+                      Container(
+                          width: 225,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Trading Account",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 25),
+                              ),
+                              Text("Get The Status of your Trading Account"),
+                            ],
+                          )),
+                    ],
+                  ),
+                ),
               ),
             ],
           ),

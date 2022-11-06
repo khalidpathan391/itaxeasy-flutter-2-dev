@@ -214,40 +214,73 @@ class _EInvoicingUiState extends State<EInvoicingUi>
               scale: _scale,
               child: Container(
                 decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white70,
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.grey,
+                          blurRadius: 8.0,
+                          offset: Offset(3, 3))
+                    ],
                     border: Border.all(
-                      width: 1.5,
-                      color: const Color(0xffE3E9ED),
+                      color: Colors.grey,
+                      width: 2,
                     ),
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(15.0)),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      height: 55,
-                      width: 55,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Center(
+                      child: Card(
+                    color: Color.fromARGB(255, 210, 189, 214),
+                    elevation: 20,
+                    child: Container(
                       decoration: BoxDecoration(
-                        color: const Color(0xffE3E9ED),
-                        borderRadius: BorderRadius.circular(15.0),
-                      ),
-                      child: const Icon(
-                        Icons.local_atm_rounded,
-                        color: KColors.icon,
-                        size: 30,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.white60,
+                                blurRadius: 8.0,
+                                offset: Offset(2, 2))
+                          ]),
+                      height: 100,
+                      width: 150,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 55,
+                            width: 55,
+                            decoration: BoxDecoration(
+                              // color: Colors.white70,
+                              // border: Border.all(
+                              //     //color: Colors.grey,
+                              //     // width: 2,
+                              //     ),
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                            child: const Icon(
+                              Icons.local_atm_outlined,
+                              color: KColors.icon,
+                              size: 30,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 8,
+                          ),
+                          Text(
+                            "Cash",
+                            style: GoogleFonts.dmSans(
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold,
+                              color: const Color(0xFF000000),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      "Cash",
-                      style: GoogleFonts.dmSans(
-                        fontSize: 17,
-                        fontWeight: FontWeight.bold,
-                        color: const Color(0xff57435C),
-                      ),
-                    ),
-                  ],
+                  )),
                 ),
               ),
             ),
@@ -262,40 +295,73 @@ class _EInvoicingUiState extends State<EInvoicingUi>
               scale: _scale1,
               child: Container(
                 decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white70,
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.grey,
+                          blurRadius: 8.0,
+                          offset: Offset(3, 3))
+                    ],
                     border: Border.all(
-                      width: 1.5,
-                      color: const Color(0xffE3E9ED),
+                      color: Colors.grey,
+                      width: 2,
                     ),
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(15.0)),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      height: 55,
-                      width: 55,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Center(
+                      child: Card(
+                    color: Color.fromARGB(255, 210, 189, 214),
+                    elevation: 20,
+                    child: Container(
                       decoration: BoxDecoration(
-                        color: const Color(0xffE3E9ED),
-                        borderRadius: BorderRadius.circular(15.0),
-                      ),
-                      child: const Icon(
-                        Icons.price_check_rounded,
-                        color: KColors.icon,
-                        size: 30,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.white60,
+                                blurRadius: 8.0,
+                                offset: Offset(2, 2))
+                          ]),
+                      height: 100,
+                      width: 150,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 55,
+                            width: 55,
+                            decoration: BoxDecoration(
+                              // color: Colors.white70,
+                              // border: Border.all(
+                              //     //color: Colors.grey,
+                              //     // width: 2,
+                              //     ),
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                            child: const Icon(
+                              Icons.price_check_outlined,
+                              color: KColors.icon,
+                              size: 30,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 8,
+                          ),
+                          Text(
+                            "Payment",
+                            style: GoogleFonts.dmSans(
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold,
+                              color: const Color(0xFF000000),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      "Payment",
-                      style: GoogleFonts.dmSans(
-                        fontSize: 17,
-                        fontWeight: FontWeight.bold,
-                        color: const Color(0xff57435C),
-                      ),
-                    ),
-                  ],
+                  )),
                 ),
               ),
             ),
@@ -310,40 +376,73 @@ class _EInvoicingUiState extends State<EInvoicingUi>
               scale: _scale2,
               child: Container(
                 decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white70,
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.grey,
+                          blurRadius: 8.0,
+                          offset: Offset(3, 3))
+                    ],
                     border: Border.all(
-                      width: 1.5,
-                      color: const Color(0xffE3E9ED),
+                      color: Colors.grey,
+                      width: 2,
                     ),
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(15.0)),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      height: 55,
-                      width: 55,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Center(
+                      child: Card(
+                    color: Color.fromARGB(255, 210, 189, 214),
+                    elevation: 20,
+                    child: Container(
                       decoration: BoxDecoration(
-                        color: const Color(0xffE3E9ED),
-                        borderRadius: BorderRadius.circular(15.0),
-                      ),
-                      child: const Icon(
-                        Icons.credit_card_rounded,
-                        color: KColors.icon,
-                        size: 30,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.white60,
+                                blurRadius: 8.0,
+                                offset: Offset(2, 2))
+                          ]),
+                      height: 100,
+                      width: 150,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 55,
+                            width: 55,
+                            decoration: BoxDecoration(
+                              // color: Colors.white70,
+                              // border: Border.all(
+                              //     //color: Colors.grey,
+                              //     // width: 2,
+                              //     ),
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                            child: const Icon(
+                              Icons.credit_card_rounded,
+                              color: KColors.icon,
+                              size: 30,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 8,
+                          ),
+                          Text(
+                            "Purchase",
+                            style: GoogleFonts.dmSans(
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold,
+                              color: const Color(0xFF000000),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      "Purchase",
-                      style: GoogleFonts.dmSans(
-                        fontSize: 17,
-                        fontWeight: FontWeight.bold,
-                        color: const Color(0xff57435C),
-                      ),
-                    ),
-                  ],
+                  )),
                 ),
               ),
             ),
@@ -358,40 +457,73 @@ class _EInvoicingUiState extends State<EInvoicingUi>
               scale: _scale3,
               child: Container(
                 decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white70,
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.grey,
+                          blurRadius: 8.0,
+                          offset: Offset(3, 3))
+                    ],
                     border: Border.all(
-                      width: 1.5,
-                      color: const Color(0xffE3E9ED),
+                      color: Colors.grey,
+                      width: 2,
                     ),
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(15.0)),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      height: 55,
-                      width: 55,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Center(
+                      child: Card(
+                    color: Color.fromARGB(255, 210, 189, 214),
+                    elevation: 20,
+                    child: Container(
                       decoration: BoxDecoration(
-                        color: const Color(0xffE3E9ED),
-                        borderRadius: BorderRadius.circular(15.0),
-                      ),
-                      child: const Icon(
-                        Icons.redeem_rounded,
-                        color: KColors.icon,
-                        size: 30,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.white60,
+                                blurRadius: 8.0,
+                                offset: Offset(2, 2))
+                          ]),
+                      height: 100,
+                      width: 150,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 55,
+                            width: 55,
+                            decoration: BoxDecoration(
+                              // color: Colors.white70,
+                              // border: Border.all(
+                              //     //color: Colors.grey,
+                              //     // width: 2,
+                              //     ),
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                            child: const Icon(
+                              Icons.redeem_rounded,
+                              color: KColors.icon,
+                              size: 30,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 8,
+                          ),
+                          Text(
+                            "Sale",
+                            style: GoogleFonts.dmSans(
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold,
+                              color: const Color(0xFF000000),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      "Sale",
-                      style: GoogleFonts.dmSans(
-                        fontSize: 17,
-                        fontWeight: FontWeight.bold,
-                        color: const Color(0xff57435C),
-                      ),
-                    ),
-                  ],
+                  )),
                 ),
               ),
             ),

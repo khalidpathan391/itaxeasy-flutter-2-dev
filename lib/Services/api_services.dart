@@ -65,7 +65,8 @@ class ApiServices {
 
   // REGISTER API
   Future<ApiResponse<RegisterUser>> register(Register registers) async {
-    final url = Uri.parse(baseUrl + "/sign-up");
+    // final url = Uri.parse(baseUrl + "/sign-up");
+    final url = Uri.parse("http://59.144.161.72:3500/users/sign-up");
     final headers = {'Content-Type': 'application/json'};
     final jsonBody = jsonEncode(registers);
     final response = await http.post(url, headers: headers, body: jsonBody);
@@ -92,7 +93,8 @@ class ApiServices {
 // LOGIN API
 
   Future<ApiResponse<LoginUser>> login(Login login) async {
-    final url = Uri.parse(baseUrl + "/login");
+    // final url = Uri.parse(baseUrl + "/login");
+    final url = Uri.parse("http://59.144.161.72:3500/users/login");
     final headers = {'Content-Type': 'application/json'};
     final jsonBody = jsonEncode(login);
     final response = await http.post(url, headers: headers, body: jsonBody);

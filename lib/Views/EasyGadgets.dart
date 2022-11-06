@@ -322,32 +322,59 @@ class _DashServiceState extends State<DashService> {
                 child: Row(
                   children: [
                     Container(
-                      height: 72,
-                      width: 83,
+                      height: 80,
+                      width: 110,
                       decoration: BoxDecoration(
-                          boxShadow: const [
-                            BoxShadow(color: Colors.grey, blurRadius: 6),
+                        borderRadius: BorderRadius.circular(15),
+                        // color: Colors.blue,
+                      ),
+                      child: Container(
+                        width: 80,
+                        height: 70,
+                        decoration: BoxDecoration(
+                          color: Colors.white70,
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.grey,
+                                blurRadius: 8.0,
+                                offset: Offset(3, 3))
                           ],
                           border: Border.all(
-                            width: 1.5,
-                            color: const Color(0xffE3E9ED),
+                            color: Colors.grey,
+                            width: 2,
                           ),
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15.0)),
-                      child: Center(
-                        child: Container(
-                          height: 45,
-                          width: 45,
-                          decoration: BoxDecoration(
-                            color: const Color(0xffE3E9ED),
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          child: const Icon(
-                            Icons.filter_drama_rounded,
-                            color: KColors.icon,
-                            size: 30,
-                          ),
+                          borderRadius: BorderRadius.circular(15),
                         ),
+                        child: Center(
+                            child: Card(
+                          color: Color.fromARGB(255, 210, 189, 214),
+                          elevation: 20,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Colors.white60,
+                                      blurRadius: 8.0,
+                                      offset: Offset(5, 5))
+                                ]),
+                            height: 80,
+                            width: 110,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.filter_drama_outlined,
+                                  color: Colors.blue.shade900,
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text("CLOUD")
+                              ],
+                            ),
+                          ),
+                        )),
                       ),
                     ),
                     SizedBox(
@@ -398,32 +425,59 @@ class _DashServiceState extends State<DashService> {
                 child: Row(
                   children: [
                     Container(
-                      height: 72,
-                      width: 83,
+                      height: 80,
+                      width: 110,
                       decoration: BoxDecoration(
-                          boxShadow: const [
-                            BoxShadow(color: Colors.grey, blurRadius: 6),
+                        borderRadius: BorderRadius.circular(15),
+                        // color: Colors.blue,
+                      ),
+                      child: Container(
+                        width: 80,
+                        height: 70,
+                        decoration: BoxDecoration(
+                          color: Colors.white70,
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.grey,
+                                blurRadius: 8.0,
+                                offset: Offset(3, 3))
                           ],
                           border: Border.all(
-                            width: 1.5,
-                            color: const Color(0xffE3E9ED),
+                            color: Colors.grey,
+                            width: 2,
                           ),
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15.0)),
-                      child: Center(
-                        child: Container(
-                          height: 45,
-                          width: 45,
-                          decoration: BoxDecoration(
-                            color: const Color(0xffE3E9ED),
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          child: const Icon(
-                            Icons.storage_rounded,
-                            color: KColors.icon,
-                            size: 30,
-                          ),
+                          borderRadius: BorderRadius.circular(15),
                         ),
+                        child: Center(
+                            child: Card(
+                          color: Color.fromARGB(255, 210, 189, 214),
+                          elevation: 20,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Colors.white60,
+                                      blurRadius: 8.0,
+                                      offset: Offset(5, 5))
+                                ]),
+                            height: 80,
+                            width: 110,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.storage_rounded,
+                                  color: Colors.blue.shade900,
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text("DMS")
+                              ],
+                            ),
+                          ),
+                        )),
                       ),
                     ),
                     SizedBox(
@@ -474,32 +528,59 @@ class _DashServiceState extends State<DashService> {
                 child: Row(
                   children: [
                     Container(
-                      height: 72,
-                      width: 83,
+                      height: 80,
+                      width: 110,
                       decoration: BoxDecoration(
-                          boxShadow: const [
-                            BoxShadow(color: Colors.grey, blurRadius: 6),
+                        borderRadius: BorderRadius.circular(15),
+                        // color: Colors.blue,
+                      ),
+                      child: Container(
+                        width: 80,
+                        height: 70,
+                        decoration: BoxDecoration(
+                          color: Colors.white70,
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.grey,
+                                blurRadius: 8.0,
+                                offset: Offset(3, 3))
                           ],
                           border: Border.all(
-                            width: 1.5,
-                            color: const Color(0xffE3E9ED),
+                            color: Colors.grey,
+                            width: 2,
                           ),
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15.0)),
-                      child: Center(
-                        child: Container(
-                          height: 45,
-                          width: 45,
-                          decoration: BoxDecoration(
-                            color: const Color(0xffE3E9ED),
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          child: const Icon(
-                            Icons.local_library_rounded,
-                            color: KColors.icon,
-                            size: 30,
-                          ),
+                          borderRadius: BorderRadius.circular(15),
                         ),
+                        child: Center(
+                            child: Card(
+                          color: Color.fromARGB(255, 210, 189, 214),
+                          elevation: 20,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Colors.white60,
+                                      blurRadius: 8.0,
+                                      offset: Offset(5, 5))
+                                ]),
+                            height: 80,
+                            width: 110,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.local_library_outlined,
+                                  color: Colors.blue.shade900,
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text("Library")
+                              ],
+                            ),
+                          ),
+                        )),
                       ),
                     ),
                     SizedBox(
@@ -549,32 +630,59 @@ class _DashServiceState extends State<DashService> {
                 child: Row(
                   children: [
                     Container(
-                      height: 72,
-                      width: 83,
+                      height: 80,
+                      width: 110,
                       decoration: BoxDecoration(
-                          boxShadow: const [
-                            BoxShadow(color: Colors.grey, blurRadius: 6),
+                        borderRadius: BorderRadius.circular(15),
+                        // color: Colors.blue,
+                      ),
+                      child: Container(
+                        width: 80,
+                        height: 70,
+                        decoration: BoxDecoration(
+                          color: Colors.white70,
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.grey,
+                                blurRadius: 8.0,
+                                offset: Offset(3, 3))
                           ],
                           border: Border.all(
-                            width: 1.5,
-                            color: const Color(0xffE3E9ED),
+                            color: Colors.grey,
+                            width: 2,
                           ),
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15.0)),
-                      child: Center(
-                        child: Container(
-                          height: 45,
-                          width: 45,
-                          decoration: BoxDecoration(
-                            color: const Color(0xffE3E9ED),
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          child: const Icon(
-                            Icons.webhook_rounded,
-                            color: KColors.icon,
-                            size: 30,
-                          ),
+                          borderRadius: BorderRadius.circular(15),
                         ),
+                        child: Center(
+                            child: Card(
+                          color: Color.fromARGB(255, 210, 189, 214),
+                          elevation: 20,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Colors.white60,
+                                      blurRadius: 8.0,
+                                      offset: Offset(5, 5))
+                                ]),
+                            height: 80,
+                            width: 110,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.webhook_rounded,
+                                  color: Colors.blue.shade900,
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text("ERP")
+                              ],
+                            ),
+                          ),
+                        )),
                       ),
                     ),
                     SizedBox(
