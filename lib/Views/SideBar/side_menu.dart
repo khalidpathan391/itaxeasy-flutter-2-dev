@@ -8,8 +8,13 @@ import 'package:gst_app/Views/Calculator/Mis.dart';
 import 'package:gst_app/Views/Calculator/ifsc_calcii/bank-verification.dart';
 import 'package:gst_app/Views/Calculator/ifsc_calcii/ifsc_coder.dart';
 import 'package:gst_app/Views/Calculator/simple_calculators.dart';
+import 'package:gst_app/Views/Login_And_Register/UpdateUser.dart';
+import 'package:gst_app/Views/on_board_screens/IBIZ.dart';
 import 'package:gst_app/Views/on_board_screens/ITR%20Files.dart';
 import 'package:gst_app/Views/on_board_screens/Invoice.dart';
+import 'package:gst_app/Views/on_board_screens/MyInvoice.dart';
+import 'package:gst_app/Views/on_board_screens/Purchase%20Voucher.dart';
+import 'package:gst_app/Views/on_board_screens/SaleVoucher.dart';
 import 'package:material_dialogs/material_dialogs.dart';
 import '../AccountMisuse.dart';
 import '../Bottom_Nav_Bar/services.dart';
@@ -1286,22 +1291,6 @@ class _SideMenuState extends State<SideMenu> {
                     child: Padding(
                       padding: const EdgeInsets.only(left: 16),
                       child: DrawerListTile(
-                        title: "IBIZ",
-                        svgSrc: "assets/icons/ao.svg",
-                        press: () async {
-                          // await storage.delete(key: "token");
-                          // Navigator.push(context,
-                          //     MaterialPageRoute(builder: (context) => IBIZ()));
-                        },
-                      ),
-                    ),
-                  ),
-                  FadeInLeftBig(
-                    delay: const Duration(milliseconds: 500),
-                    duration: const Duration(milliseconds: 500),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 16),
-                      child: DrawerListTile(
                         title: "Image To Pdf",
                         svgSrc: "assets/icons/generatorpdf.svg",
                         press: () async {
@@ -1357,12 +1346,44 @@ class _SideMenuState extends State<SideMenu> {
               child: Padding(
                 padding: const EdgeInsets.only(left: 16),
                 child: DrawerListTile(
+                  title: "IBIZ",
+                  svgSrc: "assets/icons/ao.svg",
+                  press: () async {
+                    // await storage.delete(key: "token");
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => IBIZ()));
+                  },
+                ),
+              ),
+            ),
+            FadeInLeftBig(
+              delay: const Duration(milliseconds: 500),
+              duration: const Duration(milliseconds: 500),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 16),
+                child: DrawerListTile(
                   title: "Dark/Light Theme",
                   svgSrc: "assets/icons/ao.svg",
                   press: () async {
                     // await storage.delete(key: "token");
                     // Navigator.push(context,
                     //     MaterialPageRoute(builder: (context) => ITRFiles()));
+                  },
+                ),
+              ),
+            ),
+            FadeInLeftBig(
+              delay: const Duration(milliseconds: 500),
+              duration: const Duration(milliseconds: 500),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 16),
+                child: DrawerListTile(
+                  title: "Update User",
+                  svgSrc: "assets/icons/ao.svg",
+                  press: () async {
+                    // await storage.delete(key: "token");
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => UpdateUser()));
                   },
                 ),
               ),
@@ -1415,40 +1436,65 @@ class _SideMenuState extends State<SideMenu> {
                 ),
               ),
             ),
-            // FadeInLeftBig(
-            //   delay: const Duration(milliseconds: 500),
-            //   duration: const Duration(milliseconds: 500),
-            //   child: Padding(
-            //     padding: const EdgeInsets.only(left: 16),
-            //     child: DrawerListTile(
-            //       title: "Test",
-            //       svgSrc: "assets/icons/generatorpdf.svg",
-            //       press: () async{
-            //          // await storage.delete(key: "token");
-            //          // Navigator.push(context, MaterialPageRoute(builder: (context)=>BusinessProfileUi()));
-            //          // Navigator.push(context, MaterialPageRoute(builder: (context)=> OptionList()));
-            //          // Navigator.push(context, MaterialPageRoute(builder: (context)=> Alteration()));
-            //          // Navigator.push(context, MaterialPageRoute(builder: (context)=> LineChartS(isShowingMainData:true)));
-            //       },
-            //     ),
-            //   ),
-            // ),
-            // FadeInLeftBig(
-            //   delay: const Duration(milliseconds: 500),
-            //   duration: const Duration(milliseconds: 500),
-            //   child: Padding(
-            //     padding: const EdgeInsets.only(left: 16),
-            //     child: DrawerListTile(
-            //       title: "FlipCard",
-            //       svgSrc: "assets/icons/settings.svg",
-            //       press: () async{
-            //          // await storage.delete(key: "token");
-            //          // Navigator.push(context, MaterialPageRoute(builder: (context)=>b2bRequest()));
-            //          Navigator.push(context, MaterialPageRoute(builder: (context)=>const FlipCardUi()));
-            //       },
-            //     ),
-            //   ),
-            // ),
+            FadeInLeftBig(
+              delay: const Duration(milliseconds: 500),
+              duration: const Duration(milliseconds: 500),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 16),
+                child: DrawerListTile(
+                  title: "Purchase Voucher",
+                  svgSrc: "assets/icons/generatorpdf.svg",
+                  press: () async {
+                    // await storage.delete(key: "token");
+                    // Navigator.push(context, MaterialPageRoute(builder: (context)=>BusinessProfileUi()));
+                    // Navigator.push(context, MaterialPageRoute(builder: (context)=> OptionList()));
+                    // Navigator.push(context, MaterialPageRoute(builder: (context)=> Alteration()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => PurchaseVoucher()));
+                  },
+                ),
+              ),
+            ),
+            FadeInLeftBig(
+              delay: const Duration(milliseconds: 500),
+              duration: const Duration(milliseconds: 500),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 16),
+                child: DrawerListTile(
+                  title: "Sale Voucher",
+                  svgSrc: "assets/icons/generatorpdf.svg",
+                  press: () async {
+                    // await storage.delete(key: "token");
+                    // Navigator.push(context, MaterialPageRoute(builder: (context)=>BusinessProfileUi()));
+                    // Navigator.push(context, MaterialPageRoute(builder: (context)=> OptionList()));
+                    // Navigator.push(context, MaterialPageRoute(builder: (context)=> Alteration()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => SaleVoucher()));
+                  },
+                ),
+              ),
+            ),
+            FadeInLeftBig(
+              delay: const Duration(milliseconds: 500),
+              duration: const Duration(milliseconds: 500),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 16),
+                child: DrawerListTile(
+                  title: "INVOICE",
+                  svgSrc: "assets/icons/settings.svg",
+                  press: () async {
+                    // await storage.delete(key: "token");
+                    // Navigator.push(context, MaterialPageRoute(builder: (context)=>b2bRequest()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const MyInvoicee()));
+                  },
+                ),
+              ),
+            ),
 
             FadeInRightBig(
               delay: const Duration(milliseconds: 500),

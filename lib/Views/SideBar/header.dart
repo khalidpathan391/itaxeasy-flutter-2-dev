@@ -6,7 +6,6 @@ import 'package:provider/provider.dart';
 
 import '../Theme/colors.dart';
 
-
 class Header extends StatelessWidget {
   const Header({
     Key key,
@@ -17,7 +16,6 @@ class Header extends StatelessWidget {
     return Row(
       children: [
         if (!Responsive.isDesktop(context))
-
           IconButton(
             icon: const Icon(Icons.menu),
             onPressed: context.read<MenuController>().controlMenu,
@@ -101,7 +99,10 @@ class SearchField extends StatelessWidget {
               // color: primaryColor,
               borderRadius: BorderRadius.all(Radius.circular(10)),
             ),
-            child: SvgPicture.asset("assets/icons/Search.svg",color: KColors.primary,),
+            child: SvgPicture.asset(
+              "assets/icons/Search.svg",
+              color: KColors.primary,
+            ),
           ),
         ),
       ),

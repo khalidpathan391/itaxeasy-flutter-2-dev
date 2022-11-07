@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:gst_app/Views/Purchases.dart';
+import 'package:gst_app/Views/Sale.dart';
+import 'package:gst_app/Views/Vouchers.dart';
 
 import '../Components/constants.dart';
 import '../Theme/colors.dart';
@@ -370,7 +373,8 @@ class _EInvoicingUiState extends State<EInvoicingUi>
             onTapDown: _tapDown2,
             onTapUp: _tapUp2,
             onTap: () {
-              // Navigator.push(context, MaterialPageRoute(builder: (context)=>EasyLinks()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Purchases()));
             },
             child: Transform.scale(
               scale: _scale2,
@@ -451,7 +455,90 @@ class _EInvoicingUiState extends State<EInvoicingUi>
             onTapDown: _tapDown3,
             onTapUp: _tapUp3,
             onTap: () {
-              // Navigator.push(context, MaterialPageRoute(builder: (context)=>DashService()));
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Vouchers()));
+            },
+            child: Transform.scale(
+              scale: _scale3,
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white70,
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.grey,
+                          blurRadius: 8.0,
+                          offset: Offset(3, 3))
+                    ],
+                    border: Border.all(
+                      color: Colors.grey,
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Center(
+                      child: Card(
+                    color: Color.fromARGB(255, 210, 189, 214),
+                    elevation: 20,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.white60,
+                                blurRadius: 8.0,
+                                offset: Offset(2, 2))
+                          ]),
+                      height: 100,
+                      width: 150,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 55,
+                            width: 55,
+                            decoration: BoxDecoration(
+                              // color: Colors.white70,
+                              // border: Border.all(
+                              //     //color: Colors.grey,
+                              //     // width: 2,
+                              //     ),
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                            child: const Icon(
+                              Icons.redeem_rounded,
+                              color: KColors.icon,
+                              size: 30,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 8,
+                          ),
+                          Text(
+                            "Voucher",
+                            style: GoogleFonts.dmSans(
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold,
+                              color: const Color(0xFF000000),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  )),
+                ),
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTapDown: _tapDown3,
+            onTapUp: _tapUp3,
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => SaleUi()));
             },
             child: Transform.scale(
               scale: _scale3,

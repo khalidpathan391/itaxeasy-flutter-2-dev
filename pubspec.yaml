@@ -71,6 +71,7 @@ dependencies:
   path_provider: ^2.0.8
   open_document: ^1.0.4
   flip_card: ^0.4.4
+  pin_code_fields: ^6.1.0
   firebase_ml_vision: ^0.9.10
   path:
 #    firebase_core: ^1.8.0

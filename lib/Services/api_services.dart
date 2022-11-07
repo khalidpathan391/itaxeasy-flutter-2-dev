@@ -119,6 +119,44 @@ class ApiServices {
         errorMessage: "An error occurred");
   }
 
+// Forget Password
+  Future<ApiResponse> forget(Map data) async {
+    // final url = Uri.parse(baseUrl + "/login");
+    final url = Uri.parse("http://59.144.161.72:3500/users/send-email");
+    final headers = {'Content-Type': 'application/json'};
+    final jsonBody = jsonEncode(data);
+    final response = await http.post(url, headers: headers, body: jsonBody);
+    log(response.statusCode.toString());
+    log(response.body);
+    log(jsonBody);
+    if (response.statusCode == 200) {
+      return ApiResponse(resposeCode: 200, data: "Email sent to ");
+    }
+    return ApiResponse(
+        resposeCode: response.statusCode,
+        error: true,
+        errorMessage: "An error occurred");
+  }
+
+  //Update Profile
+  Future<ApiResponse> update(Map data) async {
+    // final url = Uri.parse(baseUrl + "/login");
+    final url = Uri.parse("http://59.144.161.72:3500/users/update");
+    final headers = {'Content-Type': 'application/json'};
+    final jsonBody = jsonEncode(data);
+    final response = await http.post(url, headers: headers, body: jsonBody);
+    log(response.statusCode.toString());
+    log(response.body);
+    log(jsonBody);
+    if (response.statusCode == 200) {
+      return ApiResponse(resposeCode: 200, data: "Email sent to ");
+    }
+    return ApiResponse(
+        resposeCode: response.statusCode,
+        error: true,
+        errorMessage: "An error occurred");
+  }
+
   // MCA
   Future<ApiResponse<Mca>> mca(String cin) async {
     String authToken = await storage.read(key: "token");
