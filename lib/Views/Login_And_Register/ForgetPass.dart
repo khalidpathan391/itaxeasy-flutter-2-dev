@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:animate_do/animate_do.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
@@ -185,7 +187,7 @@ class _EmailVerifyState extends State<EmailVerify> {
                                                     "email": emailCont.text,
                                                     "subject":
                                                         "Otp verification",
-                                                    "text": "your otp is 123456"
+                                                    "text": "your otp is "
                                                   };
                                                   final result =
                                                       await apiServices
@@ -199,9 +201,16 @@ class _EmailVerifyState extends State<EmailVerify> {
                                                   //     : "Your are registered";
                                                   if (result.resposeCode ==
                                                       200) {
+                                                    var rng = new Random();
+                                                    var code =
+                                                        rng.nextInt(900000) +
+                                                            100000;
                                                     Get.to(OTP_Verify(
-                                                      otp: "123456",
+                                                      otp: code.toString(),
+                                                      email:
+                                                          "kk7355570@gmail.com",
                                                     ));
+                                                    // log(code.toDouble());
                                                     // Navigator.pushAndRemoveUntil(
                                                     //     context,
                                                     //     MaterialPageRoute(

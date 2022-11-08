@@ -9,9 +9,6 @@ import 'GSTIN_SECTION/GSTR-3b/SalePurchaseAdd.dart';
 import 'GSTIN_SECTION/ReturnDashboard.dart';
 import 'on_board_screens/screens/landing_page.dart';
 
-
-
-
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key key}) : super(key: key);
 
@@ -19,7 +16,8 @@ class SplashScreen extends StatefulWidget {
   _SplashScreenState createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderStateMixin{
+class _SplashScreenState extends State<SplashScreen>
+    with SingleTickerProviderStateMixin {
   FlutterSecureStorage storage = const FlutterSecureStorage();
 
   var _visible = true;
@@ -27,34 +25,32 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
   AnimationController animationController;
   Animation<double> animation;
 
-
   dynamic token;
 
-  getToken()async{
+  getToken() async {
     token = await storage.read(key: "token");
-
   }
 
   @override
   void initState() {
     getToken();
     var d = const Duration(seconds: 2);
-    Future.delayed(d, () async{
+    Future.delayed(d, () async {
       print(token);
       print("---knickknack---");
-      Navigator.pushAndRemoveUntil (context,
+      Navigator.pushAndRemoveUntil(context,
           MaterialPageRoute(builder: (context) {
-            return token != null ? const Navbar(): LandingPage();
-          }), (route) => false);
+        return token != null ? const Navbar() : LandingPage();
+      }), (route) => false);
       // Navigator.push(context, MaterialPageRoute(builder: (context)=>SalePurchase()));
     });
 
     super.initState();
 
-    animationController =  AnimationController(
-        vsync: this, duration:  const Duration(seconds: 2));
+    animationController =
+        AnimationController(vsync: this, duration: const Duration(seconds: 2));
     animation =
-     CurvedAnimation(parent: animationController, curve: Curves.easeOut);
+        CurvedAnimation(parent: animationController, curve: Curves.easeOut);
 
     animation.addListener(() => setState(() {}));
     animationController.forward();
@@ -64,18 +60,20 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
     });
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-        child:  Image.asset('assets/images/itax.png',width: animation.value * 250,
-            height: animation.value * 250,
+        child: Image.asset(
+          'assets/images/itax.png',
+          width: animation.value * 250,
+          height: animation.value * 250,
         ),
       ),
     );
   }
+
   @override
   dispose() {
     animationController.dispose(); // you need this

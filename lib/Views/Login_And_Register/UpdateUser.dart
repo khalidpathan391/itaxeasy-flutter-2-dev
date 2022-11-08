@@ -1,3 +1,6 @@
+import 'dart:convert';
+import 'dart:developer';
+
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -9,6 +12,7 @@ import 'package:gst_app/Models/register.dart';
 import 'package:gst_app/Services/api_services.dart';
 import 'package:gst_app/Views/Login_And_Register/login_page.dart';
 
+import '../../Models/LoginUser.dart';
 import 'Theme.dart';
 
 class UpdateUser extends StatefulWidget {
@@ -17,6 +21,7 @@ class UpdateUser extends StatefulWidget {
 }
 
 class _UpdateUserState extends State<UpdateUser> {
+  FlutterSecureStorage storage = const FlutterSecureStorage();
   bool passwordVisible = false;
   bool passwordConfrimationVisible = false;
   void togglePassword() {
@@ -33,9 +38,29 @@ class _UpdateUserState extends State<UpdateUser> {
   TextEditingController nameCount = TextEditingController();
   TextEditingController lastName = TextEditingController();
   TextEditingController emailCount = TextEditingController();
-  TextEditingController passwordCount = TextEditingController();
+  // TextEditingController passwordCount = TextEditingController();
   TextEditingController phoneCount = TextEditingController();
   TextEditingController pinCode = TextEditingController();
+  Data user;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    getprofileLocal();
+  }
+
+  getprofileLocal() async {
+    String data = await storage.read(key: "user");
+    user = Data.fromJson(json.decode(data));
+    log(user.toJson().toString());
+    setState(() {
+      nameCount.text = user.firstName;
+      lastName.text = user.lastName;
+      emailCount.text = user.email;
+      phoneCount.text = user.phone;
+      pinCode.text = user.pincode;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -173,34 +198,34 @@ class _UpdateUserState extends State<UpdateUser> {
                                     const SizedBox(
                                       height: 15,
                                     ),
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        color: textWhiteGrey,
-                                        borderRadius:
-                                            BorderRadius.circular(14.0),
-                                      ),
-                                      child: TextFormField(
-                                        controller: passwordCount,
-                                        obscureText: !passwordVisible,
-                                        decoration: InputDecoration(
-                                          hintText: 'Password',
-                                          hintStyle: heading6.copyWith(
-                                              color: textGrey),
-                                          suffixIcon: IconButton(
-                                            color: textGrey,
-                                            splashRadius: 1,
-                                            icon: Icon(passwordVisible
-                                                ? Icons.visibility_outlined
-                                                : Icons
-                                                    .visibility_off_outlined),
-                                            onPressed: togglePassword,
-                                          ),
-                                          border: const OutlineInputBorder(
-                                            borderSide: BorderSide.none,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
+                                    // Container(
+                                    //   decoration: BoxDecoration(
+                                    //     color: textWhiteGrey,
+                                    //     borderRadius:
+                                    //         BorderRadius.circular(14.0),
+                                    //   ),
+                                    //   child: TextFormField(
+                                    //     controller: passwordCount,
+                                    //     obscureText: !passwordVisible,
+                                    //     decoration: InputDecoration(
+                                    //       hintText: 'Password',
+                                    //       hintStyle: heading6.copyWith(
+                                    //           color: textGrey),
+                                    //       suffixIcon: IconButton(
+                                    //         color: textGrey,
+                                    //         splashRadius: 1,
+                                    //         icon: Icon(passwordVisible
+                                    //             ? Icons.visibility_outlined
+                                    //             : Icons
+                                    //                 .visibility_off_outlined),
+                                    //         onPressed: togglePassword,
+                                    //       ),
+                                    //       border: const OutlineInputBorder(
+                                    //         borderSide: BorderSide.none,
+                                    //       ),
+                                    //     ),
+                                    //   ),
+                                    // ),
                                     const SizedBox(
                                       height: 15,
                                     ),
@@ -256,7 +281,7 @@ class _UpdateUserState extends State<UpdateUser> {
                                             .requestFocus(FocusNode());
                                         if (nameCount.text.isEmpty ||
                                             emailCount.text.isEmpty ||
-                                            passwordCount.text.isEmpty ||
+                                            // passwordCount.text.isEmpty ||
                                             phoneCount.text.isEmpty ||
                                             pinCode.text.isEmpty ||
                                             lastName.text.isEmpty) {
@@ -275,13 +300,13 @@ class _UpdateUserState extends State<UpdateUser> {
                                                 "Email Id should be valid"),
                                           ));
                                         }
-                                        if (passwordCount.text.length < 5) {
-                                          ScaffoldMessenger.of(context)
-                                              .showSnackBar(const SnackBar(
-                                            content: Text(
-                                                "Password Should be more than 5 digits"),
-                                          ));
-                                        }
+                                        // if (passwordCount.text.length < 5) {
+                                        //   ScaffoldMessenger.of(context)
+                                        //       .showSnackBar(const SnackBar(
+                                        //     content: Text(
+                                        //         "Password Should be more than 5 digits"),
+                                        //   ));
+                                        // }
                                         if (isChecked == false) {
                                           ScaffoldMessenger.of(context)
                                               .showSnackBar(const SnackBar(
@@ -296,19 +321,21 @@ class _UpdateUserState extends State<UpdateUser> {
                                                 "Number should be 10  digits!"),
                                           ));
                                         } else {
+                                          Map prm = {
+                                            "isverified": true,
+                                            "first_name": nameCount.text,
+                                            "last_name": lastName.text,
+                                            "phone": phoneCount.text,
+                                            "email": emailCount.text,
+                                            "pincode": pinCode.text
+                                          };
+
+                                          final result =
+                                              await apiServices.update(prm);
                                           setState(() {
-                                            isLoading = true;
+                                            isLoading = false;
                                           });
-                                          final insert = Register(
-                                            firstName: nameCount.text,
-                                            lastName: lastName.text,
-                                            phone: phoneCount.text,
-                                            pincode: pinCode.text,
-                                            email: emailCount.text,
-                                            password: passwordCount.text,
-                                          );
-                                          final result = await apiServices
-                                              .register(insert);
+
                                           setState(() {
                                             isLoading = false;
                                           });

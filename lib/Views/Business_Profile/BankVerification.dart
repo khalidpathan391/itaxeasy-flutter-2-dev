@@ -6,12 +6,12 @@ class BusinessBankVerification extends StatefulWidget {
   const BusinessBankVerification({Key key}) : super(key: key);
 
   @override
-  State<BusinessBankVerification> createState() => _BusinessBankVerificationState();
+  State<BusinessBankVerification> createState() =>
+      _BusinessBankVerificationState();
 }
 
 class _BusinessBankVerificationState extends State<BusinessBankVerification> {
   @override
-
   TextEditingController nameCont = TextEditingController();
   TextEditingController accountCont = TextEditingController();
   TextEditingController ifscCont = TextEditingController();
@@ -25,7 +25,6 @@ class _BusinessBankVerificationState extends State<BusinessBankVerification> {
             padding: const EdgeInsets.fromLTRB(15.0, 20.0, 15.0, 0),
             child: Column(
               children: [
-
                 Row(
                   children: [
                     IconButton(
@@ -52,7 +51,7 @@ class _BusinessBankVerificationState extends State<BusinessBankVerification> {
                         ),
                         Image.asset(
                           'assets/images/accent.png',
-                          color: Colors.purple,
+                          color: Colors.blue.shade900,
                           width: 99,
                           height: 4,
                         ),
@@ -64,7 +63,8 @@ class _BusinessBankVerificationState extends State<BusinessBankVerification> {
                 Card(
                   elevation: 5,
                   child: Padding(
-                    padding: const EdgeInsets.only(top: 10, bottom: 10, left: 10, right: 10),
+                    padding: const EdgeInsets.only(
+                        top: 10, bottom: 10, left: 10, right: 10),
                     child: Row(
                       children: [
                         Expanded(
@@ -80,7 +80,6 @@ class _BusinessBankVerificationState extends State<BusinessBankVerification> {
                                   fontSize: 17.5,
                                 ),
                               ),
-
                               Text(
                                 "XXXXX XXX XXX",
                                 style: TextStyle(
@@ -102,7 +101,6 @@ class _BusinessBankVerificationState extends State<BusinessBankVerification> {
                                   fontSize: 17.5,
                                 ),
                               ),
-
                               Text(
                                 "XXXXX",
                                 style: TextStyle(
@@ -124,7 +122,6 @@ class _BusinessBankVerificationState extends State<BusinessBankVerification> {
                                   fontSize: 17.5,
                                 ),
                               ),
-
                               Text(
                                 "XXXX XX XX",
                                 style: TextStyle(
@@ -146,7 +143,6 @@ class _BusinessBankVerificationState extends State<BusinessBankVerification> {
                                   fontSize: 17.5,
                                 ),
                               ),
-
                               Text(
                                 "XXXX XX XX",
                                 style: TextStyle(
@@ -156,13 +152,11 @@ class _BusinessBankVerificationState extends State<BusinessBankVerification> {
                                   fontSize: 17.5,
                                 ),
                               ),
-
                             ],
                           ),
                         ),
                         Expanded(
                           child: Column(
-
                             children: [
                               Stack(fit: StackFit.loose, children: <Widget>[
                                 Row(
@@ -175,7 +169,8 @@ class _BusinessBankVerificationState extends State<BusinessBankVerification> {
                                         decoration: const BoxDecoration(
                                           shape: BoxShape.circle,
                                           image: DecorationImage(
-                                            image: ExactAssetImage('assets/images/as.png'),
+                                            image: ExactAssetImage(
+                                                'assets/images/as.png'),
                                             fit: BoxFit.cover,
                                           ),
                                         )),
@@ -217,11 +212,13 @@ class _BusinessBankVerificationState extends State<BusinessBankVerification> {
                   ),
                 ),
                 const SizedBox(
-                  height:20,
+                  height: 20,
                 ),
                 Text(
                   'Bank Verification',
-                  style: heading2.copyWith(color: Colors.purple,),
+                  style: heading2.copyWith(
+                    color: Colors.purple,
+                  ),
                 ),
                 const SizedBox(
                   height: 10,
@@ -230,8 +227,7 @@ class _BusinessBankVerificationState extends State<BusinessBankVerification> {
                   child: Column(
                     children: [
                       const Padding(
-                        padding: EdgeInsets.only(
-                            left: 10, bottom: 10, top: 10),
+                        padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
                         child: Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
@@ -262,8 +258,7 @@ class _BusinessBankVerificationState extends State<BusinessBankVerification> {
                         ),
                       ),
                       const Padding(
-                        padding: EdgeInsets.only(
-                            left: 10, bottom: 10, top: 10),
+                        padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
                         child: Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
@@ -295,8 +290,7 @@ class _BusinessBankVerificationState extends State<BusinessBankVerification> {
                         ),
                       ),
                       const Padding(
-                        padding: EdgeInsets.only(
-                            left: 10, bottom: 10, top: 10),
+                        padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
                         child: Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
@@ -328,8 +322,7 @@ class _BusinessBankVerificationState extends State<BusinessBankVerification> {
                         ),
                       ),
                       const Padding(
-                        padding: EdgeInsets.only(
-                            left: 10, bottom: 10, top: 10),
+                        padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
                         child: Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
@@ -363,8 +356,6 @@ class _BusinessBankVerificationState extends State<BusinessBankVerification> {
                     ],
                   ),
                 ),
-
-
               ],
             ),
           ),

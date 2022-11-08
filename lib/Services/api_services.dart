@@ -4,6 +4,7 @@ import 'package:gst_app/Models/api_response.dart';
 import 'package:gst_app/Models/bank-response.dart';
 import 'package:gst_app/Models/bank-verify.dart';
 import 'package:gst_app/Models/capital-gain.dart';
+import 'package:gst_app/Models/createUser.dart';
 import 'package:gst_app/Models/get-pan-details-byPanNo.dart';
 import 'package:gst_app/Models/gst-return.dart';
 import 'package:gst_app/Models/ifsc.dart';
@@ -109,6 +110,10 @@ class ApiServices {
       await storage.write(key: "token", value: output1["token"]);
       await storage.write(key: "username", value: output2["first_name"]);
       await storage.write(key: "lastname", value: output2["last_name"]);
+      await storage.write(
+          key: "user",
+          value: json.encode(LoginUser.fromJson(output).results.data.toJson()));
+
       return ApiResponse<LoginUser>(
           data: LoginUser.fromJson(output), resposeCode: response.statusCode);
     }
@@ -142,14 +147,68 @@ class ApiServices {
   Future<ApiResponse> update(Map data) async {
     // final url = Uri.parse(baseUrl + "/login");
     final url = Uri.parse("http://59.144.161.72:3500/users/update");
+    String authToken = await storage.read(key: "token");
+    final headers = {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer $authToken',
+    };
+    final jsonBody = jsonEncode(data);
+
+    final response = await http.post(url, headers: headers, body: jsonBody);
+
+    log(response.statusCode.toString());
+    log(response.body);
+    log(jsonBody);
+    if (response.statusCode == 200) {
+      await storage.write(key: "user", value: json.encode(data));
+      return ApiResponse(resposeCode: 200, data: "Update ");
+    }
+    return ApiResponse(
+        resposeCode: response.statusCode,
+        error: true,
+        errorMessage: "An error occurred");
+  }
+  //// Change Password
+
+  Future<ApiResponse> changePass(Map data) async {
+    // final url = Uri.parse(baseUrl + "/login");
+    final url = Uri.parse("http://59.144.161.72:3500/users/update-password");
     final headers = {'Content-Type': 'application/json'};
     final jsonBody = jsonEncode(data);
     final response = await http.post(url, headers: headers, body: jsonBody);
     log(response.statusCode.toString());
     log(response.body);
     log(jsonBody);
+
     if (response.statusCode == 200) {
-      return ApiResponse(resposeCode: 200, data: "Email sent to ");
+      return ApiResponse(resposeCode: 200, data: "Password Changed ");
+    }
+    return ApiResponse(
+        resposeCode: response.statusCode,
+        error: true,
+        errorMessage: "An error occurred");
+  }
+
+  /// Create User Profile
+
+  Future<ApiResponse> createuser(Map data) async {
+    // final url = Uri.parse(baseUrl + "/login");
+    final url = Uri.parse("http://59.144.161.72:3500/users/update");
+    String authToken = await storage.read(key: "token");
+    final headers = {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer $authToken',
+    };
+    final jsonBody = jsonEncode(data);
+
+    final response = await http.post(url, headers: headers, body: jsonBody);
+
+    log(response.statusCode.toString());
+    log(response.body);
+    log(jsonBody);
+    if (response.statusCode == 200) {
+      await storage.write(key: "user", value: json.encode(data));
+      return ApiResponse(resposeCode: 200, data: "create ");
     }
     return ApiResponse(
         resposeCode: response.statusCode,

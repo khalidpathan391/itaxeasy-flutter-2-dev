@@ -1,12 +1,16 @@
+import 'dart:convert';
+import 'dart:developer';
 import 'dart:io';
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:getwidget/Components/button/gf_button.dart';
 import 'package:getwidget/shape/gf_button_shape.dart';
 import 'package:gst_app/Services/api_services.dart';
 import 'package:image_picker/image_picker.dart';
 
+import '../../Models/LoginUser.dart';
 import '../Business_Profile/BusinessProfile.dart';
 import '../Business_Profile/Modification.dart';
 
@@ -19,6 +23,33 @@ class ProfilePage extends StatefulWidget {
 
 class MapScreenState extends State<ProfilePage>
     with SingleTickerProviderStateMixin {
+  FlutterSecureStorage storage = const FlutterSecureStorage();
+  Data user;
+
+  getuserLocal() async {
+    String data = await storage.read(key: "user");
+    user = Data.fromJson(json.decode(data));
+    log(user.toJson().toString());
+    setState(() {
+      nameCount.text = user.firstName;
+      lastName.text = user.lastName;
+      pan.text = user.pan;
+      emailCount.text = user.email;
+      phoneCount.text = user.phone;
+      pinCode.text = user.pincode;
+      //statecount.text = user.state;
+      aadharcount.text = user.aadhar;
+    });
+  }
+
+  TextEditingController nameCount = TextEditingController();
+  TextEditingController lastName = TextEditingController();
+  TextEditingController pan = TextEditingController();
+  TextEditingController emailCount = TextEditingController();
+  TextEditingController phoneCount = TextEditingController();
+  TextEditingController pinCode = TextEditingController();
+  TextEditingController statecount = new TextEditingController();
+  TextEditingController aadharcount = new TextEditingController();
   // var _formKey = GlobalKey<FormState>();
   ApiServices apiServices = ApiServices();
 
@@ -84,6 +115,7 @@ class MapScreenState extends State<ProfilePage>
 
   @override
   void initState() {
+    getuserLocal();
     // TODO: implement initState
     super.initState();
   }
@@ -237,18 +269,25 @@ class MapScreenState extends State<ProfilePage>
                               left: 25.0, right: 25.0, top: 25.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
-                            children: <Widget>[
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                mainAxisSize: MainAxisSize.min,
-                                children: const <Widget>[
-                                  Text(
-                                    'Name',
-                                    style: TextStyle(
-                                        fontSize: 16.0,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ],
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: const <Widget>[
+                              Expanded(
+                                child: Text(
+                                  'First Name',
+                                  style: TextStyle(
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                flex: 2,
+                              ),
+                              Expanded(
+                                child: Text(
+                                  'Last Name',
+                                  style: TextStyle(
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                flex: 2,
                               ),
                             ],
                           )),
@@ -257,15 +296,28 @@ class MapScreenState extends State<ProfilePage>
                               left: 25.0, right: 25.0, top: 2.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.start,
                             children: <Widget>[
                               Flexible(
-                                child: TextField(
-                                  decoration: const InputDecoration(
-                                    hintText: "Enter Your Name",
+                                child: Padding(
+                                  padding: const EdgeInsets.only(right: 10.0),
+                                  child: TextField(
+                                    controller: nameCount,
+                                    decoration: const InputDecoration(
+                                        hintText: "Enter First Name"),
+                                    enabled: !_status,
                                   ),
-                                  enabled: !_status,
-                                  autofocus: !_status,
                                 ),
+                                flex: 2,
+                              ),
+                              Flexible(
+                                child: TextField(
+                                  controller: lastName,
+                                  decoration: const InputDecoration(
+                                      hintText: "Enter last Name"),
+                                  enabled: !_status,
+                                ),
+                                flex: 2,
                               ),
                             ],
                           )),
@@ -298,6 +350,7 @@ class MapScreenState extends State<ProfilePage>
                             children: <Widget>[
                               Flexible(
                                 child: TextField(
+                                  controller: pan,
                                   decoration: const InputDecoration(
                                     hintText: "Enter PAN Number",
                                   ),
@@ -335,6 +388,7 @@ class MapScreenState extends State<ProfilePage>
                             children: <Widget>[
                               Flexible(
                                 child: TextField(
+                                  controller: emailCount,
                                   decoration: const InputDecoration(
                                       hintText: "Enter Email ID"),
                                   enabled: !_status,
@@ -370,6 +424,7 @@ class MapScreenState extends State<ProfilePage>
                             children: <Widget>[
                               Flexible(
                                 child: TextField(
+                                  controller: phoneCount,
                                   decoration: const InputDecoration(
                                       hintText: "Enter Mobile Number"),
                                   enabled: !_status,
@@ -415,6 +470,7 @@ class MapScreenState extends State<ProfilePage>
                                 child: Padding(
                                   padding: const EdgeInsets.only(right: 10.0),
                                   child: TextField(
+                                    controller: pinCode,
                                     decoration: const InputDecoration(
                                         hintText: "Enter Pin Code"),
                                     enabled: !_status,
@@ -424,6 +480,7 @@ class MapScreenState extends State<ProfilePage>
                               ),
                               Flexible(
                                 child: TextField(
+                                  controller: statecount,
                                   decoration: const InputDecoration(
                                       hintText: "Enter State"),
                                   enabled: !_status,
@@ -460,6 +517,7 @@ class MapScreenState extends State<ProfilePage>
                             children: <Widget>[
                               Flexible(
                                 child: TextField(
+                                  controller: aadharcount,
                                   decoration: const InputDecoration(
                                     hintText: "Enter Aadhaar Number",
                                   ),
@@ -528,6 +586,13 @@ class MapScreenState extends State<ProfilePage>
                 textColor: Colors.white,
                 color: Colors.green,
                 onPressed: () async {
+                  Map prm = {
+                    "pan": pan.text,
+                    "aadhar": aadharcount.text,
+                  };
+
+                  final result = await apiServices.createuser(prm);
+                  setState(() {});
                   if (_image != null) {
                     final result =
                         await apiServices.postFile("notes/", _image.path);

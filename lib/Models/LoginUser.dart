@@ -61,6 +61,8 @@ class Data {
     this.isverified,
     this.phone,
     this.pincode,
+    this.pan,
+    this.aadhar,
   });
 
   int id;
@@ -71,6 +73,8 @@ class Data {
 
   String phone;
   String pincode;
+  String pan;
+  String aadhar;
 
   factory Data.fromJson(Map<String, dynamic> json) => Data(
         id: json["id"],
@@ -80,6 +84,8 @@ class Data {
         isverified: json["isverified"],
         phone: json["phone"],
         pincode: json["pincode"],
+        pan: json["pan"],
+        aadhar: json["aadhar"],
       );
 
   Map<String, dynamic> toJson() => {
@@ -90,5 +96,7 @@ class Data {
         "isverified": isverified,
         "phone": phone,
         "pincode": pincode,
+        "pan": pan,
+        "aadhar": aadhar,
       };
 }

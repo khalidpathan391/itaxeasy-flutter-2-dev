@@ -1,16 +1,20 @@
+import 'dart:developer';
+
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_verification_code/flutter_verification_code.dart';
 import 'package:get/get.dart';
 import 'package:getwidget/components/button/gf_button.dart';
+import 'package:gst_app/Services/api_services.dart';
 import 'package:gst_app/Views/Calculator/ifsc_calcii/Theme.dart';
 import 'package:gst_app/Views/Login_And_Register/login_page.dart';
 import 'package:gst_app/Views/Theme/colors.dart';
 
 class OTP_Verify extends StatefulWidget {
-  const OTP_Verify({Key key, this.otp}) : super(key: key);
+  const OTP_Verify({Key key, this.otp, this.email}) : super(key: key);
   final String otp;
+  final String email;
 
   @override
   _OTP_VerifyState createState() => _OTP_VerifyState();
@@ -20,6 +24,8 @@ class _OTP_VerifyState extends State<OTP_Verify> {
   TextEditingController passwordCont = TextEditingController();
   String _code = '';
   bool passwordVisible = false;
+  bool isLoading = false;
+  ApiServices apiServices = ApiServices();
 
   void togglePassword() {
     setState(() {
@@ -191,6 +197,7 @@ class _OTP_VerifyState extends State<OTP_Verify> {
                                                               .visibility_off_outlined),
                                                       onPressed: togglePassword,
                                                     ),
+
                                                     // border:
                                                     //     const OutlineInputBorder(
                                                     //   borderSide:
@@ -202,8 +209,26 @@ class _OTP_VerifyState extends State<OTP_Verify> {
                                             ),
                                             actions: [
                                               GFButton(
-                                                onPressed: () {
+                                                onPressed: () async {
+                                                  setState(() {
+                                                    isLoading = true;
+                                                  });
+                                                  Map prm = {
+                                                    "password": passwordCont
+                                                        .text
+                                                        .toString(),
+                                                    "email": widget.email
+                                                  };
+
+                                                  final result =
+                                                      await apiServices
+                                                          .changePass(prm);
+                                                  setState(() {
+                                                    isLoading = false;
+                                                  });
+
                                                   Get.to(LoginPage());
+                                                  log(prm.toString());
                                                 },
                                                 color: Colors.blue.shade900,
                                                 text: "OK",
