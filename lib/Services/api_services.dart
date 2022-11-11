@@ -189,6 +189,31 @@ class ApiServices {
         errorMessage: "An error occurred");
   }
 
+  Future<ApiResponse> getuserProfile() async {
+    // final url = Uri.parse(baseUrl + "/login");
+    String authToken = await storage.read(key: "token");
+    final headers = {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer $authToken',
+    };
+    final url = Uri.parse("http://59.144.161.72:3500/users/getProfile");
+
+    final response = await http.get(
+      url,
+      headers: headers,
+    );
+    log(response.statusCode.toString());
+    log(response.body);
+
+    if (response.statusCode == 200) {
+      return ApiResponse(resposeCode: 200, data: json.encode(response.body));
+    }
+    return ApiResponse(
+        resposeCode: response.statusCode,
+        error: true,
+        errorMessage: "An error occurred");
+  }
+
   /// Create User Profile
 
   Future<ApiResponse> createuser(Map data) async {

@@ -33,12 +33,14 @@ class MapScreenState extends State<ProfilePage>
     setState(() {
       nameCount.text = user.firstName;
       lastName.text = user.lastName;
-      pan.text = user.pan;
       emailCount.text = user.email;
       phoneCount.text = user.phone;
       pinCode.text = user.pincode;
-      //statecount.text = user.state;
-      aadharcount.text = user.aadhar;
+    });
+    apiServices.getuserProfile().then((value) {
+      if (value.resposeCode == 200) {
+        log(value.data.toString());
+      }
     });
   }
 
