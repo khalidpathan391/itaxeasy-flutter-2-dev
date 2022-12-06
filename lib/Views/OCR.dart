@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:pdf/pdf.dart';
@@ -81,9 +82,66 @@ class _OCRSystemState extends State<OCRSystem> {
         body: SingleChildScrollView(
           child: Column(
             children: [
+              Container(
+                height: 230,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Colors.blue.shade800,
+                    Colors.blue.shade900,
+                  ],
+                )),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20, top: 5),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Icon(
+                          Icons.chevron_left_rounded,
+                          color: Colors.white,
+                          size: 35,
+                        ),
+                        // child: Container(
+                        //   height: 45,
+                        //   width: 45,
+                        //   decoration: const BoxDecoration(
+                        //     color: Colors.white,
+                        //     borderRadius: BorderRadius.all(Radius.circular(20)),
+                        //   ),
+                        //   child: Icon(
+                        //     Icons.chevron_left_rounded,
+                        //     color: Colors.blue.shade900,
+                        //     size: 35,
+                        //   ),
+                        // ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 70, left: 20),
+                      child: Text(
+                        "OCR",
+                        overflow: TextOverflow.ellipsis,
+                        style: GoogleFonts.dmSans(
+                          fontSize: 40,
+                          letterSpacing: 3,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               Padding(
                 padding: const EdgeInsets.only(
-                    left: 20, right: 20, top: 20, bottom: 20),
+                    left: 20, right: 20, top: 10, bottom: 20),
                 child: SizedBox(
                   // height: 280,
                   width: double.infinity,
@@ -91,40 +149,50 @@ class _OCRSystemState extends State<OCRSystem> {
                     child: Center(
                       child: result != ""
                           ? Card(
+                              elevation: 5,
+                              color: Colors.grey.shade300,
                               child: Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 10, right: 10, top: 10),
-                              child: SizedBox(
-                                  width: double.infinity,
-                                  child: Text(
-                                    result,
-                                    textAlign: TextAlign.justify,
-                                  )),
-                            ))
-                          : const Card(
+                                padding: const EdgeInsets.only(
+                                    left: 10, right: 10, top: 10),
+                                child: SizedBox(
+                                    width: double.infinity,
+                                    child: Text(
+                                      result,
+                                      textAlign: TextAlign.justify,
+                                    )),
+                              ))
+                          : Card(
+                              elevation: 5,
+                              color: Colors.grey.shade300,
                               child: Padding(
-                              padding:
-                                  EdgeInsets.only(left: 10, right: 10, top: 10),
-                              child: SizedBox(
-                                  height: 100,
-                                  width: double.infinity,
-                                  child: Center(
-                                      child:
-                                          Text("Your Text Will appear here"))),
-                            )),
+                                padding: EdgeInsets.only(
+                                    left: 10, right: 10, top: 10),
+                                child: SizedBox(
+                                    height: 100,
+                                    width: double.infinity,
+                                    child: Center(
+                                        child: Text(
+                                      "Your Text Will appear here",
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ))),
+                              )),
                     ),
                   ),
                 ),
               ),
               InkWell(
+                //
                 onTap: () {
                   getImagefromGallery();
                 },
                 child: Container(
                   child: _image != null
-                      ? Image.file(_image, width: 200, height: 200)
-                      : const Icon(
+                      ? Image.file(_image, width: 300, height: 300)
+                      : Icon(
                           Icons.camera,
+                          color: Colors.blue.shade900,
                           size: 50,
                         ),
                 ),

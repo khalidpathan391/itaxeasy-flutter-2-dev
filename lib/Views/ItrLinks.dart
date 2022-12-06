@@ -40,19 +40,24 @@ class _ItrLinksUiState extends State<ItrLinksUi> {
                       onTap: () {
                         Navigator.pop(context);
                       },
-                      child: Container(
-                        height: 45,
-                        width: 45,
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                        ),
-                        child: const Icon(
-                          Icons.chevron_left_rounded,
-                          color: KColors.icon,
-                          size: 35,
-                        ),
+                      child: const Icon(
+                        Icons.chevron_left_rounded,
+                        color: Colors.white,
+                        size: 35,
                       ),
+                      // child: Container(
+                      //   height: 45,
+                      //   width: 45,
+                      //   decoration: const BoxDecoration(
+                      //     color: Colors.white,
+                      //     borderRadius: BorderRadius.all(Radius.circular(20)),
+                      //   ),
+                      //   child: const Icon(
+                      //     Icons.chevron_left_rounded,
+                      //     color: KColors.icon,
+                      //     size: 35,
+                      //   ),
+                      // ),
                     ),
                   ),
                   Expanded(

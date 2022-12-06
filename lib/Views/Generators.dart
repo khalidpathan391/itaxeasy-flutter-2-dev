@@ -287,13 +287,13 @@ class _GeneratorsState extends State<Generators> {
             Container(
               height: 230,
               width: double.infinity,
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                   gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-                  Color(0xFF655B96),
-                  Color(0xFFA644B7),
+                  Colors.blue.shade800,
+                  Colors.blue.shade900,
                 ],
               )),
               child: Column(
@@ -305,19 +305,24 @@ class _GeneratorsState extends State<Generators> {
                       onTap: () {
                         Navigator.pop(context);
                       },
-                      child: Container(
-                        height: 45,
-                        width: 45,
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                        ),
-                        child: const Icon(
-                          Icons.chevron_left_rounded,
-                          color: KColors.icon,
-                          size: 35,
-                        ),
+                      child: const Icon(
+                        Icons.chevron_left_rounded,
+                        color: Colors.white,
+                        size: 35,
                       ),
+                      // child: Container(
+                      //   height: 45,
+                      //   width: 45,
+                      //   decoration: const BoxDecoration(
+                      //     color: Colors.white,
+                      //     borderRadius: BorderRadius.all(Radius.circular(20)),
+                      //   ),
+                      //   child: const Icon(
+                      //     Icons.chevron_left_rounded,
+                      //     color: KColors.icon,
+                      //     size: 35,
+                      //   ),
+                      // ),
                     ),
                   ),
                   Expanded(
@@ -349,6 +354,7 @@ class _GeneratorsState extends State<Generators> {
   }
 
   Widget sectionCard(BuildContext context) {
+    double width = MediaQuery.of(context).size.width - 10;
     return Expanded(
       child: SingleChildScrollView(
         child: Padding(
@@ -359,339 +365,436 @@ class _GeneratorsState extends State<Generators> {
                 onTap: () {
                   multipleFilePicker();
                 },
-                child: Row(
-                  children: [
-                    Container(
-                      height: 72,
-                      width: 83,
-                      decoration: BoxDecoration(
-                          boxShadow: const [
-                            BoxShadow(color: Colors.grey, blurRadius: 6),
-                          ],
-                          border: Border.all(
-                            width: 1.5,
-                            color: const Color(0xffE3E9ED),
-                          ),
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15.0)),
-                      child: Center(
+                child: Container(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 80,
+                        width: 110,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.blue.shade900,
+                        ),
                         child: Container(
-                          height: 45,
-                          width: 45,
+                          width: 80,
+                          height: 70,
                           decoration: BoxDecoration(
-                            color: const Color(0xffE3E9ED),
-                            borderRadius: BorderRadius.circular(15.0),
+                            color: Colors.white70,
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey,
+                                  blurRadius: 8.0,
+                                  offset: Offset(3, 3))
+                            ],
+                            border: Border.all(
+                              color: Colors.grey,
+                              width: 2,
+                            ),
+                            borderRadius: BorderRadius.circular(15),
                           ),
-                          child: const Icon(
-                            Icons.filter_drama_rounded,
-                            color: KColors.icon,
-                            size: 30,
-                          ),
+                          child: Center(
+                              child: Card(
+                            color: Color.fromARGB(255, 210, 189, 214),
+                            elevation: 20,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.white60,
+                                        blurRadius: 8.0,
+                                        offset: Offset(5, 5))
+                                  ]),
+                              height: 80,
+                              width: 110,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.filter_drama_rounded,
+                                    color: Colors.blue.shade900,
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text("Select File")
+                                ],
+                              ),
+                            ),
+                          )),
                         ),
                       ),
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Expanded(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Select File",
-                            style: GoogleFonts.dmSans(
-                              fontSize: 25,
-                              letterSpacing: 2,
-                              fontWeight: FontWeight.normal,
-                              color: KColors.headline,
-                            ),
-                          ),
-                          Text(
-                            "Select any type of file you want to convert",
-                            overflow: TextOverflow.clip,
-                            style: GoogleFonts.dmSans(
-                              fontSize: 15,
-                              fontWeight: FontWeight.normal,
-                              color: KColors.subtitles,
-                            ),
-                          ),
-                        ],
+                      SizedBox(
+                        width: width * .05,
                       ),
-                    ),
-                  ],
+                      Container(
+                          width: 225,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Select File",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 25),
+                              ),
+                              Text(
+                                  "Select any  type of file you want to convert"),
+                            ],
+                          )),
+                    ],
+                  ),
                 ),
-              ),
-              SizedBox(
-                height: 25,
               ),
               GestureDetector(
                 onTap: () {
                   callMethod(1);
                 },
-                child: Row(
-                  children: [
-                    Container(
-                      height: 72,
-                      width: 83,
-                      decoration: BoxDecoration(
-                          boxShadow: const [
-                            BoxShadow(color: Colors.grey, blurRadius: 6),
-                          ],
-                          border: Border.all(
-                            width: 1.5,
-                            color: const Color(0xffE3E9ED),
-                          ),
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15.0)),
-                      child: Center(
+                child: Container(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 80,
+                        width: 110,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.blue.shade900,
+                        ),
                         child: Container(
-                          height: 45,
-                          width: 45,
+                          width: 80,
+                          height: 70,
                           decoration: BoxDecoration(
-                            color: const Color(0xffE3E9ED),
-                            borderRadius: BorderRadius.circular(15.0),
+                            color: Colors.white70,
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey,
+                                  blurRadius: 8.0,
+                                  offset: Offset(3, 3))
+                            ],
+                            border: Border.all(
+                              color: Colors.grey,
+                              width: 2,
+                            ),
+                            borderRadius: BorderRadius.circular(15),
                           ),
-                          child: const Icon(
-                            Icons.storage_rounded,
-                            color: KColors.icon,
-                            size: 30,
-                          ),
+                          child: Center(
+                              child: Card(
+                            color: Color.fromARGB(255, 210, 189, 214),
+                            elevation: 20,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.white60,
+                                        blurRadius: 8.0,
+                                        offset: Offset(5, 5))
+                                  ]),
+                              height: 80,
+                              width: 110,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.storage_rounded,
+                                    color: Colors.blue.shade900,
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text("Merge PDF")
+                                ],
+                              ),
+                            ),
+                          )),
                         ),
                       ),
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Expanded(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Merge Multiple PDF",
-                            overflow: TextOverflow.clip,
-                            style: GoogleFonts.dmSans(
-                              fontSize: 25,
-                              letterSpacing: 2,
-                              fontWeight: FontWeight.normal,
-                              color: KColors.headline,
-                            ),
-                          ),
-                          Text(
-                            "Select file and Merge Your PDF's",
-                            overflow: TextOverflow.clip,
-                            style: GoogleFonts.dmSans(
-                              fontSize: 15,
-                              fontWeight: FontWeight.normal,
-                              color: KColors.subtitles,
-                            ),
-                          ),
-                        ],
+                      SizedBox(
+                        width: width * .05,
                       ),
-                    ),
-                  ],
+                      Container(
+                          width: 225,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Merge Multiple PDF",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 25),
+                              ),
+                              Text("Select file and Merge Your PDF's"),
+                            ],
+                          )),
+                    ],
+                  ),
                 ),
-              ),
-              SizedBox(
-                height: 25,
               ),
               GestureDetector(
                 onTap: () {
                   singleFilePicker(1);
                 },
-                child: Row(
-                  children: [
-                    Container(
-                      height: 72,
-                      width: 83,
-                      decoration: BoxDecoration(
-                          boxShadow: const [
-                            BoxShadow(color: Colors.grey, blurRadius: 6),
-                          ],
-                          border: Border.all(
-                            width: 1.5,
-                            color: const Color(0xffE3E9ED),
-                          ),
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15.0)),
-                      child: Center(
+                child: Container(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 80,
+                        width: 110,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.blue.shade900,
+                        ),
                         child: Container(
-                          height: 45,
-                          width: 45,
+                          width: 80,
+                          height: 70,
                           decoration: BoxDecoration(
-                            color: const Color(0xffE3E9ED),
-                            borderRadius: BorderRadius.circular(15.0),
+                            color: Colors.white70,
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey,
+                                  blurRadius: 8.0,
+                                  offset: Offset(3, 3))
+                            ],
+                            border: Border.all(
+                              color: Colors.grey,
+                              width: 2,
+                            ),
+                            borderRadius: BorderRadius.circular(15),
                           ),
-                          child: const Icon(
-                            Icons.local_library_rounded,
-                            color: KColors.icon,
-                            size: 30,
-                          ),
+                          child: Center(
+                              child: Card(
+                            color: Color.fromARGB(255, 210, 189, 214),
+                            elevation: 20,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.white60,
+                                        blurRadius: 8.0,
+                                        offset: Offset(5, 5))
+                                  ]),
+                              height: 80,
+                              width: 110,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.local_library_outlined,
+                                    color: Colors.blue.shade900,
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text("PDF to Image")
+                                ],
+                              ),
+                            ),
+                          )),
                         ),
                       ),
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "PDF To Image",
-                          style: GoogleFonts.dmSans(
-                            fontSize: 25,
-                            letterSpacing: 2,
-                            fontWeight: FontWeight.normal,
-                            color: KColors.headline,
+                      SizedBox(
+                        width: width * .05,
+                      ),
+                      Container(
+                          width: 225,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
                           ),
-                        ),
-                        Text(
-                          "Create Images from PDF",
-                          style: GoogleFonts.dmSans(
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                            color: KColors.subtitles,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "PDF to Image",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 25),
+                              ),
+                              Text("Create Images from PDF"),
+                            ],
+                          )),
+                    ],
+                  ),
                 ),
-              ),
-              SizedBox(
-                height: 25,
               ),
               GestureDetector(
                 onTap: () {
                   singleFilePicker(2);
                 },
-                child: Row(
-                  children: [
-                    Container(
-                      height: 72,
-                      width: 83,
-                      decoration: BoxDecoration(
-                          boxShadow: const [
-                            BoxShadow(color: Colors.grey, blurRadius: 6),
-                          ],
-                          border: Border.all(
-                            width: 1.5,
-                            color: const Color(0xffE3E9ED),
-                          ),
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15.0)),
-                      child: Center(
+                child: Container(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 80,
+                        width: 110,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.blue.shade900,
+                        ),
                         child: Container(
-                          height: 45,
-                          width: 45,
+                          width: 80,
+                          height: 70,
                           decoration: BoxDecoration(
-                            color: const Color(0xffE3E9ED),
-                            borderRadius: BorderRadius.circular(15.0),
+                            color: Colors.white70,
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey,
+                                  blurRadius: 8.0,
+                                  offset: Offset(3, 3))
+                            ],
+                            border: Border.all(
+                              color: Colors.grey,
+                              width: 2,
+                            ),
+                            borderRadius: BorderRadius.circular(15),
                           ),
-                          child: const Icon(
-                            Icons.webhook_rounded,
-                            color: KColors.icon,
-                            size: 30,
-                          ),
+                          child: Center(
+                              child: Card(
+                            color: Color.fromARGB(255, 210, 189, 214),
+                            elevation: 20,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.white60,
+                                        blurRadius: 8.0,
+                                        offset: Offset(5, 5))
+                                  ]),
+                              height: 80,
+                              width: 110,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.webhook_rounded,
+                                    color: Colors.blue.shade900,
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text("File Size")
+                                ],
+                              ),
+                            ),
+                          )),
                         ),
                       ),
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "File Size",
-                          style: GoogleFonts.dmSans(
-                            fontSize: 25,
-                            letterSpacing: 2,
-                            fontWeight: FontWeight.normal,
-                            color: KColors.headline,
+                      SizedBox(
+                        width: width * .05,
+                      ),
+                      Container(
+                          width: 225,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
                           ),
-                        ),
-                        Text(
-                          "Get Size of Any File",
-                          style: GoogleFonts.dmSans(
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                            color: KColors.subtitles,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "File Size",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 25),
+                              ),
+                              Text("Get Size of Any File"),
+                            ],
+                          )),
+                    ],
+                  ),
                 ),
-              ),
-              SizedBox(
-                height: 25,
               ),
               GestureDetector(
                 onTap: () {
                   clear();
                 },
-                child: Row(
-                  children: [
-                    Container(
-                      height: 72,
-                      width: 83,
-                      decoration: BoxDecoration(
-                          boxShadow: const [
-                            BoxShadow(color: Colors.grey, blurRadius: 6),
-                          ],
-                          border: Border.all(
-                            width: 1.5,
-                            color: const Color(0xffE3E9ED),
-                          ),
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15.0)),
-                      child: Center(
+                child: Container(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 80,
+                        width: 110,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.blue.shade900,
+                        ),
                         child: Container(
-                          height: 45,
-                          width: 45,
+                          width: 80,
+                          height: 70,
                           decoration: BoxDecoration(
-                            color: const Color(0xffE3E9ED),
-                            borderRadius: BorderRadius.circular(15.0),
+                            color: Colors.white70,
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey,
+                                  blurRadius: 8.0,
+                                  offset: Offset(3, 3))
+                            ],
+                            border: Border.all(
+                              color: Colors.grey,
+                              width: 2,
+                            ),
+                            borderRadius: BorderRadius.circular(15),
                           ),
-                          child: const Icon(
-                            Icons.webhook_rounded,
-                            color: KColors.icon,
-                            size: 30,
-                          ),
+                          child: Center(
+                              child: Card(
+                            color: Color.fromARGB(255, 210, 189, 214),
+                            elevation: 20,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.white60,
+                                        blurRadius: 8.0,
+                                        offset: Offset(5, 5))
+                                  ]),
+                              height: 80,
+                              width: 110,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.clear,
+                                    color: Colors.blue.shade900,
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text("Clear")
+                                ],
+                              ),
+                            ),
+                          )),
                         ),
                       ),
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Clear",
-                          style: GoogleFonts.dmSans(
-                            fontSize: 25,
-                            letterSpacing: 2,
-                            fontWeight: FontWeight.normal,
-                            color: KColors.headline,
+                      SizedBox(
+                        width: width * .05,
+                      ),
+                      Container(
+                          width: 225,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
                           ),
-                        ),
-                        Text(
-                          "Clear the build",
-                          style: GoogleFonts.dmSans(
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                            color: KColors.subtitles,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Clear",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 25),
+                              ),
+                              Text("Clear the build"),
+                            ],
+                          )),
+                    ],
+                  ),
                 ),
               ),
             ],

@@ -38,25 +38,30 @@ class _IBIZState extends State<IBIZ> {
                       onTap: () {
                         Navigator.pop(context);
                       },
-                      child: Container(
-                        height: 45,
-                        width: 45,
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                        ),
-                        child: Icon(
-                          Icons.chevron_left_rounded,
-                          color: Colors.blue.shade900,
-                          size: 35,
-                        ),
+                      child: Icon(
+                        Icons.chevron_left_rounded,
+                        color: Colors.white,
+                        size: 35,
                       ),
+                      // child: Container(
+                      //   height: 45,
+                      //   width: 45,
+                      //   decoration: const BoxDecoration(
+                      //     color: Colors.white,
+                      //     borderRadius: BorderRadius.all(Radius.circular(20)),
+                      //   ),
+                      //   child: Icon(
+                      //     Icons.chevron_left_rounded,
+                      //     color: Colors.blue.shade900,
+                      //     size: 35,
+                      //   ),
+                      // ),
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 70, left: 20),
                     child: Text(
-                      "Ibiz",
+                      "Bill-Vill",
                       overflow: TextOverflow.ellipsis,
                       style: GoogleFonts.dmSans(
                         fontSize: 40,

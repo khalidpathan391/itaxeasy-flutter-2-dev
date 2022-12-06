@@ -38,20 +38,25 @@ class _EasyLinksState extends State<EasyLinks> {
                           onTap: () {
                             Navigator.pop(context);
                           },
-                          child: Container(
-                            height: 45,
-                            width: 45,
-                            decoration: BoxDecoration(
-                              color: Colors.blue.shade900,
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20)),
-                            ),
-                            child: const Icon(
-                              Icons.chevron_left_rounded,
-                              color: Colors.white,
-                              size: 35,
-                            ),
+                          child: Icon(
+                            Icons.chevron_left_rounded,
+                            color: Colors.blue.shade900,
+                            size: 35,
                           ),
+                          // child: Container(
+                          //   height: 45,
+                          //   width: 45,
+                          //   decoration: BoxDecoration(
+                          //     color: Colors.blue.shade900,
+                          //     borderRadius:
+                          //         BorderRadius.all(Radius.circular(20)),
+                          //   ),
+                          //   child: const Icon(
+                          //     Icons.chevron_left_rounded,
+                          //     color: Colors.white,
+                          //     size: 35,
+                          //   ),
+                          // ),
                         ),
                       ),
                       Padding(
@@ -402,105 +407,97 @@ class _EasyLinksState extends State<EasyLinks> {
                   ],
                 ),
               ),
-              SizedBox(
-                height: 25,
-              ),
               GestureDetector(
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => ItrLinksUi()));
                 },
-                child: Row(
-                  children: [
-                    Container(
-                      height: 80,
-                      width: 110,
+                child: Row(children: [
+                  Container(
+                    height: 80,
+                    width: 110,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      // color: Colors.blue,
+                    ),
+                    child: Container(
+                      width: 80,
+                      height: 70,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        // color: Colors.blue,
-                      ),
-                      child: Container(
-                        width: 80,
-                        height: 70,
-                        decoration: BoxDecoration(
-                          color: Colors.white70,
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.grey,
-                                blurRadius: 8.0,
-                                offset: Offset(3, 3))
-                          ],
-                          border: Border.all(
-                            color: Colors.grey,
-                            width: 2,
-                          ),
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        child: Center(
-                            child: Card(
-                          color: Color.fromARGB(255, 210, 189, 214),
-                          elevation: 20,
-                          child: Container(
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                boxShadow: [
-                                  BoxShadow(
-                                      color: Colors.white60,
-                                      blurRadius: 8.0,
-                                      offset: Offset(5, 5))
-                                ]),
-                            height: 80,
-                            width: 110,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  Icons.analytics_rounded,
-                                  color: Colors.blue.shade900,
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Text("Easy ITR")
-                              ],
-                            ),
-                          ),
-                        )),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Expanded(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Easy ITR",
-                            style: GoogleFonts.dmSans(
-                              fontSize: 25,
-                              letterSpacing: 2,
-                              fontWeight: FontWeight.normal,
-                              color: KColors.headline,
-                            ),
-                          ),
-                          Text(
-                            "Search for your ITR and other services using our easy ITR search tool",
-                            style: GoogleFonts.dmSans(
-                              fontSize: 15,
-                              fontWeight: FontWeight.normal,
-                              color: KColors.subtitles,
-                            ),
-                          ),
+                        color: Colors.white70,
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey,
+                              blurRadius: 8.0,
+                              offset: Offset(3, 3))
                         ],
+                        border: Border.all(
+                          color: Colors.grey,
+                          width: 2,
+                        ),
+                        borderRadius: BorderRadius.circular(15),
                       ),
+                      child: Center(
+                          child: Card(
+                        color: Color.fromARGB(255, 210, 189, 214),
+                        elevation: 20,
+                        child: Container(
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.white60,
+                                    blurRadius: 8.0,
+                                    offset: Offset(5, 5))
+                              ]),
+                          height: 80,
+                          width: 110,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.analytics_rounded,
+                                color: Colors.blue.shade900,
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text("Easy ITR")
+                            ],
+                          ),
+                        ),
+                      )),
                     ),
-                  ],
-                ),
-              ),
-              const SizedBox(
-                height: 25,
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Easy ITR",
+                          style: GoogleFonts.dmSans(
+                            fontSize: 25,
+                            letterSpacing: 2,
+                            fontWeight: FontWeight.normal,
+                            color: KColors.headline,
+                          ),
+                        ),
+                        Text(
+                          "Search for your ITR and other services using our easy ITR search tool",
+                          style: GoogleFonts.dmSans(
+                            fontSize: 15,
+                            fontWeight: FontWeight.normal,
+                            color: KColors.subtitles,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ]),
               ),
               GestureDetector(
                 onTap: () {
@@ -597,9 +594,6 @@ class _EasyLinksState extends State<EasyLinks> {
                   ],
                 ),
               ),
-              SizedBox(
-                height: 25,
-              ),
               GestureDetector(
                 onTap: () {
                   Navigator.push(context,
@@ -694,9 +688,6 @@ class _EasyLinksState extends State<EasyLinks> {
                     ),
                   ],
                 ),
-              ),
-              SizedBox(
-                height: 25,
               ),
               GestureDetector(
                 onTap: () {

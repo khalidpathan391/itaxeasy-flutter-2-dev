@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:gst_app/Views/Bottom_Nav_Bar/MainPage.dart';
 import 'package:gst_app/Views/splash_screen.dart';
 import 'package:shake/shake.dart';
 
@@ -109,7 +110,8 @@ class _MyAppState extends State<MyApp> {
           primarySwatch: Colors.teal,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: const SplashScreen()
+        // home: const SplashScreen()
+        home: const DetailsScreen()
         // routes: {
         //   '/login': (context) => Login(),
         //   '/mainpage': (context) => Navbar(),

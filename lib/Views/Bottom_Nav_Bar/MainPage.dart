@@ -24,13 +24,6 @@ import '../TradingAccount.dart';
 import '../Vouchers.dart';
 import '../EasyServices.dart';
 
-class SalesData {
-  SalesData(this.year, this.sales);
-
-  final String year;
-  final double sales;
-}
-
 class DetailsScreen extends StatefulWidget {
   const DetailsScreen({Key key}) : super(key: key);
 
@@ -244,11 +237,15 @@ class _DetailsScreenState extends State<DetailsScreen>
                   ],
                 ),
                 const SizedBox(
-                  height: 30,
+                  height: 20,
                 ),
                 Row(
                   children: [
-                    Image.asset("assets/images/Mask Group.png"),
+                    CircleAvatar(
+                      radius: 40,
+                      backgroundImage: AssetImage("assets/images/mypic.jpeg"),
+                    ),
+                    // Image.asset("assets/images/mypic.jpeg"),
                     const SizedBox(
                       width: 20,
                     ),
@@ -259,9 +256,17 @@ class _DetailsScreenState extends State<DetailsScreen>
                         Text(
                           "Welcome Back",
                           style: GoogleFonts.dmSans(
-                              fontSize: 16,
+                              fontSize: 20,
                               fontWeight: FontWeight.normal,
                               color: Colors.blue.shade900),
+                        ),
+                        Text(
+                          "Khalid",
+                          style: GoogleFonts.dmSans(
+                            fontSize: 25,
+                            color: Colors.blue.shade900,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                         Text(
                           name.capitalize ?? "",
@@ -559,7 +564,7 @@ class _DetailsScreenState extends State<DetailsScreen>
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         childAspectRatio: 1.4,
-        crossAxisSpacing: 10,
+        crossAxisSpacing: 90,
         mainAxisSpacing: 10,
       ),
       shrinkWrap: true,
@@ -574,51 +579,7 @@ class _DetailsScreenState extends State<DetailsScreen>
           },
           child: Transform.scale(
             scale: _scale,
-            child:
-                // Container(
-                //   decoration: BoxDecoration(
-                //       border: Border.all(
-                //         width: 1.5,
-                //         color: const Color(0xffE3E9ED),
-                //       ),
-                //       color: Colors.white,
-                //       borderRadius: BorderRadius.circular(15.0)),
-                //   child: Column(
-                //     mainAxisAlignment: MainAxisAlignment.center,
-                //     children: [
-                //       Container(
-                //         height: 55,
-                //         width: 55,
-                //         decoration: BoxDecoration(
-                //           color: Colors.white70,
-
-                //   border: Border.all(
-                //     color: Colors.grey,
-                //     width: 2,
-                //   ),
-                //           borderRadius: BorderRadius.circular(15.0),
-                //         ),
-                //         child: const Icon(
-                //           Icons.description_outlined,
-                //           color: KColors.icon,
-                //           size: 30,
-                //         ),
-                //       ),
-                //       const SizedBox(
-                //         height: 8,
-                //       ),
-                //       Text(
-                //         "Easy Tax",
-                //         style: GoogleFonts.dmSans(
-                //           fontSize: 17,
-                //           fontWeight: FontWeight.bold,
-                //           color: const Color(0xFF000000),
-                //         ),
-                //       ),
-                //     ],
-                //   ),
-                // ),
-                Container(
+            child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
               ),
@@ -629,7 +590,7 @@ class _DetailsScreenState extends State<DetailsScreen>
                     BoxShadow(
                         color: Colors.grey,
                         blurRadius: 8.0,
-                        offset: Offset(3, 3))
+                        offset: Offset(2, 2))
                   ],
                   border: Border.all(
                     color: Colors.grey,
@@ -650,14 +611,13 @@ class _DetailsScreenState extends State<DetailsScreen>
                               blurRadius: 8.0,
                               offset: Offset(2, 2))
                         ]),
-                    height: 100,
-                    width: 150,
+                    height: 140,
+                    width: 170,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                          height: 55,
-                          width: 55,
+                          //
                           decoration: BoxDecoration(
                             // color: Colors.white70,
                             // border: Border.all(
@@ -672,13 +632,13 @@ class _DetailsScreenState extends State<DetailsScreen>
                             size: 30,
                           ),
                         ),
-                        const SizedBox(
+                        SizedBox(
                           height: 8,
                         ),
                         Text(
                           "Easy Tax",
                           style: GoogleFonts.dmSans(
-                            fontSize: 17,
+                            fontSize: 13,
                             fontWeight: FontWeight.bold,
                             color: const Color(0xFF000000),
                           ),
@@ -732,14 +692,12 @@ class _DetailsScreenState extends State<DetailsScreen>
                               blurRadius: 8.0,
                               offset: Offset(2, 2))
                         ]),
-                    height: 100,
-                    width: 150,
+                    height: 130,
+                    width: 170,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                          height: 55,
-                          width: 55,
                           decoration: BoxDecoration(
                             // color: Colors.white70,
                             // border: Border.all(
@@ -760,7 +718,7 @@ class _DetailsScreenState extends State<DetailsScreen>
                         Text(
                           "Easy Services",
                           style: GoogleFonts.dmSans(
-                            fontSize: 17,
+                            fontSize: 13,
                             fontWeight: FontWeight.bold,
                             color: const Color(0xFF000000),
                           ),
@@ -773,6 +731,49 @@ class _DetailsScreenState extends State<DetailsScreen>
             ),
           ),
         ),
+        // Container(
+        //   decoration: BoxDecoration(
+        //       border: Border.all(
+        //         width: 1.5,
+        //         color: const Color(0xffE3E9ED),
+        //       ),
+        //       color: Colors.white,
+        //       borderRadius: BorderRadius.circular(15.0)),
+        //   child: Column(
+        //     mainAxisAlignment: MainAxisAlignment.center,
+        //     children: [
+        //       Container(
+        //         height: 55,
+        //         width: 55,
+        //         decoration: BoxDecoration(
+        //           color: Colors.white70,
+
+        //   border: Border.all(
+        //     color: Colors.grey,
+        //     width: 2,
+        //   ),
+        //           borderRadius: BorderRadius.circular(15.0),
+        //         ),
+        //         child: const Icon(
+        //           Icons.description_outlined,
+        //           color: KColors.icon,
+        //           size: 30,
+        //         ),
+        //       ),
+        //       const SizedBox(
+        //         height: 8,
+        //       ),
+        //       Text(
+        //         "Easy Tax",
+        //         style: GoogleFonts.dmSans(
+        //           fontSize: 13,
+        //           fontWeight: FontWeight.bold,
+        //           color: const Color(0xFF000000),
+        //         ),
+        //       ),
+        //     ],
+        //   ),
+        // ),
         GestureDetector(
           onTapDown: _tapDown2,
           onTapUp: _tapUp2,
@@ -814,14 +815,12 @@ class _DetailsScreenState extends State<DetailsScreen>
                               blurRadius: 8.0,
                               offset: Offset(2, 2))
                         ]),
-                    height: 100,
-                    width: 150,
+                    height: 130,
+                    width: 170,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                          height: 55,
-                          width: 55,
                           decoration: BoxDecoration(
                             // color: Colors.white70,
                             // border: Border.all(
@@ -842,7 +841,7 @@ class _DetailsScreenState extends State<DetailsScreen>
                         Text(
                           "Easy Links",
                           style: GoogleFonts.dmSans(
-                            fontSize: 17,
+                            fontSize: 13,
                             fontWeight: FontWeight.bold,
                             color: const Color(0xFF000000),
                           ),
@@ -896,14 +895,12 @@ class _DetailsScreenState extends State<DetailsScreen>
                               blurRadius: 8.0,
                               offset: Offset(2, 2))
                         ]),
-                    height: 100,
-                    width: 150,
+                    height: 130,
+                    width: 170,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                          height: 55,
-                          width: 55,
                           decoration: BoxDecoration(
                             // color: Colors.white70,
                             // border: Border.all(
@@ -924,7 +921,7 @@ class _DetailsScreenState extends State<DetailsScreen>
                         Text(
                           "Easy Gadgets",
                           style: GoogleFonts.dmSans(
-                            fontSize: 17,
+                            fontSize: 13,
                             fontWeight: FontWeight.bold,
                             color: const Color(0xFF000000),
                           ),
@@ -978,14 +975,12 @@ class _DetailsScreenState extends State<DetailsScreen>
                               blurRadius: 8.0,
                               offset: Offset(2, 2))
                         ]),
-                    height: 100,
-                    width: 150,
+                    height: 130,
+                    width: 170,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                          height: 55,
-                          width: 55,
                           decoration: BoxDecoration(
                             // color: Colors.white70,
                             // border: Border.all(
@@ -1004,9 +999,9 @@ class _DetailsScreenState extends State<DetailsScreen>
                           height: 8,
                         ),
                         Text(
-                          "Ibiz",
+                          "Bill-Vill",
                           style: GoogleFonts.dmSans(
-                            fontSize: 17,
+                            fontSize: 13,
                             fontWeight: FontWeight.bold,
                             color: const Color(0xFF000000),
                           ),
@@ -1060,14 +1055,12 @@ class _DetailsScreenState extends State<DetailsScreen>
                               blurRadius: 8.0,
                               offset: Offset(2, 2))
                         ]),
-                    height: 100,
-                    width: 150,
+                    height: 130,
+                    width: 170,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                          height: 55,
-                          width: 55,
                           decoration: BoxDecoration(
                             // color: Colors.white70,
                             // border: Border.all(
@@ -1088,7 +1081,7 @@ class _DetailsScreenState extends State<DetailsScreen>
                         Text(
                           "OCR",
                           style: GoogleFonts.dmSans(
-                            fontSize: 17,
+                            fontSize: 13,
                             fontWeight: FontWeight.bold,
                             color: const Color(0xFF000000),
                           ),
@@ -1242,7 +1235,7 @@ class _DetailsScreenState extends State<DetailsScreen>
         //           Text(
         //             "Voucher",
         //             style: GoogleFonts.dmSans(
-        //               fontSize: 17,
+        //               fontSize: 13,
         //               fontWeight: FontWeight.bold,
         //               color: const Color(0xFF000000),
         //             ),
@@ -1291,7 +1284,7 @@ class _DetailsScreenState extends State<DetailsScreen>
         //           Text(
         //             "Sale",
         //             style: GoogleFonts.dmSans(
-        //               fontSize: 17,
+        //               fontSize: 13,
         //               fontWeight: FontWeight.bold,
         //               color: const Color(0xFF000000),
         //             ),
@@ -1340,7 +1333,7 @@ class _DetailsScreenState extends State<DetailsScreen>
         //           Text(
         //             "Purchase",
         //             style: GoogleFonts.dmSans(
-        //               fontSize: 17,
+        //               fontSize: 13,
         //               fontWeight: FontWeight.bold,
         //               color: const Color(0xFF000000),
         //             ),
@@ -1388,7 +1381,7 @@ class _DetailsScreenState extends State<DetailsScreen>
         //           Text(
         //             "Expenses",
         //             style: GoogleFonts.dmSans(
-        //               fontSize: 17,
+        //               fontSize: 13,
         //               fontWeight: FontWeight.bold,
         //               color: const Color(0xFF000000),
         //             ),
@@ -1437,7 +1430,7 @@ class _DetailsScreenState extends State<DetailsScreen>
         //           Text(
         //             "IBIZ",
         //             style: GoogleFonts.dmSans(
-        //               fontSize: 17,
+        //               fontSize: 13,
         //               fontWeight: FontWeight.bold,
         //               color: const Color(0xFF000000),
         //             ),
@@ -1486,7 +1479,7 @@ class _DetailsScreenState extends State<DetailsScreen>
         //           Text(
         //             "Trading",
         //             style: GoogleFonts.dmSans(
-        //               fontSize: 17,
+        //               fontSize: 13,
         //               fontWeight: FontWeight.bold,
         //               color: const Color(0xFF000000),
         //             ),
@@ -1535,7 +1528,7 @@ class _DetailsScreenState extends State<DetailsScreen>
         //           Text(
         //             "OCR",
         //             style: GoogleFonts.dmSans(
-        //               fontSize: 17,
+        //               fontSize: 13,
         //               fontWeight: FontWeight.bold,
         //               color: const Color(0xFF000000),
         //             ),
@@ -1584,7 +1577,7 @@ class _DetailsScreenState extends State<DetailsScreen>
         //           Text(
         //             "Balance Sheet",
         //             style: GoogleFonts.dmSans(
-        //               fontSize: 17,
+        //               fontSize: 13,
         //               fontWeight: FontWeight.bold,
         //               color: const Color(0xFF000000),
         //             ),

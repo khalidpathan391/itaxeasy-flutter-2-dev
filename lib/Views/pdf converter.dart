@@ -4,6 +4,7 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:gst_app/Views/ImageToPdf.dart';
 import 'package:gst_app/Views/OCR.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -85,8 +86,10 @@ class _ConverterState extends State<Converter> {
                   padding: const EdgeInsets.only(left: 20, right: 20),
                   child: GestureDetector(
                     onTap: () {
-                      // Navigator.push(context,
-                      //     MaterialPageRoute(builder: (context) => OCRSystem()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ImageToPdf()));
                     },
                     child: Card(
                       shape: RoundedRectangleBorder(
@@ -195,8 +198,8 @@ class _ConverterState extends State<Converter> {
                   padding: const EdgeInsets.only(left: 20, right: 20),
                   child: GestureDetector(
                     onTap: () {
-                      // Navigator.push(context,
-                      //     MaterialPageRoute(builder: (context) => OCRSystem()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => OCRSystem()));
                     },
                     child: Card(
                       shape: RoundedRectangleBorder(

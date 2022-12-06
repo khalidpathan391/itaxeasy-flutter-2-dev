@@ -40,20 +40,25 @@ class _DashServiceState extends State<DashService> {
                           onTap: () {
                             Navigator.pop(context);
                           },
-                          child: Container(
-                            height: 45,
-                            width: 45,
-                            decoration: BoxDecoration(
-                              color: Colors.blue.shade900,
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20)),
-                            ),
-                            child: const Icon(
-                              Icons.chevron_left_rounded,
-                              color: Colors.white,
-                              size: 35,
-                            ),
+                          child: Icon(
+                            Icons.chevron_left_rounded,
+                            color: Colors.blue.shade900,
+                            size: 35,
                           ),
+                          // child: Container(
+                          //   height: 45,
+                          //   width: 45,
+                          //   decoration: BoxDecoration(
+                          //     color: Colors.blue.shade900,
+                          //     borderRadius:
+                          //         BorderRadius.all(Radius.circular(20)),
+                          //   ),
+                          //   child: const Icon(
+                          //     Icons.chevron_left_rounded,
+                          //     color: Colors.white,
+                          //     size: 35,
+                          //   ),
+                          // ),
                         ),
                       ),
                       Padding(
