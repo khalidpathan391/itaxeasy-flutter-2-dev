@@ -88,7 +88,7 @@ class _ITRState extends State<ITR> {
     );
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey.shade300,
       body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(

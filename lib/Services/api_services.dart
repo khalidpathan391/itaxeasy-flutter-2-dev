@@ -67,7 +67,7 @@ class ApiServices {
   // REGISTER API
   Future<ApiResponse<RegisterUser>> register(Register registers) async {
     // final url = Uri.parse(baseUrl + "/sign-up");
-    final url = Uri.parse("http://59.144.161.72:3500/users/sign-up");
+    final url = Uri.parse("https://api.itaxeasy.com/users/sign-up");
     final headers = {'Content-Type': 'application/json'};
     final jsonBody = jsonEncode(registers);
     final response = await http.post(url, headers: headers, body: jsonBody);
@@ -95,7 +95,7 @@ class ApiServices {
 
   Future<ApiResponse<LoginUser>> login(Login login) async {
     // final url = Uri.parse(baseUrl + "/login");
-    final url = Uri.parse("http://59.144.161.72:3500/users/login");
+    final url = Uri.parse("https://api.itaxeasy.com/users/login");
     final headers = {'Content-Type': 'application/json'};
     final jsonBody = jsonEncode(login);
     final response = await http.post(url, headers: headers, body: jsonBody);
@@ -127,7 +127,7 @@ class ApiServices {
 // Forget Password
   Future<ApiResponse> forget(Map data) async {
     // final url = Uri.parse(baseUrl + "/login");
-    final url = Uri.parse("http://59.144.161.72:3500/users/send-email");
+    final url = Uri.parse("https://api.itaxeasy.com/users/send-email");
     final headers = {'Content-Type': 'application/json'};
     final jsonBody = jsonEncode(data);
     final response = await http.post(url, headers: headers, body: jsonBody);
@@ -146,7 +146,7 @@ class ApiServices {
   //Update Profile
   Future<ApiResponse> update(Map data) async {
     // final url = Uri.parse(baseUrl + "/login");
-    final url = Uri.parse("http://59.144.161.72:3500/users/update");
+    final url = Uri.parse("https://api.itaxeasy.com/users/update");
     String authToken = await storage.read(key: "token");
     final headers = {
       'Content-Type': 'application/json',
@@ -172,7 +172,7 @@ class ApiServices {
 
   Future<ApiResponse> changePass(Map data) async {
     // final url = Uri.parse(baseUrl + "/login");
-    final url = Uri.parse("http://59.144.161.72:3500/users/update-password");
+    final url = Uri.parse("https://api.itaxeasy.com/users/update-password");
     final headers = {'Content-Type': 'application/json'};
     final jsonBody = jsonEncode(data);
     final response = await http.post(url, headers: headers, body: jsonBody);
@@ -196,7 +196,7 @@ class ApiServices {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer $authToken',
     };
-    final url = Uri.parse("http://59.144.161.72:3500/users/getProfile");
+    final url = Uri.parse("https://api.itaxeasy.com/users/getProfile");
 
     final response = await http.get(
       url,
@@ -218,7 +218,7 @@ class ApiServices {
 
   Future<ApiResponse> createuser(Map data) async {
     // final url = Uri.parse(baseUrl + "/login");
-    final url = Uri.parse("http://59.144.161.72:3500/users/update");
+    final url = Uri.parse("https://api.itaxeasy.com/users/update");
     String authToken = await storage.read(key: "token");
     final headers = {
       'Content-Type': 'application/json',

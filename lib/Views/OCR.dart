@@ -78,70 +78,27 @@ class _OCRSystemState extends State<OCRSystem> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.grey.shade300,
+        appBar: AppBar(
+          backgroundColor: Colors.blue.shade900,
+          elevation: 0,
+          toolbarHeight: 250,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(bottomRight: Radius.circular(200)),
+          ),
+          title: Text(
+            'OCR',
+            style:
+                GoogleFonts.dmSans(fontSize: 40, fontWeight: FontWeight.bold),
+          ),
+        ),
         floatingActionButton: buildSpeedDial(),
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Container(
-                height: 230,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    Colors.blue.shade800,
-                    Colors.blue.shade900,
-                  ],
-                )),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 20, top: 5),
-                      child: GestureDetector(
-                        onTap: () {
-                          Navigator.pop(context);
-                        },
-                        child: Icon(
-                          Icons.chevron_left_rounded,
-                          color: Colors.white,
-                          size: 35,
-                        ),
-                        // child: Container(
-                        //   height: 45,
-                        //   width: 45,
-                        //   decoration: const BoxDecoration(
-                        //     color: Colors.white,
-                        //     borderRadius: BorderRadius.all(Radius.circular(20)),
-                        //   ),
-                        //   child: Icon(
-                        //     Icons.chevron_left_rounded,
-                        //     color: Colors.blue.shade900,
-                        //     size: 35,
-                        //   ),
-                        // ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 70, left: 20),
-                      child: Text(
-                        "OCR",
-                        overflow: TextOverflow.ellipsis,
-                        style: GoogleFonts.dmSans(
-                          fontSize: 40,
-                          letterSpacing: 3,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
               Padding(
                 padding: const EdgeInsets.only(
-                    left: 20, right: 20, top: 10, bottom: 20),
+                    left: 20, right: 20, top: 10, bottom: 10),
                 child: SizedBox(
                   // height: 280,
                   width: double.infinity,

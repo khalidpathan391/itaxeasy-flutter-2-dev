@@ -260,14 +260,14 @@ class _DetailsScreenState extends State<DetailsScreen>
                               fontWeight: FontWeight.normal,
                               color: Colors.blue.shade900),
                         ),
-                        Text(
-                          "Khalid",
-                          style: GoogleFonts.dmSans(
-                            fontSize: 25,
-                            color: Colors.blue.shade900,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
+                        // Text(
+                        //   "Khalid",
+                        //   style: GoogleFonts.dmSans(
+                        //     fontSize: 25,
+                        //     color: Colors.blue.shade900,
+                        //     fontWeight: FontWeight.bold,
+                        //   ),
+                        // ),
                         Text(
                           name.capitalize ?? "",
                           style: GoogleFonts.dmSans(
@@ -563,8 +563,8 @@ class _DetailsScreenState extends State<DetailsScreen>
     return GridView(
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        childAspectRatio: 1.4,
-        crossAxisSpacing: 90,
+        childAspectRatio: 1.5,
+        crossAxisSpacing: 100,
         mainAxisSpacing: 10,
       ),
       shrinkWrap: true,

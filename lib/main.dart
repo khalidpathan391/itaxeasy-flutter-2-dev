@@ -110,8 +110,8 @@ class _MyAppState extends State<MyApp> {
           primarySwatch: Colors.teal,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        // home: const SplashScreen()
-        home: const DetailsScreen()
+        home: const SplashScreen()
+        // home: const DetailsScreen()
         // routes: {
         //   '/login': (context) => Login(),
         //   '/mainpage': (context) => Navbar(),

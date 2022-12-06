@@ -229,13 +229,16 @@ class _AddRecordB2BState extends State<AddRecordB2B> {
                             const SizedBox(
                               width: 20,
                             ),
-                            const Text(
-                              "Intra-State Supplies attracting IGST",
-                              style: TextStyle(
-                                fontFamily: "OpenSans",
-                                fontWeight: FontWeight.bold,
-                                letterSpacing: 1.5,
-                                fontSize: 13.5,
+                            const Expanded(
+                              child: Text(
+                                "Intra-State Supplies attracting IGST",
+                                overflow: TextOverflow.clip,
+                                style: TextStyle(
+                                  fontFamily: "OpenSans",
+                                  fontWeight: FontWeight.bold,
+                                  letterSpacing: 1.5,
+                                  fontSize: 13.5,
+                                ),
                               ),
                             ),
                           ],

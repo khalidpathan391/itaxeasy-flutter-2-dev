@@ -300,7 +300,7 @@ class _GeneratorsState extends State<Generators> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 20, top: 20),
+                    padding: const EdgeInsets.only(left: 10, top: 20),
                     child: GestureDetector(
                       onTap: () {
                         Navigator.pop(context);
@@ -354,11 +354,11 @@ class _GeneratorsState extends State<Generators> {
   }
 
   Widget sectionCard(BuildContext context) {
-    double width = MediaQuery.of(context).size.width - 10;
+    double width = MediaQuery.of(context).size.width - 20;
     return Expanded(
       child: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(left: 20, right: 20),
+          padding: const EdgeInsets.only(left: 10, right: 10),
           child: Column(
             children: [
               GestureDetector(
@@ -366,7 +366,7 @@ class _GeneratorsState extends State<Generators> {
                   multipleFilePicker();
                 },
                 child: Container(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.only(top: 8, bottom: 8),
                   child: Row(
                     children: [
                       Container(
@@ -426,7 +426,7 @@ class _GeneratorsState extends State<Generators> {
                         ),
                       ),
                       SizedBox(
-                        width: width * .05,
+                        width: width * .03,
                       ),
                       Container(
                           width: 225,
@@ -454,7 +454,7 @@ class _GeneratorsState extends State<Generators> {
                   callMethod(1);
                 },
                 child: Container(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.only(top: 8, bottom: 8),
                   child: Row(
                     children: [
                       Container(
@@ -514,7 +514,7 @@ class _GeneratorsState extends State<Generators> {
                         ),
                       ),
                       SizedBox(
-                        width: width * .05,
+                        width: width * .03,
                       ),
                       Container(
                           width: 225,
@@ -541,7 +541,7 @@ class _GeneratorsState extends State<Generators> {
                   singleFilePicker(1);
                 },
                 child: Container(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.only(top: 8, bottom: 8),
                   child: Row(
                     children: [
                       Container(
@@ -601,7 +601,7 @@ class _GeneratorsState extends State<Generators> {
                         ),
                       ),
                       SizedBox(
-                        width: width * .05,
+                        width: width * .03,
                       ),
                       Container(
                           width: 225,
@@ -628,7 +628,7 @@ class _GeneratorsState extends State<Generators> {
                   singleFilePicker(2);
                 },
                 child: Container(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.only(top: 8, bottom: 8),
                   child: Row(
                     children: [
                       Container(
@@ -688,7 +688,7 @@ class _GeneratorsState extends State<Generators> {
                         ),
                       ),
                       SizedBox(
-                        width: width * .05,
+                        width: width * .03,
                       ),
                       Container(
                           width: 225,
@@ -715,7 +715,7 @@ class _GeneratorsState extends State<Generators> {
                   clear();
                 },
                 child: Container(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.only(top: 8, bottom: 8),
                   child: Row(
                     children: [
                       Container(
@@ -775,7 +775,7 @@ class _GeneratorsState extends State<Generators> {
                         ),
                       ),
                       SizedBox(
-                        width: width * .05,
+                        width: width * .03,
                       ),
                       Container(
                           width: 225,

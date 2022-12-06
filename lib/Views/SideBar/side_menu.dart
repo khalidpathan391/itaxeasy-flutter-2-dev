@@ -12,6 +12,8 @@ import 'package:gst_app/Views/Calculator/ifsc_calcii/bank-verification.dart';
 import 'package:gst_app/Views/Calculator/ifsc_calcii/ifsc_coder.dart';
 import 'package:gst_app/Views/Calculator/simple_calculators.dart';
 import 'package:gst_app/Views/Login_And_Register/UpdateUser.dart';
+import 'package:gst_app/Views/on_board_screens/Dashboard1.dart';
+import 'package:gst_app/Views/on_board_screens/Dashbord3.dart';
 import 'package:gst_app/Views/on_board_screens/IBIZ.dart';
 import 'package:gst_app/Views/on_board_screens/ITR%20Files.dart';
 import 'package:gst_app/Views/on_board_screens/Invoice.dart';
@@ -87,7 +89,7 @@ class _SideMenuState extends State<SideMenu> {
       width: 270,
       child: Drawer(
         child: Scaffold(
-          backgroundColor: Colors.blue.shade100,
+          backgroundColor: Colors.grey.shade300,
           body: Container(
             child: ListView(
               children: [
@@ -135,1017 +137,1018 @@ class _SideMenuState extends State<SideMenu> {
                   )),
                 ),
 
-                FadeInRightBig(
-                  delay: const Duration(milliseconds: 500),
-                  duration: const Duration(milliseconds: 500),
-                  child: ExpansionTile(
-                    iconColor: Colors.blue.shade900,
-                    title: DrawerListTile(
-                      title: "Easy GSTIN Search",
-                      svgSrc: "assets/icons/taxxx.svg",
-                      press: () {},
-                    ),
-                    children: [
-                      FadeInRightBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: ExpansionTile(
-                            //iconColor: Colors.white,
-                            title: DrawerListTile(
-                              title: "Search by GSTIN",
-                              svgSrc: "assets/icons/taxxx.svg",
-                              press: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => GST()));
-                              },
-                            ),
-                          ),
-                        ),
-                      ),
-                      FadeInLeftBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Search by Pan",
-                            svgSrc: "assets/icons/taxxx.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => GSTByPan()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInRightBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Track GST Return",
-                            svgSrc: "assets/icons/taxxx.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const TrackGST()));
-                            },
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                FadeInRightBig(
-                  delay: const Duration(milliseconds: 500),
-                  duration: const Duration(milliseconds: 500),
-                  child: ExpansionTile(
-                    iconColor: Colors.blue.shade900,
-                    title: DrawerListTile(
-                      title: "Easy ITR Links",
-                      svgSrc: "assets/icons/tax2.svg",
-                      press: () {},
-                    ),
-                    children: [
-                      FadeInRightBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Easy ITR Status",
-                            svgSrc: "assets/icons/itr.svg",
-                            press: () {
-                              // Dialogs.materialDialog(
-                              //   color: Colors.white,
-                              //   msg: 'This feature will be available in the next release',
-                              //   title: 'Thank You',
-                              //   // animations: 'assets/cong_example.json',
-                              //   context: context,
-                              //   // actions: [
-                              //   //   IconsButton(
-                              //   //     onPressed: () {
-                              //   //     },
-                              //   //     text: 'OK',
-                              //   //     iconData: Icons.done,
-                              //   //     color: Colors.blue,
-                              //   //     textStyle: TextStyle(color: Colors.white),
-                              //   //     iconColor: Colors.white,
-                              //   //   ),
-                              //   // ]
-                              // );
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => ItrStatus()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInLeftBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Easy E-Pan",
-                            svgSrc: "assets/icons/cardss.svg",
-                            press: () {
-                              // Dialogs.materialDialog(
-                              //   color: Colors.white,
-                              //   msg: 'This feature will be available in the next release',
-                              //   title: 'Thank You',
-                              //   // animations: 'assets/cong_example.json',
-                              //   context: context,
-                              //   // actions: [
-                              //   //   IconsButton(
-                              //   //     onPressed: () {
-                              //   //     },
-                              //   //     text: 'OK',
-                              //   //     iconData: Icons.done,
-                              //   //     color: Colors.blue,
-                              //   //     textStyle: TextStyle(color: Colors.white),
-                              //   //     iconColor: Colors.white,
-                              //   //   ),
-                              //   // ]
-                              // );
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => InstantEPan()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInRightBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: " Easy e-Verify Return",
-                            svgSrc: "assets/icons/verify.svg",
-                            press: () {
-                              // Dialogs.materialDialog(
-                              //   color: Colors.white,
-                              //   msg: 'This feature will be available in the next release',
-                              //   title: 'Thank You',
-                              //   // animations: 'assets/cong_example.json',
-                              //   context: context,
-                              //   // actions: [
-                              //   //   IconsButton(
-                              //   //     onPressed: () {
-                              //   //     },
-                              //   //     text: 'OK',
-                              //   //     iconData: Icons.done,
-                              //   //     color: Colors.blue,
-                              //   //     textStyle: TextStyle(color: Colors.white),
-                              //   //     iconColor: Colors.white,
-                              //   //   ),
-                              //   // ]
-                              // );
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => VerifyReturn()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInLeftBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: " Easy e-Pay Tax",
-                            svgSrc: "assets/icons/paytax.svg",
-                            press: () {
-                              // Dialogs.materialDialog(
-                              //   color: Colors.white,
-                              //   msg: 'This feature will be available in the next release',
-                              //   title: 'Thank You',
-                              //   // animations: 'assets/cong_example.json',
-                              //   context: context,
-                              //   // actions: [
-                              //   //   IconsButton(
-                              //   //     onPressed: () {
-                              //   //     },
-                              //   //     text: 'OK',
-                              //   //     iconData: Icons.done,
-                              //   //     color: Colors.blue,
-                              //   //     textStyle: TextStyle(color: Colors.white),
-                              //   //     iconColor: Colors.white,
-                              //   //   ),
-                              //   // ]
-                              // );
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => EPayTax()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInRightBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Know TAN Details",
-                            svgSrc: "assets/icons/tan.svg",
-                            press: () {
-                              // Dialogs.materialDialog(
-                              //   color: Colors.white,
-                              //   msg: 'This feature will be available in the next release',
-                              //   title: 'Thank You',
-                              //   // animations: 'assets/cong_example.json',
-                              //   context: context,
-                              //   // actions: [
-                              //   //   IconsButton(
-                              //   //     onPressed: () {
-                              //   //     },
-                              //   //     text: 'OK',
-                              //   //     iconData: Icons.done,
-                              //   //     color: Colors.blue,
-                              //   //     textStyle: TextStyle(color: Colors.white),
-                              //   //     iconColor: Colors.white,
-                              //   //   ),
-                              //   // ]
-                              // );
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => KnowYourTan()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInLeftBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Easy Verify your PAN",
-                            svgSrc: "assets/icons/pan.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const VerifyYourPan()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInLeftBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Easy TDS On Cash Withdrawal",
-                            svgSrc: "assets/icons/casshhh.svg",
-                            press: () {
-                              // Dialogs.materialDialog(
-                              //   color: Colors.white,
-                              //   msg: 'This feature will be available in the next release',
-                              //   title: 'Thank You',
-                              //   // animations: 'assets/cong_example.json',
-                              //   context: context,
-                              //   // actions: [
-                              //   //   IconsButton(
-                              //   //     onPressed: () {
-                              //   //     },
-                              //   //     text: 'OK',
-                              //   //     iconData: Icons.done,
-                              //   //     color: Colors.blue,
-                              //   //     textStyle: TextStyle(color: Colors.white),
-                              //   //     iconColor: Colors.white,
-                              //   //   ),
-                              //   // ]
-                              // );
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const TDS()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInRightBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title:
-                                "Easy Authenticate notice/order issued by ITD",
-                            svgSrc: "assets/icons/auth.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const ITD()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInLeftBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Easy Tax Information & Services",
-                            svgSrc: "assets/icons/info.svg",
-                            press: () {
-                              Dialogs.materialDialog(
-                                color: Colors.white,
-                                msg:
-                                    'This feature will be available in the next release',
-                                title: 'Thank You',
-                                // animations: 'assets/cong_example.json',
-                                context: context,
-                                // actions: [
-                                //   IconsButton(
-                                //     onPressed: () {
-                                //     },
-                                //     text: 'OK',
-                                //     iconData: Icons.done,
-                                //     color: Colors.blue,
-                                //     textStyle: TextStyle(color: Colors.white),
-                                //     iconColor: Colors.white,
-                                //   ),
-                                // ]
-                              );
-                              // Navigator.push(context, MaterialPageRoute(builder: (context)=>tester()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInRightBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: " Easy Know your AO",
-                            svgSrc: "assets/icons/ao.svg",
-                            press: () {
-                              // Dialogs.materialDialog(
-                              //   color: Colors.white,
-                              //   msg: 'This feature will be available in the next release',
-                              //   title: 'Thank You',
-                              //   // animations: 'assets/cong_example.json',
-                              //   context: context,
-                              //   // actions: [
-                              //   //   IconsButton(
-                              //   //     onPressed: () {
-                              //   //     },
-                              //   //     text: 'OK',
-                              //   //     iconData: Icons.done,
-                              //   //     color: Colors.blue,
-                              //   //     textStyle: TextStyle(color: Colors.white),
-                              //   //     iconColor: Colors.white,
-                              //   //   ),
-                              //   // ]
-                              // );
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => KnowYourAo()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInLeftBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Easy Pan Details",
-                            svgSrc: "assets/icons/infooo.svg",
-                            press: () {
-                              // Dialogs.materialDialog(
-                              //   color: Colors.white,
-                              //   msg: 'This feature will be available in the next release',
-                              //   title: 'Thank You',
-                              //   // animations: 'assets/cong_example.json',
-                              //   context: context,
-                              //   // actions: [
-                              //   //   IconsButton(
-                              //   //     onPressed: () {
-                              //   //     },
-                              //   //     text: 'OK',
-                              //   //     iconData: Icons.done,
-                              //   //     color: Colors.blue,
-                              //   //     textStyle: TextStyle(color: Colors.white),
-                              //   //     iconColor: Colors.white,
-                              //   //   ),
-                              //   // ]
-                              // );
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => PanDetailsUI()));
-                            },
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                FadeInRightBig(
-                  delay: const Duration(milliseconds: 500),
-                  duration: const Duration(milliseconds: 500),
-                  child: ExpansionTile(
-                    iconColor: Colors.blue.shade900,
-                    title: DrawerListTile(
-                      title: "Easy Bank Links",
-                      svgSrc: "assets/icons/bank.svg",
-                      press: () {},
-                    ),
-                    children: [
-                      FadeInRightBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "IFSC Code",
-                            svgSrc: "assets/icons/code.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => IfscFinder()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInLeftBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Verify Bank Account",
-                            svgSrc: "assets/icons/bank.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const BankVerification()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInRightBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Easy Bank Statement",
-                            svgSrc: "assets/icons/verify.svg",
-                            press: () {
-                              Dialogs.materialDialog(
-                                color: Colors.white,
-                                msg:
-                                    'This feature will be available in the next release',
-                                title: 'Thank You',
-                                // animations: 'assets/cong_example.json',
-                                context: context,
-                                // actions: [
-                                //   IconsButton(
-                                //     onPressed: () {
-                                //     },
-                                //     text: 'OK',
-                                //     iconData: Icons.done,
-                                //     color: Colors.blue,
-                                //     textStyle: TextStyle(color: Colors.white),
-                                //     iconColor: Colors.white,
-                                //   ),
-                                // ]
-                              );
-                              // Navigator.push(context, MaterialPageRoute(builder: (context)=>DetailsScreen()));
-                            },
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                FadeInRightBig(
-                  delay: const Duration(milliseconds: 500),
-                  duration: const Duration(milliseconds: 500),
-                  child: ExpansionTile(
-                    iconColor: Colors.blue.shade900,
-                    title: DrawerListTile(
-                      title: "Easy Aadhaar Links",
-                      svgSrc: "assets/icons/easyadhaar.svg",
-                      press: () {},
-                    ),
-                    children: [
-                      FadeInRightBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Easy Link Aadhaar Status",
-                            svgSrc: "assets/icons/cardstatus.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const LinkAadhaarStatus()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInLeftBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Easy Link Aadhaar",
-                            svgSrc: "assets/icons/aadhaar.svg",
-                            press: () {
-                              // Dialogs.materialDialog(
-                              //   color: Colors.white,
-                              //   msg: 'This feature will be available in the next release',
-                              //   title: 'Thank You',
-                              //   // animations: 'assets/cong_example.json',
-                              //   context: context,
-                              //   // actions: [
-                              //   //   IconsButton(
-                              //   //     onPressed: () {
-                              //   //     },
-                              //   //     text: 'OK',
-                              //   //     iconData: Icons.done,
-                              //   //     color: Colors.blue,
-                              //   //     textStyle: TextStyle(color: Colors.white),
-                              //   //     iconColor: Colors.white,
-                              //   //   ),
-                              //   // ]
-                              // );
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => LinkAadhaar()));
-                            },
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                FadeInLeftBig(
-                  delay: const Duration(milliseconds: 500),
-                  duration: const Duration(milliseconds: 500),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 16),
-                    child: DrawerListTile(
-                      title: " Easy Ministry of Corporate Affairs (MCA)",
-                      svgSrc: "assets/icons/company.svg",
-                      press: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const CompanySearch()));
-                      },
-                    ),
-                  ),
-                ),
+                // FadeInRightBig(
+                //   delay: const Duration(milliseconds: 500),
+                //   duration: const Duration(milliseconds: 500),
+                //   child: ExpansionTile(
+                //     iconColor: Colors.white,
+                //     title: DrawerListTile(
+                //       title: "Easy GSTIN Search",
+                //       svgSrc: "assets/icons/taxxx.svg",
+                //       press: () {},
+                //     ),
+                //     children: [
+                //       FadeInRightBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: ExpansionTile(
+                //             iconColor: Colors.white,
+                //             textColor: Colors.white,
+                //             title: DrawerListTile(
+                //               title: "Search by GSTIN",
+                //               svgSrc: "assets/icons/taxxx.svg",
+                //               press: () {
+                //                 Navigator.push(
+                //                     context,
+                //                     MaterialPageRoute(
+                //                         builder: (context) => GST()));
+                //               },
+                //             ),
+                //           ),
+                //         ),
+                //       ),
+                //       FadeInLeftBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "Search by Pan",
+                //             svgSrc: "assets/icons/taxxx.svg",
+                //             press: () {
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) => GSTByPan()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       FadeInRightBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "Track GST Return",
+                //             svgSrc: "assets/icons/taxxx.svg",
+                //             press: () {
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) => const TrackGST()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //     ],
+                //   ),
+                // ),
+                // FadeInRightBig(
+                //   delay: const Duration(milliseconds: 500),
+                //   duration: const Duration(milliseconds: 500),
+                //   child: ExpansionTile(
+                //     iconColor: Colors.blue.shade900,
+                //     title: DrawerListTile(
+                //       title: "Easy ITR Links",
+                //       svgSrc: "assets/icons/tax2.svg",
+                //       press: () {},
+                //     ),
+                //     children: [
+                //       FadeInRightBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "Easy ITR Status",
+                //             svgSrc: "assets/icons/itr.svg",
+                //             press: () {
+                //               // Dialogs.materialDialog(
+                //               //   color: Colors.white,
+                //               //   msg: 'This feature will be available in the next release',
+                //               //   title: 'Thank You',
+                //               //   // animations: 'assets/cong_example.json',
+                //               //   context: context,
+                //               //   // actions: [
+                //               //   //   IconsButton(
+                //               //   //     onPressed: () {
+                //               //   //     },
+                //               //   //     text: 'OK',
+                //               //   //     iconData: Icons.done,
+                //               //   //     color: Colors.blue,
+                //               //   //     textStyle: TextStyle(color: Colors.white),
+                //               //   //     iconColor: Colors.white,
+                //               //   //   ),
+                //               //   // ]
+                //               // );
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) => ItrStatus()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       FadeInLeftBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "Easy E-Pan",
+                //             svgSrc: "assets/icons/cardss.svg",
+                //             press: () {
+                //               // Dialogs.materialDialog(
+                //               //   color: Colors.white,
+                //               //   msg: 'This feature will be available in the next release',
+                //               //   title: 'Thank You',
+                //               //   // animations: 'assets/cong_example.json',
+                //               //   context: context,
+                //               //   // actions: [
+                //               //   //   IconsButton(
+                //               //   //     onPressed: () {
+                //               //   //     },
+                //               //   //     text: 'OK',
+                //               //   //     iconData: Icons.done,
+                //               //   //     color: Colors.blue,
+                //               //   //     textStyle: TextStyle(color: Colors.white),
+                //               //   //     iconColor: Colors.white,
+                //               //   //   ),
+                //               //   // ]
+                //               // );
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) => InstantEPan()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       FadeInRightBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: " Easy e-Verify Return",
+                //             svgSrc: "assets/icons/verify.svg",
+                //             press: () {
+                //               // Dialogs.materialDialog(
+                //               //   color: Colors.white,
+                //               //   msg: 'This feature will be available in the next release',
+                //               //   title: 'Thank You',
+                //               //   // animations: 'assets/cong_example.json',
+                //               //   context: context,
+                //               //   // actions: [
+                //               //   //   IconsButton(
+                //               //   //     onPressed: () {
+                //               //   //     },
+                //               //   //     text: 'OK',
+                //               //   //     iconData: Icons.done,
+                //               //   //     color: Colors.blue,
+                //               //   //     textStyle: TextStyle(color: Colors.white),
+                //               //   //     iconColor: Colors.white,
+                //               //   //   ),
+                //               //   // ]
+                //               // );
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) => VerifyReturn()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       FadeInLeftBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: " Easy e-Pay Tax",
+                //             svgSrc: "assets/icons/paytax.svg",
+                //             press: () {
+                //               // Dialogs.materialDialog(
+                //               //   color: Colors.white,
+                //               //   msg: 'This feature will be available in the next release',
+                //               //   title: 'Thank You',
+                //               //   // animations: 'assets/cong_example.json',
+                //               //   context: context,
+                //               //   // actions: [
+                //               //   //   IconsButton(
+                //               //   //     onPressed: () {
+                //               //   //     },
+                //               //   //     text: 'OK',
+                //               //   //     iconData: Icons.done,
+                //               //   //     color: Colors.blue,
+                //               //   //     textStyle: TextStyle(color: Colors.white),
+                //               //   //     iconColor: Colors.white,
+                //               //   //   ),
+                //               //   // ]
+                //               // );
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) => EPayTax()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       FadeInRightBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "Know TAN Details",
+                //             svgSrc: "assets/icons/tan.svg",
+                //             press: () {
+                //               // Dialogs.materialDialog(
+                //               //   color: Colors.white,
+                //               //   msg: 'This feature will be available in the next release',
+                //               //   title: 'Thank You',
+                //               //   // animations: 'assets/cong_example.json',
+                //               //   context: context,
+                //               //   // actions: [
+                //               //   //   IconsButton(
+                //               //   //     onPressed: () {
+                //               //   //     },
+                //               //   //     text: 'OK',
+                //               //   //     iconData: Icons.done,
+                //               //   //     color: Colors.blue,
+                //               //   //     textStyle: TextStyle(color: Colors.white),
+                //               //   //     iconColor: Colors.white,
+                //               //   //   ),
+                //               //   // ]
+                //               // );
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) => KnowYourTan()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       FadeInLeftBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "Easy Verify your PAN",
+                //             svgSrc: "assets/icons/pan.svg",
+                //             press: () {
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) =>
+                //                           const VerifyYourPan()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       FadeInLeftBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "Easy TDS On Cash Withdrawal",
+                //             svgSrc: "assets/icons/casshhh.svg",
+                //             press: () {
+                //               // Dialogs.materialDialog(
+                //               //   color: Colors.white,
+                //               //   msg: 'This feature will be available in the next release',
+                //               //   title: 'Thank You',
+                //               //   // animations: 'assets/cong_example.json',
+                //               //   context: context,
+                //               //   // actions: [
+                //               //   //   IconsButton(
+                //               //   //     onPressed: () {
+                //               //   //     },
+                //               //   //     text: 'OK',
+                //               //   //     iconData: Icons.done,
+                //               //   //     color: Colors.blue,
+                //               //   //     textStyle: TextStyle(color: Colors.white),
+                //               //   //     iconColor: Colors.white,
+                //               //   //   ),
+                //               //   // ]
+                //               // );
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) => const TDS()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       FadeInRightBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title:
+                //                 "Easy Authenticate notice/order issued by ITD",
+                //             svgSrc: "assets/icons/auth.svg",
+                //             press: () {
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) => const ITD()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       FadeInLeftBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "Easy Tax Information & Services",
+                //             svgSrc: "assets/icons/info.svg",
+                //             press: () {
+                //               Dialogs.materialDialog(
+                //                 color: Colors.white,
+                //                 msg:
+                //                     'This feature will be available in the next release',
+                //                 title: 'Thank You',
+                //                 // animations: 'assets/cong_example.json',
+                //                 context: context,
+                //                 // actions: [
+                //                 //   IconsButton(
+                //                 //     onPressed: () {
+                //                 //     },
+                //                 //     text: 'OK',
+                //                 //     iconData: Icons.done,
+                //                 //     color: Colors.blue,
+                //                 //     textStyle: TextStyle(color: Colors.white),
+                //                 //     iconColor: Colors.white,
+                //                 //   ),
+                //                 // ]
+                //               );
+                //               // Navigator.push(context, MaterialPageRoute(builder: (context)=>tester()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       FadeInRightBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: " Easy Know your AO",
+                //             svgSrc: "assets/icons/ao.svg",
+                //             press: () {
+                //               // Dialogs.materialDialog(
+                //               //   color: Colors.white,
+                //               //   msg: 'This feature will be available in the next release',
+                //               //   title: 'Thank You',
+                //               //   // animations: 'assets/cong_example.json',
+                //               //   context: context,
+                //               //   // actions: [
+                //               //   //   IconsButton(
+                //               //   //     onPressed: () {
+                //               //   //     },
+                //               //   //     text: 'OK',
+                //               //   //     iconData: Icons.done,
+                //               //   //     color: Colors.blue,
+                //               //   //     textStyle: TextStyle(color: Colors.white),
+                //               //   //     iconColor: Colors.white,
+                //               //   //   ),
+                //               //   // ]
+                //               // );
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) => KnowYourAo()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       FadeInLeftBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "Easy Pan Details",
+                //             svgSrc: "assets/icons/infooo.svg",
+                //             press: () {
+                //               // Dialogs.materialDialog(
+                //               //   color: Colors.white,
+                //               //   msg: 'This feature will be available in the next release',
+                //               //   title: 'Thank You',
+                //               //   // animations: 'assets/cong_example.json',
+                //               //   context: context,
+                //               //   // actions: [
+                //               //   //   IconsButton(
+                //               //   //     onPressed: () {
+                //               //   //     },
+                //               //   //     text: 'OK',
+                //               //   //     iconData: Icons.done,
+                //               //   //     color: Colors.blue,
+                //               //   //     textStyle: TextStyle(color: Colors.white),
+                //               //   //     iconColor: Colors.white,
+                //               //   //   ),
+                //               //   // ]
+                //               // );
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) => PanDetailsUI()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //     ],
+                //   ),
+                // ),
+                // FadeInRightBig(
+                //   delay: const Duration(milliseconds: 500),
+                //   duration: const Duration(milliseconds: 500),
+                //   child: ExpansionTile(
+                //     iconColor: Colors.blue.shade900,
+                //     title: DrawerListTile(
+                //       title: "Easy Bank Links",
+                //       svgSrc: "assets/icons/bank.svg",
+                //       press: () {},
+                //     ),
+                //     children: [
+                //       FadeInRightBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "IFSC Code",
+                //             svgSrc: "assets/icons/code.svg",
+                //             press: () {
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) => IfscFinder()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       FadeInLeftBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "Verify Bank Account",
+                //             svgSrc: "assets/icons/bank.svg",
+                //             press: () {
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) =>
+                //                           const BankVerification()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       FadeInRightBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "Easy Bank Statement",
+                //             svgSrc: "assets/icons/verify.svg",
+                //             press: () {
+                //               Dialogs.materialDialog(
+                //                 color: Colors.white,
+                //                 msg:
+                //                     'This feature will be available in the next release',
+                //                 title: 'Thank You',
+                //                 // animations: 'assets/cong_example.json',
+                //                 context: context,
+                //                 // actions: [
+                //                 //   IconsButton(
+                //                 //     onPressed: () {
+                //                 //     },
+                //                 //     text: 'OK',
+                //                 //     iconData: Icons.done,
+                //                 //     color: Colors.blue,
+                //                 //     textStyle: TextStyle(color: Colors.white),
+                //                 //     iconColor: Colors.white,
+                //                 //   ),
+                //                 // ]
+                //               );
+                //               // Navigator.push(context, MaterialPageRoute(builder: (context)=>DetailsScreen()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //     ],
+                //   ),
+                // ),
+                // FadeInRightBig(
+                //   delay: const Duration(milliseconds: 500),
+                //   duration: const Duration(milliseconds: 500),
+                //   child: ExpansionTile(
+                //     iconColor: Colors.blue.shade900,
+                //     title: DrawerListTile(
+                //       title: "Easy Aadhaar Links",
+                //       svgSrc: "assets/icons/easyadhaar.svg",
+                //       press: () {},
+                //     ),
+                //     children: [
+                //       FadeInRightBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "Easy Link Aadhaar Status",
+                //             svgSrc: "assets/icons/cardstatus.svg",
+                //             press: () {
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) =>
+                //                           const LinkAadhaarStatus()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       FadeInLeftBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "Easy Link Aadhaar",
+                //             svgSrc: "assets/icons/aadhaar.svg",
+                //             press: () {
+                //               // Dialogs.materialDialog(
+                //               //   color: Colors.white,
+                //               //   msg: 'This feature will be available in the next release',
+                //               //   title: 'Thank You',
+                //               //   // animations: 'assets/cong_example.json',
+                //               //   context: context,
+                //               //   // actions: [
+                //               //   //   IconsButton(
+                //               //   //     onPressed: () {
+                //               //   //     },
+                //               //   //     text: 'OK',
+                //               //   //     iconData: Icons.done,
+                //               //   //     color: Colors.blue,
+                //               //   //     textStyle: TextStyle(color: Colors.white),
+                //               //   //     iconColor: Colors.white,
+                //               //   //   ),
+                //               //   // ]
+                //               // );
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) => LinkAadhaar()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //     ],
+                //   ),
+                // ),
+                // FadeInLeftBig(
+                //   delay: const Duration(milliseconds: 500),
+                //   duration: const Duration(milliseconds: 500),
+                //   child: Padding(
+                //     padding: const EdgeInsets.only(left: 16),
+                //     child: DrawerListTile(
+                //       title: " Easy Ministry of Corporate Affairs (MCA)",
+                //       svgSrc: "assets/icons/company.svg",
+                //       press: () {
+                //         Navigator.push(
+                //             context,
+                //             MaterialPageRoute(
+                //                 builder: (context) => const CompanySearch()));
+                //       },
+                //     ),
+                //   ),
+                // ),
 
-                FadeInLeftBig(
-                  delay: const Duration(milliseconds: 500),
-                  duration: const Duration(milliseconds: 500),
-                  child: ExpansionTile(
-                    title: DrawerListTile(
-                      title: "Easy Financial Calculators",
-                      svgSrc: "assets/icons/calci.svg",
-                      press: () {},
-                    ),
-                    children: [
-                      FadeInRightBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "GST Calculator",
-                            svgSrc: "assets/icons/calci.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const GstUi()));
-                            },
-                          ),
-                        ),
-                      ),
-                      // FadeInLeftBig(
-                      //   delay: const Duration(milliseconds: 500),
-                      //   duration: const Duration(milliseconds: 500),
-                      //   child: Padding(
-                      //     padding: const EdgeInsets.only(left: 16),
-                      //     child: DrawerListTile(
-                      //       title: "Calculator",
-                      //       svgSrc: "assets/icons/calci.svg",
-                      //       press: () {
-                      //         Navigator.push(context, MaterialPageRoute(builder: (context)=>SimpleCalculator()));
-                      //       },
-                      //     ),
-                      //   ),
-                      // ),
-                      FadeInRightBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Income Tax/New Regime",
-                            svgSrc: "assets/icons/calci.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const NewRegimeUi()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInLeftBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Income Tax/Old Regime",
-                            svgSrc: "assets/icons/calci.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const OldRegimeUi()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInRightBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Fixed Deposit",
-                            svgSrc: "assets/icons/calci.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const FixedDepositUi()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInLeftBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Simple Interest",
-                            svgSrc: "assets/icons/calci.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const SimpleInterestUi()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInRightBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Compound Interest",
-                            svgSrc: "assets/icons/calci.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const CompoundInterestUi()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInLeftBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "EMI ",
-                            svgSrc: "assets/icons/calci.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const EmiUI()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInRightBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Compound annual growth rate",
-                            svgSrc: "assets/icons/calci.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const CagrUi()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInLeftBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "SIP Gain",
-                            svgSrc: "assets/icons/calci.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const SipGainUI()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInRightBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Lump Sum",
-                            svgSrc: "assets/icons/calci.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const LumpSumUI()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInLeftBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Recursive Deposite",
-                            svgSrc: "assets/icons/calci.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const RecursiveDepositeUI()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInRightBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "House Rent Allowance",
-                            svgSrc: "assets/icons/calci.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const HraUI()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInLeftBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Monthly Income Scheme",
-                            svgSrc: "assets/icons/calci.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const MisUi()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInRightBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Business Loan Calculator",
-                            svgSrc: "assets/icons/calci.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const BusinessLoanUI()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInLeftBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Depreciation Calculator ",
-                            svgSrc: "assets/icons/calci.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const DepricationUi()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInRightBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Home Loan EMI",
-                            svgSrc: "assets/icons/calci.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const HomeLoanEMIUI()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInLeftBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Car Loan EMI",
-                            svgSrc: "assets/icons/calci.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const CarLoanUI()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInRightBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Personal Loan EMI",
-                            svgSrc: "assets/icons/calci.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const PersonalLoanUI()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInLeftBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Tax Deducted at Source (TDS)",
-                            svgSrc: "assets/icons/calci.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const TdsUi()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInRightBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Capital Gain",
-                            svgSrc: "assets/icons/calci.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const CapitalGainUi()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInLeftBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "National Pension System (NPS)",
-                            svgSrc: "assets/icons/calci.svg",
-                            press: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const NpsUi()));
-                            },
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                // FadeInLeftBig(
+                //   delay: const Duration(milliseconds: 500),
+                //   duration: const Duration(milliseconds: 500),
+                //   child: ExpansionTile(
+                //     title: DrawerListTile(
+                //       title: "Easy Financial Calculators",
+                //       svgSrc: "assets/icons/calci.svg",
+                //       press: () {},
+                //     ),
+                //     children: [
+                //       FadeInRightBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "GST Calculator",
+                //             svgSrc: "assets/icons/calci.svg",
+                //             press: () {
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) => const GstUi()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       // FadeInLeftBig(
+                //       //   delay: const Duration(milliseconds: 500),
+                //       //   duration: const Duration(milliseconds: 500),
+                //       //   child: Padding(
+                //       //     padding: const EdgeInsets.only(left: 16),
+                //       //     child: DrawerListTile(
+                //       //       title: "Calculator",
+                //       //       svgSrc: "assets/icons/calci.svg",
+                //       //       press: () {
+                //       //         Navigator.push(context, MaterialPageRoute(builder: (context)=>SimpleCalculator()));
+                //       //       },
+                //       //     ),
+                //       //   ),
+                //       // ),
+                //       // FadeInRightBig(
+                //       //   delay: const Duration(milliseconds: 500),
+                //       //   duration: const Duration(milliseconds: 500),
+                //       //   child: Padding(
+                //       //     padding: const EdgeInsets.only(left: 16),
+                //       //     child: DrawerListTile(
+                //       //       title: "Income Tax/New Regime",
+                //       //       svgSrc: "assets/icons/calci.svg",
+                //       //       press: () {
+                //       //         Navigator.push(
+                //       //             context,
+                //       //             MaterialPageRoute(
+                //       //                 builder: (context) =>
+                //       //                     const NewRegimeUi()));
+                //       //       },
+                //       //     ),
+                //       //   ),
+                //       // ),
+                //       // FadeInLeftBig(
+                //       //   delay: const Duration(milliseconds: 500),
+                //       //   duration: const Duration(milliseconds: 500),
+                //       //   child: Padding(
+                //       //     padding: const EdgeInsets.only(left: 16),
+                //       //     child: DrawerListTile(
+                //       //       title: "Income Tax/Old Regime",
+                //       //       svgSrc: "assets/icons/calci.svg",
+                //       //       press: () {
+                //       //         Navigator.push(
+                //       //             context,
+                //       //             MaterialPageRoute(
+                //       //                 builder: (context) =>
+                //       //                     const OldRegimeUi()));
+                //       //       },
+                //       //     ),
+                //       //   ),
+                //       // ),
+                //       FadeInRightBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "Fixed Deposit",
+                //             svgSrc: "assets/icons/calci.svg",
+                //             press: () {
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) =>
+                //                           const FixedDepositUi()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       FadeInLeftBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "Simple Interest",
+                //             svgSrc: "assets/icons/calci.svg",
+                //             press: () {
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) =>
+                //                           const SimpleInterestUi()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       FadeInRightBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "Compound Interest",
+                //             svgSrc: "assets/icons/calci.svg",
+                //             press: () {
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) =>
+                //                           const CompoundInterestUi()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       FadeInLeftBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "EMI ",
+                //             svgSrc: "assets/icons/calci.svg",
+                //             press: () {
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) => const EmiUI()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       FadeInRightBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "Compound annual growth rate",
+                //             svgSrc: "assets/icons/calci.svg",
+                //             press: () {
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) => const CagrUi()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       FadeInLeftBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "SIP Gain",
+                //             svgSrc: "assets/icons/calci.svg",
+                //             press: () {
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) => const SipGainUI()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       FadeInRightBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "Lump Sum",
+                //             svgSrc: "assets/icons/calci.svg",
+                //             press: () {
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) => const LumpSumUI()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       FadeInLeftBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "Recursive Deposite",
+                //             svgSrc: "assets/icons/calci.svg",
+                //             press: () {
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) =>
+                //                           const RecursiveDepositeUI()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       // FadeInRightBig(
+                //       //   delay: const Duration(milliseconds: 500),
+                //       //   duration: const Duration(milliseconds: 500),
+                //       //   child: Padding(
+                //       //     padding: const EdgeInsets.only(left: 16),
+                //       //     child: DrawerListTile(
+                //       //       title: "House Rent Allowance",
+                //       //       svgSrc: "assets/icons/calci.svg",
+                //       //       press: () {
+                //       //         Navigator.push(
+                //       //             context,
+                //       //             MaterialPageRoute(
+                //       //                 builder: (context) => const HraUI()));
+                //       //       },
+                //       //     ),
+                //       //   ),
+                //       // ),
+                //       FadeInLeftBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "Monthly Income Scheme",
+                //             svgSrc: "assets/icons/calci.svg",
+                //             press: () {
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) => const MisUi()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       FadeInRightBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "Business Loan Calculator",
+                //             svgSrc: "assets/icons/calci.svg",
+                //             press: () {
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) =>
+                //                           const BusinessLoanUI()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       // FadeInLeftBig(
+                //       //   delay: const Duration(milliseconds: 500),
+                //       //   duration: const Duration(milliseconds: 500),
+                //       //   child: Padding(
+                //       //     padding: const EdgeInsets.only(left: 16),
+                //       //     child: DrawerListTile(
+                //       //       title: "Depreciation Calculator ",
+                //       //       svgSrc: "assets/icons/calci.svg",
+                //       //       press: () {
+                //       //         Navigator.push(
+                //       //             context,
+                //       //             MaterialPageRoute(
+                //       //                 builder: (context) =>
+                //       //                     const DepricationUi()));
+                //       //       },
+                //       //     ),
+                //       //   ),
+                //       // ),
+                //       FadeInRightBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "Home Loan EMI",
+                //             svgSrc: "assets/icons/calci.svg",
+                //             press: () {
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) =>
+                //                           const HomeLoanEMIUI()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       FadeInLeftBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "Car Loan EMI",
+                //             svgSrc: "assets/icons/calci.svg",
+                //             press: () {
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) => const CarLoanUI()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       FadeInRightBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "Personal Loan EMI",
+                //             svgSrc: "assets/icons/calci.svg",
+                //             press: () {
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) =>
+                //                           const PersonalLoanUI()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //       // FadeInLeftBig(
+                //       //   delay: const Duration(milliseconds: 500),
+                //       //   duration: const Duration(milliseconds: 500),
+                //       //   child: Padding(
+                //       //     padding: const EdgeInsets.only(left: 16),
+                //       //     child: DrawerListTile(
+                //       //       title: "Tax Deducted at Source (TDS)",
+                //       //       svgSrc: "assets/icons/calci.svg",
+                //       //       press: () {
+                //       //         Navigator.push(
+                //       //             context,
+                //       //             MaterialPageRoute(
+                //       //                 builder: (context) => const TdsUi()));
+                //       //       },
+                //       //     ),
+                //       //   ),
+                //       // ),
+                //       // FadeInRightBig(
+                //       //   delay: const Duration(milliseconds: 500),
+                //       //   duration: const Duration(milliseconds: 500),
+                //       //   child: Padding(
+                //       //     padding: const EdgeInsets.only(left: 16),
+                //       //     child: DrawerListTile(
+                //       //       title: "Capital Gain",
+                //       //       svgSrc: "assets/icons/calci.svg",
+                //       //       press: () {
+                //       //         Navigator.push(
+                //       //             context,
+                //       //             MaterialPageRoute(
+                //       //                 builder: (context) =>
+                //       //                     const CapitalGainUi()));
+                //       //       },
+                //       //     ),
+                //       //   ),
+                //       // ),
+                //       FadeInLeftBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "National Pension System (NPS)",
+                //             svgSrc: "assets/icons/calci.svg",
+                //             press: () {
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) => const NpsUi()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //     ],
+                //   ),
+                // ),
 
-                FadeInRightBig(
-                  delay: const Duration(milliseconds: 500),
-                  duration: const Duration(milliseconds: 500),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 16),
-                    child: DrawerListTile(
-                      title: "Account Misuse",
-                      svgSrc: "assets/icons/account.svg",
-                      press: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const AccountMisuse()));
-                      },
-                    ),
-                  ),
-                ),
+                // FadeInRightBig(
+                //   delay: const Duration(milliseconds: 500),
+                //   duration: const Duration(milliseconds: 500),
+                //   child: Padding(
+                //     padding: const EdgeInsets.only(left: 16),
+                //     child: DrawerListTile(
+                //       title: "Account Misuse",
+                //       svgSrc: "assets/icons/account.svg",
+                //       press: () {
+                //         Navigator.push(
+                //             context,
+                //             MaterialPageRoute(
+                //                 builder: (context) => const AccountMisuse()));
+                //       },
+                //     ),
+                //   ),
+                // ),
 
                 // FadeInRightBig(
                 //   delay: const Duration(milliseconds: 500),
@@ -1191,236 +1194,235 @@ class _SideMenuState extends State<SideMenu> {
                 //     ),
                 //   ),
                 // ),
-                FadeInLeftBig(
-                  delay: const Duration(milliseconds: 500),
-                  duration: const Duration(milliseconds: 500),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 16),
-                    child: DrawerListTile(
-                      title: "Services",
-                      svgSrc: "assets/icons/qrcode.svg",
-                      press: () async {
-                        // await storage.delete(key: "token");
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const ContactUs()));
-                      },
-                    ),
-                  ),
-                ),
-                FadeInLeftBig(
-                  delay: const Duration(milliseconds: 500),
-                  duration: const Duration(milliseconds: 500),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 16),
-                    child: DrawerListTile(
-                      title: "PinCode Info",
-                      svgSrc: "assets/icons/qrcode.svg",
-                      press: () async {
-                        // await storage.delete(key: "token");
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => PincodeInfoUi()));
-                      },
-                    ),
-                  ),
-                ),
-                FadeInLeftBig(
-                  delay: const Duration(milliseconds: 500),
-                  duration: const Duration(milliseconds: 500),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 16),
-                    child: DrawerListTile(
-                      title: "ITR Files",
-                      svgSrc: "assets/icons/ao.svg",
-                      press: () async {
-                        // await storage.delete(key: "token");
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => ITRFiles()));
-                      },
-                    ),
-                  ),
-                ),
-                FadeInLeftBig(
-                  delay: const Duration(milliseconds: 500),
-                  duration: const Duration(milliseconds: 500),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 16),
-                    child: DrawerListTile(
-                      title: "Calculator",
-                      svgSrc: "assets/icons/ao.svg",
-                      press: () async {
-                        // await storage.delete(key: "token");
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Calculator()));
-                      },
-                    ),
-                  ),
-                ),
-                FadeInLeftBig(
-                  delay: const Duration(milliseconds: 500),
-                  duration: const Duration(milliseconds: 500),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 16),
-                    child: DrawerListTile(
-                      title: "Calculator Individual",
-                      svgSrc: "assets/icons/ao.svg",
-                      press: () async {
-                        // await storage.delete(key: "token");
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Select()));
-                      },
-                    ),
-                  ),
-                ),
-                FadeInLeftBig(
-                  delay: const Duration(milliseconds: 500),
-                  duration: const Duration(milliseconds: 500),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 16),
-                    child: DrawerListTile(
-                      title: "Calculator Domestic",
-                      svgSrc: "assets/icons/ao.svg",
-                      press: () async {
-                        // await storage.delete(key: "token");
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Domestic()));
-                      },
-                    ),
-                  ),
-                ),
-                FadeInLeftBig(
-                  delay: const Duration(milliseconds: 500),
-                  duration: const Duration(milliseconds: 500),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 16),
-                    child: DrawerListTile(
-                      title: "PDF Converter",
-                      svgSrc: "assets/icons/ao.svg",
-                      press: () async {
-                        // await storage.delete(key: "token");
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Converter()));
-                      },
-                    ),
-                  ),
-                ),
-                FadeInRightBig(
-                  delay: const Duration(milliseconds: 500),
-                  duration: const Duration(milliseconds: 500),
-                  child: ExpansionTile(
-                    iconColor: Colors.blue.shade900,
-                    title: DrawerListTile(
-                      title: "Easy Convertors",
-                      svgSrc: "assets/icons/qrcode.svg",
-                      press: () {},
-                    ),
-                    children: [
-                      FadeInLeftBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Image Compressor",
-                            svgSrc: "assets/icons/qrcode.svg",
-                            press: () {
-                              // await storage.delete(key: "token");
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => ImageCompressor()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInLeftBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "OCR",
-                            svgSrc: "assets/icons/ocr.svg",
-                            press: () async {
-                              // await storage.delete(key: "token");
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const OCRSystem()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInLeftBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Merge PDF/PDFto image  or File Size",
-                            svgSrc: "assets/icons/generatorpdf.svg",
-                            press: () async {
-                              // await storage.delete(key: "token");
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const Generators()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInLeftBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Image To Pdf",
-                            svgSrc: "assets/icons/generatorpdf.svg",
-                            press: () async {
-                              // await storage.delete(key: "token");
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const ImageToPdf()));
-                            },
-                          ),
-                        ),
-                      ),
-                      FadeInLeftBig(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16),
-                          child: DrawerListTile(
-                            title: "Invoice Generator",
-                            svgSrc: "assets/icons/pdf.svg",
-                            press: () async {
-                              // await storage.delete(key: "token");
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => MyInvoice()));
-                            },
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                // FadeInLeftBig(
+                //   delay: const Duration(milliseconds: 500),
+                //   duration: const Duration(milliseconds: 500),
+                //   child: Padding(
+                //     padding: const EdgeInsets.only(left: 16),
+                //     child: DrawerListTile(
+                //       title: "Services",
+                //       svgSrc: "assets/icons/qrcode.svg",
+                //       press: () async {
+                //         // await storage.delete(key: "token");
+                //         Navigator.push(
+                //             context,
+                //             MaterialPageRoute(
+                //                 builder: (context) => const ContactUs()));
+                //       },
+                //     ),
+                //   ),
+                // ),
+                // FadeInLeftBig(
+                //   delay: const Duration(milliseconds: 500),
+                //   duration: const Duration(milliseconds: 500),
+                //   child: Padding(
+                //     padding: const EdgeInsets.only(left: 16),
+                //     child: DrawerListTile(
+                //       title: "PinCode Info",
+                //       svgSrc: "assets/icons/qrcode.svg",
+                //       press: () async {
+                //         // await storage.delete(key: "token");
+                //         Navigator.push(
+                //             context,
+                //             MaterialPageRoute(
+                //                 builder: (context) => PincodeInfoUi()));
+                //       },
+                //     ),
+                //   ),
+                // ),
+                // FadeInLeftBig(
+                //   delay: const Duration(milliseconds: 500),
+                //   duration: const Duration(milliseconds: 500),
+                //   child: Padding(
+                //     padding: const EdgeInsets.only(left: 16),
+                //     child: DrawerListTile(
+                //       title: "ITR Files",
+                //       svgSrc: "assets/icons/ao.svg",
+                //       press: () async {
+                //         // await storage.delete(key: "token");
+                //         Navigator.push(
+                //             context,
+                //             MaterialPageRoute(
+                //                 builder: (context) => ITRFiles()));
+                //       },
+                //     ),
+                //   ),
+                // ),
+                // FadeInLeftBig(
+                //   delay: const Duration(milliseconds: 500),
+                //   duration: const Duration(milliseconds: 500),
+                //   child: Padding(
+                //     padding: const EdgeInsets.only(left: 16),
+                //     child: DrawerListTile(
+                //       title: "Calculator",
+                //       svgSrc: "assets/icons/ao.svg",
+                //       press: () async {
+                //         // await storage.delete(key: "token");
+                //         Navigator.push(
+                //             context,
+                //             MaterialPageRoute(
+                //                 builder: (context) => Calculator()));
+                //       },
+                //     ),
+                //   ),
+                // ),
+                // FadeInLeftBig(
+                //   delay: const Duration(milliseconds: 500),
+                //   duration: const Duration(milliseconds: 500),
+                //   child: Padding(
+                //     padding: const EdgeInsets.only(left: 16),
+                //     child: DrawerListTile(
+                //       title: "Calculator Individual",
+                //       svgSrc: "assets/icons/ao.svg",
+                //       press: () async {
+                //         // await storage.delete(key: "token");
+                //         Navigator.push(context,
+                //             MaterialPageRoute(builder: (context) => Select()));
+                //       },
+                //     ),
+                //   ),
+                // ),
+                // FadeInLeftBig(
+                //   delay: const Duration(milliseconds: 500),
+                //   duration: const Duration(milliseconds: 500),
+                //   child: Padding(
+                //     padding: const EdgeInsets.only(left: 16),
+                //     child: DrawerListTile(
+                //       title: "Calculator Domestic",
+                //       svgSrc: "assets/icons/ao.svg",
+                //       press: () async {
+                //         // await storage.delete(key: "token");
+                //         Navigator.push(
+                //             context,
+                //             MaterialPageRoute(
+                //                 builder: (context) => Domestic()));
+                //       },
+                //     ),
+                //   ),
+                // ),
+                // FadeInLeftBig(
+                //   delay: const Duration(milliseconds: 500),
+                //   duration: const Duration(milliseconds: 500),
+                //   child: Padding(
+                //     padding: const EdgeInsets.only(left: 16),
+                //     child: DrawerListTile(
+                //       title: "PDF Converter",
+                //       svgSrc: "assets/icons/ao.svg",
+                //       press: () async {
+                //         // await storage.delete(key: "token");
+                //         Navigator.push(
+                //             context,
+                //             MaterialPageRoute(
+                //                 builder: (context) => Converter()));
+                //       },
+                //     ),
+                //   ),
+                // ),
+                // FadeInRightBig(
+                //   delay: const Duration(milliseconds: 500),
+                //   duration: const Duration(milliseconds: 500),
+                //   child: ExpansionTile(
+                //     iconColor: Colors.blue.shade900,
+                //     title: DrawerListTile(
+                //       title: "Easy Convertors",
+                //       svgSrc: "assets/icons/qrcode.svg",
+                //       press: () {},
+                //     ),
+                //     children: [
+                //       FadeInLeftBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "Image Compressor",
+                //             svgSrc: "assets/icons/qrcode.svg",
+                //             press: () {
+                //               // await storage.delete(key: "token");
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) => ImageCompressor()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                // FadeInLeftBig(
+                //   delay: const Duration(milliseconds: 500),
+                //   duration: const Duration(milliseconds: 500),
+                //   child: Padding(
+                //     padding: const EdgeInsets.only(left: 16),
+                //     child: DrawerListTile(
+                //       title: "OCR",
+                //       svgSrc: "assets/icons/ocr.svg",
+                //       press: () async {
+                //         // await storage.delete(key: "token");
+                //         Navigator.push(
+                //             context,
+                //             MaterialPageRoute(
+                //                 builder: (context) => const OCRSystem()));
+                //       },
+                //     ),
+                //   ),
+                // ),
+                // FadeInLeftBig(
+                //   delay: const Duration(milliseconds: 500),
+                //   duration: const Duration(milliseconds: 500),
+                //   child: Padding(
+                //     padding: const EdgeInsets.only(left: 16),
+                //     child: DrawerListTile(
+                //       title: "Merge PDF/PDFto image  or File Size",
+                //       svgSrc: "assets/icons/generatorpdf.svg",
+                //       press: () async {
+                //         // await storage.delete(key: "token");
+                //         Navigator.push(
+                //             context,
+                //             MaterialPageRoute(
+                //                 builder: (context) => const Generators()));
+                //       },
+                //     ),
+                //   ),
+                // ),
+                // FadeInLeftBig(
+                //   delay: const Duration(milliseconds: 500),
+                //   duration: const Duration(milliseconds: 500),
+                //   child: Padding(
+                //     padding: const EdgeInsets.only(left: 16),
+                //     child: DrawerListTile(
+                //       title: "Image To Pdf",
+                //       svgSrc: "assets/icons/generatorpdf.svg",
+                //       press: () async {
+                //         // await storage.delete(key: "token");
+                //         Navigator.push(
+                //             context,
+                //             MaterialPageRoute(
+                //                 builder: (context) =>
+                //                     const ImageToPdf()));
+                //       },
+                //     ),
+                //   ),
+                // ),
+                //       FadeInLeftBig(
+                //         delay: const Duration(milliseconds: 500),
+                //         duration: const Duration(milliseconds: 500),
+                //         child: Padding(
+                //           padding: const EdgeInsets.only(left: 16),
+                //           child: DrawerListTile(
+                //             title: "Invoice Generator",
+                //             svgSrc: "assets/icons/pdf.svg",
+                //             press: () async {
+                //               // await storage.delete(key: "token");
+                //               Navigator.push(
+                //                   context,
+                //                   MaterialPageRoute(
+                //                       builder: (context) => MyInvoice()));
+                //             },
+                //           ),
+                //         ),
+                //       ),
+                //     ],
+                //   ),
+                // ),
                 // FadeInLeftBig(
                 //   delay: const Duration(milliseconds: 500),
                 //   duration: const Duration(milliseconds: 500),
@@ -1469,24 +1471,24 @@ class _SideMenuState extends State<SideMenu> {
                     ),
                   ),
                 ),
-                FadeInLeftBig(
-                  delay: const Duration(milliseconds: 500),
-                  duration: const Duration(milliseconds: 500),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 16),
-                    child: DrawerListTile(
-                      title: "Update User",
-                      svgSrc: "assets/icons/ao.svg",
-                      press: () async {
-                        // await storage.delete(key: "token");
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => UpdateUser()));
-                      },
-                    ),
-                  ),
-                ),
+                // FadeInLeftBig(
+                //   delay: const Duration(milliseconds: 500),
+                //   duration: const Duration(milliseconds: 500),
+                //   child: Padding(
+                //     padding: const EdgeInsets.only(left: 16),
+                //     child: DrawerListTile(
+                //       title: "Update User",
+                //       svgSrc: "assets/icons/ao.svg",
+                //       press: () async {
+                //         // await storage.delete(key: "token");
+                //         Navigator.push(
+                //             context,
+                //             MaterialPageRoute(
+                //                 builder: (context) => UpdateUser()));
+                //       },
+                //     ),
+                //   ),
+                // ),
 
                 FadeInLeftBig(
                   delay: const Duration(milliseconds: 500),
@@ -1577,26 +1579,61 @@ class _SideMenuState extends State<SideMenu> {
                 //     ),
                 //   ),
                 // ),
+                // FadeInLeftBig(
+                //   delay: const Duration(milliseconds: 500),
+                //   duration: const Duration(milliseconds: 500),
+                //   child: Padding(
+                //     padding: const EdgeInsets.only(left: 16),
+                //     child: DrawerListTile(
+                //       title: "INVOICE",
+                //       svgSrc: "assets/icons/settings.svg",
+                //       press: () async {
+                //         // await storage.delete(key: "token");
+                //         // Navigator.push(context, MaterialPageRoute(builder: (context)=>b2bRequest()));
+                //         Navigator.push(
+                //             context,
+                //             MaterialPageRoute(
+                //                 builder: (context) => const MyInvoicee()));
+                //       },
+                //     ),
+                //   ),
+                // ),
                 FadeInLeftBig(
                   delay: const Duration(milliseconds: 500),
                   duration: const Duration(milliseconds: 500),
                   child: Padding(
                     padding: const EdgeInsets.only(left: 16),
                     child: DrawerListTile(
-                      title: "INVOICE",
-                      svgSrc: "assets/icons/settings.svg",
+                      title: "Dashbord3",
+                      svgSrc: "assets/icons/generatorpdf.svg",
                       press: () async {
                         // await storage.delete(key: "token");
-                        // Navigator.push(context, MaterialPageRoute(builder: (context)=>b2bRequest()));
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const MyInvoicee()));
+                                builder: (context) => const Dashbord3()));
                       },
                     ),
                   ),
                 ),
-
+                FadeInLeftBig(
+                  delay: const Duration(milliseconds: 500),
+                  duration: const Duration(milliseconds: 500),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 16),
+                    child: DrawerListTile(
+                      title: "Dashbord1",
+                      svgSrc: "assets/icons/generatorpdf.svg",
+                      press: () async {
+                        // await storage.delete(key: "token");
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Dashbord1()));
+                      },
+                    ),
+                  ),
+                ),
                 FadeInRightBig(
                   delay: const Duration(milliseconds: 500),
                   duration: const Duration(milliseconds: 500),

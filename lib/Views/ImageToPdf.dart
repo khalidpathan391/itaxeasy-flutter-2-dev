@@ -39,19 +39,21 @@ class _ImageToPdfState extends State<ImageToPdf> {
         child: Icon(Icons.add, color: Colors.white),
         onPressed: getImageFromGallery,
       ),
-      body: _image != null
-          ? ListView.builder(
-              itemCount: _image.length,
-              itemBuilder: (context, index) => Container(
-                  height: 400,
-                  width: double.infinity,
-                  margin: const EdgeInsets.all(8),
-                  child: Image.file(
-                    _image[index],
-                    fit: BoxFit.cover,
-                  )),
-            )
-          : Container(),
+      body: Container(
+        child: _image != null
+            ? ListView.builder(
+                itemCount: _image.length,
+                itemBuilder: (context, index) => Container(
+                    height: 400,
+                    width: double.infinity,
+                    margin: const EdgeInsets.all(8),
+                    child: Image.file(
+                      _image[index],
+                      fit: BoxFit.cover,
+                    )),
+              )
+            : Container(),
+      ),
     );
   }
 

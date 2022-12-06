@@ -134,56 +134,7 @@ class _EInvoicingUiState extends State<EInvoicingUi>
             SizedBox(
               height: 30,
             ),
-//             GlassmorphicContainer(
 //
-//               width: 350,
-//               height: 250,
-//               borderRadius: 20,
-//               blur: 10,
-//               alignment: Alignment.bottomCenter,
-//               border: 2,
-//               linearGradient: LinearGradient(
-//                   begin: Alignment.topLeft,
-//                   end: Alignment.bottomRight,
-//                   colors: [
-//                     Colors.purple.withOpacity(0.1),
-//                     Colors.purple.withOpacity(0.05),
-//                   ],
-//                   stops: [
-//                     0.1,
-//                     1,
-//                   ]),
-//               borderGradient: LinearGradient(
-//                 begin: Alignment.topLeft,
-//                 end: Alignment.bottomRight,
-//                 colors: [
-//                   Colors.purple.withOpacity(0.5),
-//                   Colors.purple.withOpacity(0.5),
-//                 ],
-//               ),
-//               child: SfCartesianChart(
-//                   enableAxisAnimation: true,
-//                   enableSideBySideSeriesPlacement: true,
-// // backgroundColor: Colors.purple.withOpacity(0.2),
-//                   primaryXAxis: CategoryAxis(), // legend: Legend(isVisible: true),
-//                   tooltipBehavior: _tooltipBehavior,
-//                   series: <LineSeries<SalesData, String>>[
-//                     LineSeries<SalesData, String>(
-//                         dataSource: <SalesData>[
-//                           SalesData('Jan', 35),
-//                           SalesData('Feb', 20),
-//                           SalesData('Mar', 40),
-//                           SalesData('Apr', 32),
-//                           SalesData('May', 40),
-//                           SalesData('June', 48),
-//                         ],
-//                         xValueMapper: (SalesData sales, _) => sales.year,
-//                         yValueMapper: (SalesData sales, _) => sales.sales,
-// // Enable data label
-//                         dataLabelSettings:
-//                         const DataLabelSettings(isVisible: true))
-//                   ]),
-//             ),
           ],
         ),
       ),

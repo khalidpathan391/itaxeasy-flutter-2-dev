@@ -4,6 +4,8 @@ import 'package:getwidget/components/button/gf_button.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:gst_app/Views/GSTIN_SECTION/ReturnDashboard.dart';
 
+import 'gstn_list.dart';
+
 class Gstn extends StatefulWidget {
   const Gstn({Key key}) : super(key: key);
 
@@ -31,6 +33,7 @@ class _GstnState extends State<Gstn> {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width - 40;
     return isLoading
         ? const Center(child: CircularProgressIndicator())
         : SafeArea(
@@ -60,10 +63,19 @@ class _GstnState extends State<Gstn> {
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.only(top: 20),
-                                  child: Text(
-                                    'File Returns',
-                                    // style: heading2.copyWith(color: textBlack),
-                                  ),
+                                  child: Row(children: [
+                                    Text(
+                                      'File Returns',
+                                      // style: heading2.copyWith(color: textBlack),
+                                    ),
+                                    SizedBox(
+                                      width: width * .2,
+                                    ),
+                                    Text(
+                                      'Due Date - 11/01/2022',
+                                      // style: heading2.copyWith(color: textBlack),
+                                    ),
+                                  ]),
                                 ),
                                 const SizedBox(
                                   height: 20,
@@ -363,7 +375,7 @@ class _GstnState extends State<Gstn> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            const ReturnDashboard()));
+                                            const GstnList()));
                               },
                               text: "Search",
                             ),

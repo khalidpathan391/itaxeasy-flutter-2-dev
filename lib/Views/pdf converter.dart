@@ -41,7 +41,7 @@ class _ConverterState extends State<Converter> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.blue.shade100,
+        backgroundColor: Colors.grey.shade300,
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.fromLTRB(24.0, 20.0, 24.0, 0),
@@ -97,12 +97,25 @@ class _ConverterState extends State<Converter> {
                       elevation: 5,
                       child: Container(
                         padding: const EdgeInsets.all(defaultPadding),
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(10),
-                          ),
-                        ),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey.shade700,
+                                  blurRadius: 8.0,
+                                  offset: Offset(5, 3))
+                            ],
+                            // border: Border.all(
+                            //     color: Colors.blue.shade900),
+                            shape: BoxShape.rectangle,
+                            gradient: LinearGradient(
+                              begin: Alignment.bottomRight,
+                              end: Alignment.centerLeft,
+                              colors: [
+                                Colors.grey.shade100,
+                                Colors.white,
+                              ],
+                            )),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -151,12 +164,25 @@ class _ConverterState extends State<Converter> {
                       elevation: 5,
                       child: Container(
                         padding: const EdgeInsets.all(defaultPadding),
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(10),
-                          ),
-                        ),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey.shade700,
+                                  blurRadius: 8.0,
+                                  offset: Offset(5, 3))
+                            ],
+                            // border: Border.all(
+                            //     color: Colors.blue.shade900),
+                            shape: BoxShape.rectangle,
+                            gradient: LinearGradient(
+                              begin: Alignment.bottomRight,
+                              end: Alignment.centerLeft,
+                              colors: [
+                                Colors.grey.shade100,
+                                Colors.white,
+                              ],
+                            )),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -207,12 +233,25 @@ class _ConverterState extends State<Converter> {
                       elevation: 5,
                       child: Container(
                         padding: const EdgeInsets.all(defaultPadding),
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(10),
-                          ),
-                        ),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey.shade700,
+                                  blurRadius: 8.0,
+                                  offset: Offset(5, 3))
+                            ],
+                            // border: Border.all(
+                            //     color: Colors.blue.shade900),
+                            shape: BoxShape.rectangle,
+                            gradient: LinearGradient(
+                              begin: Alignment.bottomRight,
+                              end: Alignment.centerLeft,
+                              colors: [
+                                Colors.grey.shade100,
+                                Colors.white,
+                              ],
+                            )),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [

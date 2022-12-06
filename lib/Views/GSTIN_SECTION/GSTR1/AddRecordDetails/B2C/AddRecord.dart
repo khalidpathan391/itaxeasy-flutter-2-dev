@@ -63,7 +63,8 @@ class _AddRecordB2CState extends State<AddRecordB2C> {
                           padding: const EdgeInsets.only(top: 20),
                           child: Text(
                             'B2C(Large) Invoices- Details',
-                            style: heading2.copyWith(color: textBlack),
+                            style: TextStyle(fontSize: 20)
+                                .copyWith(color: textBlack),
                           ),
                         ),
                         const SizedBox(

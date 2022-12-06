@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:gst_app/Controllers/menu_controller.dart';
 import 'package:gst_app/Views/Bottom_Nav_Bar/user_profile.dart';
 import 'package:gst_app/Views/Theme/colors.dart';
+import 'package:gst_app/Views/on_board_screens/Dashbord3.dart';
 
 import 'package:iconsax/iconsax.dart';
 
@@ -90,7 +91,8 @@ class _NavlistState extends State<Navlist> with SingleTickerProviderStateMixin {
       body: FadeInDown(
         child: TabBarView(
           children: const <Widget>[
-            DetailsScreen(),
+            //  DetailsScreen(),
+            Dashbord3(),
             ListCustomer(),
             EInvoicingUi(),
             Statistics(),
@@ -106,7 +108,7 @@ class _NavlistState extends State<Navlist> with SingleTickerProviderStateMixin {
         delay: const Duration(milliseconds: 430),
         duration: const Duration(milliseconds: 630),
         child: Container(
-          height: 80,
+          height: 70,
           decoration: BoxDecoration(
             color: Color(0xffFFFFFF),
           ),
