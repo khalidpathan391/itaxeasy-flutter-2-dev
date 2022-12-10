@@ -52,7 +52,7 @@ class _IBIZState extends State<IBIZ> {
                 ),
               ),
               Text(
-                "Bill-Sill",
+                "Bill-Shill",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 25,
@@ -65,6 +65,456 @@ class _IBIZState extends State<IBIZ> {
           child: ListView(children: [
             Column(
               children: [
+                // GestureDetector(
+                //   onTap: () {
+                //     // Navigator.push(
+                //     //     context,
+                //     //     MaterialPageRoute(
+                //     //         builder: (context) => TradingAccount()));
+                //   },
+                //   child: Container(
+                //       padding: EdgeInsets.all(15),
+                //       margin: EdgeInsets.only(left: 5, right: 5, top: 10),
+                //       decoration: BoxDecoration(
+                //           borderRadius: BorderRadius.circular(10),
+                //           boxShadow: [
+                //             BoxShadow(
+                //                 color: Colors.grey.shade700,
+                //                 blurRadius: 5.0,
+                //                 offset: Offset(5, 3))
+                //           ],
+                //           // border: Border.all(
+                //           //     color: Colors.blue.shade900),
+                //           shape: BoxShape.rectangle,
+                //           gradient: LinearGradient(
+                //             begin: Alignment.bottomRight,
+                //             end: Alignment.centerLeft,
+                //             colors: [
+                //               Colors.grey.shade100,
+                //               Colors.white,
+                //             ],
+                //           )),
+                //       child: Row(
+                //         //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //         children: [
+                //           Icon(
+                //             Icons.account_box_rounded,
+                //             color: Colors.blue.shade900,
+                //           ),
+                //           SizedBox(
+                //             width: width * .12,
+                //           ),
+                //           Container(
+                //             //  margin: EdgeInsets.only(right: 180),
+                //             child: Column(
+                //               crossAxisAlignment: CrossAxisAlignment.start,
+                //               children: [
+                //                 Text(
+                //                   "Sale",
+                //                   style: TextStyle(
+                //                       fontWeight: FontWeight.bold,
+                //                       fontSize: 18,
+                //                       color: Colors.black),
+                //                 ),
+                //               ],
+                //             ),
+                //           ),
+                //         ],
+                //       )),
+                // ),
+                // GestureDetector(
+                //   onTap: () {
+                //     // Navigator.push(
+                //     //     context,
+                //     //     MaterialPageRoute(
+                //     //         builder: (context) => TradingAccount()));
+                //   },
+                //   child: Container(
+                //       padding: EdgeInsets.all(15),
+                //       margin: EdgeInsets.only(left: 5, right: 5, top: 10),
+                //       decoration: BoxDecoration(
+                //           borderRadius: BorderRadius.circular(10),
+                //           boxShadow: [
+                //             BoxShadow(
+                //                 color: Colors.grey.shade700,
+                //                 blurRadius: 5.0,
+                //                 offset: Offset(5, 3))
+                //           ],
+                //           // border: Border.all(
+                //           //     color: Colors.blue.shade900),
+                //           shape: BoxShape.rectangle,
+                //           gradient: LinearGradient(
+                //             begin: Alignment.bottomRight,
+                //             end: Alignment.centerLeft,
+                //             colors: [
+                //               Colors.grey.shade100,
+                //               Colors.white,
+                //             ],
+                //           )),
+                //       child: Row(
+                //         //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //         children: [
+                //           Icon(
+                //             Icons.account_box_rounded,
+                //             color: Colors.blue.shade900,
+                //           ),
+                //           SizedBox(
+                //             width: width * .12,
+                //           ),
+                //           Container(
+                //             //  margin: EdgeInsets.only(right: 180),
+                //             child: Column(
+                //               crossAxisAlignment: CrossAxisAlignment.start,
+                //               children: [
+                //                 Text(
+                //                   "Recipt",
+                //                   style: TextStyle(
+                //                       fontWeight: FontWeight.bold,
+                //                       fontSize: 18,
+                //                       color: Colors.black),
+                //                 ),
+                //               ],
+                //             ),
+                //           ),
+                //         ],
+                //       )),
+                // ),
+                // GestureDetector(
+                //   onTap: () {
+                //     // Navigator.push(context,
+                //     //     MaterialPageRoute(builder: (context) => ItrLinksUi()));
+                //   },
+                //   child: Container(
+                //       padding: EdgeInsets.all(15),
+                //       margin: EdgeInsets.only(left: 5, right: 5, top: 10),
+                //       decoration: BoxDecoration(
+                //           borderRadius: BorderRadius.circular(10),
+                //           boxShadow: [
+                //             BoxShadow(
+                //                 color: Colors.grey.shade700,
+                //                 blurRadius: 5.0,
+                //                 offset: Offset(5, 3))
+                //           ],
+                //           // border: Border.all(
+                //           //     color: Colors.blue.shade900),
+                //           shape: BoxShape.rectangle,
+                //           gradient: LinearGradient(
+                //             begin: Alignment.bottomRight,
+                //             end: Alignment.centerLeft,
+                //             colors: [
+                //               Colors.grey.shade100,
+                //               Colors.white,
+                //             ],
+                //           )),
+                //       child: Row(
+                //         //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //         children: [
+                //           Icon(
+                //             Icons.insert_comment_sharp,
+                //             color: Colors.blue.shade900,
+                //           ),
+                //           SizedBox(
+                //             width: width * .12,
+                //           ),
+                //           Container(
+                //             //  margin: EdgeInsets.only(right: 180),
+                //             child: Column(
+                //               crossAxisAlignment: CrossAxisAlignment.start,
+                //               children: [
+                //                 Text(
+                //                   "Payment",
+                //                   style: TextStyle(
+                //                       fontWeight: FontWeight.bold,
+                //                       fontSize: 18,
+                //                       color: Colors.black),
+                //                 ),
+                //               ],
+                //             ),
+                //           ),
+                //         ],
+                //       )),
+                // ),
+                // GestureDetector(
+                //   onTap: () {
+                //     // Navigator.push(
+                //     //     context,
+                //     //     MaterialPageRoute(
+                //     //         builder: (context) => VerifyYourPan()));
+                //   },
+                //   child: Container(
+                //       padding: EdgeInsets.all(15),
+                //       margin: EdgeInsets.only(left: 5, right: 5, top: 10),
+                //       decoration: BoxDecoration(
+                //           borderRadius: BorderRadius.circular(10),
+                //           boxShadow: [
+                //             BoxShadow(
+                //                 color: Colors.grey.shade700,
+                //                 blurRadius: 5.0,
+                //                 offset: Offset(5, 3))
+                //           ],
+                //           // border: Border.all(
+                //           //     color: Colors.blue.shade900),
+                //           shape: BoxShape.rectangle,
+                //           gradient: LinearGradient(
+                //             begin: Alignment.bottomRight,
+                //             end: Alignment.centerLeft,
+                //             colors: [
+                //               Colors.grey.shade100,
+                //               Colors.white,
+                //             ],
+                //           )),
+                //       child: Row(
+                //         //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //         children: [
+                //           Icon(
+                //             Icons.verified_rounded,
+                //             color: Colors.blue.shade900,
+                //           ),
+                //           SizedBox(
+                //             width: width * .12,
+                //           ),
+                //           Container(
+                //             //  margin: EdgeInsets.only(right: 180),
+                //             child: Column(
+                //               crossAxisAlignment: CrossAxisAlignment.start,
+                //               children: [
+                //                 Text(
+                //                   "Purchase",
+                //                   style: TextStyle(
+                //                       fontWeight: FontWeight.bold,
+                //                       fontSize: 18,
+                //                       color: Colors.black),
+                //                 ),
+                //               ],
+                //             ),
+                //           ),
+                //         ],
+                //       )),
+                // ),
+                // GestureDetector(
+                //   onTap: () {
+                //     // Navigator.push(context,
+                //     //     MaterialPageRoute(builder: (context) => ItrLinksUi()));
+                //   },
+                //   child: Container(
+                //       padding: EdgeInsets.all(15),
+                //       margin: EdgeInsets.only(left: 5, right: 5, top: 10),
+                //       decoration: BoxDecoration(
+                //           borderRadius: BorderRadius.circular(10),
+                //           boxShadow: [
+                //             BoxShadow(
+                //                 color: Colors.grey.shade700,
+                //                 blurRadius: 5.0,
+                //                 offset: Offset(5, 3))
+                //           ],
+                //           // border: Border.all(
+                //           //     color: Colors.blue.shade900),
+                //           shape: BoxShape.rectangle,
+                //           gradient: LinearGradient(
+                //             begin: Alignment.bottomRight,
+                //             end: Alignment.centerLeft,
+                //             colors: [
+                //               Colors.grey.shade100,
+                //               Colors.white,
+                //             ],
+                //           )),
+                //       child: Row(
+                //         //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //         children: [
+                //           Icon(
+                //             Icons.insert_comment_sharp,
+                //             color: Colors.blue.shade900,
+                //           ),
+                //           SizedBox(
+                //             width: width * .12,
+                //           ),
+                //           Container(
+                //             //  margin: EdgeInsets.only(right: 180),
+                //             child: Column(
+                //               crossAxisAlignment: CrossAxisAlignment.start,
+                //               children: [
+                //                 Text(
+                //                   "Invoice",
+                //                   style: TextStyle(
+                //                       fontWeight: FontWeight.bold,
+                //                       fontSize: 18,
+                //                       color: Colors.black),
+                //                 ),
+                //               ],
+                //             ),
+                //           ),
+                //         ],
+                //       )),
+                // ),
+                GestureDetector(
+                  onTap: () {
+                    // Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //         builder: (context) => VerifyYourPan()));
+                  },
+                  child: Container(
+                      padding: EdgeInsets.all(15),
+                      margin: EdgeInsets.only(left: 5, right: 5, top: 10),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.grey.shade700,
+                                blurRadius: 5.0,
+                                offset: Offset(5, 3))
+                          ],
+                          // border: Border.all(
+                          //     color: Colors.blue.shade900),
+                          shape: BoxShape.rectangle,
+                          gradient: LinearGradient(
+                            begin: Alignment.bottomRight,
+                            end: Alignment.centerLeft,
+                            colors: [
+                              Colors.grey.shade100,
+                              Colors.white,
+                            ],
+                          )),
+                      child: Row(
+                        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Icon(
+                            Icons.verified_rounded,
+                            color: Colors.blue.shade900,
+                          ),
+                          SizedBox(
+                            width: width * .12,
+                          ),
+                          Container(
+                            //  margin: EdgeInsets.only(right: 180),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Fixed Asstes",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18,
+                                      color: Colors.black),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      )),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    // Navigator.push(context,
+                    //     MaterialPageRoute(builder: (context) => ItrLinksUi()));
+                  },
+                  child: Container(
+                      padding: EdgeInsets.all(15),
+                      margin: EdgeInsets.only(left: 5, right: 5, top: 10),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.grey.shade700,
+                                blurRadius: 5.0,
+                                offset: Offset(5, 3))
+                          ],
+                          // border: Border.all(
+                          //     color: Colors.blue.shade900),
+                          shape: BoxShape.rectangle,
+                          gradient: LinearGradient(
+                            begin: Alignment.bottomRight,
+                            end: Alignment.centerLeft,
+                            colors: [
+                              Colors.grey.shade100,
+                              Colors.white,
+                            ],
+                          )),
+                      child: Row(
+                        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Icon(
+                            Icons.insert_comment_sharp,
+                            color: Colors.blue.shade900,
+                          ),
+                          SizedBox(
+                            width: width * .12,
+                          ),
+                          Container(
+                            //  margin: EdgeInsets.only(right: 180),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Creditor",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18,
+                                      color: Colors.black),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      )),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    // Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //         builder: (context) => VerifyYourPan()));
+                  },
+                  child: Container(
+                      padding: EdgeInsets.all(15),
+                      margin: EdgeInsets.only(left: 5, right: 5, top: 10),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.grey.shade700,
+                                blurRadius: 5.0,
+                                offset: Offset(5, 3))
+                          ],
+                          // border: Border.all(
+                          //     color: Colors.blue.shade900),
+                          shape: BoxShape.rectangle,
+                          gradient: LinearGradient(
+                            begin: Alignment.bottomRight,
+                            end: Alignment.centerLeft,
+                            colors: [
+                              Colors.grey.shade100,
+                              Colors.white,
+                            ],
+                          )),
+                      child: Row(
+                        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Icon(
+                            Icons.verified_rounded,
+                            color: Colors.blue.shade900,
+                          ),
+                          SizedBox(
+                            width: width * .12,
+                          ),
+                          Container(
+                            //  margin: EdgeInsets.only(right: 180),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Debitor",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18,
+                                      color: Colors.black),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      )),
+                ),
                 GestureDetector(
                   onTap: () {
                     Navigator.push(
@@ -277,7 +727,7 @@ class _IBIZState extends State<IBIZ> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  "********************",
+                                  "Trial Balance",
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 18,

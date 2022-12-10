@@ -79,7 +79,7 @@ class _SelectState extends State<Select> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.blue[100],
+        backgroundColor: Colors.grey[400],
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.fromLTRB(24.0, 20.0, 24.0, 0),
@@ -88,25 +88,25 @@ class _SelectState extends State<Select> {
               children: <Widget>[
                 Row(
                   children: [
-                    // IconButton(
-                    //   onPressed: () {
-                    //     Navigator.of(context).pop();
-                    //   },
-                    //   icon: const Icon(Icons.arrow_back),
-                    // ),
+                    IconButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                      icon: const Icon(Icons.arrow_back),
+                    ),
                     const SizedBox(
                       width: 20,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // Padding(
-                        //   padding: const EdgeInsets.only(top: 20),
-                        //   child: Text(
-                        //     'Individual',
-                        //     style: heading2.copyWith(color: textBlack),
-                        //   ),
-                        // ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 20),
+                          child: Text(
+                            'Individual',
+                            style: heading2.copyWith(color: textBlack),
+                          ),
+                        ),
                         const SizedBox(
                           height: 20,
                         ),

@@ -70,13 +70,31 @@ class _Gstr4aState extends State<Gstr4a> {
                 children: [
                   Expanded(
                     child: Card(
-                      elevation: 5,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                      color: Color.fromARGB(255, 210, 189, 214),
+                      elevation: 20,
                       child: Container(
                         padding: const EdgeInsets.all(defaultPadding),
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
-                        ),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey.shade700,
+                                  blurRadius: 5.0,
+                                  offset: Offset(5, 3))
+                            ],
+                            // border: Border.all(
+                            //     color: Colors.blue.shade900),
+                            shape: BoxShape.rectangle,
+                            gradient: LinearGradient(
+                              begin: Alignment.bottomRight,
+                              end: Alignment.centerLeft,
+                              colors: [
+                                Colors.grey.shade100,
+                                Colors.white,
+                              ],
+                            )),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
@@ -142,13 +160,31 @@ class _Gstr4aState extends State<Gstr4a> {
                   ),
                   Expanded(
                     child: Card(
-                      elevation: 5,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                      color: Color.fromARGB(255, 210, 189, 214),
+                      elevation: 20,
                       child: Container(
                         padding: const EdgeInsets.all(defaultPadding),
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
-                        ),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey.shade700,
+                                  blurRadius: 5.0,
+                                  offset: Offset(5, 3))
+                            ],
+                            // border: Border.all(
+                            //     color: Colors.blue.shade900),
+                            shape: BoxShape.rectangle,
+                            gradient: LinearGradient(
+                              begin: Alignment.bottomRight,
+                              end: Alignment.centerLeft,
+                              colors: [
+                                Colors.grey.shade100,
+                                Colors.white,
+                              ],
+                            )),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
@@ -241,16 +277,38 @@ class _Gstr4aState extends State<Gstr4a> {
                       SizedBox(
                         height: 10,
                       ),
-                      Container(
-                        padding: const EdgeInsets.only(
-                            top: 10, left: 10, right: 10, bottom: 10),
-                        decoration: BoxDecoration(
-                            color: Colors.blue.shade100,
-                            borderRadius: BorderRadius.circular(20)),
-                        child: Text(
-                          "3.Summary of self-assessed liability(Net of advances,credit and debit notes and any other"
-                          "adjustment  due to amendments etc.)",
-                          style: GoogleFonts.dmSans(),
+                      Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15)),
+                        color: Color.fromARGB(255, 210, 189, 214),
+                        elevation: 20,
+                        child: Container(
+                          padding: const EdgeInsets.only(
+                              top: 10, left: 10, right: 10, bottom: 10),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.grey.shade700,
+                                    blurRadius: 5.0,
+                                    offset: Offset(5, 3))
+                              ],
+                              // border: Border.all(
+                              //     color: Colors.blue.shade900),
+                              shape: BoxShape.rectangle,
+                              gradient: LinearGradient(
+                                begin: Alignment.bottomRight,
+                                end: Alignment.centerLeft,
+                                colors: [
+                                  Colors.grey.shade100,
+                                  Colors.white,
+                                ],
+                              )),
+                          child: Text(
+                            "3.Summary of self-assessed liability(Net of advances,credit and debit notes and any other"
+                            "adjustment  due to amendments etc.)",
+                            style: GoogleFonts.dmSans(),
+                          ),
                         ),
                       ),
                       SizedBox(

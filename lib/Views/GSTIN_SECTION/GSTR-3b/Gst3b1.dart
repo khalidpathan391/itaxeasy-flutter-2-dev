@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:getwidget/components/button/gf_button.dart';
 import 'package:getwidget/shape/gf_button_shape.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:gst_app/Views/Calculator/ifsc_calcii/theme.dart';
 import 'package:gst_app/Views/GSTIN_SECTION/GSTR-3b/GST3.1.1table.dart';
 import 'package:gst_app/Views/GSTIN_SECTION/GSTR-3b/Gst3b1.dart';
@@ -13,6 +14,7 @@ import 'package:gst_app/Views/GSTIN_SECTION/GSTR-3b/Table5_1.dart';
 import 'package:gst_app/Views/GSTIN_SECTION/GSTR-3b/Table_3_2.dart';
 import 'package:gst_app/Views/components/constants.dart';
 
+import '../../Calculator/ifsc_calcii/widgets/custom_checkbox.dart';
 import '../GSTR1/prepare_online.dart';
 import 'Table4.dart';
 import 'Chalaan.dart';
@@ -27,6 +29,7 @@ class GST3b extends StatefulWidget {
 }
 
 class _GST3bState extends State<GST3b> {
+  bool isChecked = false;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -77,6 +80,25 @@ class _GST3bState extends State<GST3b> {
                   ),
                   const SizedBox(
                     height: 20,
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(left: 10, right: 10, bottom: 10),
+                    child: Row(
+                      children: [
+                        CustomCheckbox(),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Text(
+                          "File Nil GST CMP-08",
+                          style: GoogleFonts.dmSans(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   Card(
                     shape: RoundedRectangleBorder(
@@ -995,7 +1017,49 @@ class _GST3bState extends State<GST3b> {
                     ),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 30,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      FadeInRight(
+                        delay: const Duration(milliseconds: 500),
+                        duration: const Duration(milliseconds: 500),
+                        child: GFButton(
+                            color: Colors.blue.shade900,
+                            padding: const EdgeInsets.all(10),
+                            shape: GFButtonShape.pills,
+                            onPressed: () {},
+                            text: "Save"),
+                      ),
+                      FadeInRight(
+                        delay: const Duration(milliseconds: 500),
+                        duration: const Duration(milliseconds: 500),
+                        child: GFButton(
+                            color: Colors.blue.shade900,
+                            padding: const EdgeInsets.all(10),
+                            shape: GFButtonShape.pills,
+                            onPressed: () {
+                              // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
+                            },
+                            text: "Pay Tax"),
+                      ),
+                      FadeInRight(
+                        delay: const Duration(milliseconds: 500),
+                        duration: const Duration(milliseconds: 500),
+                        child: GFButton(
+                            color: Colors.blue.shade900,
+                            padding: const EdgeInsets.all(10),
+                            shape: GFButtonShape.pills,
+                            onPressed: () {
+                              // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
+                            },
+                            text: "File ITR"),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 30,
                   ),
                 ],
               ),

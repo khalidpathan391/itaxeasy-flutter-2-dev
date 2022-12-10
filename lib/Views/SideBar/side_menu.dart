@@ -1132,23 +1132,23 @@ class _SideMenuState extends State<SideMenu> {
                 //   ),
                 // ),
 
-                // FadeInRightBig(
-                //   delay: const Duration(milliseconds: 500),
-                //   duration: const Duration(milliseconds: 500),
-                //   child: Padding(
-                //     padding: const EdgeInsets.only(left: 16),
-                //     child: DrawerListTile(
-                //       title: "Account Misuse",
-                //       svgSrc: "assets/icons/account.svg",
-                //       press: () {
-                //         Navigator.push(
-                //             context,
-                //             MaterialPageRoute(
-                //                 builder: (context) => const AccountMisuse()));
-                //       },
-                //     ),
-                //   ),
-                // ),
+                FadeInRightBig(
+                  delay: const Duration(milliseconds: 500),
+                  duration: const Duration(milliseconds: 500),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 16),
+                    child: DrawerListTile(
+                      title: "Account Misuse",
+                      svgSrc: "assets/icons/account.svg",
+                      press: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const AccountMisuse()));
+                      },
+                    ),
+                  ),
+                ),
 
                 // FadeInRightBig(
                 //   delay: const Duration(milliseconds: 500),
@@ -1365,24 +1365,24 @@ class _SideMenuState extends State<SideMenu> {
                 //     ),
                 //   ),
                 // ),
-                // FadeInLeftBig(
-                //   delay: const Duration(milliseconds: 500),
-                //   duration: const Duration(milliseconds: 500),
-                //   child: Padding(
-                //     padding: const EdgeInsets.only(left: 16),
-                //     child: DrawerListTile(
-                //       title: "Merge PDF/PDFto image  or File Size",
-                //       svgSrc: "assets/icons/generatorpdf.svg",
-                //       press: () async {
-                //         // await storage.delete(key: "token");
-                //         Navigator.push(
-                //             context,
-                //             MaterialPageRoute(
-                //                 builder: (context) => const Generators()));
-                //       },
-                //     ),
-                //   ),
-                // ),
+                FadeInLeftBig(
+                  delay: const Duration(milliseconds: 500),
+                  duration: const Duration(milliseconds: 500),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 16),
+                    child: DrawerListTile(
+                      title: "Merge PDF/PDFto image  or File Size",
+                      svgSrc: "assets/icons/generatorpdf.svg",
+                      press: () async {
+                        // await storage.delete(key: "token");
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Generators()));
+                      },
+                    ),
+                  ),
+                ),
                 // FadeInLeftBig(
                 //   delay: const Duration(milliseconds: 500),
                 //   duration: const Duration(milliseconds: 500),

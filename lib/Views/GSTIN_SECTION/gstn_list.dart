@@ -4,9 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:getwidget/components/button/gf_button.dart';
 import 'package:getwidget/shape/gf_button_shape.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:gst_app/Views/Calculator/ifsc_calcii/theme.dart';
 import 'package:gst_app/Views/GSTIN_SECTION/GSTR-3b/Gst3b1.dart';
 
+import '../Calculator/ifsc_calcii/widgets/custom_checkbox.dart';
 import '../Theme/colors.dart';
 import '../components/constants.dart';
 import 'GSTR-3b/Chalaan.dart';
@@ -23,6 +25,7 @@ class GstnList extends StatefulWidget {
 }
 
 class _GstnListState extends State<GstnList> {
+  bool isChecked = false;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -73,6 +76,25 @@ class _GstnListState extends State<GstnList> {
                   ),
                   const SizedBox(
                     height: 20,
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(left: 10, right: 10, bottom: 10),
+                    child: Row(
+                      children: [
+                        CustomCheckbox(),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Text(
+                          "File Nil GST ",
+                          style: GoogleFonts.dmSans(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   Card(
                     shape: RoundedRectangleBorder(
@@ -475,18 +497,18 @@ class _GstnListState extends State<GstnList> {
                                         },
                                         text: "VIEW"),
                                   ),
-                                  FadeInRight(
-                                    delay: const Duration(milliseconds: 500),
-                                    duration: const Duration(milliseconds: 500),
-                                    child: GFButton(
-                                        color: Colors.blue.shade900,
-                                        padding: const EdgeInsets.all(10),
-                                        shape: GFButtonShape.pills,
-                                        onPressed: () {
-                                          // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
-                                        },
-                                        text: "DOWNLOAD"),
-                                  ),
+                                  // FadeInRight(
+                                  //   delay: const Duration(milliseconds: 500),
+                                  //   duration: const Duration(milliseconds: 500),
+                                  //   child: GFButton(
+                                  //       color: Colors.blue.shade900,
+                                  //       padding: const EdgeInsets.all(10),
+                                  //       shape: GFButtonShape.pills,
+                                  //       onPressed: () {
+                                  //         // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
+                                  //       },
+                                  //       text: "DOWNLOAD"),
+                                  // ),
                                 ],
                               ),
                             ],
@@ -737,11 +759,11 @@ class _GstnListState extends State<GstnList> {
                                         padding: const EdgeInsets.all(10),
                                         shape: GFButtonShape.pills,
                                         onPressed: () {
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      Gstr4a()));
+                                          // Navigator.push(
+                                          //     context,
+                                          //     MaterialPageRoute(
+                                          //         builder: (context) =>
+                                          //             Gstr4a()));
                                         },
                                         text: "VIEW"),
                                   ),
@@ -818,7 +840,7 @@ class _GstnListState extends State<GstnList> {
                                     ),
                                   ),
                                   const Text(
-                                    "Auto Drafted details\n(For view only)",
+                                    "Auto Drafted details",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       fontFamily: "Poppins",

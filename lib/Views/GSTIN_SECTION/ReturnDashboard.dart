@@ -68,7 +68,7 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                   "Return Filing  Preference (APR-jun 2022) monthly (CHARGE)",
                   textAlign: TextAlign.center,
                   style: GoogleFonts.dmSans(
-                    fontSize: 20,
+                    fontSize: 16.5,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
@@ -79,7 +79,7 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                   "Returns calendar  (Last 5 return periods)",
                   textAlign: TextAlign.center,
                   style: GoogleFonts.dmSans(
-                    fontSize: 20,
+                    fontSize: 16.5,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
@@ -142,43 +142,35 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                   ),
                 ),
                 SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  "Ledger Balance",
-                  style: GoogleFonts.recursive(
-                    color: Colors.black,
-                    fontSize: 25.0,
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                SizedBox(
-                  height: 10,
+                  height: 25,
                 ),
                 Container(
                   padding:
-                      EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 10),
+                      EdgeInsets.only(left: 5, right: 15, top: 5, bottom: 5),
                   color: Colors.blue,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("Electronic\n Liability \nRegister",
+                      Text("Ledger\nBalance",
                           style: GoogleFonts.dmSans(
                             fontWeight: FontWeight.w700,
                           )),
-                      SizedBox(width: width * .01),
+                      // SizedBox(width: width * .08),
                       Text("IGST",
                           style: GoogleFonts.dmSans(
                             fontWeight: FontWeight.w700,
                           )),
+                      // SizedBox(width: width * .05),
                       Text("CGST",
                           style: GoogleFonts.dmSans(
                             fontWeight: FontWeight.w700,
                           )),
+                      // SizedBox(width: width * .04),
                       Text("SGST",
                           style: GoogleFonts.dmSans(
                             fontWeight: FontWeight.w700,
                           )),
+                      // SizedBox(width: width * .05),
                       Text("CESS",
                           style: GoogleFonts.dmSans(
                             fontWeight: FontWeight.w700,
@@ -189,93 +181,412 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                 Container(
                   padding:
                       EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 10),
-                  color: Colors.yellow,
+                  color: Colors.grey.shade200,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("Electronic cash \nLedger",
+                      Text("Electronic\nLiability\nRegister",
                           style: GoogleFonts.dmSans(
                             fontWeight: FontWeight.w700,
                           )),
-                      SizedBox(width: width * .01),
-                      Text("IGST",
-                          style: GoogleFonts.dmSans(
-                            fontWeight: FontWeight.w700,
-                          )),
-                      Text("CGST",
-                          style: GoogleFonts.dmSans(
-                            fontWeight: FontWeight.w700,
-                          )),
-                      Text("SGST",
-                          style: GoogleFonts.dmSans(
-                            fontWeight: FontWeight.w700,
-                          )),
-                      Text("CESS",
-                          style: GoogleFonts.dmSans(
-                            fontWeight: FontWeight.w700,
-                          )),
+                      SizedBox(width: width * .08),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 5, top: 5),
+                          child: Column(
+                            children: [
+                              Container(
+                                width: 60,
+                                decoration: BoxDecoration(
+                                  // color: textWhiteGrey,
+                                  borderRadius: BorderRadius.circular(14.0),
+                                ),
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    hintText: 'Value',
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: width * .08),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 5, top: 5),
+                          child: Column(
+                            children: [
+                              Container(
+                                width: 60,
+                                decoration: BoxDecoration(
+                                  // color: textWhiteGrey,
+                                  borderRadius: BorderRadius.circular(14.0),
+                                ),
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    hintText: 'Value',
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: width * .08),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 5, top: 5),
+                          child: Column(
+                            children: [
+                              Container(
+                                width: 60,
+                                decoration: BoxDecoration(
+                                  // color: textWhiteGrey,
+                                  borderRadius: BorderRadius.circular(14.0),
+                                ),
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    hintText: 'Value',
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: width * .05),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 5, top: 5),
+                          child: Column(
+                            children: [
+                              Container(
+                                width: 60,
+                                decoration: BoxDecoration(
+                                  // color: textWhiteGrey,
+                                  borderRadius: BorderRadius.circular(14.0),
+                                ),
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    hintText: 'Value',
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      // SizedBox(width: width * .01)
                     ],
                   ),
                 ),
                 Container(
                   padding:
                       EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 10),
-                  color: Colors.grey.shade400,
+                  color: Colors.grey.shade200,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("Electronin \nCredit Ledger \n  TDS",
+                      Text("Electronic\nCash\nLedger",
                           style: GoogleFonts.dmSans(
                             fontWeight: FontWeight.w700,
                           )),
-                      SizedBox(width: width * .04),
-                      Text("IGST",
-                          style: GoogleFonts.dmSans(
-                            fontWeight: FontWeight.w700,
-                          )),
-                      Text("CGST",
-                          style: GoogleFonts.dmSans(
-                            fontWeight: FontWeight.w700,
-                          )),
-                      Text("SGST",
-                          style: GoogleFonts.dmSans(
-                            fontWeight: FontWeight.w700,
-                          )),
-                      Text("CESS",
-                          style: GoogleFonts.dmSans(
-                            fontWeight: FontWeight.w700,
-                          )),
+                      SizedBox(width: width * .08),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 5, top: 5),
+                          child: Column(
+                            children: [
+                              Container(
+                                width: 60,
+                                decoration: BoxDecoration(
+                                  // color: textWhiteGrey,
+                                  borderRadius: BorderRadius.circular(14.0),
+                                ),
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    hintText: 'Value',
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: width * .08),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 5, top: 5),
+                          child: Column(
+                            children: [
+                              Container(
+                                width: 60,
+                                decoration: BoxDecoration(
+                                  // color: textWhiteGrey,
+                                  borderRadius: BorderRadius.circular(14.0),
+                                ),
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    hintText: 'Value',
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: width * .08),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 5, top: 5),
+                          child: Column(
+                            children: [
+                              Container(
+                                width: 60,
+                                decoration: BoxDecoration(
+                                  // color: textWhiteGrey,
+                                  borderRadius: BorderRadius.circular(14.0),
+                                ),
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    hintText: 'Value',
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: width * .05),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 5, top: 5),
+                          child: Column(
+                            children: [
+                              Container(
+                                width: 60,
+                                decoration: BoxDecoration(
+                                  // color: textWhiteGrey,
+                                  borderRadius: BorderRadius.circular(14.0),
+                                ),
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    hintText: 'Value',
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      // SizedBox(width: width * .01)
                     ],
                   ),
                 ),
                 Container(
                   padding:
                       EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 10),
-                  color: Colors.blue.shade100,
+                  color: Colors.grey.shade200,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("TCS",
+                      Text("Electronic\nCredit\nLedger\nTDS",
                           style: GoogleFonts.dmSans(
                             fontWeight: FontWeight.w700,
                           )),
-                      SizedBox(width: width * .21),
-                      Text("IGST",
+                      SizedBox(width: width * .08),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 5, top: 5),
+                          child: Column(
+                            children: [
+                              Container(
+                                width: 60,
+                                decoration: BoxDecoration(
+                                  // color: textWhiteGrey,
+                                  borderRadius: BorderRadius.circular(14.0),
+                                ),
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    hintText: 'Value',
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: width * .08),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 5, top: 5),
+                          child: Column(
+                            children: [
+                              Container(
+                                width: 60,
+                                decoration: BoxDecoration(
+                                  // color: textWhiteGrey,
+                                  borderRadius: BorderRadius.circular(14.0),
+                                ),
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    hintText: 'Value',
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: width * .08),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 5, top: 5),
+                          child: Column(
+                            children: [
+                              Container(
+                                width: 60,
+                                decoration: BoxDecoration(
+                                  // color: textWhiteGrey,
+                                  borderRadius: BorderRadius.circular(14.0),
+                                ),
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    hintText: 'Value',
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: width * .05),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 5, top: 5),
+                          child: Column(
+                            children: [
+                              Container(
+                                width: 60,
+                                decoration: BoxDecoration(
+                                  // color: textWhiteGrey,
+                                  borderRadius: BorderRadius.circular(14.0),
+                                ),
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    hintText: 'Value',
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      // SizedBox(width: width * .01)
+                    ],
+                  ),
+                ),
+                Container(
+                  padding:
+                      EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 10),
+                  color: Colors.grey.shade200,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("    TCS         ",
                           style: GoogleFonts.dmSans(
                             fontWeight: FontWeight.w700,
                           )),
-                      Text("CGST",
-                          style: GoogleFonts.dmSans(
-                            fontWeight: FontWeight.w700,
-                          )),
-                      Text("SGST",
-                          style: GoogleFonts.dmSans(
-                            fontWeight: FontWeight.w700,
-                          )),
-                      Text("CESS",
-                          style: GoogleFonts.dmSans(
-                            fontWeight: FontWeight.w700,
-                          )),
+                      SizedBox(width: width * .08),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 5, top: 5),
+                          child: Column(
+                            children: [
+                              Container(
+                                width: 60,
+                                decoration: BoxDecoration(
+                                  // color: textWhiteGrey,
+                                  borderRadius: BorderRadius.circular(14.0),
+                                ),
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    hintText: 'Value',
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: width * .08),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 5, top: 5),
+                          child: Column(
+                            children: [
+                              Container(
+                                width: 60,
+                                decoration: BoxDecoration(
+                                  // color: textWhiteGrey,
+                                  borderRadius: BorderRadius.circular(14.0),
+                                ),
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    hintText: 'Value',
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: width * .08),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 5, top: 5),
+                          child: Column(
+                            children: [
+                              Container(
+                                width: 60,
+                                decoration: BoxDecoration(
+                                  // color: textWhiteGrey,
+                                  borderRadius: BorderRadius.circular(14.0),
+                                ),
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    hintText: 'Value',
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: width * .05),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 5, top: 5),
+                          child: Column(
+                            children: [
+                              Container(
+                                width: 60,
+                                decoration: BoxDecoration(
+                                  // color: textWhiteGrey,
+                                  borderRadius: BorderRadius.circular(14.0),
+                                ),
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    hintText: 'Value',
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      // SizedBox(width: width * .01)
                     ],
                   ),
                 ),
@@ -290,108 +601,47 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                   height: 5,
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Column(children: [
-                      FadeInRight(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: GFButton(
-                            padding: const EdgeInsets.all(10),
-                            shape: GFButtonShape.pills,
-                            color: Colors.blue.shade800,
-                            onPressed: () {},
-                            text: "   Cash   "),
-                      ),
-                      FadeInRight(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: GFButton(
-                            padding: const EdgeInsets.all(10),
-                            shape: GFButtonShape.pills,
-                            color: Colors.blue.shade800,
-                            onPressed: () {
-                              // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
-                            },
-                            text: "  Liability "),
-                      ),
-                      FadeInRight(
-                        delay: const Duration(milliseconds: 500),
-                        duration: const Duration(milliseconds: 500),
-                        child: GFButton(
-                            padding: const EdgeInsets.all(10),
-                            shape: GFButtonShape.pills,
-                            color: Colors.blue.shade800,
-                            onPressed: () {
-                              // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
-                            },
-                            text: "   Credit   "),
-                      ),
-                    ]),
+                    FadeInRight(
+                      delay: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 500),
+                      child: GFButton(
+                          padding: const EdgeInsets.all(10),
+                          shape: GFButtonShape.pills,
+                          color: Colors.blue.shade800,
+                          onPressed: () {},
+                          text: "   Cash   "),
+                    ),
+                    FadeInRight(
+                      delay: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 500),
+                      child: GFButton(
+                          padding: const EdgeInsets.all(10),
+                          shape: GFButtonShape.pills,
+                          color: Colors.blue.shade800,
+                          onPressed: () {
+                            // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
+                          },
+                          text: "    Liability   "),
+                    ),
+                    FadeInRight(
+                      delay: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 500),
+                      child: GFButton(
+                          padding: const EdgeInsets.all(10),
+                          shape: GFButtonShape.pills,
+                          color: Colors.blue.shade800,
+                          onPressed: () {
+                            // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
+                          },
+                          text: "   Credit   "),
+                    ),
                   ],
                 ),
                 SizedBox(
                   height: 10,
                 ),
-                // Container(
-                //   padding:
-                //       EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 10),
-                //   color: Colors.yellow,
-                //   child: Row(
-                //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                //     children: [
-                //       Text("Electronic Credit Ledger",
-                //           style: GoogleFonts.dmSans(
-                //             fontWeight: FontWeight.w700,
-                //           )),
-                //       Text("IGST",
-                //           style: GoogleFonts.dmSans(
-                //             fontWeight: FontWeight.w700,
-                //           )),
-                //       Text("CGST",
-                //           style: GoogleFonts.dmSans(
-                //             fontWeight: FontWeight.w700,
-                //           )),
-                //       Text("SGST",
-                //           style: GoogleFonts.dmSans(
-                //             fontWeight: FontWeight.w700,
-                //           )),
-                //       Text("CESS",
-                //           style: GoogleFonts.dmSans(
-                //             fontWeight: FontWeight.w700,
-                //           )),
-                //     ],
-                //   ),
-                // ),
-                // Container(
-                //   padding:
-                //       EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 10),
-                //   color: Colors.white,
-                //   child: Row(
-                //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                //     children: [
-                //       Text("",
-                //           style: GoogleFonts.dmSans(
-                //             fontWeight: FontWeight.w700,
-                //           )),
-                //       Text("",
-                //           style: GoogleFonts.dmSans(
-                //             fontWeight: FontWeight.w700,
-                //           )),
-                //       Text("",
-                //           style: GoogleFonts.dmSans(
-                //             fontWeight: FontWeight.w700,
-                //           )),
-                //       Text("",
-                //           style: GoogleFonts.dmSans(
-                //             fontWeight: FontWeight.w700,
-                //           )),
-                //       Text("",
-                //           style: GoogleFonts.dmSans(
-                //             fontWeight: FontWeight.w700,
-                //           )),
-                //     ],
-                //   ),
-                // ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -411,7 +661,7 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                           text: "File Returns"),
                     ),
                     SizedBox(
-                      width: 20,
+                      width: width * .18,
                     ),
                     FadeInRight(
                       delay: const Duration(milliseconds: 500),

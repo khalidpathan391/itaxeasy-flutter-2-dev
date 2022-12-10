@@ -324,7 +324,7 @@ class _CapitalGainUiState extends State<CapitalGainUi> {
                             borderRadius: BorderRadius.circular(14.0),
                           ),
                           child: GFButton(
-                              color: Colors.purple,
+                              color: Colors.blue.shade900,
                               onPressed: () async {
                                 FocusScope.of(context)
                                     .requestFocus(FocusNode());
@@ -495,8 +495,8 @@ class _CapitalGainUiState extends State<CapitalGainUi> {
   }
 
   Widget buildSpeedDial() => SpeedDial(
-        overlayColor: Colors.purple.shade100,
-        backgroundColor: Colors.deepPurple,
+        overlayColor: Colors.blue.shade900,
+        backgroundColor: Colors.blue.shade900,
         spacing: 12,
         // childrenButtonSize: 60,
         spaceBetweenChildren: 8,

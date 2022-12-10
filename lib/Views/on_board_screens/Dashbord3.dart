@@ -655,7 +655,7 @@ class _Dashbord3State extends State<Dashbord3> with TickerProviderStateMixin {
                                       height: 8,
                                     ),
                                     Text(
-                                      "Bill-Sill",
+                                      "Bill-Shill",
                                       style: GoogleFonts.dmSans(
                                         fontSize: 13,
                                         fontWeight: FontWeight.bold,

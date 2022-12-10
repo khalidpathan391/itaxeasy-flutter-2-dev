@@ -75,442 +75,618 @@ class _DebitNoteState extends State<DebitNote> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                   ),
-                  elevation: 5,
-                  child: Padding(
-                    padding:
-                        const EdgeInsets.only(right: 10, left: 10, bottom: 10),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Expanded(
-                              child: Column(
-                                children: [
-                                  const Padding(
-                                    padding: EdgeInsets.only(
-                                        left: 10, bottom: 10, top: 10),
-                                    child: Align(
-                                      alignment: Alignment.centerLeft,
-                                      child: Text(
-                                        "Date",
-                                        style: TextStyle(
-                                          fontFamily: "Poppins",
-                                          fontWeight: FontWeight.w500,
-                                          letterSpacing: 1.5,
-                                          fontSize: 17.5,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      color: textWhiteGrey,
-                                      borderRadius: BorderRadius.circular(14.0),
-                                    ),
-                                    child: TextFormField(
-                                      // controller: contactCont,
-                                      keyboardType: TextInputType.number,
-                                      decoration: InputDecoration(
-                                        hintText: 'Date:',
-                                        hintStyle:
-                                            heading6.copyWith(color: textGrey),
-                                        border: const OutlineInputBorder(
-                                          borderSide: BorderSide.none,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            const SizedBox(width: 10),
-                            Expanded(
-                              child: Column(
-                                children: [
-                                  const Padding(
-                                    padding: EdgeInsets.only(
-                                        left: 10, bottom: 10, top: 10),
-                                    child: Align(
-                                      alignment: Alignment.centerLeft,
-                                      child: Text(
-                                        "GSTIN No",
-                                        style: TextStyle(
-                                          fontFamily: "Poppins",
-                                          fontWeight: FontWeight.w500,
-                                          letterSpacing: 1.5,
-                                          fontSize: 17.5,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      color: textWhiteGrey,
-                                      borderRadius: BorderRadius.circular(14.0),
-                                    ),
-                                    child: TextFormField(
-                                      // controller: contactCont,
-                                      keyboardType: TextInputType.number,
-                                      decoration: InputDecoration(
-                                        hintText: 'Gstin no:',
-                                        hintStyle:
-                                            heading6.copyWith(color: textGrey),
-                                        border: const OutlineInputBorder(
-                                          borderSide: BorderSide.none,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
+                  elevation: 20,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey.shade700,
+                              blurRadius: 5.0,
+                              offset: Offset(5, 3))
+                        ],
+                        // border: Border.all(
+                        //     color: Colors.blue.shade900),
+                        shape: BoxShape.rectangle,
+                        gradient: LinearGradient(
+                          begin: Alignment.bottomRight,
+                          end: Alignment.centerLeft,
+                          colors: [
+                            Colors.grey.shade100,
+                            Colors.white,
                           ],
-                        ),
-                        const Padding(
-                          padding:
-                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              "Name of the party",
-                              style: TextStyle(
-                                fontFamily: "Poppins",
-                                fontWeight: FontWeight.w500,
-                                letterSpacing: 1.5,
-                                fontSize: 17.5,
-                              ),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          decoration: BoxDecoration(
-                            color: textWhiteGrey,
-                            borderRadius: BorderRadius.circular(14.0),
-                          ),
-                          child: TextFormField(
-                            // controller: contactCont,
-                            // keyboardType: TextInputType.number,
-                            decoration: InputDecoration(
-                              hintText: 'Party Name:',
-                              hintStyle: heading6.copyWith(color: textGrey),
-                              border: const OutlineInputBorder(
-                                borderSide: BorderSide.none,
-                              ),
-                            ),
-                          ),
-                        ),
-
-                        const Padding(
-                          padding:
-                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              "GSTIN No of the party",
-                              style: TextStyle(
-                                fontFamily: "Poppins",
-                                fontWeight: FontWeight.w500,
-                                letterSpacing: 1.5,
-                                fontSize: 17.5,
-                              ),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          decoration: BoxDecoration(
-                            color: textWhiteGrey,
-                            borderRadius: BorderRadius.circular(14.0),
-                          ),
-                          child: TextFormField(
-                            // controller: contactCont,
-                            // keyboardType: TextInputType.number,
-                            decoration: InputDecoration(
-                              hintText: 'GSTIN No of the party:',
-                              hintStyle: heading6.copyWith(color: textGrey),
-                              border: const OutlineInputBorder(
-                                borderSide: BorderSide.none,
-                              ),
-                            ),
-                          ),
-                        ),
-                        const Padding(
-                          padding:
-                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              "Purchase Return",
-                              style: TextStyle(
-                                fontFamily: "Poppins",
-                                fontWeight: FontWeight.w500,
-                                letterSpacing: 1.5,
-                                fontSize: 17.5,
-                              ),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          decoration: BoxDecoration(
-                            color: textWhiteGrey,
-                            borderRadius: BorderRadius.circular(14.0),
-                          ),
-                          child: TextFormField(
-                            // controller: contactCont,
-                            // keyboardType: TextInputType.number,
-                            decoration: InputDecoration(
-                              hintText: 'Purchase Return:',
-                              hintStyle: heading6.copyWith(color: textGrey),
-                              border: const OutlineInputBorder(
-                                borderSide: BorderSide.none,
-                              ),
-                            ),
-                          ),
-                        ),
-
-                        Row(
-                          children: [
-                            Expanded(
-                              child: Column(
-                                children: [
-                                  const Padding(
-                                    padding: EdgeInsets.only(
-                                        left: 10, bottom: 10, top: 10),
-                                    child: Align(
-                                      alignment: Alignment.centerLeft,
-                                      child: Text(
-                                        "IGST",
-                                        style: TextStyle(
-                                          fontFamily: "Poppins",
-                                          fontWeight: FontWeight.w500,
-                                          letterSpacing: 1.5,
-                                          fontSize: 17.5,
+                        )),
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                          right: 10, left: 10, bottom: 10),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              Expanded(
+                                child: Column(
+                                  children: [
+                                    const Padding(
+                                      padding: EdgeInsets.only(
+                                          left: 10, bottom: 10, top: 10),
+                                      child: Align(
+                                        alignment: Alignment.centerLeft,
+                                        child: Text(
+                                          "Date",
+                                          style: TextStyle(
+                                            fontFamily: "Poppins",
+                                            fontWeight: FontWeight.w500,
+                                            letterSpacing: 1.5,
+                                            fontSize: 17.5,
+                                          ),
                                         ),
                                       ),
                                     ),
-                                  ),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      color: textWhiteGrey,
-                                      borderRadius: BorderRadius.circular(14.0),
-                                    ),
-                                    child: TextFormField(
-                                      // controller: contactCont,
-                                      keyboardType: TextInputType.number,
-                                      decoration: InputDecoration(
-                                        hintText: 'IGST:',
-                                        hintStyle:
-                                            heading6.copyWith(color: textGrey),
-                                        border: const OutlineInputBorder(
-                                          borderSide: BorderSide.none,
+                                    Container(
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(15),
+                                          boxShadow: [
+                                            BoxShadow(
+                                                color: Colors.grey.shade700,
+                                                blurRadius: 5.0,
+                                                offset: Offset(5, 3))
+                                          ],
+                                          // border: Border.all(
+                                          //     color: Colors.blue.shade900),
+                                          shape: BoxShape.rectangle,
+                                          gradient: LinearGradient(
+                                            begin: Alignment.bottomRight,
+                                            end: Alignment.centerLeft,
+                                            colors: [
+                                              Colors.grey.shade100,
+                                              Colors.white,
+                                            ],
+                                          )),
+                                      child: TextFormField(
+                                        // controller: contactCont,
+                                        keyboardType: TextInputType.number,
+                                        decoration: InputDecoration(
+                                          hintText: 'Date:',
+                                          hintStyle: heading6.copyWith(
+                                              color: textGrey),
+                                          border: const OutlineInputBorder(
+                                            borderSide: BorderSide.none,
+                                          ),
                                         ),
                                       ),
                                     ),
-                                  ),
+                                  ],
+                                ),
+                              ),
+                              const SizedBox(width: 10),
+                              Expanded(
+                                child: Column(
+                                  children: [
+                                    const Padding(
+                                      padding: EdgeInsets.only(
+                                          left: 10, bottom: 10, top: 10),
+                                      child: Align(
+                                        alignment: Alignment.centerLeft,
+                                        child: Text(
+                                          "GSTIN No",
+                                          style: TextStyle(
+                                            fontFamily: "Poppins",
+                                            fontWeight: FontWeight.w500,
+                                            letterSpacing: 1.5,
+                                            fontSize: 17.5,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Container(
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(15),
+                                          boxShadow: [
+                                            BoxShadow(
+                                                color: Colors.grey.shade700,
+                                                blurRadius: 5.0,
+                                                offset: Offset(5, 3))
+                                          ],
+                                          // border: Border.all(
+                                          //     color: Colors.blue.shade900),
+                                          shape: BoxShape.rectangle,
+                                          gradient: LinearGradient(
+                                            begin: Alignment.bottomRight,
+                                            end: Alignment.centerLeft,
+                                            colors: [
+                                              Colors.grey.shade100,
+                                              Colors.white,
+                                            ],
+                                          )),
+                                      child: TextFormField(
+                                        // controller: contactCont,
+                                        keyboardType: TextInputType.number,
+                                        decoration: InputDecoration(
+                                          hintText: 'Gstin no:',
+                                          hintStyle: heading6.copyWith(
+                                              color: textGrey),
+                                          border: const OutlineInputBorder(
+                                            borderSide: BorderSide.none,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                          const Padding(
+                            padding:
+                                EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                "Name of the party",
+                                style: TextStyle(
+                                  fontFamily: "Poppins",
+                                  fontWeight: FontWeight.w500,
+                                  letterSpacing: 1.5,
+                                  fontSize: 17.5,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Colors.grey.shade700,
+                                      blurRadius: 5.0,
+                                      offset: Offset(5, 3))
                                 ],
-                              ),
-                            ),
-                            const SizedBox(width: 10),
-                            Expanded(
-                              child: Column(
-                                children: [
-                                  const Padding(
-                                    padding: EdgeInsets.only(
-                                        left: 10, bottom: 10, top: 10),
-                                    child: Align(
-                                      alignment: Alignment.centerLeft,
-                                      child: Text(
-                                        "CGST",
-                                        style: TextStyle(
-                                          fontFamily: "Poppins",
-                                          fontWeight: FontWeight.w500,
-                                          letterSpacing: 1.5,
-                                          fontSize: 17.5,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      color: textWhiteGrey,
-                                      borderRadius: BorderRadius.circular(14.0),
-                                    ),
-                                    child: TextFormField(
-                                      // controller: contactCont,
-                                      keyboardType: TextInputType.number,
-                                      decoration: InputDecoration(
-                                        hintText: 'CGST:',
-                                        hintStyle:
-                                            heading6.copyWith(color: textGrey),
-                                        border: const OutlineInputBorder(
-                                          borderSide: BorderSide.none,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            const SizedBox(width: 10),
-                            Expanded(
-                              child: Column(
-                                children: [
-                                  const Padding(
-                                    padding: EdgeInsets.only(
-                                        left: 10, bottom: 10, top: 10),
-                                    child: Align(
-                                      alignment: Alignment.centerLeft,
-                                      child: Text(
-                                        "SGST",
-                                        style: TextStyle(
-                                          fontFamily: "Poppins",
-                                          fontWeight: FontWeight.w500,
-                                          letterSpacing: 1.5,
-                                          fontSize: 17.5,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      color: textWhiteGrey,
-                                      borderRadius: BorderRadius.circular(14.0),
-                                    ),
-                                    child: TextFormField(
-                                      // controller: contactCont,
-                                      keyboardType: TextInputType.number,
-                                      decoration: InputDecoration(
-                                        hintText: 'SGST:',
-                                        hintStyle:
-                                            heading6.copyWith(color: textGrey),
-                                        border: const OutlineInputBorder(
-                                          borderSide: BorderSide.none,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                        // Row(
-                        //   mainAxisAlignment: MainAxisAlignment.end,
-                        //   children: [
-                        //     Expanded(
-                        //       child: Column(
-                        //         children: [],
-                        //       ),
-                        //     ),
-                        //     Expanded(
-                        //       child: Column(
-                        //         children: [
-                        //           const Padding(
-                        //             padding: EdgeInsets.only(
-                        //                 left: 10, bottom: 10, top: 10),
-                        //             child: Align(
-                        //               alignment: Alignment.centerLeft,
-                        //               child: Text(
-                        //                 "Total",
-                        //                 style: TextStyle(
-                        //                   fontFamily: "Poppins",
-                        //                   fontWeight: FontWeight.w500,
-                        //                   letterSpacing: 1.5,
-                        //                   fontSize: 17.5,
-                        //                 ),
-                        //               ),
-                        //             ),
-                        //           ),
-                        //           Container(
-                        //             decoration: BoxDecoration(
-                        //               color: textWhiteGrey,
-                        //               borderRadius: BorderRadius.circular(14.0),
-                        //             ),
-                        //             child: TextFormField(
-                        //               // controller: contactCont,
-                        //               keyboardType: TextInputType.number,
-                        //               decoration: InputDecoration(
-                        //                 hintText: 'Total:',
-                        //                 hintStyle: heading6.copyWith(color: textGrey),
-                        //                 border: const OutlineInputBorder(
-                        //                   borderSide: BorderSide.none,
-                        //                 ),
-                        //               ),
-                        //             ),
-                        //           ),
-                        //         ],
-                        //       ),
-                        //     ),
-                        //
-                        //   ],
-                        // ),
-                        const Padding(
-                          padding:
-                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              "Price",
-                              style: TextStyle(
-                                fontFamily: "Poppins",
-                                fontWeight: FontWeight.w500,
-                                letterSpacing: 1.5,
-                                fontSize: 17.5,
+                                // border: Border.all(
+                                //     color: Colors.blue.shade900),
+                                shape: BoxShape.rectangle,
+                                gradient: LinearGradient(
+                                  begin: Alignment.bottomRight,
+                                  end: Alignment.centerLeft,
+                                  colors: [
+                                    Colors.grey.shade100,
+                                    Colors.white,
+                                  ],
+                                )),
+                            child: TextFormField(
+                              // controller: contactCont,
+                              // keyboardType: TextInputType.number,
+                              decoration: InputDecoration(
+                                hintText: 'Party Name:',
+                                hintStyle: heading6.copyWith(color: textGrey),
+                                border: const OutlineInputBorder(
+                                  borderSide: BorderSide.none,
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        Container(
-                          decoration: BoxDecoration(
-                            color: textWhiteGrey,
-                            borderRadius: BorderRadius.circular(14.0),
-                          ),
-                          child: TextFormField(
-                            // controller: contactCont,
-                            keyboardType: TextInputType.number,
-                            decoration: InputDecoration(
-                              hintText: 'Price:',
-                              hintStyle: heading6.copyWith(color: textGrey),
-                              border: const OutlineInputBorder(
-                                borderSide: BorderSide.none,
-                              ),
-                            ),
-                          ),
-                        ),
 
-                        const Padding(
-                          padding:
-                              EdgeInsets.only(left: 10, bottom: 10, top: 10),
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              "GST Details",
-                              style: TextStyle(
-                                fontFamily: "Poppins",
-                                fontWeight: FontWeight.w500,
-                                letterSpacing: 1.5,
-                                fontSize: 17.5,
+                          const Padding(
+                            padding:
+                                EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                "GSTIN No of the party",
+                                style: TextStyle(
+                                  fontFamily: "Poppins",
+                                  fontWeight: FontWeight.w500,
+                                  letterSpacing: 1.5,
+                                  fontSize: 17.5,
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        Container(
-                          decoration: BoxDecoration(
-                            color: textWhiteGrey,
-                            borderRadius: BorderRadius.circular(14.0),
-                          ),
-                          child: TextFormField(
-                            // controller: contactCont,
-                            keyboardType: TextInputType.number,
-                            decoration: InputDecoration(
-                              hintText: 'GST Details:',
-                              hintStyle: heading6.copyWith(color: textGrey),
-                              border: const OutlineInputBorder(
-                                borderSide: BorderSide.none,
+                          Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Colors.grey.shade700,
+                                      blurRadius: 5.0,
+                                      offset: Offset(5, 3))
+                                ],
+                                // border: Border.all(
+                                //     color: Colors.blue.shade900),
+                                shape: BoxShape.rectangle,
+                                gradient: LinearGradient(
+                                  begin: Alignment.bottomRight,
+                                  end: Alignment.centerLeft,
+                                  colors: [
+                                    Colors.grey.shade100,
+                                    Colors.white,
+                                  ],
+                                )),
+                            child: TextFormField(
+                              // controller: contactCont,
+                              // keyboardType: TextInputType.number,
+                              decoration: InputDecoration(
+                                hintText: 'GSTIN No of the party:',
+                                hintStyle: heading6.copyWith(color: textGrey),
+                                border: const OutlineInputBorder(
+                                  borderSide: BorderSide.none,
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                      ],
+                          const Padding(
+                            padding:
+                                EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                "Purchase Return",
+                                style: TextStyle(
+                                  fontFamily: "Poppins",
+                                  fontWeight: FontWeight.w500,
+                                  letterSpacing: 1.5,
+                                  fontSize: 17.5,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Colors.grey.shade700,
+                                      blurRadius: 5.0,
+                                      offset: Offset(5, 3))
+                                ],
+                                // border: Border.all(
+                                //     color: Colors.blue.shade900),
+                                shape: BoxShape.rectangle,
+                                gradient: LinearGradient(
+                                  begin: Alignment.bottomRight,
+                                  end: Alignment.centerLeft,
+                                  colors: [
+                                    Colors.grey.shade100,
+                                    Colors.white,
+                                  ],
+                                )),
+                            child: TextFormField(
+                              // controller: contactCont,
+                              // keyboardType: TextInputType.number,
+                              decoration: InputDecoration(
+                                hintText: 'Purchase Return:',
+                                hintStyle: heading6.copyWith(color: textGrey),
+                                border: const OutlineInputBorder(
+                                  borderSide: BorderSide.none,
+                                ),
+                              ),
+                            ),
+                          ),
+
+                          Row(
+                            children: [
+                              Expanded(
+                                child: Column(
+                                  children: [
+                                    const Padding(
+                                      padding: EdgeInsets.only(
+                                          left: 10, bottom: 10, top: 10),
+                                      child: Align(
+                                        alignment: Alignment.centerLeft,
+                                        child: Text(
+                                          "IGST",
+                                          style: TextStyle(
+                                            fontFamily: "Poppins",
+                                            fontWeight: FontWeight.w500,
+                                            letterSpacing: 1.5,
+                                            fontSize: 17.5,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Container(
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(15),
+                                          boxShadow: [
+                                            BoxShadow(
+                                                color: Colors.grey.shade700,
+                                                blurRadius: 5.0,
+                                                offset: Offset(5, 3))
+                                          ],
+                                          // border: Border.all(
+                                          //     color: Colors.blue.shade900),
+                                          shape: BoxShape.rectangle,
+                                          gradient: LinearGradient(
+                                            begin: Alignment.bottomRight,
+                                            end: Alignment.centerLeft,
+                                            colors: [
+                                              Colors.grey.shade100,
+                                              Colors.white,
+                                            ],
+                                          )),
+                                      child: TextFormField(
+                                        // controller: contactCont,
+                                        keyboardType: TextInputType.number,
+                                        decoration: InputDecoration(
+                                          hintText: 'IGST:',
+                                          hintStyle: heading6.copyWith(
+                                              color: textGrey),
+                                          border: const OutlineInputBorder(
+                                            borderSide: BorderSide.none,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const SizedBox(width: 10),
+                              Expanded(
+                                child: Column(
+                                  children: [
+                                    const Padding(
+                                      padding: EdgeInsets.only(
+                                          left: 10, bottom: 10, top: 10),
+                                      child: Align(
+                                        alignment: Alignment.centerLeft,
+                                        child: Text(
+                                          "CGST",
+                                          style: TextStyle(
+                                            fontFamily: "Poppins",
+                                            fontWeight: FontWeight.w500,
+                                            letterSpacing: 1.5,
+                                            fontSize: 17.5,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Container(
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(15),
+                                          boxShadow: [
+                                            BoxShadow(
+                                                color: Colors.grey.shade700,
+                                                blurRadius: 5.0,
+                                                offset: Offset(5, 3))
+                                          ],
+                                          // border: Border.all(
+                                          //     color: Colors.blue.shade900),
+                                          shape: BoxShape.rectangle,
+                                          gradient: LinearGradient(
+                                            begin: Alignment.bottomRight,
+                                            end: Alignment.centerLeft,
+                                            colors: [
+                                              Colors.grey.shade100,
+                                              Colors.white,
+                                            ],
+                                          )),
+                                      child: TextFormField(
+                                        // controller: contactCont,
+                                        keyboardType: TextInputType.number,
+                                        decoration: InputDecoration(
+                                          hintText: 'CGST:',
+                                          hintStyle: heading6.copyWith(
+                                              color: textGrey),
+                                          border: const OutlineInputBorder(
+                                            borderSide: BorderSide.none,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const SizedBox(width: 10),
+                              Expanded(
+                                child: Column(
+                                  children: [
+                                    const Padding(
+                                      padding: EdgeInsets.only(
+                                          left: 10, bottom: 10, top: 10),
+                                      child: Align(
+                                        alignment: Alignment.centerLeft,
+                                        child: Text(
+                                          "SGST",
+                                          style: TextStyle(
+                                            fontFamily: "Poppins",
+                                            fontWeight: FontWeight.w500,
+                                            letterSpacing: 1.5,
+                                            fontSize: 17.5,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Container(
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(15),
+                                          boxShadow: [
+                                            BoxShadow(
+                                                color: Colors.grey.shade700,
+                                                blurRadius: 5.0,
+                                                offset: Offset(5, 3))
+                                          ],
+                                          // border: Border.all(
+                                          //     color: Colors.blue.shade900),
+                                          shape: BoxShape.rectangle,
+                                          gradient: LinearGradient(
+                                            begin: Alignment.bottomRight,
+                                            end: Alignment.centerLeft,
+                                            colors: [
+                                              Colors.grey.shade100,
+                                              Colors.white,
+                                            ],
+                                          )),
+                                      child: TextFormField(
+                                        // controller: contactCont,
+                                        keyboardType: TextInputType.number,
+                                        decoration: InputDecoration(
+                                          hintText: 'SGST:',
+                                          hintStyle: heading6.copyWith(
+                                              color: textGrey),
+                                          border: const OutlineInputBorder(
+                                            borderSide: BorderSide.none,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.end,
+                          //   children: [
+                          //     Expanded(
+                          //       child: Column(
+                          //         children: [],
+                          //       ),
+                          //     ),
+                          //     Expanded(
+                          //       child: Column(
+                          //         children: [
+                          //           const Padding(
+                          //             padding: EdgeInsets.only(
+                          //                 left: 10, bottom: 10, top: 10),
+                          //             child: Align(
+                          //               alignment: Alignment.centerLeft,
+                          //               child: Text(
+                          //                 "Total",
+                          //                 style: TextStyle(
+                          //                   fontFamily: "Poppins",
+                          //                   fontWeight: FontWeight.w500,
+                          //                   letterSpacing: 1.5,
+                          //                   fontSize: 17.5,
+                          //                 ),
+                          //               ),
+                          //             ),
+                          //           ),
+                          //           Container(
+                          //             decoration: BoxDecoration(
+                          //               color: textWhiteGrey,
+                          //               borderRadius: BorderRadius.circular(14.0),
+                          //             ),
+                          //             child: TextFormField(
+                          //               // controller: contactCont,
+                          //               keyboardType: TextInputType.number,
+                          //               decoration: InputDecoration(
+                          //                 hintText: 'Total:',
+                          //                 hintStyle: heading6.copyWith(color: textGrey),
+                          //                 border: const OutlineInputBorder(
+                          //                   borderSide: BorderSide.none,
+                          //                 ),
+                          //               ),
+                          //             ),
+                          //           ),
+                          //         ],
+                          //       ),
+                          //     ),
+                          //
+                          //   ],
+                          // ),
+                          const Padding(
+                            padding:
+                                EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                "Price",
+                                style: TextStyle(
+                                  fontFamily: "Poppins",
+                                  fontWeight: FontWeight.w500,
+                                  letterSpacing: 1.5,
+                                  fontSize: 17.5,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Colors.grey.shade700,
+                                      blurRadius: 5.0,
+                                      offset: Offset(5, 3))
+                                ],
+                                // border: Border.all(
+                                //     color: Colors.blue.shade900),
+                                shape: BoxShape.rectangle,
+                                gradient: LinearGradient(
+                                  begin: Alignment.bottomRight,
+                                  end: Alignment.centerLeft,
+                                  colors: [
+                                    Colors.grey.shade100,
+                                    Colors.white,
+                                  ],
+                                )),
+                            child: TextFormField(
+                              // controller: contactCont,
+                              keyboardType: TextInputType.number,
+                              decoration: InputDecoration(
+                                hintText: 'Price:',
+                                hintStyle: heading6.copyWith(color: textGrey),
+                                border: const OutlineInputBorder(
+                                  borderSide: BorderSide.none,
+                                ),
+                              ),
+                            ),
+                          ),
+
+                          const Padding(
+                            padding:
+                                EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                "GST Details",
+                                style: TextStyle(
+                                  fontFamily: "Poppins",
+                                  fontWeight: FontWeight.w500,
+                                  letterSpacing: 1.5,
+                                  fontSize: 17.5,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Colors.grey.shade700,
+                                      blurRadius: 5.0,
+                                      offset: Offset(5, 3))
+                                ],
+                                // border: Border.all(
+                                //     color: Colors.blue.shade900),
+                                shape: BoxShape.rectangle,
+                                gradient: LinearGradient(
+                                  begin: Alignment.bottomRight,
+                                  end: Alignment.centerLeft,
+                                  colors: [
+                                    Colors.grey.shade100,
+                                    Colors.white,
+                                  ],
+                                )),
+                            child: TextFormField(
+                              // controller: contactCont,
+                              keyboardType: TextInputType.number,
+                              decoration: InputDecoration(
+                                hintText: 'GST Details:',
+                                hintStyle: heading6.copyWith(color: textGrey),
+                                border: const OutlineInputBorder(
+                                  borderSide: BorderSide.none,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),

@@ -44,7 +44,7 @@ class _DomesticState extends State<Domestic> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.blue[100],
+        backgroundColor: Colors.grey[400],
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.fromLTRB(24.0, 20.0, 24.0, 0),
@@ -53,12 +53,12 @@ class _DomesticState extends State<Domestic> {
               children: <Widget>[
                 Row(
                   children: [
-                    // IconButton(
-                    //   onPressed: () {
-                    //     Navigator.of(context).pop();
-                    //   },
-                    //   icon: const Icon(Icons.arrow_back),
-                    // ),
+                    IconButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                      icon: const Icon(Icons.arrow_back),
+                    ),
                     const SizedBox(
                       width: 20,
                     ),
