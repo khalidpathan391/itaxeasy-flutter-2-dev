@@ -1170,4 +1170,33 @@ class ApiServices {
     }
     return ApiResponse<bool>(error: true, resposeCode: response.statusCode);
   }
+
+  // REGISTER API
+  Future<ApiResponse<RegisterUser>> getStateFromPin(String pin) async {
+    // final url = Uri.parse(baseUrl + "/sign-up");
+    final url = Uri.parse("https://api.postalpincode.in/pincode/$pin");
+    final headers = {'Content-Type': 'application/json'};
+
+    final response = await http.get(
+      url,
+      headers: headers,
+    );
+    log(response.statusCode.toString());
+    log(response.body);
+    if (response.statusCode == 200) {
+      final jsonData = jsonDecode(response.body);
+      return ApiResponse<RegisterUser>(
+          data: RegisterUser.fromJson(jsonData),
+          resposeCode: response.statusCode);
+    }
+    final jsonData = jsonDecode(response.body);
+    Map<String, dynamic> errorData = jsonData["error"];
+    List<dynamic> errorMessage = errorData["email"];
+    await storage.write(key: "emailMessage", value: errorMessage.toString());
+
+    return ApiResponse<RegisterUser>(
+        resposeCode: response.statusCode,
+        error: true,
+        errorMessage: "An error occurred");
+  }
 }
