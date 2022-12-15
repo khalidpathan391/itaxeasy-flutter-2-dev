@@ -189,6 +189,7 @@ class ApiServices {
         errorMessage: "An error occurred");
   }
 
+// get user profile
   Future<ApiResponse> getuserProfile() async {
     // final url = Uri.parse(baseUrl + "/login");
     String authToken = await storage.read(key: "token");
@@ -206,7 +207,8 @@ class ApiServices {
     log(response.body);
 
     if (response.statusCode == 200) {
-      return ApiResponse(resposeCode: 200, data: json.encode(response.body));
+      Map body = jsonDecode(response.body);
+      return ApiResponse(resposeCode: 200, data: body["data"]);
     }
     return ApiResponse(
         resposeCode: response.statusCode,
@@ -218,7 +220,7 @@ class ApiServices {
 
   Future<ApiResponse> createuser(Map data) async {
     // final url = Uri.parse(baseUrl + "/login");
-    final url = Uri.parse("https://api.itaxeasy.com/users/update");
+    final url = Uri.parse("https://api.itaxeasy.com/users/createProfile");
     String authToken = await storage.read(key: "token");
     final headers = {
       'Content-Type': 'application/json',
@@ -232,7 +234,111 @@ class ApiServices {
     log(response.body);
     log(jsonBody);
     if (response.statusCode == 200) {
-      await storage.write(key: "user", value: json.encode(data));
+      await storage.write(key: "userProfile", value: json.encode(data));
+      return ApiResponse(resposeCode: 200, data: "create ");
+    }
+    return ApiResponse(
+        resposeCode: response.statusCode,
+        error: true,
+        errorMessage: "An error occurred");
+  }
+
+//// update user profile
+  Future<ApiResponse> updateuser(Map data) async {
+    // final url = Uri.parse(baseUrl + "/login");
+    final url = Uri.parse("https://api.itaxeasy.com/users/update-profile");
+    String authToken = await storage.read(key: "token");
+    final headers = {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer $authToken',
+    };
+    final jsonBody = jsonEncode(data);
+
+    final response = await http.post(url, headers: headers, body: jsonBody);
+
+    log(response.statusCode.toString());
+    log(response.body);
+    if (response.statusCode == 200) {
+      await storage.write(key: "userProfile", value: json.encode(data));
+      return ApiResponse(resposeCode: 200, data: "create ");
+    }
+    return ApiResponse(
+        resposeCode: response.statusCode,
+        error: true,
+        errorMessage: "An error occurred");
+  }
+
+  ///  Create Business Profile
+  Future<ApiResponse> createBusinessuser(Map data) async {
+    // final url = Uri.parse(baseUrl + "/login");
+    final url =
+        Uri.parse("https://api.itaxeasy.com/users/create-business-profile");
+    String authToken = await storage.read(key: "token");
+    final headers = {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer $authToken',
+    };
+    final jsonBody = jsonEncode(data);
+
+    final response = await http.post(url, headers: headers, body: jsonBody);
+
+    log(response.statusCode.toString());
+    log(response.body);
+    log(jsonBody);
+    if (response.statusCode == 200) {
+      await storage.write(key: "userProfile", value: json.encode(data));
+      return ApiResponse(resposeCode: 200, data: "create ");
+    }
+    return ApiResponse(
+        resposeCode: response.statusCode,
+        error: true,
+        errorMessage: "An error occurred");
+  }
+
+  // get Business profile
+  Future<ApiResponse> getBusinessProfile() async {
+    // final url = Uri.parse(baseUrl + "/login");
+    String authToken = await storage.read(key: "token");
+    final headers = {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer $authToken',
+    };
+    final url = Uri.parse("https://api.itaxeasy.com/users/getProfile");
+
+    final response = await http.get(
+      url,
+      headers: headers,
+    );
+    log(response.statusCode.toString());
+    log(response.body);
+
+    if (response.statusCode == 200) {
+      Map body = jsonDecode(response.body);
+      return ApiResponse(resposeCode: 200, data: body["data"]);
+    }
+    return ApiResponse(
+        resposeCode: response.statusCode,
+        error: true,
+        errorMessage: "An error occurred");
+  }
+
+// Update business user
+  Future<ApiResponse> updateBusinessUser(Map data) async {
+    // final url = Uri.parse(baseUrl + "/login");
+    final url = Uri.parse("https://api.itaxeasy.com/users/update-profile");
+    String authToken = await storage.read(key: "token");
+    final headers = {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer $authToken',
+    };
+    final jsonBody = jsonEncode(data);
+
+    final response = await http.post(url, headers: headers, body: jsonBody);
+
+    log(response.statusCode.toString());
+    log(response.body);
+    if (response.statusCode == 200) {
+      await storage.write(key: "userProfile", value: json.encode(data));
       return ApiResponse(resposeCode: 200, data: "create ");
     }
     return ApiResponse(

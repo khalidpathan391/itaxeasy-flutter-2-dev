@@ -77,25 +77,6 @@ class _GstnListState extends State<GstnList> {
                   const SizedBox(
                     height: 20,
                   ),
-                  Padding(
-                    padding:
-                        const EdgeInsets.only(left: 10, right: 10, bottom: 10),
-                    child: Row(
-                      children: [
-                        CustomCheckbox(),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Text(
-                          "File Nil GST ",
-                          style: GoogleFonts.dmSans(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
                   Card(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15)),
@@ -632,11 +613,11 @@ class _GstnListState extends State<GstnList> {
                                           padding: const EdgeInsets.all(10),
                                           shape: GFButtonShape.pills,
                                           onPressed: () {
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        SalePurchase()));
+                                            // Navigator.push(
+                                            //     context,
+                                            //     MaterialPageRoute(
+                                            //         builder: (context) =>
+                                            //             SalePurchase()));
                                           },
                                           text: "DOWNLOAD"),
                                     ),
@@ -775,11 +756,11 @@ class _GstnListState extends State<GstnList> {
                                         padding: const EdgeInsets.all(10),
                                         shape: GFButtonShape.pills,
                                         onPressed: () {
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      ChalaanGenerated()));
+                                          // Navigator.push(
+                                          //     context,
+                                          //     MaterialPageRoute(
+                                          //         builder: (context) =>
+                                          //             ChalaanGenerated()));
                                         },
                                         text: "DOWNLOAD"),
                                   ),

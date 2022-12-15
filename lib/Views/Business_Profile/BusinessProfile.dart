@@ -1,20 +1,57 @@
+import 'dart:developer';
+
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/components/button/gf_button.dart';
 import 'package:getwidget/shape/gf_button_shape.dart';
+import 'package:gst_app/Services/api_services.dart';
+import '../../Models/LoginUser.dart';
 import '../Calculator/ifsc_calcii/Theme.dart';
 
 class BusinessProfileUi extends StatefulWidget {
-  const BusinessProfileUi({Key key}) : super(key: key);
+  final String name;
+  final String pan;
+  const BusinessProfileUi({Key key, this.name, this.pan}) : super(key: key);
 
   @override
   State<BusinessProfileUi> createState() => _BusinessProfileUiState();
 }
 
 class _BusinessProfileUiState extends State<BusinessProfileUi> {
+  Data user;
+  String state;
+  bool isProfileCreated = false;
+  bool isUserProfileChange = false;
   bool _status = true;
-  final FocusNode myFocusNode = FocusNode();
+  getuserLocal() async {
+    setState(() {
+      apiServices.getBusinessProfile().then((value) {
+        if (value.resposeCode == 200) {
+          setState(() {
+            isProfileCreated = true;
+            // businessname.text = value.data["pan"];
+            // companypan.text = value.data["aadhar"];
+            // companytan.text = value.data["aadhar"];
+            // msme.text = value.data["aadhar"];
+            // gst.text = value.data["aadhar"];
+            // bankaccount.text = value.data["aadhar"];
+            // bankaccountdetails.text = value.data["aadhar"];
+            // incorporation.text = value.data["aadhar"];
+          });
 
+          // log("valued from api:" + value.data.toString());
+        } else {
+          setState(() {
+            _status = false;
+          });
+        }
+        log(value.data.toString());
+      });
+    });
+  }
+
+  final FocusNode myFocusNode = FocusNode();
+  ApiServices apiServices = ApiServices();
   @override
   void initState() {
     // TODO: implement initState
@@ -75,7 +112,7 @@ class _BusinessProfileUiState extends State<BusinessProfileUi> {
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
+                            children: [
                               Text(
                                 "Pan Number",
                                 style: TextStyle(
@@ -86,7 +123,7 @@ class _BusinessProfileUiState extends State<BusinessProfileUi> {
                                 ),
                               ),
                               Text(
-                                "XXXXX XXX XXX",
+                                widget.pan,
                                 style: TextStyle(
                                   fontFamily: "Poppins",
                                   fontWeight: FontWeight.w500,
@@ -107,7 +144,7 @@ class _BusinessProfileUiState extends State<BusinessProfileUi> {
                                 ),
                               ),
                               Text(
-                                "XXXXX",
+                                widget.name,
                                 style: TextStyle(
                                   fontFamily: "Poppins",
                                   fontWeight: FontWeight.w500,

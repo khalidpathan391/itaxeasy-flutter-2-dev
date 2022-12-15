@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:developer';
 import 'dart:io';
 import 'package:animate_do/animate_do.dart';
+import 'package:dropdown_formfield/dropdown_formfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
@@ -25,7 +26,9 @@ class MapScreenState extends State<ProfilePage>
     with SingleTickerProviderStateMixin {
   FlutterSecureStorage storage = const FlutterSecureStorage();
   Data user;
-
+  String state;
+  bool isProfileCreated = false;
+  bool isUserProfileChange = false;
   getuserLocal() async {
     String data = await storage.read(key: "user");
     user = Data.fromJson(json.decode(data));
@@ -39,11 +42,29 @@ class MapScreenState extends State<ProfilePage>
     });
     apiServices.getuserProfile().then((value) {
       if (value.resposeCode == 200) {
-        log(value.data.toString());
+        setState(() {
+          isProfileCreated = true;
+          pan.text = value.data["pan"];
+          aadharcount.text = value.data["aadhar"];
+        });
+
+        // log("valued from api:" + value.data.toString());
+      } else {
+        setState(() {
+          _status = false;
+        });
       }
+      log(value.data.toString());
     });
   }
 
+  var items = [
+    'Item 1',
+    'Item 2',
+    'Item 3',
+    'Item 4',
+    'Item 5',
+  ];
   TextEditingController nameCount = TextEditingController();
   TextEditingController lastName = TextEditingController();
   TextEditingController pan = TextEditingController();
@@ -225,7 +246,11 @@ class MapScreenState extends State<ProfilePage>
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => BusinessProfileUi()));
+                                builder: (context) => BusinessProfileUi(
+                                      pan: pan.text,
+                                      name:
+                                          nameCount.text + " " + lastName.text,
+                                    )));
                       },
                       text: "Business Profile"),
                 ),
@@ -304,6 +329,9 @@ class MapScreenState extends State<ProfilePage>
                                 child: Padding(
                                   padding: const EdgeInsets.only(right: 10.0),
                                   child: TextField(
+                                    onChanged: (val) {
+                                      isUserProfileChange = true;
+                                    },
                                     controller: nameCount,
                                     decoration: const InputDecoration(
                                         hintText: "Enter First Name"),
@@ -352,6 +380,10 @@ class MapScreenState extends State<ProfilePage>
                             children: <Widget>[
                               Flexible(
                                 child: TextField(
+                                  maxLength: 10,
+                                  textCapitalization:
+                                      TextCapitalization.characters,
+                                  // keyboardType: ,
                                   controller: pan,
                                   decoration: const InputDecoration(
                                     hintText: "Enter PAN Number",
@@ -390,6 +422,7 @@ class MapScreenState extends State<ProfilePage>
                             children: <Widget>[
                               Flexible(
                                 child: TextField(
+                                  keyboardType: TextInputType.emailAddress,
                                   controller: emailCount,
                                   decoration: const InputDecoration(
                                       hintText: "Enter Email ID"),
@@ -426,6 +459,8 @@ class MapScreenState extends State<ProfilePage>
                             children: <Widget>[
                               Flexible(
                                 child: TextField(
+                                  keyboardType: TextInputType.phone,
+                                  maxLength: 10,
                                   controller: phoneCount,
                                   decoration: const InputDecoration(
                                       hintText: "Enter Mobile Number"),
@@ -467,11 +502,14 @@ class MapScreenState extends State<ProfilePage>
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.end,
                             children: <Widget>[
                               Flexible(
                                 child: Padding(
                                   padding: const EdgeInsets.only(right: 10.0),
                                   child: TextField(
+                                    keyboardType: TextInputType.phone,
+                                    maxLength: 6,
                                     controller: pinCode,
                                     decoration: const InputDecoration(
                                         hintText: "Enter Pin Code"),
@@ -481,11 +519,39 @@ class MapScreenState extends State<ProfilePage>
                                 flex: 2,
                               ),
                               Flexible(
-                                child: TextField(
-                                  controller: statecount,
-                                  decoration: const InputDecoration(
-                                      hintText: "Enter State"),
-                                  enabled: !_status,
+                                // child: TextField(
+                                //   controller: statecount,
+                                //   decoration: const InputDecoration(
+                                //       hintText: "Enter State"),
+                                //   enabled: !_status,
+                                // ),
+                                child: Container(
+                                  // decoration: BoxDecoration(border:),
+                                  // color: Colors.amber,
+                                  child: DropdownButton(
+                                    underline: SizedBox(),
+                                    // Initial Value
+                                    value: state,
+
+                                    // Down Arrow Icon
+                                    icon: const Icon(Icons.keyboard_arrow_down),
+
+                                    // Array list of items
+                                    items: items.map((String items) {
+                                      return DropdownMenuItem(
+                                        value: items,
+                                        child: Text(items),
+                                      );
+                                    }).toList(),
+                                    // After selecting the desired option,it will
+                                    // change button value to selected value
+                                    onChanged: (String newValue) {
+                                      setState(() {
+                                        state = newValue;
+                                      });
+                                    },
+                                    hint: Text("Choose State"),
+                                  ),
                                 ),
                                 flex: 2,
                               ),
@@ -519,6 +585,8 @@ class MapScreenState extends State<ProfilePage>
                             children: <Widget>[
                               Flexible(
                                 child: TextField(
+                                  keyboardType: TextInputType.phone,
+                                  maxLength: 12,
                                   controller: aadharcount,
                                   decoration: const InputDecoration(
                                     hintText: "Enter Aadhaar Number",
@@ -592,22 +660,92 @@ class MapScreenState extends State<ProfilePage>
                     "pan": pan.text,
                     "aadhar": aadharcount.text,
                   };
-
-                  final result = await apiServices.createuser(prm);
-                  setState(() {});
-                  if (_image != null) {
-                    final result =
-                        await apiServices.postFile("notes/", _image.path);
-                    print(result.statusCode);
-                  } else {
-                    print("-------------------------------");
-                    print("failed");
-                    print("---------------------");
+                  if (isUserProfileChange) {
+                    Map prma = {
+                      "first_name": nameCount.text,
+                      "last_name": lastName.text,
+                      "phone": phoneCount.text,
+                      "email": emailCount.text,
+                      "pincode": pinCode.text,
+                    };
+                    await apiServices.update(prma).then((value) async {
+                      if (value.resposeCode == 200) {
+                        user.firstName = nameCount.text;
+                        user.lastName = lastName.text;
+                        user.phone = phoneCount.text;
+                        user.email = emailCount.text;
+                        user.pincode = pinCode.text;
+                        await storage.write(
+                            key: "user", value: json.encode(user.toJson()));
+                        setState(() {
+                          _status = true;
+                        });
+                      }
+                    });
                   }
+                  if (isProfileCreated) {
+                    await apiServices.updateuser(prm).then((value) {
+                      if (value.resposeCode == 200) {
+                        setState(() {
+                          _status = true;
+                          getuserLocal();
+                        });
+                      }
+                    });
+                  } else
+                    final result = await apiServices.createuser(prm);
+                  // setState(() {});
+                  // if (_image != null) {
+                  //   final result =
+                  //       await apiServices.postFile("notes/", _image.path);
+                  //   print(result.statusCode);
+                  // } else {
+                  //   print("-------------------------------");
+                  //   print("failed");
+                  //   print("---------------------");
+                  // }
                   setState(() {
                     _status = true;
                     FocusScope.of(context).requestFocus(FocusNode());
                   });
+                  if (nameCount.text.isEmpty ||
+                      emailCount.text.isEmpty ||
+                      lastName.text.isEmpty ||
+                      phoneCount.text.isEmpty ||
+                      pinCode.text.isEmpty ||
+                      aadharcount.text.isEmpty ||
+                      pan.text.isEmpty) {
+                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                      content: Text("Please Fill The Given Field"),
+                    ));
+                  }
+                  if (!RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]")
+                      .hasMatch(emailCount.text)) {
+                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                      content: Text("Email Id should be valid"),
+                    ));
+                  }
+                  if (pinCode.text.length < 10) {
+                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                      content: Text("PAN No. Should be   10 digits"),
+                    ));
+                  }
+                  if (aadharcount.text.length < 12) {
+                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                      content: Text("Aadhar number Should be   12 digits"),
+                    ));
+                  }
+
+                  if (phoneCount.text.length < 10) {
+                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                      content: Text("Number should be 10  digits!"),
+                    ));
+                  }
+                  if (pinCode.text.length < 6) {
+                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                      content: Text("Number should be 6  digits!"),
+                    ));
+                  }
                 },
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0)),

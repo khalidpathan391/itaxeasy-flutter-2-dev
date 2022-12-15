@@ -229,13 +229,16 @@ class _CaluiState extends State<Calui> with TickerProviderStateMixin {
     _scale7 = 1 - _controller7.value;
     _scale8 = 1 - _controller8.value;
     return Padding(
-      padding: const EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 10),
+      padding: const EdgeInsets.only(
+        left: 10,
+        right: 10,
+      ),
       child: GridView(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           childAspectRatio: 1.6,
           crossAxisSpacing: 10,
-          mainAxisSpacing: 10,
+          mainAxisSpacing: 5,
         ),
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),

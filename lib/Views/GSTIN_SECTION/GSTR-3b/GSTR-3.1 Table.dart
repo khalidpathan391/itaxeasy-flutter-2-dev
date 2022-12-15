@@ -43,7 +43,7 @@ class _GSTTable3BState extends State<GSTTable3B> {
                         Padding(
                           padding: const EdgeInsets.only(top: 20),
                           child: Text(
-                            'GSTR-3.1.1',
+                            'GSTR-3.1',
                             style: heading2.copyWith(color: textBlack),
                           ),
                         ),
