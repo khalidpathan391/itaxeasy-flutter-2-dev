@@ -20,6 +20,7 @@ import 'package:gst_app/Views/on_board_screens/Invoice.dart';
 import 'package:gst_app/Views/on_board_screens/MyInvoice.dart';
 import 'package:gst_app/Views/on_board_screens/Purchase%20Voucher.dart';
 import 'package:gst_app/Views/on_board_screens/SaleVoucher.dart';
+
 import 'package:gst_app/Views/pdf%20converter.dart';
 
 import 'package:material_dialogs/material_dialogs.dart';
@@ -64,6 +65,7 @@ import '../itr_status.dart';
 import '../know_your_ao.dart';
 import '../know_your_tan.dart';
 import '../link_aadhaar.dart';
+import '../on_board_screens/payment.dart';
 import '../pan_details.dart';
 import '../search-by-gstin.dart';
 import '../itd.dart';
@@ -1439,22 +1441,24 @@ class _SideMenuState extends State<SideMenu> {
                 //     ),
                 //   ),
                 // ),
-                // FadeInLeftBig(
-                //   delay: const Duration(milliseconds: 500),
-                //   duration: const Duration(milliseconds: 500),
-                //   child: Padding(
-                //     padding: const EdgeInsets.only(left: 16),
-                //     child: DrawerListTile(
-                //       title: "IBIZ",
-                //       svgSrc: "assets/icons/ao.svg",
-                //       press: () async {
-                //         // await storage.delete(key: "token");
-                //         Navigator.push(context,
-                //             MaterialPageRoute(builder: (context) => IBIZ()));
-                //       },
-                //     ),
-                //   ),
-                // ),
+                FadeInLeftBig(
+                  delay: const Duration(milliseconds: 500),
+                  duration: const Duration(milliseconds: 500),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 16),
+                    child: DrawerListTile(
+                      title: "payment Gateway",
+                      svgSrc: "assets/icons/ao.svg",
+                      press: () async {
+                        // await storage.delete(key: "token");
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => PaymentGateway()));
+                      },
+                    ),
+                  ),
+                ),
                 FadeInLeftBig(
                   delay: const Duration(milliseconds: 500),
                   duration: const Duration(milliseconds: 500),

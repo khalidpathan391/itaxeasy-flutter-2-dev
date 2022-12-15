@@ -62,7 +62,7 @@ class _NewRegimeUiState extends State<NewRegimeUi> {
           )
         : Scaffold(
             resizeToAvoidBottomInset: false,
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.grey.shade300,
             body: SingleChildScrollView(
               child: SafeArea(
                 child: Padding(
@@ -134,9 +134,24 @@ class _NewRegimeUiState extends State<NewRegimeUi> {
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: textWhiteGrey,
-                                    borderRadius: BorderRadius.circular(14.0),
-                                  ),
+                                      borderRadius: BorderRadius.circular(15),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Colors.grey.shade700,
+                                            blurRadius: 5.0,
+                                            offset: Offset(5, 3))
+                                      ],
+                                      // border: Border.all(
+                                      //     color: Colors.blue.shade900),
+                                      shape: BoxShape.rectangle,
+                                      gradient: LinearGradient(
+                                        begin: Alignment.bottomRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.grey.shade100,
+                                          Colors.white,
+                                        ],
+                                      )),
                                   child: TextFormField(
                                     controller: financialCont,
                                     // keyboardType: TextInputType.phone,
@@ -168,9 +183,24 @@ class _NewRegimeUiState extends State<NewRegimeUi> {
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: textWhiteGrey,
-                                    borderRadius: BorderRadius.circular(14.0),
-                                  ),
+                                      borderRadius: BorderRadius.circular(15),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Colors.grey.shade700,
+                                            blurRadius: 5.0,
+                                            offset: Offset(5, 3))
+                                      ],
+                                      // border: Border.all(
+                                      //     color: Colors.blue.shade900),
+                                      shape: BoxShape.rectangle,
+                                      gradient: LinearGradient(
+                                        begin: Alignment.bottomRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.grey.shade100,
+                                          Colors.white,
+                                        ],
+                                      )),
                                   child: TextFormField(
                                     // keyboardType: TextInputType.phone,
                                     controller: panCont,
@@ -202,9 +232,24 @@ class _NewRegimeUiState extends State<NewRegimeUi> {
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: textWhiteGrey,
-                                    borderRadius: BorderRadius.circular(14.0),
-                                  ),
+                                      borderRadius: BorderRadius.circular(15),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Colors.grey.shade700,
+                                            blurRadius: 5.0,
+                                            offset: Offset(5, 3))
+                                      ],
+                                      // border: Border.all(
+                                      //     color: Colors.blue.shade900),
+                                      shape: BoxShape.rectangle,
+                                      gradient: LinearGradient(
+                                        begin: Alignment.bottomRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.grey.shade100,
+                                          Colors.white,
+                                        ],
+                                      )),
                                   child: TextFormField(
                                     controller: fillingCont,
                                     // keyboardType: TextInputType.phone,
@@ -236,9 +281,24 @@ class _NewRegimeUiState extends State<NewRegimeUi> {
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: textWhiteGrey,
-                                    borderRadius: BorderRadius.circular(14.0),
-                                  ),
+                                      borderRadius: BorderRadius.circular(15),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Colors.grey.shade700,
+                                            blurRadius: 5.0,
+                                            offset: Offset(5, 3))
+                                      ],
+                                      // border: Border.all(
+                                      //     color: Colors.blue.shade900),
+                                      shape: BoxShape.rectangle,
+                                      gradient: LinearGradient(
+                                        begin: Alignment.bottomRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.grey.shade100,
+                                          Colors.white,
+                                        ],
+                                      )),
                                   child: TextFormField(
                                     // keyboardType: TextInputType.phone,
                                     controller: residentialCont,
@@ -270,9 +330,24 @@ class _NewRegimeUiState extends State<NewRegimeUi> {
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: textWhiteGrey,
-                                    borderRadius: BorderRadius.circular(14.0),
-                                  ),
+                                      borderRadius: BorderRadius.circular(15),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Colors.grey.shade700,
+                                            blurRadius: 5.0,
+                                            offset: Offset(5, 3))
+                                      ],
+                                      // border: Border.all(
+                                      //     color: Colors.blue.shade900),
+                                      shape: BoxShape.rectangle,
+                                      gradient: LinearGradient(
+                                        begin: Alignment.bottomRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.grey.shade100,
+                                          Colors.white,
+                                        ],
+                                      )),
                                   child: TextFormField(
                                     controller: basicSalaryCont,
                                     // keyboardType: TextInputType.phone,
@@ -304,9 +379,24 @@ class _NewRegimeUiState extends State<NewRegimeUi> {
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: textWhiteGrey,
-                                    borderRadius: BorderRadius.circular(14.0),
-                                  ),
+                                      borderRadius: BorderRadius.circular(15),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Colors.grey.shade700,
+                                            blurRadius: 5.0,
+                                            offset: Offset(5, 3))
+                                      ],
+                                      // border: Border.all(
+                                      //     color: Colors.blue.shade900),
+                                      shape: BoxShape.rectangle,
+                                      gradient: LinearGradient(
+                                        begin: Alignment.bottomRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.grey.shade100,
+                                          Colors.white,
+                                        ],
+                                      )),
                                   child: TextFormField(
                                     controller: hraCont,
                                     // keyboardType: TextInputType.phone,
@@ -338,9 +428,24 @@ class _NewRegimeUiState extends State<NewRegimeUi> {
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: textWhiteGrey,
-                                    borderRadius: BorderRadius.circular(14.0),
-                                  ),
+                                      borderRadius: BorderRadius.circular(15),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Colors.grey.shade700,
+                                            blurRadius: 5.0,
+                                            offset: Offset(5, 3))
+                                      ],
+                                      // border: Border.all(
+                                      //     color: Colors.blue.shade900),
+                                      shape: BoxShape.rectangle,
+                                      gradient: LinearGradient(
+                                        begin: Alignment.bottomRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.grey.shade100,
+                                          Colors.white,
+                                        ],
+                                      )),
                                   child: TextFormField(
                                     controller: rentCont,
                                     // keyboardType: TextInputType.phone,
@@ -372,9 +477,24 @@ class _NewRegimeUiState extends State<NewRegimeUi> {
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: textWhiteGrey,
-                                    borderRadius: BorderRadius.circular(14.0),
-                                  ),
+                                      borderRadius: BorderRadius.circular(15),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Colors.grey.shade700,
+                                            blurRadius: 5.0,
+                                            offset: Offset(5, 3))
+                                      ],
+                                      // border: Border.all(
+                                      //     color: Colors.blue.shade900),
+                                      shape: BoxShape.rectangle,
+                                      gradient: LinearGradient(
+                                        begin: Alignment.bottomRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.grey.shade100,
+                                          Colors.white,
+                                        ],
+                                      )),
                                   child: TextFormField(
                                     controller: cityCont,
                                     // keyboardType: TextInputType.phone,
@@ -406,9 +526,24 @@ class _NewRegimeUiState extends State<NewRegimeUi> {
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: textWhiteGrey,
-                                    borderRadius: BorderRadius.circular(14.0),
-                                  ),
+                                      borderRadius: BorderRadius.circular(15),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Colors.grey.shade700,
+                                            blurRadius: 5.0,
+                                            offset: Offset(5, 3))
+                                      ],
+                                      // border: Border.all(
+                                      //     color: Colors.blue.shade900),
+                                      shape: BoxShape.rectangle,
+                                      gradient: LinearGradient(
+                                        begin: Alignment.bottomRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.grey.shade100,
+                                          Colors.white,
+                                        ],
+                                      )),
                                   child: TextFormField(
                                     controller: otherACount,
                                     // keyboardType: TextInputType.phone,
@@ -440,9 +575,24 @@ class _NewRegimeUiState extends State<NewRegimeUi> {
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: textWhiteGrey,
-                                    borderRadius: BorderRadius.circular(14.0),
-                                  ),
+                                      borderRadius: BorderRadius.circular(15),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Colors.grey.shade700,
+                                            blurRadius: 5.0,
+                                            offset: Offset(5, 3))
+                                      ],
+                                      // border: Border.all(
+                                      //     color: Colors.blue.shade900),
+                                      shape: BoxShape.rectangle,
+                                      gradient: LinearGradient(
+                                        begin: Alignment.bottomRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.grey.shade100,
+                                          Colors.white,
+                                        ],
+                                      )),
                                   child: TextFormField(
                                     controller: letCount,
                                     // keyboardType: TextInputType.phone,
@@ -474,9 +624,24 @@ class _NewRegimeUiState extends State<NewRegimeUi> {
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: textWhiteGrey,
-                                    borderRadius: BorderRadius.circular(14.0),
-                                  ),
+                                      borderRadius: BorderRadius.circular(15),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Colors.grey.shade700,
+                                            blurRadius: 5.0,
+                                            offset: Offset(5, 3))
+                                      ],
+                                      // border: Border.all(
+                                      //     color: Colors.blue.shade900),
+                                      shape: BoxShape.rectangle,
+                                      gradient: LinearGradient(
+                                        begin: Alignment.bottomRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.grey.shade100,
+                                          Colors.white,
+                                        ],
+                                      )),
                                   child: TextFormField(
                                     controller: rentRCount,
                                     // keyboardType: TextInputType.phone,
@@ -508,9 +673,24 @@ class _NewRegimeUiState extends State<NewRegimeUi> {
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: textWhiteGrey,
-                                    borderRadius: BorderRadius.circular(14.0),
-                                  ),
+                                      borderRadius: BorderRadius.circular(15),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Colors.grey.shade700,
+                                            blurRadius: 5.0,
+                                            offset: Offset(5, 3))
+                                      ],
+                                      // border: Border.all(
+                                      //     color: Colors.blue.shade900),
+                                      shape: BoxShape.rectangle,
+                                      gradient: LinearGradient(
+                                        begin: Alignment.bottomRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.grey.shade100,
+                                          Colors.white,
+                                        ],
+                                      )),
                                   child: TextFormField(
                                     controller: propertyTaxCont,
                                     // keyboardType: TextInputType.phone,
@@ -542,9 +722,24 @@ class _NewRegimeUiState extends State<NewRegimeUi> {
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: textWhiteGrey,
-                                    borderRadius: BorderRadius.circular(14.0),
-                                  ),
+                                      borderRadius: BorderRadius.circular(15),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Colors.grey.shade700,
+                                            blurRadius: 5.0,
+                                            offset: Offset(5, 3))
+                                      ],
+                                      // border: Border.all(
+                                      //     color: Colors.blue.shade900),
+                                      shape: BoxShape.rectangle,
+                                      gradient: LinearGradient(
+                                        begin: Alignment.bottomRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.grey.shade100,
+                                          Colors.white,
+                                        ],
+                                      )),
                                   child: TextFormField(
                                     controller: selfCont,
                                     // keyboardType: TextInputType.phone,
@@ -576,9 +771,24 @@ class _NewRegimeUiState extends State<NewRegimeUi> {
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: textWhiteGrey,
-                                    borderRadius: BorderRadius.circular(14.0),
-                                  ),
+                                      borderRadius: BorderRadius.circular(15),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Colors.grey.shade700,
+                                            blurRadius: 5.0,
+                                            offset: Offset(5, 3))
+                                      ],
+                                      // border: Border.all(
+                                      //     color: Colors.blue.shade900),
+                                      shape: BoxShape.rectangle,
+                                      gradient: LinearGradient(
+                                        begin: Alignment.bottomRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.grey.shade100,
+                                          Colors.white,
+                                        ],
+                                      )),
                                   child: TextFormField(
                                     controller: savingCont,
                                     // keyboardType: TextInputType.phone,
@@ -610,9 +820,24 @@ class _NewRegimeUiState extends State<NewRegimeUi> {
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: textWhiteGrey,
-                                    borderRadius: BorderRadius.circular(14.0),
-                                  ),
+                                      borderRadius: BorderRadius.circular(15),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Colors.grey.shade700,
+                                            blurRadius: 5.0,
+                                            offset: Offset(5, 3))
+                                      ],
+                                      // border: Border.all(
+                                      //     color: Colors.blue.shade900),
+                                      shape: BoxShape.rectangle,
+                                      gradient: LinearGradient(
+                                        begin: Alignment.bottomRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.grey.shade100,
+                                          Colors.white,
+                                        ],
+                                      )),
                                   child: TextFormField(
                                     controller: FDCount,
                                     // keyboardType: TextInputType.phone,
@@ -644,9 +869,24 @@ class _NewRegimeUiState extends State<NewRegimeUi> {
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: textWhiteGrey,
-                                    borderRadius: BorderRadius.circular(14.0),
-                                  ),
+                                      borderRadius: BorderRadius.circular(15),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Colors.grey.shade700,
+                                            blurRadius: 5.0,
+                                            offset: Offset(5, 3))
+                                      ],
+                                      // border: Border.all(
+                                      //     color: Colors.blue.shade900),
+                                      shape: BoxShape.rectangle,
+                                      gradient: LinearGradient(
+                                        begin: Alignment.bottomRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.grey.shade100,
+                                          Colors.white,
+                                        ],
+                                      )),
                                   child: TextFormField(
                                     controller: dividentCont,
                                     // keyboardType: TextInputType.phone,
@@ -678,9 +918,24 @@ class _NewRegimeUiState extends State<NewRegimeUi> {
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: textWhiteGrey,
-                                    borderRadius: BorderRadius.circular(14.0),
-                                  ),
+                                      borderRadius: BorderRadius.circular(15),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Colors.grey.shade700,
+                                            blurRadius: 5.0,
+                                            offset: Offset(5, 3))
+                                      ],
+                                      // border: Border.all(
+                                      //     color: Colors.blue.shade900),
+                                      shape: BoxShape.rectangle,
+                                      gradient: LinearGradient(
+                                        begin: Alignment.bottomRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.grey.shade100,
+                                          Colors.white,
+                                        ],
+                                      )),
                                   child: TextFormField(
                                     controller: OtherInCont,
                                     // keyboardType: TextInputType.phone,

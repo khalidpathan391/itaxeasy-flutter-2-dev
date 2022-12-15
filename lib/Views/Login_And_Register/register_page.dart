@@ -2,6 +2,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gst_app/Models/register.dart';
 import 'package:gst_app/Services/api_services.dart';
@@ -87,6 +88,11 @@ class _RegisterPageState extends State<RegisterPage> {
                                       ),
                                       child: TextFormField(
                                         controller: nameCount,
+                                        //               validator: (value) {
+                                        //   if (value == null || value.isEmpty) {
+                                        //     return "*  Required  *";
+                                        //   }
+                                        // },
                                         decoration: InputDecoration(
                                           hintText: 'First Name',
                                           hintStyle: heading6.copyWith(
@@ -108,6 +114,11 @@ class _RegisterPageState extends State<RegisterPage> {
                                       ),
                                       child: TextFormField(
                                         controller: lastName,
+                                        //               validator: (value) {
+                                        //   if (value == null || value.isEmpty) {
+                                        //     return "*  Required  *";
+                                        //   }
+                                        // },
                                         decoration: InputDecoration(
                                           hintText: 'Last Name',
                                           hintStyle: heading6.copyWith(
@@ -132,6 +143,15 @@ class _RegisterPageState extends State<RegisterPage> {
                                           LengthLimitingTextInputFormatter(10),
                                         ],
                                         controller: phoneCount,
+                                        // validator: (Value) {
+                                        //   if (Value == null || Value.isEmpty) {
+                                        //     return "*Required";
+                                        //   } else if (Value.length != 10) {
+                                        //     return "Phone Number should be 10 digit";
+                                        //   } else {
+                                        //     return null;
+                                        //   }
+                                        // },
                                         keyboardType: TextInputType.phone,
                                         decoration: InputDecoration(
                                           hintText: 'Mobile No',
@@ -154,6 +174,15 @@ class _RegisterPageState extends State<RegisterPage> {
                                       ),
                                       child: TextFormField(
                                         controller: emailCount,
+                                        // validator: (value) {
+                                        //   if (value == null || value.isEmpty) {
+                                        //     return "*  Required  *";
+                                        //   } else if (value.indexOf("@") == -1) {
+                                        //     return "*  Email is invalid  *";
+                                        //   } else {
+                                        //     return null;
+                                        //   }
+                                        // },
                                         decoration: InputDecoration(
                                           hintText: 'Email Id',
                                           hintStyle: heading6.copyWith(
@@ -175,6 +204,29 @@ class _RegisterPageState extends State<RegisterPage> {
                                       ),
                                       child: TextFormField(
                                         controller: passwordCount,
+                                        // validator: (Value){
+                                        //     if (
+                                        //             Value.isEmpty) {
+                                        //           ScaffoldMessenger.of(context)
+                                        //               .showSnackBar(
+                                        //                   const SnackBar(
+                                        //             content: Text(
+                                        //                 "Please Fill The Given Field"),
+                                        //           ));
+                                        //         }
+                                        //         if (!RegExp(
+                                        //                 "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]")
+                                        //             .hasMatch(Value)) {
+                                        //           ScaffoldMessenger.of(context)
+                                        //               .showSnackBar(
+                                        //                   const SnackBar(
+                                        //             content: Text(
+                                        //                 "Email Id should be valid"),
+                                        //           ));
+                                        //         }
+
+                                        // },
+
                                         obscureText: !passwordVisible,
                                         decoration: InputDecoration(
                                           hintText: 'Password',
@@ -205,7 +257,17 @@ class _RegisterPageState extends State<RegisterPage> {
                                             BorderRadius.circular(14.0),
                                       ),
                                       child: TextFormField(
+                                        maxLength: 6,
                                         controller: pinCode,
+                                        // validator: (Value){
+                                        //    if (Value == null || Value.isEmpty) {
+                                        //     return "*  Required  *";
+                                        //   } else if (Value.length!=6) {
+                                        //     return "*  Pincode is invalid  *";
+                                        //   } else {
+                                        //     return null;
+                                        //   }
+                                        // },
                                         keyboardType: TextInputType.number,
                                         decoration: InputDecoration(
                                           hintText: 'Pin Code',
@@ -346,6 +408,13 @@ class _RegisterPageState extends State<RegisterPage> {
                                               .showSnackBar(const SnackBar(
                                             content: Text(
                                                 "Number should be 10  digits!"),
+                                          ));
+                                        }
+                                        if (pinCode.text.length < 6) {
+                                          ScaffoldMessenger.of(context)
+                                              .showSnackBar(const SnackBar(
+                                            content: Text(
+                                                "Number should be 6  digits!"),
                                           ));
                                         } else {
                                           setState(() {

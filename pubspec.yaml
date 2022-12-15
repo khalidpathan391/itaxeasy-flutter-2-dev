@@ -40,6 +40,7 @@ dependencies:
   numeric_keyboard:
   flutter_staggered_grid_view: ^0.6.1
   awesome_dialog: ^2.1.2
+  razorpay_flutter: ^1.1.1
   material_dialogs:
   flutter_speed_dial: ^5.0.0+1
   flutter_secure_storage: ^5.0.2
@@ -74,6 +75,7 @@ dependencies:
   open_file: ^3.2.1
   get:
   path_provider: ^2.0.8
+ 
   open_document: ^1.0.4
   flip_card: ^0.4.4
   pin_code_fields: ^6.1.0

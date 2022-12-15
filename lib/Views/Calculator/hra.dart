@@ -42,7 +42,7 @@ class _HraUIState extends State<HraUI> {
           )
         : Scaffold(
             floatingActionButton: buildSpeedDial(),
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.grey.shade300,
             body: SingleChildScrollView(
               child: SafeArea(
                 child: Padding(
@@ -118,19 +118,41 @@ class _HraUIState extends State<HraUI> {
                                 ),
                               ),
                             ),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: textWhiteGrey,
-                                borderRadius: BorderRadius.circular(14.0),
-                              ),
-                              child: TextFormField(
-                                keyboardType: TextInputType.number,
-                                controller: basic,
-                                decoration: InputDecoration(
-                                  hintText: 'basic',
-                                  hintStyle: heading6.copyWith(color: textGrey),
-                                  border: const OutlineInputBorder(
-                                    borderSide: BorderSide.none,
+                            Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15)),
+                              color: Color.fromARGB(255, 210, 189, 214),
+                              elevation: 20,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Colors.grey.shade700,
+                                          blurRadius: 5.0,
+                                          offset: Offset(5, 3))
+                                    ],
+                                    // border: Border.all(
+                                    //     color: Colors.blue.shade900),
+                                    shape: BoxShape.rectangle,
+                                    gradient: LinearGradient(
+                                      begin: Alignment.bottomRight,
+                                      end: Alignment.centerLeft,
+                                      colors: [
+                                        Colors.grey.shade100,
+                                        Colors.white,
+                                      ],
+                                    )),
+                                child: TextFormField(
+                                  keyboardType: TextInputType.number,
+                                  controller: basic,
+                                  decoration: InputDecoration(
+                                    hintText: 'basic',
+                                    hintStyle:
+                                        heading6.copyWith(color: textGrey),
+                                    border: const OutlineInputBorder(
+                                      borderSide: BorderSide.none,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -151,19 +173,41 @@ class _HraUIState extends State<HraUI> {
                                 ),
                               ),
                             ),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: textWhiteGrey,
-                                borderRadius: BorderRadius.circular(14.0),
-                              ),
-                              child: TextFormField(
-                                controller: hra,
-                                keyboardType: TextInputType.number,
-                                decoration: InputDecoration(
-                                  hintText: 'hra',
-                                  hintStyle: heading6.copyWith(color: textGrey),
-                                  border: const OutlineInputBorder(
-                                    borderSide: BorderSide.none,
+                            Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15)),
+                              color: Color.fromARGB(255, 210, 189, 214),
+                              elevation: 20,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Colors.grey.shade700,
+                                          blurRadius: 5.0,
+                                          offset: Offset(5, 3))
+                                    ],
+                                    // border: Border.all(
+                                    //     color: Colors.blue.shade900),
+                                    shape: BoxShape.rectangle,
+                                    gradient: LinearGradient(
+                                      begin: Alignment.bottomRight,
+                                      end: Alignment.centerLeft,
+                                      colors: [
+                                        Colors.grey.shade100,
+                                        Colors.white,
+                                      ],
+                                    )),
+                                child: TextFormField(
+                                  controller: hra,
+                                  keyboardType: TextInputType.number,
+                                  decoration: InputDecoration(
+                                    hintText: 'hra',
+                                    hintStyle:
+                                        heading6.copyWith(color: textGrey),
+                                    border: const OutlineInputBorder(
+                                      borderSide: BorderSide.none,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -184,19 +228,41 @@ class _HraUIState extends State<HraUI> {
                                 ),
                               ),
                             ),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: textWhiteGrey,
-                                borderRadius: BorderRadius.circular(14.0),
-                              ),
-                              child: TextFormField(
-                                controller: rentPaid,
-                                keyboardType: TextInputType.number,
-                                decoration: InputDecoration(
-                                  hintText: 'rentPaid',
-                                  hintStyle: heading6.copyWith(color: textGrey),
-                                  border: const OutlineInputBorder(
-                                    borderSide: BorderSide.none,
+                            Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15)),
+                              color: Color.fromARGB(255, 210, 189, 214),
+                              elevation: 20,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Colors.grey.shade700,
+                                          blurRadius: 5.0,
+                                          offset: Offset(5, 3))
+                                    ],
+                                    // border: Border.all(
+                                    //     color: Colors.blue.shade900),
+                                    shape: BoxShape.rectangle,
+                                    gradient: LinearGradient(
+                                      begin: Alignment.bottomRight,
+                                      end: Alignment.centerLeft,
+                                      colors: [
+                                        Colors.grey.shade100,
+                                        Colors.white,
+                                      ],
+                                    )),
+                                child: TextFormField(
+                                  controller: rentPaid,
+                                  keyboardType: TextInputType.number,
+                                  decoration: InputDecoration(
+                                    hintText: 'rentPaid',
+                                    hintStyle:
+                                        heading6.copyWith(color: textGrey),
+                                    border: const OutlineInputBorder(
+                                      borderSide: BorderSide.none,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -217,19 +283,41 @@ class _HraUIState extends State<HraUI> {
                                 ),
                               ),
                             ),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: textWhiteGrey,
-                                borderRadius: BorderRadius.circular(14.0),
-                              ),
-                              child: TextFormField(
-                                controller: allowances,
-                                keyboardType: TextInputType.number,
-                                decoration: InputDecoration(
-                                  hintText: 'allowances',
-                                  hintStyle: heading6.copyWith(color: textGrey),
-                                  border: const OutlineInputBorder(
-                                    borderSide: BorderSide.none,
+                            Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15)),
+                              color: Color.fromARGB(255, 210, 189, 214),
+                              elevation: 20,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Colors.grey.shade700,
+                                          blurRadius: 5.0,
+                                          offset: Offset(5, 3))
+                                    ],
+                                    // border: Border.all(
+                                    //     color: Colors.blue.shade900),
+                                    shape: BoxShape.rectangle,
+                                    gradient: LinearGradient(
+                                      begin: Alignment.bottomRight,
+                                      end: Alignment.centerLeft,
+                                      colors: [
+                                        Colors.grey.shade100,
+                                        Colors.white,
+                                      ],
+                                    )),
+                                child: TextFormField(
+                                  controller: allowances,
+                                  keyboardType: TextInputType.number,
+                                  decoration: InputDecoration(
+                                    hintText: 'allowances',
+                                    hintStyle:
+                                        heading6.copyWith(color: textGrey),
+                                    border: const OutlineInputBorder(
+                                      borderSide: BorderSide.none,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -322,6 +410,10 @@ class _HraUIState extends State<HraUI> {
                               stream: null,
                               builder: (context, snapshot) {
                                 return Card(
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(15)),
+                                  color: Color.fromARGB(255, 210, 189, 214),
+                                  elevation: 20,
                                   child: Padding(
                                     padding: const EdgeInsets.only(
                                         left: 15, top: 10, bottom: 10),

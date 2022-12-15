@@ -91,7 +91,7 @@ class _GST3bState extends State<GST3b> {
                           width: 20,
                         ),
                         Text(
-                          "File Nil GST CMP-08",
+                          "File Nil GST ",
                           style: GoogleFonts.dmSans(
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
