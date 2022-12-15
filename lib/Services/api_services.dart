@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:developer';
+import 'package:get/get.dart';
 import 'package:gst_app/Models/api_response.dart';
 import 'package:gst_app/Models/bank-response.dart';
 import 'package:gst_app/Models/bank-verify.dart';
@@ -81,14 +82,16 @@ class ApiServices {
           resposeCode: response.statusCode);
     }
     final jsonData = jsonDecode(response.body);
-    Map<String, dynamic> errorData = jsonData["error"];
-    List<dynamic> errorMessage = errorData["email"];
-    await storage.write(key: "emailMessage", value: errorMessage.toString());
+    // Get.snackbar("Error!", jsonData["message"]);
+    // Map<String, dynamic> errorData = jsonData["message"];
+    // List<dynamic> errorMessage = errorData["email"];
+    await storage.write(
+        key: "emailMessage", value: jsonData["message"] ?? "An error occured");
 
     return ApiResponse<RegisterUser>(
         resposeCode: response.statusCode,
         error: true,
-        errorMessage: "An error occurred");
+        errorMessage: jsonData["message"] ?? "An error occurred");
   }
 
 // LOGIN API
