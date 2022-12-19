@@ -27,6 +27,8 @@ import 'package:gst_app/Views/search-by-gstin.dart';
 import 'package:path/path.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../BalanceSheet.dart';
+import '../Calculator/Fi Cal.dart';
+import '../Calculator/Finencial Calculator.dart';
 import '../EasyGadgets.dart';
 import '../EasyLinks.dart';
 import '../EasyTax.dart';
@@ -314,9 +316,6 @@ class _Dashbord3State extends State<Dashbord3> with TickerProviderStateMixin {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(
-                  height: 5,
-                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -356,7 +355,7 @@ class _Dashbord3State extends State<Dashbord3> with TickerProviderStateMixin {
                   ],
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 5,
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -801,7 +800,7 @@ class _Dashbord3State extends State<Dashbord3> with TickerProviderStateMixin {
                                       height: 8,
                                     ),
                                     Text(
-                                      "E-Invoicing",
+                                      "Invoice",
                                       style: GoogleFonts.dmSans(
                                         fontSize: 13,
                                         fontWeight: FontWeight.bold,
@@ -1348,7 +1347,13 @@ class _Dashbord3State extends State<Dashbord3> with TickerProviderStateMixin {
                                     GestureDetector(
                                       onTapDown: _tapDown12,
                                       onTapUp: _tapUp12,
-                                      onTap: () {},
+                                      onTap: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    FiCalculator()));
+                                      },
                                       child: Transform.scale(
                                         scale: _scale12,
                                         child: Column(

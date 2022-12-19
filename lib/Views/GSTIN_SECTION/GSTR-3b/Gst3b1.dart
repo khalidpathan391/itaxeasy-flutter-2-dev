@@ -612,11 +612,11 @@ class _GST3bState extends State<GST3b> {
                                     padding: const EdgeInsets.all(10),
                                     shape: GFButtonShape.pills,
                                     onPressed: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  SalePurchase()));
+                                      // Navigator.push(
+                                      //     context,
+                                      //     MaterialPageRoute(
+                                      //         builder: (context) =>
+                                      //             SalePurchase()));
                                     },
                                     text: "DOWNLOAD"),
                               ),
@@ -1054,7 +1054,7 @@ class _GST3bState extends State<GST3b> {
                             onPressed: () {
                               // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
                             },
-                            text: "File ITR"),
+                            text: "File GSTR"),
                       ),
                     ],
                   ),

@@ -169,9 +169,7 @@ class _Five_TableState extends State<Five_Table> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -191,9 +189,7 @@ class _Five_TableState extends State<Five_Table> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -229,9 +225,7 @@ class _Five_TableState extends State<Five_Table> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -251,9 +245,7 @@ class _Five_TableState extends State<Five_Table> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],

@@ -110,9 +110,24 @@ class _LumpSumUIState extends State<LumpSumUI> {
                             ),
                             Container(
                               decoration: BoxDecoration(
-                                color: textWhiteGrey,
-                                borderRadius: BorderRadius.circular(14.0),
-                              ),
+                                  borderRadius: BorderRadius.circular(15),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.grey.shade700,
+                                        blurRadius: 5.0,
+                                        offset: Offset(5, 3))
+                                  ],
+                                  // border: Border.all(
+                                  //     color: Colors.blue.shade900),
+                                  shape: BoxShape.rectangle,
+                                  gradient: LinearGradient(
+                                    begin: Alignment.bottomRight,
+                                    end: Alignment.centerLeft,
+                                    colors: [
+                                      Colors.grey.shade100,
+                                      Colors.white,
+                                    ],
+                                  )),
                               child: TextFormField(
                                 keyboardType: TextInputType.number,
                                 controller: invested,
@@ -143,9 +158,24 @@ class _LumpSumUIState extends State<LumpSumUI> {
                             ),
                             Container(
                               decoration: BoxDecoration(
-                                color: textWhiteGrey,
-                                borderRadius: BorderRadius.circular(14.0),
-                              ),
+                                  borderRadius: BorderRadius.circular(15),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.grey.shade700,
+                                        blurRadius: 5.0,
+                                        offset: Offset(5, 3))
+                                  ],
+                                  // border: Border.all(
+                                  //     color: Colors.blue.shade900),
+                                  shape: BoxShape.rectangle,
+                                  gradient: LinearGradient(
+                                    begin: Alignment.bottomRight,
+                                    end: Alignment.centerLeft,
+                                    colors: [
+                                      Colors.grey.shade100,
+                                      Colors.white,
+                                    ],
+                                  )),
                               child: TextFormField(
                                 controller: rate,
                                 keyboardType: TextInputType.number,
@@ -176,9 +206,24 @@ class _LumpSumUIState extends State<LumpSumUI> {
                             ),
                             Container(
                               decoration: BoxDecoration(
-                                color: textWhiteGrey,
-                                borderRadius: BorderRadius.circular(14.0),
-                              ),
+                                  borderRadius: BorderRadius.circular(15),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.grey.shade700,
+                                        blurRadius: 5.0,
+                                        offset: Offset(5, 3))
+                                  ],
+                                  // border: Border.all(
+                                  //     color: Colors.blue.shade900),
+                                  shape: BoxShape.rectangle,
+                                  gradient: LinearGradient(
+                                    begin: Alignment.bottomRight,
+                                    end: Alignment.centerLeft,
+                                    colors: [
+                                      Colors.grey.shade100,
+                                      Colors.white,
+                                    ],
+                                  )),
                               child: TextFormField(
                                 controller: year,
                                 keyboardType: TextInputType.phone,

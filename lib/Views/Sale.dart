@@ -90,16 +90,30 @@ class _SaleUiState extends State<SaleUi> {
                     },
                     child: Card(
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20)),
-                      elevation: 5,
+                          borderRadius: BorderRadius.circular(15)),
+                      color: Color.fromARGB(255, 210, 189, 214),
+                      elevation: 20,
                       child: Container(
                         padding: const EdgeInsets.all(defaultPadding),
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(10),
-                          ),
-                        ),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey.shade700,
+                                  blurRadius: 5.0,
+                                  offset: Offset(5, 3))
+                            ],
+                            // border: Border.all(
+                            //     color: Colors.blue.shade900),
+                            shape: BoxShape.rectangle,
+                            gradient: LinearGradient(
+                              begin: Alignment.bottomRight,
+                              end: Alignment.centerLeft,
+                              colors: [
+                                Colors.grey.shade100,
+                                Colors.white,
+                              ],
+                            )),
                         child: Column(
                           children: [
                             Center(
@@ -138,12 +152,25 @@ class _SaleUiState extends State<SaleUi> {
                           elevation: 5,
                           child: Container(
                             padding: const EdgeInsets.all(defaultPadding),
-                            decoration: const BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(10),
-                              ),
-                            ),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Colors.grey.shade700,
+                                      blurRadius: 5.0,
+                                      offset: Offset(5, 3))
+                                ],
+                                // border: Border.all(
+                                //     color: Colors.blue.shade900),
+                                shape: BoxShape.rectangle,
+                                gradient: LinearGradient(
+                                  begin: Alignment.bottomRight,
+                                  end: Alignment.centerLeft,
+                                  colors: [
+                                    Colors.grey.shade100,
+                                    Colors.white,
+                                  ],
+                                )),
                             child: Column(
                               children: [
                                 Center(
@@ -175,12 +202,25 @@ class _SaleUiState extends State<SaleUi> {
                           elevation: 5,
                           child: Container(
                             padding: const EdgeInsets.all(defaultPadding),
-                            decoration: const BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(10),
-                              ),
-                            ),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Colors.grey.shade700,
+                                      blurRadius: 5.0,
+                                      offset: Offset(5, 3))
+                                ],
+                                // border: Border.all(
+                                //     color: Colors.blue.shade900),
+                                shape: BoxShape.rectangle,
+                                gradient: LinearGradient(
+                                  begin: Alignment.bottomRight,
+                                  end: Alignment.centerLeft,
+                                  colors: [
+                                    Colors.grey.shade100,
+                                    Colors.white,
+                                  ],
+                                )),
                             child: Column(
                               children: [
                                 Center(
@@ -211,16 +251,30 @@ class _SaleUiState extends State<SaleUi> {
                     Expanded(
                       child: Card(
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                        elevation: 5,
+                            borderRadius: BorderRadius.circular(15)),
+                        color: Color.fromARGB(255, 210, 189, 214),
+                        elevation: 20,
                         child: Container(
                           padding: const EdgeInsets.all(defaultPadding),
-                          decoration: const BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(10),
-                            ),
-                          ),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.grey.shade700,
+                                    blurRadius: 5.0,
+                                    offset: Offset(5, 3))
+                              ],
+                              // border: Border.all(
+                              //     color: Colors.blue.shade900),
+                              shape: BoxShape.rectangle,
+                              gradient: LinearGradient(
+                                begin: Alignment.bottomRight,
+                                end: Alignment.centerLeft,
+                                colors: [
+                                  Colors.grey.shade100,
+                                  Colors.white,
+                                ],
+                              )),
                           child: Column(
                             children: [
                               Center(

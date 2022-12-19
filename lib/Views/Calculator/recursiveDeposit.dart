@@ -41,7 +41,7 @@ class _RecursiveDepositeUIState extends State<RecursiveDepositeUI> {
         : Scaffold(
             floatingActionButton: buildSpeedDial(),
             resizeToAvoidBottomInset: false,
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.grey.shade300,
             body: SingleChildScrollView(
               child: SafeArea(
                 child: Padding(
@@ -119,9 +119,24 @@ class _RecursiveDepositeUIState extends State<RecursiveDepositeUI> {
                             ),
                             Container(
                               decoration: BoxDecoration(
-                                color: textWhiteGrey,
-                                borderRadius: BorderRadius.circular(14.0),
-                              ),
+                                  borderRadius: BorderRadius.circular(15),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.grey.shade700,
+                                        blurRadius: 5.0,
+                                        offset: Offset(5, 3))
+                                  ],
+                                  // border: Border.all(
+                                  //     color: Colors.blue.shade900),
+                                  shape: BoxShape.rectangle,
+                                  gradient: LinearGradient(
+                                    begin: Alignment.bottomRight,
+                                    end: Alignment.centerLeft,
+                                    colors: [
+                                      Colors.grey.shade100,
+                                      Colors.white,
+                                    ],
+                                  )),
                               child: TextFormField(
                                 keyboardType: TextInputType.number,
                                 controller: principle,
@@ -152,9 +167,24 @@ class _RecursiveDepositeUIState extends State<RecursiveDepositeUI> {
                             ),
                             Container(
                               decoration: BoxDecoration(
-                                color: textWhiteGrey,
-                                borderRadius: BorderRadius.circular(14.0),
-                              ),
+                                  borderRadius: BorderRadius.circular(15),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.grey.shade700,
+                                        blurRadius: 5.0,
+                                        offset: Offset(5, 3))
+                                  ],
+                                  // border: Border.all(
+                                  //     color: Colors.blue.shade900),
+                                  shape: BoxShape.rectangle,
+                                  gradient: LinearGradient(
+                                    begin: Alignment.bottomRight,
+                                    end: Alignment.centerLeft,
+                                    colors: [
+                                      Colors.grey.shade100,
+                                      Colors.white,
+                                    ],
+                                  )),
                               child: TextFormField(
                                 controller: rate,
                                 keyboardType: TextInputType.number,
@@ -185,9 +215,24 @@ class _RecursiveDepositeUIState extends State<RecursiveDepositeUI> {
                             ),
                             Container(
                               decoration: BoxDecoration(
-                                color: textWhiteGrey,
-                                borderRadius: BorderRadius.circular(14.0),
-                              ),
+                                  borderRadius: BorderRadius.circular(15),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.grey.shade700,
+                                        blurRadius: 5.0,
+                                        offset: Offset(5, 3))
+                                  ],
+                                  // border: Border.all(
+                                  //     color: Colors.blue.shade900),
+                                  shape: BoxShape.rectangle,
+                                  gradient: LinearGradient(
+                                    begin: Alignment.bottomRight,
+                                    end: Alignment.centerLeft,
+                                    colors: [
+                                      Colors.grey.shade100,
+                                      Colors.white,
+                                    ],
+                                  )),
                               child: TextFormField(
                                 controller: months,
                                 keyboardType: TextInputType.number,

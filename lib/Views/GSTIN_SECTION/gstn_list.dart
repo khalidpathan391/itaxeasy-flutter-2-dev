@@ -331,6 +331,126 @@ class _GstnListState extends State<GstnList> {
                       ),
                     ),
                   ),
+                  Card(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15)),
+                    color: Color.fromARGB(255, 210, 189, 214),
+                    elevation: 20,
+                    child: Container(
+                      padding: const EdgeInsets.all(defaultPadding),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.grey.shade700,
+                                blurRadius: 5.0,
+                                offset: Offset(5, 3))
+                          ],
+                          // border: Border.all(
+                          //     color: Colors.blue.shade900),
+                          shape: BoxShape.rectangle,
+                          gradient: LinearGradient(
+                            begin: Alignment.bottomRight,
+                            end: Alignment.centerLeft,
+                            colors: [
+                              Colors.grey.shade100,
+                              Colors.white,
+                            ],
+                          )),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Container(
+                                padding:
+                                    const EdgeInsets.all(defaultPadding * 0.75),
+                                height: 40,
+                                width: 40,
+                                decoration: BoxDecoration(
+                                  color: Colors.blue.shade900.withOpacity(0.1),
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(10)),
+                                ),
+                                child: SvgPicture.asset(
+                                  "assets/icons/Documents.svg",
+                                  color: Colors.blue.shade900,
+                                ),
+                              ),
+                              const Text(
+                                "Auto Drafted details",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontFamily: "Poppins",
+                                  fontWeight: FontWeight.bold,
+                                  letterSpacing: 1.5,
+                                  fontSize: 14.5,
+                                ),
+                              ),
+                              // Icon(Icons.more_vert, color: Colors.lightBlueAccent[700])
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          const Center(
+                            child: Text(
+                              "GSTR4A",
+                              style: TextStyle(
+                                fontFamily: "Poppins",
+                                fontWeight: FontWeight.bold,
+                                letterSpacing: 1.5,
+                                fontSize: 14.5,
+                              ),
+                              textAlign: TextAlign.center,
+                              // maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                          const Divider(
+                            indent: 10,
+                            endIndent: 10,
+                            color: Colors.grey,
+                            thickness: 1.0,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              FadeInRight(
+                                delay: const Duration(milliseconds: 500),
+                                duration: const Duration(milliseconds: 500),
+                                child: GFButton(
+                                    color: Colors.blue.shade900,
+                                    padding: const EdgeInsets.all(10),
+                                    shape: GFButtonShape.pills,
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Gstr4a()));
+                                    },
+                                    text: "VIEW"),
+                              ),
+                              FadeInRight(
+                                delay: const Duration(milliseconds: 500),
+                                duration: const Duration(milliseconds: 500),
+                                child: GFButton(
+                                    color: Colors.blue.shade900,
+                                    padding: const EdgeInsets.all(10),
+                                    shape: GFButtonShape.pills,
+                                    onPressed: () {
+                                      // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
+                                    },
+                                    text: "DOWNLOAD"),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                   SizedBox(
                     height: 10,
                   ),
@@ -761,130 +881,6 @@ class _GstnListState extends State<GstnList> {
                                           //     MaterialPageRoute(
                                           //         builder: (context) =>
                                           //             ChalaanGenerated()));
-                                        },
-                                        text: "DOWNLOAD"),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      Card(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15)),
-                        color: Color.fromARGB(255, 210, 189, 214),
-                        elevation: 20,
-                        child: Container(
-                          padding: const EdgeInsets.all(defaultPadding),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              boxShadow: [
-                                BoxShadow(
-                                    color: Colors.grey.shade700,
-                                    blurRadius: 5.0,
-                                    offset: Offset(5, 3))
-                              ],
-                              // border: Border.all(
-                              //     color: Colors.blue.shade900),
-                              shape: BoxShape.rectangle,
-                              gradient: LinearGradient(
-                                begin: Alignment.bottomRight,
-                                end: Alignment.centerLeft,
-                                colors: [
-                                  Colors.grey.shade100,
-                                  Colors.white,
-                                ],
-                              )),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                children: [
-                                  Container(
-                                    padding: const EdgeInsets.all(
-                                        defaultPadding * 0.75),
-                                    height: 40,
-                                    width: 40,
-                                    decoration: BoxDecoration(
-                                      color:
-                                          Colors.blue.shade900.withOpacity(0.1),
-                                      borderRadius: const BorderRadius.all(
-                                          Radius.circular(10)),
-                                    ),
-                                    child: SvgPicture.asset(
-                                      "assets/icons/Documents.svg",
-                                      color: Colors.blue.shade900,
-                                    ),
-                                  ),
-                                  const Text(
-                                    "Auto Drafted details",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontFamily: "Poppins",
-                                      fontWeight: FontWeight.bold,
-                                      letterSpacing: 1.5,
-                                      fontSize: 14.5,
-                                    ),
-                                  ),
-                                  // Icon(Icons.more_vert, color: Colors.lightBlueAccent[700])
-                                ],
-                              ),
-                              const SizedBox(
-                                height: 5,
-                              ),
-                              const Center(
-                                child: Text(
-                                  "GSTR4A",
-                                  style: TextStyle(
-                                    fontFamily: "Poppins",
-                                    fontWeight: FontWeight.bold,
-                                    letterSpacing: 1.5,
-                                    fontSize: 14.5,
-                                  ),
-                                  textAlign: TextAlign.center,
-                                  // maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                              ),
-                              const Divider(
-                                indent: 10,
-                                endIndent: 10,
-                                color: Colors.grey,
-                                thickness: 1.0,
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                children: [
-                                  FadeInRight(
-                                    delay: const Duration(milliseconds: 500),
-                                    duration: const Duration(milliseconds: 500),
-                                    child: GFButton(
-                                        color: Colors.blue.shade900,
-                                        padding: const EdgeInsets.all(10),
-                                        shape: GFButtonShape.pills,
-                                        onPressed: () {
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      Gstr4a()));
-                                        },
-                                        text: "VIEW"),
-                                  ),
-                                  FadeInRight(
-                                    delay: const Duration(milliseconds: 500),
-                                    duration: const Duration(milliseconds: 500),
-                                    child: GFButton(
-                                        color: Colors.blue.shade900,
-                                        padding: const EdgeInsets.all(10),
-                                        shape: GFButtonShape.pills,
-                                        onPressed: () {
-                                          // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
                                         },
                                         text: "DOWNLOAD"),
                                   ),

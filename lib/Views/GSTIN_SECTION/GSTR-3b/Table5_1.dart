@@ -233,9 +233,7 @@ class _Five_1_TableState extends State<Five_1_Table> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -255,9 +253,7 @@ class _Five_1_TableState extends State<Five_1_Table> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -277,9 +273,7 @@ class _Five_1_TableState extends State<Five_1_Table> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -299,9 +293,7 @@ class _Five_1_TableState extends State<Five_1_Table> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -335,9 +327,7 @@ class _Five_1_TableState extends State<Five_1_Table> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -357,9 +347,7 @@ class _Five_1_TableState extends State<Five_1_Table> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -379,9 +367,7 @@ class _Five_1_TableState extends State<Five_1_Table> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -401,9 +387,7 @@ class _Five_1_TableState extends State<Five_1_Table> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],

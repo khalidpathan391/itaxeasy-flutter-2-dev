@@ -81,10 +81,25 @@ class _LoginPageState extends State<LoginPage> {
                                       children: [
                                         Container(
                                           decoration: BoxDecoration(
-                                            color: textWhiteGrey,
-                                            borderRadius:
-                                                BorderRadius.circular(14.0),
-                                          ),
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              boxShadow: [
+                                                BoxShadow(
+                                                    color: Colors.grey.shade700,
+                                                    blurRadius: 5.0,
+                                                    offset: Offset(5, 3))
+                                              ],
+                                              // border: Border.all(
+                                              //     color: Colors.blue.shade900),
+                                              shape: BoxShape.rectangle,
+                                              gradient: LinearGradient(
+                                                begin: Alignment.bottomRight,
+                                                end: Alignment.centerLeft,
+                                                colors: [
+                                                  Colors.grey.shade100,
+                                                  Colors.white,
+                                                ],
+                                              )),
                                           child: TextFormField(
                                             inputFormatters: [
                                               FilteringTextInputFormatter.deny(
@@ -92,6 +107,10 @@ class _LoginPageState extends State<LoginPage> {
                                             ],
                                             controller: emailCont,
                                             decoration: InputDecoration(
+                                              prefixIcon: Icon(
+                                                Icons.phone_android,
+                                                color: Colors.blue.shade900,
+                                              ),
                                               hintText:
                                                   'Username/Email/Phone Number',
                                               hintStyle: heading6.copyWith(
@@ -107,14 +126,33 @@ class _LoginPageState extends State<LoginPage> {
                                         ),
                                         Container(
                                           decoration: BoxDecoration(
-                                            color: textWhiteGrey,
-                                            borderRadius:
-                                                BorderRadius.circular(14.0),
-                                          ),
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              boxShadow: [
+                                                BoxShadow(
+                                                    color: Colors.grey.shade700,
+                                                    blurRadius: 5.0,
+                                                    offset: Offset(5, 3))
+                                              ],
+                                              // border: Border.all(
+                                              //     color: Colors.blue.shade900),
+                                              shape: BoxShape.rectangle,
+                                              gradient: LinearGradient(
+                                                begin: Alignment.bottomRight,
+                                                end: Alignment.centerLeft,
+                                                colors: [
+                                                  Colors.grey.shade100,
+                                                  Colors.white,
+                                                ],
+                                              )),
                                           child: TextFormField(
                                             controller: passwordCont,
                                             obscureText: !passwordVisible,
                                             decoration: InputDecoration(
+                                              prefixIcon: Icon(
+                                                Icons.password_outlined,
+                                                color: Colors.blue.shade900,
+                                              ),
                                               hintText: 'Password',
                                               hintStyle: heading6.copyWith(
                                                   color: textGrey),

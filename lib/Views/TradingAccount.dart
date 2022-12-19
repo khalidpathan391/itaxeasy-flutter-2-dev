@@ -135,9 +135,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -159,9 +157,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -183,9 +179,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -207,9 +201,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -237,9 +229,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -261,9 +251,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -285,9 +273,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -309,9 +295,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -339,9 +323,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -363,9 +345,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -387,9 +367,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -411,9 +389,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -441,9 +417,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -465,9 +439,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -489,9 +461,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -513,9 +483,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -636,9 +604,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -660,9 +626,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -684,9 +648,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -708,9 +670,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -738,9 +698,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -762,9 +720,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -786,9 +742,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -810,9 +764,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -840,9 +792,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -864,9 +814,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -888,9 +836,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -912,9 +858,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -942,9 +886,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -966,9 +908,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -990,9 +930,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -1014,9 +952,7 @@ class _TradingAccountState extends State<TradingAccount> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
