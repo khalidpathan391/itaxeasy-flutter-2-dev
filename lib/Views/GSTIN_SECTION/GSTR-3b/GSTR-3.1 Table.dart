@@ -209,8 +209,8 @@ class _GSTTable3BState extends State<GSTTable3B> {
                                 ),
                                 child: TextFormField(
                                   decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                      //
+                                      ),
                                 ),
                               ),
                             ],
@@ -230,9 +230,7 @@ class _GSTTable3BState extends State<GSTTable3B> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -252,9 +250,7 @@ class _GSTTable3BState extends State<GSTTable3B> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -274,9 +270,7 @@ class _GSTTable3BState extends State<GSTTable3B> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -296,9 +290,7 @@ class _GSTTable3BState extends State<GSTTable3B> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -332,9 +324,7 @@ class _GSTTable3BState extends State<GSTTable3B> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -354,9 +344,7 @@ class _GSTTable3BState extends State<GSTTable3B> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -376,9 +364,7 @@ class _GSTTable3BState extends State<GSTTable3B> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -412,9 +398,7 @@ class _GSTTable3BState extends State<GSTTable3B> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -448,9 +432,7 @@ class _GSTTable3BState extends State<GSTTable3B> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -470,9 +452,7 @@ class _GSTTable3BState extends State<GSTTable3B> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -492,9 +472,7 @@ class _GSTTable3BState extends State<GSTTable3B> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -514,9 +492,7 @@ class _GSTTable3BState extends State<GSTTable3B> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -536,9 +512,7 @@ class _GSTTable3BState extends State<GSTTable3B> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -572,9 +546,7 @@ class _GSTTable3BState extends State<GSTTable3B> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],

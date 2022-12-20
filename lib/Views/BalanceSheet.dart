@@ -180,9 +180,7 @@ class _BalanceSheetState extends State<BalanceSheet> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -204,9 +202,7 @@ class _BalanceSheetState extends State<BalanceSheet> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -228,9 +224,7 @@ class _BalanceSheetState extends State<BalanceSheet> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -252,9 +246,7 @@ class _BalanceSheetState extends State<BalanceSheet> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -282,9 +274,7 @@ class _BalanceSheetState extends State<BalanceSheet> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -306,9 +296,7 @@ class _BalanceSheetState extends State<BalanceSheet> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -330,9 +318,7 @@ class _BalanceSheetState extends State<BalanceSheet> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -354,9 +340,7 @@ class _BalanceSheetState extends State<BalanceSheet> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -384,9 +368,7 @@ class _BalanceSheetState extends State<BalanceSheet> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -408,9 +390,7 @@ class _BalanceSheetState extends State<BalanceSheet> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -432,9 +412,7 @@ class _BalanceSheetState extends State<BalanceSheet> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -456,9 +434,7 @@ class _BalanceSheetState extends State<BalanceSheet> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -486,9 +462,7 @@ class _BalanceSheetState extends State<BalanceSheet> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -510,9 +484,7 @@ class _BalanceSheetState extends State<BalanceSheet> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -534,9 +506,7 @@ class _BalanceSheetState extends State<BalanceSheet> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],
@@ -558,9 +528,7 @@ class _BalanceSheetState extends State<BalanceSheet> {
                                     borderRadius: BorderRadius.circular(14.0),
                                   ),
                                   child: TextFormField(
-                                    decoration: InputDecoration(
-                                      hintText: 'Value',
-                                    ),
+                                    decoration: InputDecoration(),
                                   ),
                                 ),
                               ],

@@ -43,7 +43,7 @@ class _GSTTable3_1_TableState extends State<GSTTable3_1_Table> {
                         Padding(
                           padding: const EdgeInsets.only(top: 20),
                           child: Text(
-                            'GSTR-3.1',
+                            'GSTR-3.1.1',
                             style: heading2.copyWith(color: textBlack),
                           ),
                         ),
@@ -190,8 +190,8 @@ class _GSTTable3_1_TableState extends State<GSTTable3_1_Table> {
                                 ),
                                 child: TextFormField(
                                   decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                      //hintText: 'Value',
+                                      ),
                                 ),
                               ),
                             ],
@@ -212,8 +212,8 @@ class _GSTTable3_1_TableState extends State<GSTTable3_1_Table> {
                                 ),
                                 child: TextFormField(
                                   decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                      // hintText: 'Value',
+                                      ),
                                 ),
                               ),
                             ],
@@ -234,8 +234,8 @@ class _GSTTable3_1_TableState extends State<GSTTable3_1_Table> {
                                 ),
                                 child: TextFormField(
                                   decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                      // hintText: 'Value',
+                                      ),
                                 ),
                               ),
                             ],
@@ -256,8 +256,8 @@ class _GSTTable3_1_TableState extends State<GSTTable3_1_Table> {
                                 ),
                                 child: TextFormField(
                                   decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+//hintText: 'Value',
+                                      ),
                                 ),
                               ),
                             ],
@@ -278,8 +278,8 @@ class _GSTTable3_1_TableState extends State<GSTTable3_1_Table> {
                                 ),
                                 child: TextFormField(
                                   decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                      //  hintText: 'Value',
+                                      ),
                                 ),
                               ),
                             ],
@@ -315,8 +315,8 @@ class _GSTTable3_1_TableState extends State<GSTTable3_1_Table> {
                                 ),
                                 child: TextFormField(
                                   decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                      //  hintText: 'Value',
+                                      ),
                                 ),
                               ),
                             ],

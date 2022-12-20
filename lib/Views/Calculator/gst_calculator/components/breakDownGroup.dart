@@ -27,7 +27,7 @@ class BreakDownGroup extends StatelessWidget {
                 child: BreakDownDisplay(
                   amount: exempt,
                   title: 'Exempt',
-                  icon: 'assets/icons/vault.png',
+                  icon: 'assets/icons/wallet.png',
                   iconLabel: 'exempt icon',
                 ),
               ),
@@ -63,7 +63,7 @@ class BreakDownGroup extends StatelessWidget {
                 child: BreakDownDisplay(
                   amount: medical,
                   title: 'Medical at 1%',
-                  icon: 'assets/icons/heart.png',
+                  icon: 'assets/icons/money.png',
                   iconLabel: 'medical icon',
                 ),
               ),

@@ -265,9 +265,7 @@ class _Table_3_2State extends State<Table_3_2> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -289,9 +287,7 @@ class _Table_3_2State extends State<Table_3_2> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],

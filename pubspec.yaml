@@ -45,6 +45,7 @@ dependencies:
   flutter_speed_dial: ^5.0.0+1
   flutter_secure_storage: ^5.0.2
   url_launcher: ^6.0.17
+  flutter_switch: ^0.3.2
   printing:
   platform: ^3.0.0
   pdf: ^3.6.50

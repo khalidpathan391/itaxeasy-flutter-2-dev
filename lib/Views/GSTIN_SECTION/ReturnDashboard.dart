@@ -202,9 +202,7 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -224,9 +222,7 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -246,9 +242,7 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -268,9 +262,7 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -305,9 +297,7 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -327,9 +317,7 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -349,9 +337,7 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -371,9 +357,7 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -408,9 +392,7 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -430,9 +412,7 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -452,9 +432,7 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -474,9 +452,7 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -511,9 +487,7 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -533,9 +507,7 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -555,9 +527,7 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -577,9 +547,7 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Value',
-                                  ),
+                                  decoration: InputDecoration(),
                                 ),
                               ),
                             ],
@@ -623,7 +591,7 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                           onPressed: () {
                             // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
                           },
-                          text: "    Liability   "),
+                          text: "    Liability    "),
                     ),
                     FadeInRight(
                       delay: const Duration(milliseconds: 500),
@@ -661,7 +629,7 @@ class _ReturnDashboardState extends State<ReturnDashboard> {
                           text: "File Returns"),
                     ),
                     SizedBox(
-                      width: width * .18,
+                      width: width * .15,
                     ),
                     FadeInRight(
                       delay: const Duration(milliseconds: 500),

@@ -7,6 +7,7 @@ import 'package:gst_app/Calculator%20Screen/CalculatorHuf.dart';
 import 'package:gst_app/Calculator%20Screen/Domestic.dart';
 import 'package:gst_app/Calculator%20Screen/individual.dart';
 import 'package:gst_app/Views/Calculator/Emi-Cal.dart';
+import 'package:gst_app/Views/Calculator/Fi%20Cal.dart';
 import 'package:gst_app/Views/Calculator/Mis.dart';
 import 'package:gst_app/Views/Calculator/ifsc_calcii/bank-verification.dart';
 import 'package:gst_app/Views/Calculator/ifsc_calcii/ifsc_coder.dart';
@@ -19,6 +20,7 @@ import 'package:gst_app/Views/on_board_screens/ITR%20Files.dart';
 import 'package:gst_app/Views/on_board_screens/Invoice.dart';
 import 'package:gst_app/Views/on_board_screens/MyInvoice.dart';
 import 'package:gst_app/Views/on_board_screens/Purchase%20Voucher.dart';
+import 'package:gst_app/Views/on_board_screens/Regme.dart';
 import 'package:gst_app/Views/on_board_screens/SaleVoucher.dart';
 
 import 'package:gst_app/Views/pdf%20converter.dart';
@@ -1425,29 +1427,31 @@ class _SideMenuState extends State<SideMenu> {
                 //     ],
                 //   ),
                 // ),
-                // FadeInLeftBig(
-                //   delay: const Duration(milliseconds: 500),
-                //   duration: const Duration(milliseconds: 500),
-                //   child: Padding(
-                //     padding: const EdgeInsets.only(left: 16),
-                //     child: DrawerListTile(
-                //       title: "DMS",
-                //       svgSrc: "assets/icons/ao.svg",
-                //       press: () async {
-                //         // await storage.delete(key: "token");
-                //         // Navigator.push(context,
-                //         //     MaterialPageRoute(builder: (context) => ITRFiles()));
-                //       },
-                //     ),
-                //   ),
-                // ),
                 FadeInLeftBig(
                   delay: const Duration(milliseconds: 500),
                   duration: const Duration(milliseconds: 500),
                   child: Padding(
                     padding: const EdgeInsets.only(left: 16),
                     child: DrawerListTile(
-                      title: "payment Gateway",
+                      title: "Fi Cal",
+                      svgSrc: "assets/icons/ao.svg",
+                      press: () async {
+                        await storage.delete(key: "token");
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => FinencialCalculator()));
+                      },
+                    ),
+                  ),
+                ),
+                FadeInLeftBig(
+                  delay: const Duration(milliseconds: 500),
+                  duration: const Duration(milliseconds: 500),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 16),
+                    child: DrawerListTile(
+                      title: "we Pay",
                       svgSrc: "assets/icons/ao.svg",
                       press: () async {
                         // await storage.delete(key: "token");
@@ -1541,27 +1545,25 @@ class _SideMenuState extends State<SideMenu> {
                     ),
                   ),
                 ),
-                // FadeInLeftBig(
-                //   delay: const Duration(milliseconds: 500),
-                //   duration: const Duration(milliseconds: 500),
-                //   child: Padding(
-                //     padding: const EdgeInsets.only(left: 16),
-                //     child: DrawerListTile(
-                //       title: "Purchase Voucher",
-                //       svgSrc: "assets/icons/generatorpdf.svg",
-                //       press: () async {
-                //         // await storage.delete(key: "token");
-                //         // Navigator.push(context, MaterialPageRoute(builder: (context)=>BusinessProfileUi()));
-                //         // Navigator.push(context, MaterialPageRoute(builder: (context)=> OptionList()));
-                //         // Navigator.push(context, MaterialPageRoute(builder: (context)=> Alteration()));
-                //         Navigator.push(
-                //             context,
-                //             MaterialPageRoute(
-                //                 builder: (context) => PurchaseVoucher()));
-                //       },
-                //     ),
-                //   ),
-                // ),
+                FadeInLeftBig(
+                  delay: const Duration(milliseconds: 500),
+                  duration: const Duration(milliseconds: 500),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 16),
+                    child: DrawerListTile(
+                      title: "Salery And Income",
+                      svgSrc: "assets/icons/generatorpdf.svg",
+                      press: () async {
+                        // await storage.delete(key: "token");
+                        // Navigator.push(context, MaterialPageRoute(builder: (context)=>BusinessProfileUi()));
+                        // Navigator.push(context, MaterialPageRoute(builder: (context)=> OptionList()));
+                        // Navigator.push(context, MaterialPageRoute(builder: (context)=> Alteration()));
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Salery()));
+                      },
+                    ),
+                  ),
+                ),
                 // FadeInLeftBig(
                 //   delay: const Duration(milliseconds: 500),
                 //   duration: const Duration(milliseconds: 500),

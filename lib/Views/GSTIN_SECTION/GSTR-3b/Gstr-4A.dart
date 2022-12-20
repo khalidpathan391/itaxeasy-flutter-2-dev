@@ -369,9 +369,7 @@ class _Gstr4aState extends State<Gstr4a> {
                                               BorderRadius.circular(14.0),
                                         ),
                                         child: TextFormField(
-                                          decoration: InputDecoration(
-                                            hintText: 'Value',
-                                          ),
+                                          decoration: InputDecoration(),
                                         ),
                                       ),
                                     ],
@@ -393,9 +391,7 @@ class _Gstr4aState extends State<Gstr4a> {
                                               BorderRadius.circular(14.0),
                                         ),
                                         child: TextFormField(
-                                          decoration: InputDecoration(
-                                            hintText: 'Value',
-                                          ),
+                                          decoration: InputDecoration(),
                                         ),
                                       ),
                                     ],
@@ -417,9 +413,7 @@ class _Gstr4aState extends State<Gstr4a> {
                                               BorderRadius.circular(14.0),
                                         ),
                                         child: TextFormField(
-                                          decoration: InputDecoration(
-                                            hintText: 'Value',
-                                          ),
+                                          decoration: InputDecoration(),
                                         ),
                                       ),
                                     ],
@@ -441,9 +435,7 @@ class _Gstr4aState extends State<Gstr4a> {
                                               BorderRadius.circular(14.0),
                                         ),
                                         child: TextFormField(
-                                          decoration: InputDecoration(
-                                            hintText: 'Value',
-                                          ),
+                                          decoration: InputDecoration(),
                                         ),
                                       ),
                                     ],
@@ -465,9 +457,7 @@ class _Gstr4aState extends State<Gstr4a> {
                                               BorderRadius.circular(14.0),
                                         ),
                                         child: TextFormField(
-                                          decoration: InputDecoration(
-                                            hintText: 'Value',
-                                          ),
+                                          decoration: InputDecoration(),
                                         ),
                                       ),
                                     ],
@@ -489,9 +479,7 @@ class _Gstr4aState extends State<Gstr4a> {
                                               BorderRadius.circular(14.0),
                                         ),
                                         child: TextFormField(
-                                          decoration: InputDecoration(
-                                            hintText: 'Value',
-                                          ),
+                                          decoration: InputDecoration(),
                                         ),
                                       ),
                                     ],
@@ -522,9 +510,7 @@ class _Gstr4aState extends State<Gstr4a> {
                                               BorderRadius.circular(14.0),
                                         ),
                                         child: TextFormField(
-                                          decoration: InputDecoration(
-                                            hintText: 'Value',
-                                          ),
+                                          decoration: InputDecoration(),
                                         ),
                                       ),
                                     ],
@@ -546,9 +532,7 @@ class _Gstr4aState extends State<Gstr4a> {
                                               BorderRadius.circular(14.0),
                                         ),
                                         child: TextFormField(
-                                          decoration: InputDecoration(
-                                            hintText: 'Value',
-                                          ),
+                                          decoration: InputDecoration(),
                                         ),
                                       ),
                                     ],
@@ -570,9 +554,7 @@ class _Gstr4aState extends State<Gstr4a> {
                                               BorderRadius.circular(14.0),
                                         ),
                                         child: TextFormField(
-                                          decoration: InputDecoration(
-                                            hintText: 'Value',
-                                          ),
+                                          decoration: InputDecoration(),
                                         ),
                                       ),
                                     ],
@@ -594,9 +576,7 @@ class _Gstr4aState extends State<Gstr4a> {
                                               BorderRadius.circular(14.0),
                                         ),
                                         child: TextFormField(
-                                          decoration: InputDecoration(
-                                            hintText: 'Value',
-                                          ),
+                                          decoration: InputDecoration(),
                                         ),
                                       ),
                                     ],
@@ -618,9 +598,7 @@ class _Gstr4aState extends State<Gstr4a> {
                                               BorderRadius.circular(14.0),
                                         ),
                                         child: TextFormField(
-                                          decoration: InputDecoration(
-                                            hintText: 'Value',
-                                          ),
+                                          decoration: InputDecoration(),
                                         ),
                                       ),
                                     ],
@@ -642,9 +620,7 @@ class _Gstr4aState extends State<Gstr4a> {
                                               BorderRadius.circular(14.0),
                                         ),
                                         child: TextFormField(
-                                          decoration: InputDecoration(
-                                            hintText: 'Value',
-                                          ),
+                                          decoration: InputDecoration(),
                                         ),
                                       ),
                                     ],
@@ -675,9 +651,7 @@ class _Gstr4aState extends State<Gstr4a> {
                                               BorderRadius.circular(14.0),
                                         ),
                                         child: TextFormField(
-                                          decoration: InputDecoration(
-                                            hintText: 'Value',
-                                          ),
+                                          decoration: InputDecoration(),
                                         ),
                                       ),
                                     ],
@@ -699,9 +673,7 @@ class _Gstr4aState extends State<Gstr4a> {
                                               BorderRadius.circular(14.0),
                                         ),
                                         child: TextFormField(
-                                          decoration: InputDecoration(
-                                            hintText: 'Value',
-                                          ),
+                                          decoration: InputDecoration(),
                                         ),
                                       ),
                                     ],
@@ -723,9 +695,7 @@ class _Gstr4aState extends State<Gstr4a> {
                                               BorderRadius.circular(14.0),
                                         ),
                                         child: TextFormField(
-                                          decoration: InputDecoration(
-                                            hintText: 'Value',
-                                          ),
+                                          decoration: InputDecoration(),
                                         ),
                                       ),
                                     ],
@@ -747,9 +717,7 @@ class _Gstr4aState extends State<Gstr4a> {
                                               BorderRadius.circular(14.0),
                                         ),
                                         child: TextFormField(
-                                          decoration: InputDecoration(
-                                            hintText: 'Value',
-                                          ),
+                                          decoration: InputDecoration(),
                                         ),
                                       ),
                                     ],
@@ -771,9 +739,7 @@ class _Gstr4aState extends State<Gstr4a> {
                                               BorderRadius.circular(14.0),
                                         ),
                                         child: TextFormField(
-                                          decoration: InputDecoration(
-                                            hintText: 'Value',
-                                          ),
+                                          decoration: InputDecoration(),
                                         ),
                                       ),
                                     ],
@@ -795,9 +761,7 @@ class _Gstr4aState extends State<Gstr4a> {
                                               BorderRadius.circular(14.0),
                                         ),
                                         child: TextFormField(
-                                          decoration: InputDecoration(
-                                            hintText: 'Value',
-                                          ),
+                                          decoration: InputDecoration(),
                                         ),
                                       ),
                                     ],
