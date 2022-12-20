@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -58,7 +59,7 @@ class _OCRSystemState extends State<OCRSystem> {
         FirebaseVisionImage.fromFile(_image);
     final TextRecognizer recognizer = FirebaseVision.instance.textRecognizer();
     VisionText visionText = await recognizer.processImage(firebaseVisionImage);
-
+    log("fnd:" + visionText.text.toString());
     result = "";
     setState(() {
       for (TextBlock block in visionText.blocks) {

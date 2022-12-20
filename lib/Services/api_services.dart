@@ -1281,7 +1281,7 @@ class ApiServices {
   }
 
   // REGISTER API
-  Future<ApiResponse<RegisterUser>> getStateFromPin(String pin) async {
+  Future<ApiResponse> getStateFromPin(String pin) async {
     // final url = Uri.parse(baseUrl + "/sign-up");
     final url = Uri.parse("https://api.postalpincode.in/pincode/$pin");
     final headers = {'Content-Type': 'application/json'};
@@ -1291,11 +1291,13 @@ class ApiServices {
       headers: headers,
     );
     log(response.statusCode.toString());
-    log(response.body);
+    // log(response.body);
     if (response.statusCode == 200) {
       final jsonData = jsonDecode(response.body);
-      return ApiResponse<RegisterUser>(
-          data: RegisterUser.fromJson(jsonData),
+      log(jsonData.toString());
+      // List data = jsonData["PostOffice"];
+      return ApiResponse(
+          data: jsonData.first["PostOffice"].first["State"],
           resposeCode: response.statusCode);
     }
     final jsonData = jsonDecode(response.body);
@@ -1303,7 +1305,7 @@ class ApiServices {
     List<dynamic> errorMessage = errorData["email"];
     await storage.write(key: "emailMessage", value: errorMessage.toString());
 
-    return ApiResponse<RegisterUser>(
+    return ApiResponse(
         resposeCode: response.statusCode,
         error: true,
         errorMessage: "An error occurred");
