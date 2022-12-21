@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:developer';
+import 'dart:io';
 import 'package:get/get.dart';
 import 'package:gst_app/Models/api_response.dart';
 import 'package:gst_app/Models/bank-response.dart';
@@ -195,28 +196,35 @@ class ApiServices {
 // get user profile
   Future<ApiResponse> getuserProfile() async {
     // final url = Uri.parse(baseUrl + "/login");
-    String authToken = await storage.read(key: "token");
-    final headers = {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer $authToken',
-    };
-    final url = Uri.parse("https://api.itaxeasy.com/users/getProfile");
+    try {
+      String authToken = await storage.read(key: "token");
+      final headers = {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer $authToken',
+      };
+      final url = Uri.parse("https://api.itaxeasy.com/users/getProfile");
 
-    final response = await http.get(
-      url,
-      headers: headers,
-    );
-    log(response.statusCode.toString());
-    log(response.body);
+      final response = await http.get(
+        url,
+        headers: headers,
+      );
+      log(response.statusCode.toString());
+      log(response.body);
 
-    if (response.statusCode == 200) {
-      Map body = jsonDecode(response.body);
-      return ApiResponse(resposeCode: 200, data: body["data"]);
+      if (response.statusCode == 200) {
+        Map body = jsonDecode(response.body);
+        return ApiResponse(resposeCode: 200, data: body["data"]);
+      }
+      return ApiResponse(
+          resposeCode: response.statusCode,
+          error: true,
+          errorMessage: "An error occurred");
+    } catch (e) {
+      if (e is SocketException) {
+        Get.snackbar("No Internet Connection", e.message,
+            snackPosition: SnackPosition.BOTTOM);
+      }
     }
-    return ApiResponse(
-        resposeCode: response.statusCode,
-        error: true,
-        errorMessage: "An error occurred");
   }
 
   /// Create User Profile

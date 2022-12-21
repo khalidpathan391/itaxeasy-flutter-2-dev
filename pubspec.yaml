@@ -81,7 +81,8 @@ dependencies:
   flip_card: ^0.4.4
   pin_code_fields: ^6.1.0
   firebase_ml_vision: ^0.9.10
-  google_mlkit_text_recognition: ^0.5.0
+  # google_mlkit_text_recognition: ^0.5.0
+  google_ml_kit: ^0.7.3
 
   path:
 #    firebase_core: ^1.8.0
