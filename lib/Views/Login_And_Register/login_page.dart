@@ -106,6 +106,8 @@ class _LoginPageState extends State<LoginPage> {
                                                   RegExp('[ ]')),
                                             ],
                                             controller: emailCont,
+                                            textCapitalization:
+                                                TextCapitalization.words,
                                             decoration: InputDecoration(
                                               prefixIcon: Icon(
                                                 Icons.phone_android,
@@ -148,6 +150,8 @@ class _LoginPageState extends State<LoginPage> {
                                           child: TextFormField(
                                             controller: passwordCont,
                                             obscureText: !passwordVisible,
+                                            textCapitalization:
+                                                TextCapitalization.words,
                                             decoration: InputDecoration(
                                               prefixIcon: Icon(
                                                 Icons.password_outlined,

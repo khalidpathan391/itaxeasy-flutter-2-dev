@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:gst_app/Calculator%20Screen/CalculatorHuf.dart';
 import 'package:gst_app/Calculator%20Screen/Domestic.dart';
 import 'package:gst_app/Calculator%20Screen/individual.dart';
+import 'package:gst_app/Views/Bottom_Nav_Bar/MainPage.dart';
 import 'package:gst_app/Views/Calculator/Emi-Cal.dart';
 import 'package:gst_app/Views/Calculator/Fi%20Cal.dart';
 import 'package:gst_app/Views/Calculator/Mis.dart';
@@ -15,19 +16,26 @@ import 'package:gst_app/Views/Calculator/simple_calculators.dart';
 import 'package:gst_app/Views/Login_And_Register/UpdateUser.dart';
 import 'package:gst_app/Views/on_board_screens/Dashboard1.dart';
 import 'package:gst_app/Views/on_board_screens/Dashbord3.dart';
+import 'package:gst_app/Views/on_board_screens/Form%202.dart';
 import 'package:gst_app/Views/on_board_screens/IBIZ.dart';
 import 'package:gst_app/Views/on_board_screens/ITR%20Files.dart';
 import 'package:gst_app/Views/on_board_screens/Invoice.dart';
 import 'package:gst_app/Views/on_board_screens/MyInvoice.dart';
 import 'package:gst_app/Views/on_board_screens/Purchase%20Voucher.dart';
+
 import 'package:gst_app/Views/on_board_screens/Regme.dart';
 import 'package:gst_app/Views/on_board_screens/SaleVoucher.dart';
 
 import 'package:gst_app/Views/pdf%20converter.dart';
 
 import 'package:material_dialogs/material_dialogs.dart';
+import '../../Services/Invoice_Services.dart';
 import '../AccountMisuse.dart';
 import '../Bottom_Nav_Bar/services.dart';
+import '../Business_Profile/Alteration.dart';
+import '../Business_Profile/Creation.dart';
+import '../Business_Profile/Modification.dart';
+import '../Business_Profile/OptionList.dart';
 import '../Calculator/BusinessLoan.dart';
 import '../Calculator/Cagr.dart';
 import '../Calculator/CapitalGain.dart';
@@ -53,6 +61,7 @@ import '../ImageCompressor.dart';
 import '../ImageToPdf.dart';
 import '../Instant_E_PAN/instant_e_pan.dart';
 import '../Invoice-Generator/mains.dart';
+import '../Invoice-Generator/page/pdf_page.dart';
 import '../Login_And_Register/login_page.dart';
 import '../OCR.dart';
 import '../PinCodeInfo.dart';
@@ -67,6 +76,7 @@ import '../itr_status.dart';
 import '../know_your_ao.dart';
 import '../know_your_tan.dart';
 import '../link_aadhaar.dart';
+import '../on_board_screens/invoicegen.dart';
 import '../on_board_screens/payment.dart';
 import '../pan_details.dart';
 import '../search-by-gstin.dart';
@@ -1136,23 +1146,23 @@ class _SideMenuState extends State<SideMenu> {
                 //   ),
                 // ),
 
-                FadeInRightBig(
-                  delay: const Duration(milliseconds: 500),
-                  duration: const Duration(milliseconds: 500),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 16),
-                    child: DrawerListTile(
-                      title: "Account Misuse",
-                      svgSrc: "assets/icons/account.svg",
-                      press: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const AccountMisuse()));
-                      },
-                    ),
-                  ),
-                ),
+                // FadeInRightBig(
+                //   delay: const Duration(milliseconds: 500),
+                //   duration: const Duration(milliseconds: 500),
+                //   child: Padding(
+                //     padding: const EdgeInsets.only(left: 16),
+                //     child: DrawerListTile(
+                //       title: "Account Misuse",
+                //       svgSrc: "assets/icons/account.svg",
+                //       press: () {
+                //         Navigator.push(
+                //             context,
+                //             MaterialPageRoute(
+                //                 builder: (context) => const AccountMisuse()));
+                //       },
+                //     ),
+                //   ),
+                // ),
 
                 // FadeInRightBig(
                 //   delay: const Duration(milliseconds: 500),
@@ -1258,14 +1268,14 @@ class _SideMenuState extends State<SideMenu> {
                 //   child: Padding(
                 //     padding: const EdgeInsets.only(left: 16),
                 //     child: DrawerListTile(
-                //       title: "Calculator",
+                //       title: "Detail",
                 //       svgSrc: "assets/icons/ao.svg",
                 //       press: () async {
                 //         // await storage.delete(key: "token");
                 //         Navigator.push(
                 //             context,
                 //             MaterialPageRoute(
-                //                 builder: (context) => Calculator()));
+                //                 builder: (context) => DetailsScreen()));
                 //       },
                 //     ),
                 //   ),
@@ -1427,24 +1437,24 @@ class _SideMenuState extends State<SideMenu> {
                 //     ],
                 //   ),
                 // ),
-                FadeInLeftBig(
-                  delay: const Duration(milliseconds: 500),
-                  duration: const Duration(milliseconds: 500),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 16),
-                    child: DrawerListTile(
-                      title: "Fi Cal",
-                      svgSrc: "assets/icons/ao.svg",
-                      press: () async {
-                        await storage.delete(key: "token");
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => FinencialCalculator()));
-                      },
-                    ),
-                  ),
-                ),
+                // FadeInLeftBig(
+                //   delay: const Duration(milliseconds: 500),
+                //   duration: const Duration(milliseconds: 500),
+                //   child: Padding(
+                //     padding: const EdgeInsets.only(left: 16),
+                //     child: DrawerListTile(
+                //       title: "Fi Cal",
+                //       svgSrc: "assets/icons/ao.svg",
+                //       press: () async {
+                //         await storage.delete(key: "token");
+                //         Navigator.push(
+                //             context,
+                //             MaterialPageRoute(
+                //                 builder: (context) => FinencialCalculator()));
+                //       },
+                //     ),
+                //   ),
+                // ),
                 FadeInLeftBig(
                   delay: const Duration(milliseconds: 500),
                   duration: const Duration(milliseconds: 500),
@@ -1485,14 +1495,27 @@ class _SideMenuState extends State<SideMenu> {
                 //   child: Padding(
                 //     padding: const EdgeInsets.only(left: 16),
                 //     child: DrawerListTile(
-                //       title: "Update User",
+                //       title: "Regma2",
                 //       svgSrc: "assets/icons/ao.svg",
                 //       press: () async {
                 //         // await storage.delete(key: "token");
-                //         Navigator.push(
-                //             context,
-                //             MaterialPageRoute(
-                //                 builder: (context) => UpdateUser()));
+                //         Navigator.push(context,
+                //             MaterialPageRoute(builder: (context) => Regma2()));
+                //       },
+                //     ),
+                //   ),
+                // ),
+                // FadeInLeftBig(
+                //   delay: const Duration(milliseconds: 500),
+                //   duration: const Duration(milliseconds: 500),
+                //   child: Padding(
+                //     padding: const EdgeInsets.only(left: 16),
+                //     child: DrawerListTile(
+                //       title: "Form1",
+                //       svgSrc: "assets/icons/settings.svg",
+                //       press: () async {
+                //         // await storage.delete(key: "token");
+                //         // Navigator.push(context, MaterialPageRoute(builder: (context)=>ProfileWidget()));
                 //       },
                 //     ),
                 //   ),
@@ -1551,7 +1574,7 @@ class _SideMenuState extends State<SideMenu> {
                   child: Padding(
                     padding: const EdgeInsets.only(left: 16),
                     child: DrawerListTile(
-                      title: "Salery And Income",
+                      title: "Salary And Income",
                       svgSrc: "assets/icons/generatorpdf.svg",
                       press: () async {
                         // await storage.delete(key: "token");
@@ -1570,7 +1593,7 @@ class _SideMenuState extends State<SideMenu> {
                 //   child: Padding(
                 //     padding: const EdgeInsets.only(left: 16),
                 //     child: DrawerListTile(
-                //       title: "Sale Voucher",
+                //       title: "Option List",
                 //       svgSrc: "assets/icons/generatorpdf.svg",
                 //       press: () async {
                 //         // await storage.delete(key: "token");
@@ -1580,30 +1603,91 @@ class _SideMenuState extends State<SideMenu> {
                 //         Navigator.push(
                 //             context,
                 //             MaterialPageRoute(
-                //                 builder: (context) => SaleVoucher()));
+                //                 builder: (context) => OptionList()));
                 //       },
                 //     ),
                 //   ),
                 // ),
-                // FadeInLeftBig(
-                //   delay: const Duration(milliseconds: 500),
-                //   duration: const Duration(milliseconds: 500),
-                //   child: Padding(
-                //     padding: const EdgeInsets.only(left: 16),
-                //     child: DrawerListTile(
-                //       title: "INVOICE",
-                //       svgSrc: "assets/icons/settings.svg",
-                //       press: () async {
-                //         // await storage.delete(key: "token");
-                //         // Navigator.push(context, MaterialPageRoute(builder: (context)=>b2bRequest()));
-                //         Navigator.push(
-                //             context,
-                //             MaterialPageRoute(
-                //                 builder: (context) => const MyInvoicee()));
-                //       },
-                //     ),
-                //   ),
-                // ),
+                FadeInLeftBig(
+                  delay: const Duration(milliseconds: 500),
+                  duration: const Duration(milliseconds: 500),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 16),
+                    child: DrawerListTile(
+                      title: "PDF PAGE",
+                      svgSrc: "assets/icons/generatorpdf.svg",
+                      press: () async {
+                        // await storage.delete(key: "token");
+                        // Navigator.push(context, MaterialPageRoute(builder: (context)=>BusinessProfileUi()));
+                        // Navigator.push(context, MaterialPageRoute(builder: (context)=> OptionList()));
+                        // Navigator.push(context, MaterialPageRoute(builder: (context)=> Alteration()));
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => PdfPage()));
+                      },
+                    ),
+                  ),
+                ),
+                FadeInLeftBig(
+                  delay: const Duration(milliseconds: 500),
+                  duration: const Duration(milliseconds: 500),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 16),
+                    child: DrawerListTile(
+                      title: "Modification",
+                      svgSrc: "assets/icons/generatorpdf.svg",
+                      press: () async {
+                        // await storage.delete(key: "token");
+                        // Navigator.push(context, MaterialPageRoute(builder: (context)=>BusinessProfileUi()));
+                        // Navigator.push(context, MaterialPageRoute(builder: (context)=> OptionList()));
+                        // Navigator.push(context, MaterialPageRoute(builder: (context)=> Alteration()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Modification()));
+                      },
+                    ),
+                  ),
+                ),
+                FadeInLeftBig(
+                  delay: const Duration(milliseconds: 500),
+                  duration: const Duration(milliseconds: 500),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 16),
+                    child: DrawerListTile(
+                      title: "Creation",
+                      svgSrc: "assets/icons/generatorpdf.svg",
+                      press: () async {
+                        // await storage.delete(key: "token");
+                        // Navigator.push(context, MaterialPageRoute(builder: (context)=>BusinessProfileUi()));
+                        // Navigator.push(context, MaterialPageRoute(builder: (context)=> OptionList()));
+                        // Navigator.push(context, MaterialPageRoute(builder: (context)=> Alteration()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Creation()));
+                      },
+                    ),
+                  ),
+                ),
+                FadeInLeftBig(
+                  delay: const Duration(milliseconds: 500),
+                  duration: const Duration(milliseconds: 500),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 16),
+                    child: DrawerListTile(
+                      title: "Alternation",
+                      svgSrc: "assets/icons/settings.svg",
+                      press: () async {
+                        // await storage.delete(key: "token");
+                        // Navigator.push(context, MaterialPageRoute(builder: (context)=>b2bRequest()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Alteration()));
+                      },
+                    ),
+                  ),
+                ),
                 FadeInLeftBig(
                   delay: const Duration(milliseconds: 500),
                   duration: const Duration(milliseconds: 500),
@@ -1636,6 +1720,42 @@ class _SideMenuState extends State<SideMenu> {
                             context,
                             MaterialPageRoute(
                                 builder: (context) => const Dashbord1()));
+                      },
+                    ),
+                  ),
+                ),
+                FadeInLeftBig(
+                  delay: const Duration(milliseconds: 500),
+                  duration: const Duration(milliseconds: 500),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 16),
+                    child: DrawerListTile(
+                      title: "Form1",
+                      svgSrc: "assets/icons/generatorpdf.svg",
+                      press: () async {
+                        // await storage.delete(key: "token");
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => InvoiceGen()));
+                      },
+                    ),
+                  ),
+                ),
+                FadeInLeftBig(
+                  delay: const Duration(milliseconds: 500),
+                  duration: const Duration(milliseconds: 500),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 16),
+                    child: DrawerListTile(
+                      title: "Form2",
+                      svgSrc: "assets/icons/generatorpdf.svg",
+                      press: () async {
+                        // await storage.delete(key: "token");
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => PurchaseInvoice()));
                       },
                     ),
                   ),

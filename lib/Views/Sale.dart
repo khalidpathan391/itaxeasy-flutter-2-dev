@@ -117,7 +117,7 @@ class _SaleUiState extends State<SaleUi> {
                         child: Column(
                           children: [
                             Center(
-                              child: Image.asset("assets/images/coupon.png",
+                              child: Image.asset("assets/icons/sale.png",
                                   width: 100, height: 100),
                             ),
                             const SizedBox(
@@ -302,54 +302,54 @@ class _SaleUiState extends State<SaleUi> {
                 const SizedBox(
                   height: 20,
                 ),
-                Row(
-                  // mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Expanded(
-                      child: GestureDetector(
-                        onTap: selectFile,
-                        child: DottedBorder(
-                          borderType: BorderType.RRect,
-                          radius: const Radius.circular(10),
-                          dashPattern: const [10, 4],
-                          strokeCap: StrokeCap.round,
-                          color: Colors.blue.shade900,
-                          child: Container(
-                            width: double.infinity,
-                            height: 150,
-                            decoration: BoxDecoration(
-                                color: Colors.blue.shade50.withOpacity(.3),
-                                borderRadius: BorderRadius.circular(10)),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  Iconsax.folder_open,
-                                  color: Colors.blue.shade900,
-                                  size: 40,
-                                ),
-                                const SizedBox(
-                                  height: 15,
-                                ),
-                                Text(
-                                  'Select your file',
-                                  style: TextStyle(
-                                      fontSize: 15,
-                                      color: Colors.grey.shade400),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+                // Row(
+                //   // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                //   children: [
+                //     Expanded(
+                //       child: GestureDetector(
+                //         onTap: selectFile,
+                //         child: DottedBorder(
+                //           borderType: BorderType.RRect,
+                //           radius: const Radius.circular(10),
+                //           dashPattern: const [10, 4],
+                //           strokeCap: StrokeCap.round,
+                //           color: Colors.blue.shade900,
+                //           child: Container(
+                //             width: double.infinity,
+                //             height: 150,
+                //             decoration: BoxDecoration(
+                //                 color: Colors.blue.shade50.withOpacity(.3),
+                //                 borderRadius: BorderRadius.circular(10)),
+                //             child: Column(
+                //               mainAxisAlignment: MainAxisAlignment.center,
+                //               children: [
+                //                 Icon(
+                //                   Iconsax.folder_open,
+                //                   color: Colors.blue.shade900,
+                //                   size: 40,
+                //                 ),
+                //                 const SizedBox(
+                //                   height: 15,
+                //                 ),
+                //                 Text(
+                //                   'Select your file',
+                //                   style: TextStyle(
+                //                       fontSize: 15,
+                //                       color: Colors.grey.shade400),
+                //                 ),
+                //               ],
+                //             ),
+                //           ),
+                //         ),
+                //       ),
+                //     ),
+                //   ],
+                // ),
                 const SizedBox(
                   height: 40,
                 ),
                 Text(
-                  "Total Sale :",
+                  "Total Sale :(Sales+Credit Sales-Sales Return)",
                   style: GoogleFonts.recursive(
                     fontSize: 15.0,
                     fontWeight: FontWeight.w700,

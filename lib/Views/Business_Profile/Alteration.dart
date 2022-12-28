@@ -76,9 +76,24 @@ class _AlterationState extends State<Alteration> {
                       ),
                       Container(
                         decoration: BoxDecoration(
-                          color: textWhiteGrey,
-                          borderRadius: BorderRadius.circular(14.0),
-                        ),
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey.shade700,
+                                  blurRadius: 5.0,
+                                  offset: Offset(5, 3))
+                            ],
+                            // border: Border.all(
+                            //     color: Colors.blue.shade900),
+                            shape: BoxShape.rectangle,
+                            gradient: LinearGradient(
+                              begin: Alignment.bottomRight,
+                              end: Alignment.centerLeft,
+                              colors: [
+                                Colors.grey.shade100,
+                                Colors.white,
+                              ],
+                            )),
                         child: TextFormField(
                           // controller: nameCont,
                           decoration: InputDecoration(
@@ -107,9 +122,24 @@ class _AlterationState extends State<Alteration> {
                       ),
                       Container(
                         decoration: BoxDecoration(
-                          color: textWhiteGrey,
-                          borderRadius: BorderRadius.circular(14.0),
-                        ),
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey.shade700,
+                                  blurRadius: 5.0,
+                                  offset: Offset(5, 3))
+                            ],
+                            // border: Border.all(
+                            //     color: Colors.blue.shade900),
+                            shape: BoxShape.rectangle,
+                            gradient: LinearGradient(
+                              begin: Alignment.bottomRight,
+                              end: Alignment.centerLeft,
+                              colors: [
+                                Colors.grey.shade100,
+                                Colors.white,
+                              ],
+                            )),
                         child: TextFormField(
                           // controller: accountCont,
                           keyboardType: TextInputType.phone,
@@ -139,9 +169,24 @@ class _AlterationState extends State<Alteration> {
                       ),
                       Container(
                         decoration: BoxDecoration(
-                          color: textWhiteGrey,
-                          borderRadius: BorderRadius.circular(14.0),
-                        ),
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey.shade700,
+                                  blurRadius: 5.0,
+                                  offset: Offset(5, 3))
+                            ],
+                            // border: Border.all(
+                            //     color: Colors.blue.shade900),
+                            shape: BoxShape.rectangle,
+                            gradient: LinearGradient(
+                              begin: Alignment.bottomRight,
+                              end: Alignment.centerLeft,
+                              colors: [
+                                Colors.grey.shade100,
+                                Colors.white,
+                              ],
+                            )),
                         child: TextFormField(
                           // controller: ifscCont,
                           // keyboardType: TextInputType.number,
@@ -177,9 +222,24 @@ class _AlterationState extends State<Alteration> {
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: textWhiteGrey,
-                                    borderRadius: BorderRadius.circular(14.0),
-                                  ),
+                                      borderRadius: BorderRadius.circular(15),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Colors.grey.shade700,
+                                            blurRadius: 5.0,
+                                            offset: Offset(5, 3))
+                                      ],
+                                      // border: Border.all(
+                                      //     color: Colors.blue.shade900),
+                                      shape: BoxShape.rectangle,
+                                      gradient: LinearGradient(
+                                        begin: Alignment.bottomRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.grey.shade100,
+                                          Colors.white,
+                                        ],
+                                      )),
                                   child: TextFormField(
                                     // controller: contactCont,
                                     keyboardType: TextInputType.phone,
@@ -218,9 +278,24 @@ class _AlterationState extends State<Alteration> {
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: textWhiteGrey,
-                                    borderRadius: BorderRadius.circular(14.0),
-                                  ),
+                                      borderRadius: BorderRadius.circular(15),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Colors.grey.shade700,
+                                            blurRadius: 5.0,
+                                            offset: Offset(5, 3))
+                                      ],
+                                      // border: Border.all(
+                                      //     color: Colors.blue.shade900),
+                                      shape: BoxShape.rectangle,
+                                      gradient: LinearGradient(
+                                        begin: Alignment.bottomRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.grey.shade100,
+                                          Colors.white,
+                                        ],
+                                      )),
                                   child: TextFormField(
                                     // controller: contactCont,
                                     keyboardType: TextInputType.phone,
@@ -256,9 +331,24 @@ class _AlterationState extends State<Alteration> {
                       ),
                       Container(
                         decoration: BoxDecoration(
-                          color: textWhiteGrey,
-                          borderRadius: BorderRadius.circular(14.0),
-                        ),
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey.shade700,
+                                  blurRadius: 5.0,
+                                  offset: Offset(5, 3))
+                            ],
+                            // border: Border.all(
+                            //     color: Colors.blue.shade900),
+                            shape: BoxShape.rectangle,
+                            gradient: LinearGradient(
+                              begin: Alignment.bottomRight,
+                              end: Alignment.centerLeft,
+                              colors: [
+                                Colors.grey.shade100,
+                                Colors.white,
+                              ],
+                            )),
                         child: TextFormField(
                           // controller: ifscCont,
                           // keyboardType: TextInputType.number,
@@ -294,9 +384,24 @@ class _AlterationState extends State<Alteration> {
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: textWhiteGrey,
-                                    borderRadius: BorderRadius.circular(14.0),
-                                  ),
+                                      borderRadius: BorderRadius.circular(15),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Colors.grey.shade700,
+                                            blurRadius: 5.0,
+                                            offset: Offset(5, 3))
+                                      ],
+                                      // border: Border.all(
+                                      //     color: Colors.blue.shade900),
+                                      shape: BoxShape.rectangle,
+                                      gradient: LinearGradient(
+                                        begin: Alignment.bottomRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.grey.shade100,
+                                          Colors.white,
+                                        ],
+                                      )),
                                   child: TextFormField(
                                     // controller: contactCont,
                                     keyboardType: TextInputType.phone,
@@ -335,9 +440,24 @@ class _AlterationState extends State<Alteration> {
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    color: textWhiteGrey,
-                                    borderRadius: BorderRadius.circular(14.0),
-                                  ),
+                                      borderRadius: BorderRadius.circular(15),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            color: Colors.grey.shade700,
+                                            blurRadius: 5.0,
+                                            offset: Offset(5, 3))
+                                      ],
+                                      // border: Border.all(
+                                      //     color: Colors.blue.shade900),
+                                      shape: BoxShape.rectangle,
+                                      gradient: LinearGradient(
+                                        begin: Alignment.bottomRight,
+                                        end: Alignment.centerLeft,
+                                        colors: [
+                                          Colors.grey.shade100,
+                                          Colors.white,
+                                        ],
+                                      )),
                                   child: TextFormField(
                                     // controller: contactCont,
                                     keyboardType: TextInputType.phone,
@@ -373,9 +493,24 @@ class _AlterationState extends State<Alteration> {
                       ),
                       Container(
                         decoration: BoxDecoration(
-                          color: textWhiteGrey,
-                          borderRadius: BorderRadius.circular(14.0),
-                        ),
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey.shade700,
+                                  blurRadius: 5.0,
+                                  offset: Offset(5, 3))
+                            ],
+                            // border: Border.all(
+                            //     color: Colors.blue.shade900),
+                            shape: BoxShape.rectangle,
+                            gradient: LinearGradient(
+                              begin: Alignment.bottomRight,
+                              end: Alignment.centerLeft,
+                              colors: [
+                                Colors.grey.shade100,
+                                Colors.white,
+                              ],
+                            )),
                         child: TextFormField(
                           // controller: ifscCont,
                           // keyboardType: TextInputType.number,
@@ -405,9 +540,24 @@ class _AlterationState extends State<Alteration> {
                       ),
                       Container(
                         decoration: BoxDecoration(
-                          color: textWhiteGrey,
-                          borderRadius: BorderRadius.circular(14.0),
-                        ),
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey.shade700,
+                                  blurRadius: 5.0,
+                                  offset: Offset(5, 3))
+                            ],
+                            // border: Border.all(
+                            //     color: Colors.blue.shade900),
+                            shape: BoxShape.rectangle,
+                            gradient: LinearGradient(
+                              begin: Alignment.bottomRight,
+                              end: Alignment.centerLeft,
+                              colors: [
+                                Colors.grey.shade100,
+                                Colors.white,
+                              ],
+                            )),
                         child: TextFormField(
                           // controller: ifscCont,
                           // keyboardType: TextInputType.number,
@@ -437,9 +587,24 @@ class _AlterationState extends State<Alteration> {
                       ),
                       Container(
                         decoration: BoxDecoration(
-                          color: textWhiteGrey,
-                          borderRadius: BorderRadius.circular(14.0),
-                        ),
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey.shade700,
+                                  blurRadius: 5.0,
+                                  offset: Offset(5, 3))
+                            ],
+                            // border: Border.all(
+                            //     color: Colors.blue.shade900),
+                            shape: BoxShape.rectangle,
+                            gradient: LinearGradient(
+                              begin: Alignment.bottomRight,
+                              end: Alignment.centerLeft,
+                              colors: [
+                                Colors.grey.shade100,
+                                Colors.white,
+                              ],
+                            )),
                         child: TextFormField(
                           // controller: ifscCont,
                           // keyboardType: TextInputType.number,
@@ -469,8 +634,8 @@ class _AlterationState extends State<Alteration> {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(14.0),
                           ),
-                          child: const GFButton(
-                              color: Colors.purple,
+                          child: GFButton(
+                              color: Colors.redAccent,
                               // onPressed: () async {
                               //   setState(() {
                               //     isLoading = true;
@@ -519,8 +684,8 @@ class _AlterationState extends State<Alteration> {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(14.0),
                           ),
-                          child: const GFButton(
-                              color: Colors.purple,
+                          child: GFButton(
+                              color: Colors.blue.shade900,
                               // onPressed: () async {
                               //   setState(() {
                               //     isLoading = true;

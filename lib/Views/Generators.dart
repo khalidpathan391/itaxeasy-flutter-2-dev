@@ -356,69 +356,116 @@ class _GeneratorsState extends State<Generators> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          backgroundColor: Colors.blue.shade900,
+          elevation: 0,
+          title: Row(
+            children: [
+              SizedBox(
+                width: 5,
+              ),
+              Align(
+                alignment: Alignment.topLeft,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.arrow_back_ios,
+                        color: Colors.white,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Text(
+                "Convertor",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25,
+                    color: Colors.white),
+              ),
+            ],
+          ),
+        ),
         body: Column(
           children: [
-            Container(
-              height: 230,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Colors.blue.shade800,
-                  Colors.blue.shade900,
-                ],
-              )),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10, top: 10),
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: const Icon(
-                        Icons.chevron_left_rounded,
-                        color: Colors.white,
-                        size: 35,
-                      ),
-                      // child: Container(
-                      //   height: 45,
-                      //   width: 45,
-                      //   decoration: const BoxDecoration(
-                      //     color: Colors.white,
-                      //     borderRadius: BorderRadius.all(Radius.circular(20)),
-                      //   ),
-                      //   child: const Icon(
-                      //     Icons.chevron_left_rounded,
-                      //     color: KColors.icon,
-                      //     size: 35,
-                      //   ),
-                      // ),
-                    ),
-                  ),
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 70, left: 20),
-                      child: Text(
-                        "Convertor",
-                        overflow: TextOverflow.ellipsis,
-                        style: GoogleFonts.dmSans(
-                          fontSize: 50,
-                          letterSpacing: 3,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.white,
+            Padding(
+              padding:
+                  EdgeInsets.only(top: 10, right: 10, left: 10, bottom: 10),
+              child: Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15)),
+                color: Color.fromARGB(255, 210, 189, 214),
+                elevation: 20,
+                child: Container(
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.shade700,
+                            blurRadius: 5.0,
+                            offset: Offset(5, 3))
+                      ],
+                      // border: Border.all(
+                      //     color: Colors.blue.shade900),
+                      shape: BoxShape.rectangle,
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          Colors.grey.shade100,
+                          Colors.white,
+                        ],
+                      )),
+                  padding: const EdgeInsets.only(
+                      top: 10, bottom: 10, left: 10, right: 10),
+                  child: Column(
+                    children: [
+                      Text(
+                        "Open Demate account With ",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.5,
+                          fontSize: 20.5,
                         ),
                       ),
-                    ),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      Text(
+                        "ITax Easy Pvt Ltd",
+                        style: TextStyle(
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.w900,
+                          letterSpacing: 1.5,
+                          fontSize: 20.5,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text(
+                        "(Without Any Charge)",
+                        style: TextStyle(
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.w700,
+                          letterSpacing: 1.5,
+                          fontSize: 14.5,
+                        ),
+                      ),
+                    ],
                   ),
-                ],
+                ),
               ),
-            ),
-            SizedBox(
-              height: 20,
             ),
             sectionCard(context),
           ],
@@ -530,10 +577,10 @@ class _GeneratorsState extends State<Generators> with TickerProviderStateMixin {
                           Text(
                             "Select File",
                             style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 25),
+                                fontWeight: FontWeight.bold, fontSize: 20),
                           ),
                           Text(
-                              "Select any  type of file you want\n to convert"),
+                              "Select any  type of file you \nwant to convert"),
                         ],
                       ),
                     ],
@@ -729,7 +776,7 @@ class _GeneratorsState extends State<Generators> with TickerProviderStateMixin {
                           Text(
                             "PDF to Image",
                             style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 25),
+                                fontWeight: FontWeight.bold, fontSize: 20),
                           ),
                           Text("Create Images from PDF"),
                         ],
@@ -828,7 +875,7 @@ class _GeneratorsState extends State<Generators> with TickerProviderStateMixin {
                           Text(
                             "File Size",
                             style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 25),
+                                fontWeight: FontWeight.bold, fontSize: 20),
                           ),
                           Text("Get Size of Any File"),
                         ],
@@ -927,7 +974,7 @@ class _GeneratorsState extends State<Generators> with TickerProviderStateMixin {
                           Text(
                             "Clear",
                             style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 25),
+                                fontWeight: FontWeight.bold, fontSize: 20),
                           ),
                           Text("Clear the build"),
                         ],

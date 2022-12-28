@@ -34,6 +34,7 @@ class _RegisterPageState extends State<RegisterPage> {
   TextEditingController lastName = TextEditingController();
   TextEditingController emailCount = TextEditingController();
   TextEditingController passwordCount = TextEditingController();
+  TextEditingController cpasswordCount = TextEditingController();
   TextEditingController phoneCount = TextEditingController();
   TextEditingController pinCode = TextEditingController();
 
@@ -103,6 +104,8 @@ class _RegisterPageState extends State<RegisterPage> {
                                           )),
                                       child: TextFormField(
                                         controller: nameCount,
+                                        textCapitalization:
+                                            TextCapitalization.words,
 
                                         //               validator: (value) {
                                         //   if (value == null || value.isEmpty) {
@@ -149,6 +152,8 @@ class _RegisterPageState extends State<RegisterPage> {
                                           )),
                                       child: TextFormField(
                                         controller: lastName,
+                                        textCapitalization:
+                                            TextCapitalization.words,
                                         //               validator: (value) {
                                         //   if (value == null || value.isEmpty) {
                                         //     return "*  Required  *";
@@ -247,6 +252,8 @@ class _RegisterPageState extends State<RegisterPage> {
                                           )),
                                       child: TextFormField(
                                         controller: emailCount,
+                                        textCapitalization:
+                                            TextCapitalization.words,
                                         // validator: (value) {
                                         //   if (value == null || value.isEmpty) {
                                         //     return "*  Required  *";
@@ -296,7 +303,10 @@ class _RegisterPageState extends State<RegisterPage> {
                                           )),
                                       child: TextFormField(
                                         controller: passwordCount,
-                                        obscureText: !passwordVisible,
+                                        obscureText:
+                                            !passwordConfrimationVisible,
+                                        textCapitalization:
+                                            TextCapitalization.words,
                                         decoration: InputDecoration(
                                           prefixIcon: Icon(
                                             Icons.password_outlined,
@@ -322,6 +332,66 @@ class _RegisterPageState extends State<RegisterPage> {
                                     ),
                                     const SizedBox(
                                       height: 15,
+                                    ),
+                                    Container(
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                          boxShadow: [
+                                            BoxShadow(
+                                                color: Colors.grey.shade700,
+                                                blurRadius: 5.0,
+                                                offset: Offset(5, 3))
+                                          ],
+                                          // border: Border.all(
+                                          //     color: Colors.blue.shade900),
+                                          shape: BoxShape.rectangle,
+                                          gradient: LinearGradient(
+                                            begin: Alignment.bottomRight,
+                                            end: Alignment.centerLeft,
+                                            colors: [
+                                              Colors.grey.shade100,
+                                              Colors.white,
+                                            ],
+                                          )),
+                                      child: TextFormField(
+                                        textCapitalization:
+                                            TextCapitalization.words,
+                                        controller: cpasswordCount,
+                                        obscureText: !passwordVisible,
+                                        validator: (value) {
+                                          if (value == null || value.isEmpty) {
+                                            return "*  Required  *";
+                                          } else if (passwordCount.text !=
+                                              cpasswordCount.text) {
+                                            return "*  Password should be same  *";
+                                          }
+                                        },
+                                        decoration: InputDecoration(
+                                          prefixIcon: Icon(
+                                            Icons.password_outlined,
+                                            color: Colors.blue.shade900,
+                                          ),
+                                          hintText: 'Confirm Password',
+                                          hintStyle: heading6.copyWith(
+                                              color: textGrey),
+                                          suffixIcon: IconButton(
+                                            color: textGrey,
+                                            splashRadius: 1,
+                                            icon: Icon(passwordVisible
+                                                ? Icons.visibility_outlined
+                                                : Icons
+                                                    .visibility_off_outlined),
+                                            onPressed: togglePassword,
+                                          ),
+                                          border: const OutlineInputBorder(
+                                            borderSide: BorderSide.none,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
                                     ),
                                     Container(
                                       decoration: BoxDecoration(

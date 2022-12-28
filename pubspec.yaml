@@ -49,6 +49,7 @@ dependencies:
   printing:
   platform: ^3.0.0
   pdf: ^3.6.50
+  
   search_choices: ^2.0.16
 #  searchable_dropdown: ^1.1.3
   cupertino_icons: ^1.0.2

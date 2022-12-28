@@ -1636,7 +1636,7 @@ class _FiCalculatorState extends State<FiCalculator> {
                       onPressed: () {
                         // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
                       },
-                      text: "DOWNLOAD DETAILS CALCULATOR (EXCEL)"),
+                      text: "DOWNLOAD DETAILS CALCULATOR (FDF)"),
                 ),
               ),
 
