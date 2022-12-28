@@ -31,6 +31,7 @@ class MapScreenState extends State<ProfilePage>
   bool isUserProfileChange = false;
   getuserLocal() async {
     String data = await storage.read(key: "user");
+    log("daata:$data");
     user = Data.fromJson(json.decode(data));
     log(user.toJson().toString());
     setState(() {
@@ -47,7 +48,13 @@ class MapScreenState extends State<ProfilePage>
           pan.text = value.data["pan"];
           aadharcount.text = value.data["aadhar"];
         });
-
+        apiServices.getStateFromPin(user.pincode).then((value) {
+          if (value.resposeCode == 200) {
+            setState(() {
+              statecount.text = value.data;
+            });
+          }
+        });
         // log("valued from api:" + value.data.toString());
       } else {
         setState(() {
@@ -342,7 +349,7 @@ class MapScreenState extends State<ProfilePage>
                               ),
                               Flexible(
                                 child: TextField(
-                                  controller: lastName,
+                                controller: lastName,
                                   decoration: const InputDecoration(
                                       hintText: "Enter last Name"),
                                   enabled: !_status,
@@ -502,7 +509,7 @@ class MapScreenState extends State<ProfilePage>
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.end,
+                            // crossAxisAlignment: CrossAxisAlignment.end,
                             children: <Widget>[
                               Flexible(
                                 child: Padding(
@@ -519,40 +526,40 @@ class MapScreenState extends State<ProfilePage>
                                 flex: 2,
                               ),
                               Flexible(
-                                // child: TextField(
-                                //   controller: statecount,
-                                //   decoration: const InputDecoration(
-                                //       hintText: "Enter State"),
-                                //   enabled: !_status,
-                                // ),
-                                child: Container(
-                                  // decoration: BoxDecoration(border:),
-                                  // color: Colors.amber,
-                                  child: DropdownButton(
-                                    underline: SizedBox(),
-                                    // Initial Value
-                                    value: state,
-
-                                    // Down Arrow Icon
-                                    icon: const Icon(Icons.keyboard_arrow_down),
-
-                                    // Array list of items
-                                    items: items.map((String items) {
-                                      return DropdownMenuItem(
-                                        value: items,
-                                        child: Text(items),
-                                      );
-                                    }).toList(),
-                                    // After selecting the desired option,it will
-                                    // change button value to selected value
-                                    onChanged: (String newValue) {
-                                      setState(() {
-                                        state = newValue;
-                                      });
-                                    },
-                                    hint: Text("Choose State"),
-                                  ),
+                                child: TextField(
+                                  controller: statecount,
+                                  decoration: const InputDecoration(
+                                      hintText: "Enter State"),
+                                  enabled: false,
                                 ),
+                                // child: Container(
+                                //   // decoration: BoxDecoration(border:),
+                                //   // color: Colors.amber,
+                                //   child: DropdownButton(
+                                //     underline: SizedBox(),
+                                //     // Initial Value
+                                //     value: state,
+
+                                //     // Down Arrow Icon
+                                //     icon: const Icon(Icons.keyboard_arrow_down),
+
+                                //     // Array list of items
+                                //     items: items.map((String items) {
+                                //       return DropdownMenuItem(
+                                //         value: items,
+                                //         child: Text(items),
+                                //       );
+                                //     }).toList(),
+                                //     // After selecting the desired option,it will
+                                //     // change button value to selected value
+                                //     onChanged: (String newValue) {
+                                //       setState(() {
+                                //         state = newValue;
+                                //       });
+                                //     },
+                                //     hint: Text("Choose State"),
+                                //   ),
+                                // ),
                                 flex: 2,
                               ),
                             ],

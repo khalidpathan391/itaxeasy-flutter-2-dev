@@ -15,6 +15,7 @@ import 'package:gst_app/Views/GstinSearch.dart';
 import 'package:gst_app/Views/Invoice-Generator/model/invoice.dart';
 import 'package:gst_app/Views/ItrLinks.dart';
 import 'package:gst_app/Views/OCR.dart';
+import 'package:gst_app/Views/OCR/ocr.dart';
 import 'package:gst_app/Views/company_search.dart';
 import 'package:gst_app/Views/itr.dart';
 import 'package:gst_app/Views/link_aadhaar.dart';
@@ -674,7 +675,7 @@ class _Dashbord3State extends State<Dashbord3> with TickerProviderStateMixin {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => OCRSystem()));
+                                    builder: (context) => OCRScreen()));
                           },
                           child: Transform.scale(
                             scale: _scale3,

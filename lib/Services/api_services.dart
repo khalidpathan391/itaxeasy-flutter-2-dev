@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:developer';
+import 'dart:io';
 import 'package:get/get.dart';
 import 'package:gst_app/Models/api_response.dart';
 import 'package:gst_app/Models/bank-response.dart';
@@ -195,28 +196,35 @@ class ApiServices {
 // get user profile
   Future<ApiResponse> getuserProfile() async {
     // final url = Uri.parse(baseUrl + "/login");
-    String authToken = await storage.read(key: "token");
-    final headers = {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer $authToken',
-    };
-    final url = Uri.parse("https://api.itaxeasy.com/users/getProfile");
+    try {
+      String authToken = await storage.read(key: "token");
+      final headers = {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer $authToken',
+      };
+      final url = Uri.parse("https://api.itaxeasy.com/users/getProfile");
 
-    final response = await http.get(
-      url,
-      headers: headers,
-    );
-    log(response.statusCode.toString());
-    log(response.body);
+      final response = await http.get(
+        url,
+        headers: headers,
+      );
+      log(response.statusCode.toString());
+      log(response.body);
 
-    if (response.statusCode == 200) {
-      Map body = jsonDecode(response.body);
-      return ApiResponse(resposeCode: 200, data: body["data"]);
+      if (response.statusCode == 200) {
+        Map body = jsonDecode(response.body);
+        return ApiResponse(resposeCode: 200, data: body["data"]);
+      }
+      return ApiResponse(
+          resposeCode: response.statusCode,
+          error: true,
+          errorMessage: "An error occurred");
+    } catch (e) {
+      if (e is SocketException) {
+        Get.snackbar("No Internet Connection", e.message,
+            snackPosition: SnackPosition.BOTTOM);
+      }
     }
-    return ApiResponse(
-        resposeCode: response.statusCode,
-        error: true,
-        errorMessage: "An error occurred");
   }
 
   /// Create User Profile
@@ -1281,7 +1289,7 @@ class ApiServices {
   }
 
   // REGISTER API
-  Future<ApiResponse<RegisterUser>> getStateFromPin(String pin) async {
+  Future<ApiResponse> getStateFromPin(String pin) async {
     // final url = Uri.parse(baseUrl + "/sign-up");
     final url = Uri.parse("https://api.postalpincode.in/pincode/$pin");
     final headers = {'Content-Type': 'application/json'};
@@ -1291,11 +1299,13 @@ class ApiServices {
       headers: headers,
     );
     log(response.statusCode.toString());
-    log(response.body);
+    // log(response.body);
     if (response.statusCode == 200) {
       final jsonData = jsonDecode(response.body);
-      return ApiResponse<RegisterUser>(
-          data: RegisterUser.fromJson(jsonData),
+      log(jsonData.toString());
+      // List data = jsonData["PostOffice"];
+      return ApiResponse(
+          data: jsonData.first["PostOffice"].first["State"],
           resposeCode: response.statusCode);
     }
     final jsonData = jsonDecode(response.body);
@@ -1303,7 +1313,7 @@ class ApiServices {
     List<dynamic> errorMessage = errorData["email"];
     await storage.write(key: "emailMessage", value: errorMessage.toString());
 
-    return ApiResponse<RegisterUser>(
+    return ApiResponse(
         resposeCode: response.statusCode,
         error: true,
         errorMessage: "An error occurred");
