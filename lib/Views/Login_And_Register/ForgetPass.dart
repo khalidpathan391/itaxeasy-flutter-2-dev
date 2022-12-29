@@ -183,11 +183,16 @@ class _EmailVerifyState extends State<EmailVerify> {
                                                   setState(() {
                                                     isLoading = true;
                                                   });
+                                                  var rng = new Random();
+                                                  var code =
+                                                      rng.nextInt(900000) +
+                                                          100000;
                                                   Map prm = {
                                                     "email": emailCont.text,
                                                     "subject":
                                                         "Otp verification",
-                                                    "text": "your otp is "
+                                                    "text":
+                                                        "your otp to reset password is $code"
                                                   };
                                                   final result =
                                                       await apiServices
@@ -201,14 +206,9 @@ class _EmailVerifyState extends State<EmailVerify> {
                                                   //     : "Your are registered";
                                                   if (result.resposeCode ==
                                                       200) {
-                                                    var rng = new Random();
-                                                    var code =
-                                                        rng.nextInt(900000) +
-                                                            100000;
                                                     Get.to(OTP_Verify(
                                                       otp: code.toString(),
-                                                      email:
-                                                          "kk7355570@gmail.com",
+                                                      email: emailCont.text,
                                                     ));
                                                     // log(code.toDouble());
                                                     // Navigator.pushAndRemoveUntil(
