@@ -633,7 +633,7 @@ class ApiServices {
       print(response.body);
       print(response.statusCode);
       return ApiResponse<SimpleInterestResponse>(
-          data: SimpleInterestResponse.fromJson(jsonData),
+          data: SimpleInterestResponse.fromJson(jsonData["results"]),
           resposeCode: response.statusCode);
     }
     return ApiResponse<SimpleInterestResponse>(
@@ -657,7 +657,7 @@ class ApiServices {
       print(response.body);
       print(response.statusCode);
       return ApiResponse<CompoundInterestResponse>(
-          data: CompoundInterestResponse.fromJson(jsonData),
+          data: CompoundInterestResponse.fromJson(jsonData["results"]),
           resposeCode: response.statusCode);
     }
     return ApiResponse<CompoundInterestResponse>(
@@ -680,7 +680,7 @@ class ApiServices {
       print(response.body);
       print(response.statusCode);
       return ApiResponse<EmiResponse>(
-          data: EmiResponse.fromJson(jsonData),
+          data: EmiResponse.fromJson(jsonData["results"]),
           resposeCode: response.statusCode);
     }
     return ApiResponse<EmiResponse>(
@@ -799,7 +799,7 @@ class ApiServices {
       print(response.body);
       print(response.statusCode);
       return ApiResponse<HraCalResponse>(
-          data: HraCalResponse.fromJson(jsonData),
+          data: HraCalResponse.fromJson(jsonData["results"]),
           resposeCode: response.statusCode);
     }
     return ApiResponse<HraCalResponse>(
@@ -852,7 +852,7 @@ class ApiServices {
       print(response.body);
       print(response.statusCode);
       return ApiResponse<BusinessLoanResponse>(
-          data: BusinessLoanResponse.fromJson(jsonData),
+          data: BusinessLoanResponse.fromJson(jsonData["results"]),
           resposeCode: response.statusCode);
     }
     return ApiResponse<BusinessLoanResponse>(
@@ -902,7 +902,7 @@ class ApiServices {
       print(response.body);
       print(response.statusCode);
       return ApiResponse<HomeLoanResponse>(
-          data: HomeLoanResponse.fromJson(jsonData),
+          data: HomeLoanResponse.fromJson(jsonData["results"]),
           resposeCode: response.statusCode);
     }
     return ApiResponse<HomeLoanResponse>(
@@ -927,7 +927,7 @@ class ApiServices {
       print(response.body);
       print(response.statusCode);
       return ApiResponse<CarLoanResponse>(
-          data: CarLoanResponse.fromJson(jsonData),
+          data: CarLoanResponse.fromJson(jsonData["results"]),
           resposeCode: response.statusCode);
     }
     return ApiResponse<CarLoanResponse>(
@@ -952,7 +952,7 @@ class ApiServices {
       print(response.body);
       print(response.statusCode);
       return ApiResponse<PersonalLoanResponse>(
-          data: PersonalLoanResponse.fromJson(jsonData),
+          data: PersonalLoanResponse.fromJson(jsonData["results"]),
           resposeCode: response.statusCode);
     }
     return ApiResponse<PersonalLoanResponse>(
@@ -981,8 +981,10 @@ class ApiServices {
   Future<ApiResponse<CapitalGainResponse>> capitalGain(
       CapitalGain capitalGain) async {
     String authToken = await storage.read(key: "token");
+    // final url = Uri.parse(
+    //     baseUrl + "/calculator/miscellaneous/capital-gain-calculator");
     final url = Uri.parse(
-        baseUrl + "/calculator/miscellaneous/capital-gain-calculator");
+        "https://api.itaxeasy.com/calculator/capital-gain-calculator");
     final headers = {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer $authToken',
@@ -1021,16 +1023,18 @@ class ApiServices {
       print(response.body);
       print(response.statusCode);
       return ApiResponse<NpsResponse>(
-          data: NpsResponse.fromJson(jsonData),
+          data: NpsResponse.fromJson(jsonData["results"]),
           resposeCode: response.statusCode);
     }
     return ApiResponse<NpsResponse>(
         error: true, errorMessage: "An error occurred");
   }
 
-  Future<ApiResponse<GstCalcuResponse>> gstCal(GstCalcu gst) async {
+  Future<ApiResponse> gstCal(Map gst) async {
     String authToken = await storage.read(key: "token");
-    final url = Uri.parse(baseUrl + "/calculator/miscellaneous/gst-calculator");
+    // final url = Uri.parse(baseUrl + "/calculator/miscellaneous/gst-calculator");
+    final url =
+        Uri.parse("https://api.itaxeasy.com" + "/calculator/gst-calculator");
     final headers = {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer $authToken',
@@ -1041,13 +1045,10 @@ class ApiServices {
       final jsonData = jsonDecode(response.body);
 
       print(response.body);
-      print(response.statusCode);
-      return ApiResponse<GstCalcuResponse>(
-          data: GstCalcuResponse.fromJson(jsonData),
-          resposeCode: response.statusCode);
+      // print(response.statusCode);
+      return ApiResponse(data: jsonData, resposeCode: response.statusCode);
     }
-    return ApiResponse<GstCalcuResponse>(
-        error: true, errorMessage: "An error occurred");
+    return ApiResponse(error: true, errorMessage: "An error occurred");
   }
 
   Future<ApiResponse<SearchGstByPan>> searchGstByPan(

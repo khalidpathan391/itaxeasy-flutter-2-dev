@@ -33,7 +33,7 @@ class _GstUiState extends State<GstUi> {
   ApiServices apiServices = ApiServices();
 
   double cgst;
-  ApiResponse<GstCalcuResponse> _apiResponse;
+  ApiResponse _apiResponse;
 
   @override
   Widget build(BuildContext context) {
@@ -265,18 +265,19 @@ class _GstUiState extends State<GstUi> {
                                         setState(() {
                                           isLoading = true;
                                         });
-                                        final insert = GstCalcu(
-                                            amount: int.parse(amount.text),
-                                            gstRate: int.parse(gstRate.text),
-                                            type: "including");
+                                        Map data = {
+                                          "amount": int.parse(amount.text),
+                                          "gstRate": double.parse(gstRate.text),
+                                          "type": "including"
+                                        };
                                         _apiResponse =
-                                            await apiServices.gstCal(insert);
+                                            await apiServices.gstCal(data);
 
                                         if (_apiResponse.resposeCode == 200) {
                                           setState(() {
                                             cgst = double.parse(_apiResponse
-                                                    .data.gstAmount) /
-                                                2;
+                                                .data["cgst"]
+                                                .toString());
                                             isVisible = true;
                                           });
                                           print(
@@ -327,18 +328,22 @@ class _GstUiState extends State<GstUi> {
                                         setState(() {
                                           isLoading = true;
                                         });
-                                        final insert = GstCalcu(
-                                            amount: int.parse(amount.text),
-                                            gstRate: int.parse(gstRate.text),
-                                            type: "excluding");
+                                        Map data = {
+                                          "amount": int.parse(amount.text),
+                                          "gstRate": double.parse(gstRate.text),
+                                          "type": "excluding"
+                                        };
+                                        // final insert = GstCalcu(
+                                        //     amount: int.parse(amount.text),
+                                        //     gstRate: int.parse(gstRate.text),
+                                        //     type: "excluding");
                                         _apiResponse =
-                                            await apiServices.gstCal(insert);
+                                            await apiServices.gstCal(data);
 
                                         if (_apiResponse.resposeCode == 200) {
                                           setState(() {
-                                            cgst = double.parse(_apiResponse
-                                                    .data.gstAmount) /
-                                                2;
+                                            cgst = double.parse(
+                                                _apiResponse.data["cgst"]);
                                             isVisible = true;
                                           });
                                           print(
@@ -391,7 +396,7 @@ class _GstUiState extends State<GstUi> {
                                               fontSize: 17.5,
                                             ),
                                           ),
-                                          Text(_apiResponse.data.gstType
+                                          Text(_apiResponse.data["gstType"]
                                               .toString()),
                                           const SizedBox(
                                             height: 5,
@@ -405,7 +410,7 @@ class _GstUiState extends State<GstUi> {
                                               fontSize: 17.5,
                                             ),
                                           ),
-                                          Text(_apiResponse.data.gstRate
+                                          Text(_apiResponse.data["gstRate"]
                                               .toString()),
                                           const SizedBox(
                                             height: 5,
@@ -419,7 +424,7 @@ class _GstUiState extends State<GstUi> {
                                               fontSize: 17.5,
                                             ),
                                           ),
-                                          Text(_apiResponse.data.amount
+                                          Text(_apiResponse.data["amount"]
                                               .toString()),
                                           const SizedBox(
                                             height: 5,
@@ -433,7 +438,7 @@ class _GstUiState extends State<GstUi> {
                                               fontSize: 17.5,
                                             ),
                                           ),
-                                          Text(_apiResponse.data.gstAmount
+                                          Text(_apiResponse.data["gstAmount"]
                                               .toString()),
                                           const SizedBox(
                                             height: 5,
@@ -447,7 +452,7 @@ class _GstUiState extends State<GstUi> {
                                               fontSize: 17.5,
                                             ),
                                           ),
-                                          Text(_apiResponse.data.finalAmount
+                                          Text(_apiResponse.data["finalAmount"]
                                               .toString()),
                                           //
                                           // const SizedBox(
@@ -519,7 +524,7 @@ class _GstUiState extends State<GstUi> {
                       fontSize: 17.5,
                     ),
                   ),
-                  pw.Text(_apiResponse.data.gstType.toString()),
+                  pw.Text(_apiResponse.data["gstType"].toString()),
                   pw.SizedBox(
                     height: 5,
                   ),
@@ -532,7 +537,7 @@ class _GstUiState extends State<GstUi> {
                       fontSize: 17.5,
                     ),
                   ),
-                  pw.Text(_apiResponse.data.gstRate.toString()),
+                  pw.Text(_apiResponse.data["gstRate"].toString()),
                   pw.SizedBox(
                     height: 5,
                   ),
@@ -545,7 +550,7 @@ class _GstUiState extends State<GstUi> {
                       fontSize: 17.5,
                     ),
                   ),
-                  pw.Text(_apiResponse.data.amount.toString()),
+                  pw.Text(_apiResponse.data["amount"].toString()),
                   pw.SizedBox(
                     height: 5,
                   ),
@@ -558,7 +563,7 @@ class _GstUiState extends State<GstUi> {
                       fontSize: 17.5,
                     ),
                   ),
-                  pw.Text(_apiResponse.data.gstAmount.toString()),
+                  pw.Text(_apiResponse.data["gstAmount"].toString()),
                   pw.SizedBox(
                     height: 5,
                   ),
@@ -571,7 +576,7 @@ class _GstUiState extends State<GstUi> {
                       fontSize: 17.5,
                     ),
                   ),
-                  pw.Text(_apiResponse.data.finalAmount.toString()),
+                  pw.Text(_apiResponse.data["finalAmount"].toString()),
                 ]),
           );
         })); //
