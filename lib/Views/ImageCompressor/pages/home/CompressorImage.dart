@@ -17,9 +17,7 @@ import 'package:path_provider/path_provider.dart';
 
 import 'widgets/pinch_zoom_image.dart';
 
-
-enum CompressMethods {imageCompress,nativeImage,luban}
-
+enum CompressMethods { imageCompress, nativeImage, luban }
 
 class CompressorImage extends StatefulWidget {
   /* ---------------------------------------------------------------------------- */
@@ -45,6 +43,7 @@ class _CompressorImageState extends State<CompressorImage> {
     _clearCacheFiles();
     super.dispose();
   }
+
   /* ---------------------------------------------------------------------------- */
   @override
   Widget build(BuildContext context) {
@@ -66,13 +65,14 @@ class _CompressorImageState extends State<CompressorImage> {
                   ),
                   child: Column(
                     children: [
-                      Expanded( // =============> ORIGINAL IMAGE ===========================
+                      Expanded(
+                        // =============> ORIGINAL IMAGE ===========================
                         child: Row(
                           children: [
                             Expanded(
                               child: image != null
-                                ? WPinchZoomImage(child: image)
-                                : SizedBox(height: 0),
+                                  ? WPinchZoomImage(child: image)
+                                  : SizedBox(height: 0),
                             ),
                             SizedBox(width: 8),
                             SizedBox(
@@ -80,17 +80,26 @@ class _CompressorImageState extends State<CompressorImage> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text('Original image', style: TextStyle(
-                                    fontWeight: FontWeight.bold, color: Colors.red,
-                                  )),
+                                  Text('Original image',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.red,
+                                      )),
                                   SizedBox(height: 8),
                                   if (info != null) ...[
-                                    Obx(() => _showInfoItem('${info.name}', 'Filename')),
-                                    Obx(() => _showInfoItem('${info.width} px', 'Width')),
-                                    Obx(() => _showInfoItem('${info.height} px', 'Height')),
-                                    Obx(() => _showInfoItem(info.size.value, 'Size')),
-                                    Obx(() => _showInfoItem('${info.mimeType}', 'Mime type')),
-                                    Obx(() => _showInfoItem('${info.headerBytesHex}', 'Header bytes')),
+                                    Obx(() => _showInfoItem(
+                                        '${info.name}', 'Filename')),
+                                    Obx(() => _showInfoItem(
+                                        '${info.width} px', 'Width')),
+                                    Obx(() => _showInfoItem(
+                                        '${info.height} px', 'Height')),
+                                    Obx(() =>
+                                        _showInfoItem(info.size.value, 'Size')),
+                                    Obx(() => _showInfoItem(
+                                        '${info.mimeType}', 'Mime type')),
+                                    Obx(() => _showInfoItem(
+                                        '${info.headerBytesHex}',
+                                        'Header bytes')),
                                   ],
                                 ],
                               ),
@@ -99,14 +108,19 @@ class _CompressorImageState extends State<CompressorImage> {
                         ),
                       ),
                       // SizedBox(width: 10),
-                      Divider(height: 10, indent: 10, endIndent: 10, color: Colors.black26),
-                      Expanded( // =============> COMPRESSED IMAGE ===========================
+                      Divider(
+                          height: 10,
+                          indent: 10,
+                          endIndent: 10,
+                          color: Colors.black26),
+                      Expanded(
+                        // =============> COMPRESSED IMAGE ===========================
                         child: Row(
                           children: [
                             Expanded(
                               child: imageCompressed != null
-                                ? WPinchZoomImage(child: imageCompressed)
-                                : SizedBox(height: 0),
+                                  ? WPinchZoomImage(child: imageCompressed)
+                                  : SizedBox(height: 0),
                             ),
                             SizedBox(width: 8),
                             SizedBox(
@@ -115,21 +129,27 @@ class _CompressorImageState extends State<CompressorImage> {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text('Compressed image', style: TextStyle(
-                                      fontWeight: FontWeight.bold, color: Colors.red,
-                                    )),
-
-
+                                    Text('Compressed image',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.red,
+                                        )),
                                     SizedBox(height: 8),
                                     if (info2 != null) ...[
-                                      _showInfoItem(describeEnum(_method), 'Method'),
-                                      Obx(() => _showInfoItem('${info2.width} px', 'Width')),
-                                      Obx(() => _showInfoItem('${info2.height} px', 'Height')),
-                                      Obx(() => _showInfoItem(info2.size.value, 'Size')),
-                                      Obx(() => _showInfoItem('${info2.mimeType}', 'Mime type')),
-                                      Obx(() => _showInfoItem('${info2.headerBytesHex}', 'Header bytes')),
+                                      _showInfoItem(
+                                          describeEnum(_method), 'Method'),
+                                      Obx(() => _showInfoItem(
+                                          '${info2.width} px', 'Width')),
+                                      Obx(() => _showInfoItem(
+                                          '${info2.height} px', 'Height')),
+                                      Obx(() => _showInfoItem(
+                                          info2.size.value, 'Size')),
+                                      Obx(() => _showInfoItem(
+                                          '${info2.mimeType}', 'Mime type')),
+                                      Obx(() => _showInfoItem(
+                                          '${info2.headerBytesHex}',
+                                          'Header bytes')),
                                     ],
-
                                   ],
                                 ),
                               ),
@@ -147,18 +167,21 @@ class _CompressorImageState extends State<CompressorImage> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Methods:', style: TextStyle(fontWeight: FontWeight.bold)),
-                        ...CompressMethods.values.map((e) => RadioListTile<CompressMethods>(
-                          title: Text(describeEnum(e)),
-                          value: e,
-                          groupValue: _method,
-                          dense: true,
-                          contentPadding: EdgeInsets.zero,
-                          onChanged: (value) {
-                            setState(() => _method = e);
-                            if (imageCompressed != null) compressImage();
-                          },
-                        )),
+                        Text('Methods:',
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                        ...CompressMethods.values
+                            .map((e) => RadioListTile<CompressMethods>(
+                                  title: Text(describeEnum(e)),
+                                  value: e,
+                                  groupValue: _method,
+                                  dense: true,
+                                  contentPadding: EdgeInsets.zero,
+                                  onChanged: (value) {
+                                    setState(() => _method = e);
+                                    if (imageCompressed != null)
+                                      compressImage();
+                                  },
+                                )),
                       ],
                     ),
                   ),
@@ -169,14 +192,16 @@ class _CompressorImageState extends State<CompressorImage> {
                         SizedBox(height: 4),
                         Column(
                           children: [
-                            Text('Quality (${_sliderValue.truncate()}%)', style: TextStyle(fontWeight: FontWeight.bold)),
+                            Text('Quality (${_sliderValue.truncate()}%)',
+                                style: TextStyle(fontWeight: FontWeight.bold)),
                             Slider(
                               value: _sliderValue,
                               min: 0,
                               max: 100,
                               divisions: 20,
                               // label: '${_sliderValue.round()}%',
-                              onChanged: (value) => setState(() => _sliderValue = value),
+                              onChanged: (value) =>
+                                  setState(() => _sliderValue = value),
                             ),
                           ],
                         ),
@@ -212,6 +237,7 @@ class _CompressorImageState extends State<CompressorImage> {
       ),
     );
   }
+
   /* ---------------------------------------------------------------------------- */
   void getImageWithImagePicker() async {
     try {
@@ -227,30 +253,33 @@ class _CompressorImageState extends State<CompressorImage> {
       print('La imagen no pudo ser cargada.\n$e');
     }
   }
+
   /* ---------------------------------------------------------------------------- */
   Image _buildImage(File source) {
     var _image = RegExp(r'^https?:\/\/').hasMatch(source.path.toLowerCase())
-      ? Image.network(source.path, fit: BoxFit.contain)
-      : Image.file(source, fit: BoxFit.contain);
+        ? Image.network(source.path, fit: BoxFit.contain)
+        : Image.file(source, fit: BoxFit.contain);
     return _image;
   }
+
   /* ---------------------------------------------------------------------------- */
   Widget _showInfoItem(String title, String subtitle) {
     return ListTile(
       title: Text(title),
-      subtitle: Text(subtitle, style: TextStyle(color: Colors.purple)),
+      subtitle: Text(subtitle, style: TextStyle(color: Colors.blue.shade900)),
       dense: true,
       contentPadding: EdgeInsets.zero,
       visualDensity: VisualDensity(vertical: -4),
     );
   }
+
   /* ---------------------------------------------------------------------------- */
   void getImageWithFilePicker() async {
     try {
       var _picker = await FilePicker.platform.pickFiles(
         type: FileType.custom,
         onFileLoading: (status) => print('>>>> STATUS: $status'),
-        allowedExtensions: ['jpeg','png'],
+        allowedExtensions: ['jpeg', 'png'],
       );
       if (_picker != null && _picker.files.isNotEmpty) {
         _file = _picker.files.first;
@@ -267,6 +296,7 @@ class _CompressorImageState extends State<CompressorImage> {
       _logException(e.toString());
     }
   }
+
   /* ---------------------------------------------------------------------------- */
   void _logException(String message) {
     // print(message);
@@ -274,30 +304,38 @@ class _CompressorImageState extends State<CompressorImage> {
       ..hideCurrentSnackBar()
       ..showSnackBar(SnackBar(content: Text(message)));
   }
+
   /* ---------------------------------------------------------------------------- */
   void _clearCacheFiles() async {
-    await FilePicker.platform
-      .clearTemporaryFiles()
-      .then((result) {
-        print(result != null && result
+    await FilePicker.platform.clearTemporaryFiles().then((result) {
+      print(result != null && result
           ? 'Temporary files removed with success.'
           : 'Failed to clean temporary files');
-      })
-      .catchError(
-        (e) { print('Unsupported operation:: $e'); },
-        test: (e) => e is PlatformException,
-      )
-      .catchError((e) { print(e); });
+    }).catchError(
+      (e) {
+        print('Unsupported operation:: $e');
+      },
+      test: (e) => e is PlatformException,
+    ).catchError((e) {
+      print(e);
+    });
   }
+
   /* ---------------------------------------------------------------------------- */
   void compressImage() {
     if (imageFile == null) return;
 
     if (info.sizeKB >= 100) {
       switch (_method) {
-        case CompressMethods.imageCompress: compressWithImageCompress(); break;
-        case CompressMethods.nativeImage: compressWithNativeImage(); break;
-        case CompressMethods.luban: compressWithLuban(); break;
+        case CompressMethods.imageCompress:
+          compressWithImageCompress();
+          break;
+        case CompressMethods.nativeImage:
+          compressWithNativeImage();
+          break;
+        case CompressMethods.luban:
+          compressWithLuban();
+          break;
         default:
       }
     } else {
@@ -305,32 +343,32 @@ class _CompressorImageState extends State<CompressorImage> {
       info2 = null;
     }
   }
+
   /* ---------------------------------------------------------------------------- */
   void compressWithImageCompress() async {
     await FlutterImageCompress.compressWithFile(
       imageFile.absolute.path,
-      minWidth : 320,
+      minWidth: 320,
       minHeight: 240,
       quality: _sliderValue.truncate(),
-    )
-      .then((response) {
-        info2 = _ImageInfo.fromRaw(response);
-        imageCompressed = Image(
-          image: MemoryImage(Uint8List.fromList(response)),
-          fit: BoxFit.contain,
-        );
-        setState(() {});
-      })
-      .catchError((e) {
-        imageCompressed = null;
-        print(e);
-      });
+    ).then((response) {
+      info2 = _ImageInfo.fromRaw(response);
+      imageCompressed = Image(
+        image: MemoryImage(Uint8List.fromList(response)),
+        fit: BoxFit.contain,
+      );
+      setState(() {});
+    }).catchError((e) {
+      imageCompressed = null;
+      print(e);
+    });
   }
+
   /* ---------------------------------------------------------------------------- */
   void compressWithNativeImage() async {
     const _width = 320;
     const _height = 240;
-     int _neoWidth, _neoHeight;
+    int _neoWidth, _neoHeight;
 
     if (info.height.value > info.width.value) {
       _neoWidth = _width;
@@ -345,17 +383,16 @@ class _CompressorImageState extends State<CompressorImage> {
       quality: _sliderValue.truncate(),
       targetWidth: _neoWidth,
       targetHeight: _neoHeight,
-    )
-      .then((response) {
-        info2 = _ImageInfo(response);
-        imageCompressed = Image.file(response, fit: BoxFit.contain);
-        setState(() {});
-      })
-      .catchError((e) {
-        imageCompressed = null;
-        print(e);
-      });
+    ).then((response) {
+      info2 = _ImageInfo(response);
+      imageCompressed = Image.file(response, fit: BoxFit.contain);
+      setState(() {});
+    }).catchError((e) {
+      imageCompressed = null;
+      print(e);
+    });
   }
+
   /* ---------------------------------------------------------------------------- */
   void compressWithLuban() async {
     final tempDir = await getTemporaryDirectory();
@@ -365,30 +402,29 @@ class _CompressorImageState extends State<CompressorImage> {
       path: tempDir.path,
       mode: CompressMode.LARGE2SMALL,
       quality: _sliderValue.truncate(), //first compress quality, default 80
-      step: 9, //compress quality step, The bigger the fast, Smaller is more accurate, default 6
+      step:
+          9, //compress quality step, The bigger the fast, Smaller is more accurate, default 6
     );
 
-    await Luban.compressImage(compressObject)
-      .then((path) {
-        if (path == null) return;
-        var _tmpFile = File(path);
-        info2 = _ImageInfo(_tmpFile);
-        imageCompressed = Image.file(_tmpFile, fit: BoxFit.contain);
-        setState(() {});
-      })
-      .catchError((e) {
-        imageCompressed = null;
-        print(e);
-      });
+    await Luban.compressImage(compressObject).then((path) {
+      if (path == null) return;
+      var _tmpFile = File(path);
+      info2 = _ImageInfo(_tmpFile);
+      imageCompressed = Image.file(_tmpFile, fit: BoxFit.contain);
+      setState(() {});
+    }).catchError((e) {
+      imageCompressed = null;
+      print(e);
+    });
   }
   /* ---------------------------------------------------------------------------- */
   /* ---------------------------------------------------------------------------- */
 }
 
 const _headerBytes = {
-  'jpg' : [0xFF,0xD8,0xFF,0xE1],
-  'jpeg': [0xFF,0xD8,0xFF,0xE0],
-  'png' : [0x89,0x50,0x4E,0x47],
+  'jpg': [0xFF, 0xD8, 0xFF, 0xE1],
+  'jpeg': [0xFF, 0xD8, 0xFF, 0xE0],
+  'png': [0x89, 0x50, 0x4E, 0x47],
 };
 
 class _ImageInfo extends GetxController {
@@ -410,15 +446,17 @@ class _ImageInfo extends GetxController {
   _ImageInfo.fromRaw(Uint8List raw) {
     getInfoFromRaw(raw);
     mimeType.value = ListEquality().equals(headerBytes, _headerBytes['png'])
-      ? 'image/png'
-      : 'image/jpeg';
+        ? 'image/png'
+        : 'image/jpeg';
   }
   /* ---------------------------------------------------------------------------- */
   void getMoreInfo(File image) {
     var raw = image.readAsBytesSync();
     getInfoFromRaw(raw);
-    mimeType.value = lookupMimeType(image.path, headerBytes: headerBytes) ?? '<unknown>';
+    mimeType.value =
+        lookupMimeType(image.path, headerBytes: headerBytes) ?? '<unknown>';
   }
+
   /* ---------------------------------------------------------------------------- */
   void getInfoFromRaw(Uint8List raw) async {
     var decodeImage = await decodeImageFromList(raw);
@@ -428,13 +466,16 @@ class _ImageInfo extends GetxController {
     sizeKB = bytes / 1024;
     sizeMB = sizeKB / 1024;
     setSize();
-    headerBytes = raw.take(4).toList(); //raw.getRange(0, raw.indexOf(0)).toList();
-    headerBytesHex.value = headerBytes.map((e) => e.toRadixString(16).toUpperCase()).join(' ');
+    headerBytes =
+        raw.take(4).toList(); //raw.getRange(0, raw.indexOf(0)).toList();
+    headerBytesHex.value =
+        headerBytes.map((e) => e.toRadixString(16).toUpperCase()).join(' ');
   }
+
   /* ---------------------------------------------------------------------------- */
   void setSize() {
     size.value = sizeMB >= 1.0
-      ? '${sizeMB.toStringAsFixed(2)} MB'
-      : '${sizeKB.toStringAsFixed(2)} KB';
+        ? '${sizeMB.toStringAsFixed(2)} MB'
+        : '${sizeKB.toStringAsFixed(2)} KB';
   }
 }

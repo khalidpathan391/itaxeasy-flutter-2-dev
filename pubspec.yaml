@@ -28,10 +28,10 @@ dependencies:
   glassmorphism:
   permission_handler: ^4.2.0
   pdf_merger:
-#  flutter_contacts:
+  flutter_contacts:
   google_fonts:
   flutter:
-    sdk: flutter
+   sdk: flutter
   numeric_keyboard:
   flutter_staggered_grid_view: ^0.6.1
   awesome_dialog: ^2.1.2
@@ -43,11 +43,12 @@ dependencies:
   platform: ^3.0.0
   pdf: ^3.6.50
   search_choices: ^2.0.16
-#  searchable_dropdown: ^1.1.3
+  searchable_dropdown: ^1.1.3
   cupertino_icons: ^1.0.2
   file_picker: ^4.2.6
   sms_autofill: ^2.2.0
-#  mobile_number: ^1.0.4
+  mobile_number: ^1.0.4
+  flutter_switch: ^0.2.2
   http:
   custom_searchable_dropdown: ^2.1.1
   logger:
@@ -56,6 +57,7 @@ dependencies:
   loading_indicator: ^3.0.2
   dotted_border: ^2.0.0+1
   dio: ^4.0.0
+  
   flutter_verification_code: ^1.1.0
   intl: ^0.17.0
   flutter_svg: ^1.0.3
@@ -73,7 +75,10 @@ dependencies:
   flip_card: ^0.4.4
   pin_code_fields: ^6.1.0
   firebase_ml_vision: ^0.9.10
+  razorpay_flutter: ^1.2.5
   path:
+  anim_search_bar: ^2.0.3
+ 
 #    firebase_core: ^1.8.0
 #    firebase_auth: ^3.1.4
 #    google_sign_in: ^5.2.0

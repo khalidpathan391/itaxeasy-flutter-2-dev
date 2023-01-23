@@ -1,4 +1,6 @@
 class Contact {
+  // ignore: prefer_typing_uninitialized_variables
+
   const Contact(
     this.name,
     this.role,
@@ -16,7 +18,6 @@ class Contact {
   final String website;
 
   static const contacts = [
-
     Contact(
       'Lem Wiseman',
       'Analyst Programmer',
@@ -129,6 +130,7 @@ class Contact {
       'glosebiee@google.co.jp',
       'latimes.com',
     ),
-
   ];
+
+  get photo => null;
 }
