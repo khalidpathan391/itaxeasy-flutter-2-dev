@@ -1,5 +1,6 @@
 import 'dart:typed_data';
 import 'package:animate_do/animate_do.dart';
+import 'package:gst_app/Views/on_board_screens/ITR_CAL_FIiles.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
@@ -9,6 +10,7 @@ import 'package:open_file/open_file.dart';
 import 'package:pdf/pdf.dart';
 import 'package:printing/printing.dart';
 import 'dart:io';
+import 'AccountMisuse.dart';
 import 'Calculator/ifsc_calcii/theme.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:image_picker/image_picker.dart';
@@ -88,7 +90,7 @@ class _ITRState extends State<ITR> {
     );
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey.shade300,
       body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(
@@ -203,7 +205,7 @@ class _ITRState extends State<ITR> {
 //                     ),
 //                   ),
 //                 ),
-                const SizedBox(height: 10),
+
                 // FadeInLeft(
                 //   delay: const Duration(milliseconds: 500),
                 //   duration: const Duration(milliseconds: 500),
@@ -279,21 +281,202 @@ class _ITRState extends State<ITR> {
                   duration: const Duration(milliseconds: 500),
                   child: GestureDetector(
                     onTap: () {
+                      // Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //         builder: (context) => const FileUpload()));
+                    },
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                      color: Color.fromARGB(255, 210, 189, 214),
+                      elevation: 20,
+                      child: Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey.shade700,
+                                  blurRadius: 5.0,
+                                  offset: Offset(5, 3))
+                            ],
+                            // border: Border.all(
+                            //     color: Colors.blue.shade900),
+                            shape: BoxShape.rectangle,
+                            gradient: LinearGradient(
+                              begin: Alignment.bottomRight,
+                              end: Alignment.centerLeft,
+                              colors: [
+                                Colors.grey.shade100,
+                                Colors.white,
+                              ],
+                            )),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Container(
+                                  padding: const EdgeInsets.all(8),
+                                  decoration: BoxDecoration(
+                                    color:
+                                        Colors.blue.shade900.withOpacity(0.1),
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(10)),
+                                  ),
+                                  child: SvgPicture.asset(
+                                    "assets/icons/Documents.svg",
+                                    color: Colors.blue.shade900,
+                                  ),
+                                ),
+                                const Text(
+                                  "Generate Form-16",
+                                  style: TextStyle(
+                                    fontFamily: "Poppins",
+                                    fontWeight: FontWeight.w500,
+                                    letterSpacing: 1.5,
+                                    fontSize: 17.5,
+                                  ),
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                                popUp,
+                                // Stack(
+                                //   children: [
+                                //     const Icon(
+                                //              Icons.more_vert,
+                                //              color: Colors.blue.shade900),
+                                //   ],
+                                // ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                FadeInLeft(
+                  delay: const Duration(milliseconds: 500),
+                  duration: const Duration(milliseconds: 500),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Calui()));
+                    },
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                      color: Color.fromARGB(255, 210, 189, 214),
+                      elevation: 20,
+                      child: Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey.shade700,
+                                  blurRadius: 5.0,
+                                  offset: Offset(5, 3))
+                            ],
+                            // border: Border.all(
+                            //     color: Colors.blue.shade900),
+                            shape: BoxShape.rectangle,
+                            gradient: LinearGradient(
+                              begin: Alignment.bottomRight,
+                              end: Alignment.centerLeft,
+                              colors: [
+                                Colors.grey.shade100,
+                                Colors.white,
+                              ],
+                            )),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Container(
+                                  padding: const EdgeInsets.all(8),
+                                  decoration: BoxDecoration(
+                                    color:
+                                        Colors.blue.shade900.withOpacity(0.1),
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(10)),
+                                  ),
+                                  child: SvgPicture.asset(
+                                    "assets/icons/Documents.svg",
+                                    color: Colors.blue.shade900,
+                                  ),
+                                ),
+                                const Text(
+                                  "Income Tax Calculator",
+                                  style: TextStyle(
+                                    fontFamily: "Poppins",
+                                    fontWeight: FontWeight.w500,
+                                    letterSpacing: 1.5,
+                                    fontSize: 17.5,
+                                  ),
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                                popUp,
+                                // Stack(
+                                //   children: [
+                                //     const Icon(
+                                //              Icons.more_vert,
+                                //              color: Colors.blue.shade900),
+                                //   ],
+                                // ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+
+                FadeInLeft(
+                  delay: const Duration(milliseconds: 500),
+                  duration: const Duration(milliseconds: 500),
+                  child: GestureDetector(
+                    onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
                               builder: (context) => const FileUpload()));
                     },
                     child: Card(
-                      elevation: 5,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                      color: Color.fromARGB(255, 210, 189, 214),
+                      elevation: 20,
                       child: Container(
-                        padding: const EdgeInsets.all(defaultPadding),
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(10),
-                          ),
-                        ),
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey.shade700,
+                                  blurRadius: 5.0,
+                                  offset: Offset(5, 3))
+                            ],
+                            // border: Border.all(
+                            //     color: Colors.blue.shade900),
+                            shape: BoxShape.rectangle,
+                            gradient: LinearGradient(
+                              begin: Alignment.bottomRight,
+                              end: Alignment.centerLeft,
+                              colors: [
+                                Colors.grey.shade100,
+                                Colors.white,
+                              ],
+                            )),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -340,60 +523,10 @@ class _ITRState extends State<ITR> {
                     ),
                   ),
                 ),
-
                 // const SizedBox(
                 //   height: 10,
                 // ),
-                // FadeInRight(
-                //   delay: const Duration(milliseconds: 500),
-                //   duration: const Duration(milliseconds: 500),
-                //   child: Card(
-                //     elevation: 5,
-                //     child: Container(
-                //       padding: const EdgeInsets.all(defaultPadding),
-                //       decoration: const BoxDecoration(
-                //         color: Colors.white,
-                //         borderRadius: BorderRadius.all(Radius.circular(10)),
-                //       ),
-                //       child: Column(
-                //         crossAxisAlignment: CrossAxisAlignment.start,
-                //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                //         children: [
-                //           Row(
-                //             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                //             children: [
-                //               Container(
-                //                 padding: const EdgeInsets.all(8),
-                //                 decoration: BoxDecoration(
-                //                   color: const Color(0xFF007EE5).withOpacity(0.1),
-                //                   borderRadius:
-                //                       const BorderRadius.all(Radius.circular(10)),
-                //                 ),
-                //                 child: SvgPicture.asset(
-                //                   "assets/icons/Documents.svg",
-                //                   color: primaryColor,
-                //                 ),
-                //               ),
-                //               const Text(
-                //                 "Generate 26AS",
-                //                 style: TextStyle(
-                //                   fontFamily: "Poppins",
-                //                   fontWeight: FontWeight.w500,
-                //                   letterSpacing: 1.5,
-                //                   fontSize: 17.5,
-                //                 ),
-                //                 overflow: TextOverflow.ellipsis,
-                //               ),
-                //               Icon(Icons.more_vert,
-                //                   color: Colors.lightBlueAccent[700])
-                //             ],
-                //           ),
-                //         ],
-                //       ),
-                //     ),
-                //   ),
-                // ),
-                const SizedBox(height: 10),
+
                 FadeInLeft(
                   delay: const Duration(milliseconds: 500),
                   duration: const Duration(milliseconds: 500),
@@ -405,15 +538,31 @@ class _ITRState extends State<ITR> {
                               builder: (context) => const FileUpload()));
                     },
                     child: Card(
-                      elevation: 5,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                      color: Color.fromARGB(255, 210, 189, 214),
+                      elevation: 20,
                       child: Container(
-                        padding: const EdgeInsets.all(defaultPadding),
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(10),
-                          ),
-                        ),
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey.shade700,
+                                  blurRadius: 5.0,
+                                  offset: Offset(5, 3))
+                            ],
+                            // border: Border.all(
+                            //     color: Colors.blue.shade900),
+                            shape: BoxShape.rectangle,
+                            gradient: LinearGradient(
+                              begin: Alignment.bottomRight,
+                              end: Alignment.centerLeft,
+                              colors: [
+                                Colors.grey.shade100,
+                                Colors.white,
+                              ],
+                            )),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -444,8 +593,14 @@ class _ITRState extends State<ITR> {
                                   ),
                                   overflow: TextOverflow.ellipsis,
                                 ),
-                                Icon(Icons.more_vert,
-                                    color: Colors.blue.shade900)
+                                popUp,
+                                // Stack(
+                                //   children: [
+                                //     const Icon(
+                                //              Icons.more_vert,
+                                //              color: Colors.blue.shade900),
+                                //   ],
+                                // ),
                               ],
                             ),
                           ],
@@ -454,7 +609,6 @@ class _ITRState extends State<ITR> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 10),
                 FadeInLeft(
                   delay: const Duration(milliseconds: 500),
                   duration: const Duration(milliseconds: 500),
@@ -466,15 +620,31 @@ class _ITRState extends State<ITR> {
                               builder: (context) => const FileUpload()));
                     },
                     child: Card(
-                      elevation: 5,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                      color: Color.fromARGB(255, 210, 189, 214),
+                      elevation: 20,
                       child: Container(
-                        padding: const EdgeInsets.all(defaultPadding),
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(10),
-                          ),
-                        ),
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey.shade700,
+                                  blurRadius: 5.0,
+                                  offset: Offset(5, 3))
+                            ],
+                            // border: Border.all(
+                            //     color: Colors.blue.shade900),
+                            shape: BoxShape.rectangle,
+                            gradient: LinearGradient(
+                              begin: Alignment.bottomRight,
+                              end: Alignment.centerLeft,
+                              colors: [
+                                Colors.grey.shade100,
+                                Colors.white,
+                              ],
+                            )),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -505,8 +675,14 @@ class _ITRState extends State<ITR> {
                                   ),
                                   overflow: TextOverflow.ellipsis,
                                 ),
-                                Icon(Icons.more_vert,
-                                    color: Colors.blue.shade900)
+                                popUp,
+                                // Stack(
+                                //   children: [
+                                //     const Icon(
+                                //              Icons.more_vert,
+                                //              color: Colors.blue.shade900),
+                                //   ],
+                                // ),
                               ],
                             ),
                           ],
@@ -515,7 +691,7 @@ class _ITRState extends State<ITR> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 10),
+
                 FadeInLeft(
                   delay: const Duration(milliseconds: 500),
                   duration: const Duration(milliseconds: 500),
@@ -527,15 +703,31 @@ class _ITRState extends State<ITR> {
                               builder: (context) => const FileUpload()));
                     },
                     child: Card(
-                      elevation: 5,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                      color: Color.fromARGB(255, 210, 189, 214),
+                      elevation: 20,
                       child: Container(
-                        padding: const EdgeInsets.all(defaultPadding),
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(10),
-                          ),
-                        ),
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey.shade700,
+                                  blurRadius: 5.0,
+                                  offset: Offset(5, 3))
+                            ],
+                            // border: Border.all(
+                            //     color: Colors.blue.shade900),
+                            shape: BoxShape.rectangle,
+                            gradient: LinearGradient(
+                              begin: Alignment.bottomRight,
+                              end: Alignment.centerLeft,
+                              colors: [
+                                Colors.grey.shade100,
+                                Colors.white,
+                              ],
+                            )),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -566,8 +758,14 @@ class _ITRState extends State<ITR> {
                                   ),
                                   overflow: TextOverflow.ellipsis,
                                 ),
-                                Icon(Icons.more_vert,
-                                    color: Colors.blue.shade900)
+                                popUp,
+                                // Stack(
+                                //   children: [
+                                //     const Icon(
+                                //              Icons.more_vert,
+                                //              color: Colors.blue.shade900),
+                                //   ],
+                                // ),
                               ],
                             ),
                           ],

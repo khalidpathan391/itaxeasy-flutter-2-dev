@@ -217,7 +217,7 @@ class _BusinessBankVerificationState extends State<BusinessBankVerification> {
                 Text(
                   'Bank Verification',
                   style: heading2.copyWith(
-                    color: Colors.purple,
+                    color: Colors.blue.shade900,
                   ),
                 ),
                 const SizedBox(

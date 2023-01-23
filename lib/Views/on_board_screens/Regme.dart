@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
@@ -9,6 +10,22 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:gst_app/Views/on_board_screens/Drawer.dart';
 import 'package:gst_app/views/login_and_register/theme.dart';
 
+=======
+import 'package:animate_do/animate_do.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+import 'package:flutter_switch/flutter_switch.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:getwidget/Components/button/gf_button.dart';
+import 'package:getwidget/shape/gf_button_shape.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:gst_app/Views/on_board_screens/Drawer.dart';
+import 'package:gst_app/views/login_and_register/theme.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+import '../Bottom_Nav_Bar/MainPage.dart';
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
 import '../Calculator/ifsc_calcii/widgets/custom_checkbox.dart';
 import '../Theme/colors.dart';
 
@@ -24,7 +41,10 @@ class _SaleryState extends State<Salery> with TickerProviderStateMixin {
   double _scale1;
   AnimationController _controller;
   AnimationController _controller1;
+<<<<<<< HEAD
   int fyear;
+=======
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
   bool isVisible = false;
   bool visible = false;
   bool isVisible1 = false;
@@ -52,10 +72,13 @@ class _SaleryState extends State<Salery> with TickerProviderStateMixin {
   bool isVisible23 = false;
 
   bool isChecked = false;
+<<<<<<< HEAD
   getfyear() {
     fyear = DateTime.now().year % 2000 + 1;
     log(fyear.toString());
   }
+=======
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
 
   @override
   void initState() {
@@ -92,16 +115,26 @@ class _SaleryState extends State<Salery> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     getfyear();
+=======
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
     _scale = 1 - _controller.value;
     _scale1 = 1 - _controller1.value;
     return SafeArea(
       child: Scaffold(
+<<<<<<< HEAD
         floatingActionButton: buildSpeedDial(),
         appBar: AppBar(
           backgroundColor: Colors.blue.shade900,
           title: const Text(
             " Income",
+=======
+        appBar: AppBar(
+          backgroundColor: Colors.blue.shade900,
+          title: const Text(
+            "Salary And Income",
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
             style: TextStyle(
               fontFamily: "Poppins",
               fontWeight: FontWeight.w500,
@@ -156,7 +189,11 @@ class _SaleryState extends State<Salery> with TickerProviderStateMixin {
                     Padding(
                       padding: const EdgeInsets.only(top: 10),
                       child: Text(
+<<<<<<< HEAD
                         "FY ${DateTime.now().year}-$fyear",
+=======
+                        "FY 2022-23",
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
                         style: TextStyle(
                           fontFamily: "Poppins",
                           fontWeight: FontWeight.w500,
@@ -388,7 +425,11 @@ class _SaleryState extends State<Salery> with TickerProviderStateMixin {
                             width: 150,
                             child: Center(
                               child: Text(
+<<<<<<< HEAD
                                 "Income",
+=======
+                                "Salary & \nIncome",
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
                                 style: GoogleFonts.dmSans(
                                   fontSize: 17.5,
                                   fontWeight: FontWeight.bold,
@@ -430,7 +471,11 @@ class _SaleryState extends State<Salery> with TickerProviderStateMixin {
                                   width: 150,
                                   child: Center(
                                     child: Text(
+<<<<<<< HEAD
                                       "Switch to \nIncome",
+=======
+                                      "Switch to \nSalary",
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
                                       style: GoogleFonts.dmSans(
                                         fontSize: 17.5,
                                         fontWeight: FontWeight.bold,
@@ -464,7 +509,11 @@ class _SaleryState extends State<Salery> with TickerProviderStateMixin {
                                   width: 150,
                                   child: Center(
                                     child: Text(
+<<<<<<< HEAD
                                       "Exemptions",
+=======
+                                      "Excemptions\n& Educations",
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
                                       style: GoogleFonts.dmSans(
                                         fontSize: 17.5,
                                         fontWeight: FontWeight.bold,
@@ -2394,7 +2443,11 @@ class _SaleryState extends State<Salery> with TickerProviderStateMixin {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
+<<<<<<< HEAD
                       "Exemptions & Deductions",
+=======
+                      "Excemptions & Deductions",
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
                       style:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
@@ -6758,6 +6811,7 @@ class _SaleryState extends State<Salery> with TickerProviderStateMixin {
       ),
     );
   }
+<<<<<<< HEAD
 
   Widget buildSpeedDial() => SpeedDial(
         overlayColor: Colors.blue.shade100,
@@ -6793,6 +6847,8 @@ class _SaleryState extends State<Salery> with TickerProviderStateMixin {
           ),
         ],
       );
+=======
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
   // Widget buildSpeedDial() => SpeedDial(
   //       overlayColor: Colors.blue.shade100,
   //       backgroundColor: Colors.blue.shade900,

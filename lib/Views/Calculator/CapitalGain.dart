@@ -44,7 +44,7 @@ class _CapitalGainUiState extends State<CapitalGainUi> {
             child: CircularProgressIndicator(),
           )
         : Scaffold(
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.grey.shade300,
             floatingActionButton: buildSpeedDial(),
             body: SingleChildScrollView(
               child: SafeArea(
@@ -121,38 +121,59 @@ class _CapitalGainUiState extends State<CapitalGainUi> {
                                 ),
                               ),
                             ),
-                            Container(
-                              width: double.infinity,
-                              decoration: BoxDecoration(
-                                color: textWhiteGrey,
-                                borderRadius: BorderRadius.circular(14.0),
-                              ),
-                              child: Padding(
-                                padding:
-                                    const EdgeInsets.only(left: 10, right: 10),
-                                child: DropdownButtonHideUnderline(
-                                  child: DropdownButton<String>(
-                                    value: dropdownValue,
-                                    elevation: 16,
-                                    onChanged: (String newValue) {
-                                      setState(() {
-                                        dropdownValue = newValue;
-                                      });
-                                    },
-                                    items: <String>[
-                                      'equityMutualFunds',
-                                      'stocks',
-                                      'mutualFunds',
-                                      'bonds',
-                                      'gold',
-                                      'property'
-                                    ].map<DropdownMenuItem<String>>(
-                                        (String value) {
-                                      return DropdownMenuItem<String>(
-                                        value: value,
-                                        child: Text(value),
-                                      );
-                                    }).toList(),
+                            Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15)),
+                              color: Color.fromARGB(255, 210, 189, 214),
+                              elevation: 20,
+                              child: Container(
+                                width: double.infinity,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Colors.grey.shade700,
+                                          blurRadius: 5.0,
+                                          offset: Offset(5, 3))
+                                    ],
+                                    // border: Border.all(
+                                    //     color: Colors.blue.shade900),
+                                    shape: BoxShape.rectangle,
+                                    gradient: LinearGradient(
+                                      begin: Alignment.bottomRight,
+                                      end: Alignment.centerLeft,
+                                      colors: [
+                                        Colors.grey.shade100,
+                                        Colors.white,
+                                      ],
+                                    )),
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      left: 10, right: 10),
+                                  child: DropdownButtonHideUnderline(
+                                    child: DropdownButton<String>(
+                                      value: dropdownValue,
+                                      elevation: 16,
+                                      onChanged: (String newValue) {
+                                        setState(() {
+                                          dropdownValue = newValue;
+                                        });
+                                      },
+                                      items: <String>[
+                                        'equityMutualFunds',
+                                        'stocks',
+                                        'mutualFunds',
+                                        'bonds',
+                                        'gold',
+                                        'property'
+                                      ].map<DropdownMenuItem<String>>(
+                                          (String value) {
+                                        return DropdownMenuItem<String>(
+                                          value: value,
+                                          child: Text(value),
+                                        );
+                                      }).toList(),
+                                    ),
                                   ),
                                 ),
                               ),
@@ -173,30 +194,52 @@ class _CapitalGainUiState extends State<CapitalGainUi> {
                                 ),
                               ),
                             ),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: textWhiteGrey,
-                                borderRadius: BorderRadius.circular(14.0),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.only(
-                                    top: 5, left: 5, right: 5, bottom: 5),
-                                child: DateTimeFormField(
-                                  decoration: const InputDecoration(
-                                    hintStyle: TextStyle(color: Colors.black45),
-                                    errorStyle:
-                                        TextStyle(color: Colors.redAccent),
-                                    border: InputBorder.none,
-                                    suffixIcon: Icon(Icons.event_note),
-                                    hintText: 'Buy Date',
+                            Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15)),
+                              color: Color.fromARGB(255, 210, 189, 214),
+                              elevation: 20,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Colors.grey.shade700,
+                                          blurRadius: 5.0,
+                                          offset: Offset(5, 3))
+                                    ],
+                                    // border: Border.all(
+                                    //     color: Colors.blue.shade900),
+                                    shape: BoxShape.rectangle,
+                                    gradient: LinearGradient(
+                                      begin: Alignment.bottomRight,
+                                      end: Alignment.centerLeft,
+                                      colors: [
+                                        Colors.grey.shade100,
+                                        Colors.white,
+                                      ],
+                                    )),
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      top: 5, left: 5, right: 5, bottom: 5),
+                                  child: DateTimeFormField(
+                                    decoration: const InputDecoration(
+                                      hintStyle:
+                                          TextStyle(color: Colors.black45),
+                                      errorStyle:
+                                          TextStyle(color: Colors.redAccent),
+                                      border: InputBorder.none,
+                                      suffixIcon: Icon(Icons.event_note),
+                                      hintText: 'Buy Date',
+                                    ),
+                                    mode: DateTimeFieldPickerMode.date,
+                                    // autovalidateMode: AutovalidateMode.always,
+                                    // validator: (e) => (e?.day ?? 0) == 1 ? 'Please not the first day' : null,
+                                    onDateSelected: (DateTime value) {
+                                      print(value);
+                                      buyDate = value;
+                                    },
                                   ),
-                                  mode: DateTimeFieldPickerMode.date,
-                                  // autovalidateMode: AutovalidateMode.always,
-                                  // validator: (e) => (e?.day ?? 0) == 1 ? 'Please not the first day' : null,
-                                  onDateSelected: (DateTime value) {
-                                    print(value);
-                                    buyDate = value;
-                                  },
                                 ),
                               ),
                             ),
@@ -216,30 +259,52 @@ class _CapitalGainUiState extends State<CapitalGainUi> {
                                 ),
                               ),
                             ),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: textWhiteGrey,
-                                borderRadius: BorderRadius.circular(14.0),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.only(
-                                    top: 5, left: 5, right: 5, bottom: 5),
-                                child: DateTimeFormField(
-                                  decoration: const InputDecoration(
-                                    hintStyle: TextStyle(color: Colors.black45),
-                                    errorStyle:
-                                        TextStyle(color: Colors.redAccent),
-                                    border: InputBorder.none,
-                                    suffixIcon: Icon(Icons.event_note),
-                                    hintText: 'Sell Date',
+                            Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15)),
+                              color: Color.fromARGB(255, 210, 189, 214),
+                              elevation: 20,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Colors.grey.shade700,
+                                          blurRadius: 5.0,
+                                          offset: Offset(5, 3))
+                                    ],
+                                    // border: Border.all(
+                                    //     color: Colors.blue.shade900),
+                                    shape: BoxShape.rectangle,
+                                    gradient: LinearGradient(
+                                      begin: Alignment.bottomRight,
+                                      end: Alignment.centerLeft,
+                                      colors: [
+                                        Colors.grey.shade100,
+                                        Colors.white,
+                                      ],
+                                    )),
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      top: 5, left: 5, right: 5, bottom: 5),
+                                  child: DateTimeFormField(
+                                    decoration: const InputDecoration(
+                                      hintStyle:
+                                          TextStyle(color: Colors.black45),
+                                      errorStyle:
+                                          TextStyle(color: Colors.redAccent),
+                                      border: InputBorder.none,
+                                      suffixIcon: Icon(Icons.event_note),
+                                      hintText: 'Sell Date',
+                                    ),
+                                    mode: DateTimeFieldPickerMode.date,
+                                    // autovalidateMode: AutovalidateMode.always,
+                                    // validator: (e) => (e?.day ?? 0) == 1 ? 'Please not the first day' : null,
+                                    onDateSelected: (DateTime value) {
+                                      print(value);
+                                      sellDate = value;
+                                    },
                                   ),
-                                  mode: DateTimeFieldPickerMode.date,
-                                  // autovalidateMode: AutovalidateMode.always,
-                                  // validator: (e) => (e?.day ?? 0) == 1 ? 'Please not the first day' : null,
-                                  onDateSelected: (DateTime value) {
-                                    print(value);
-                                    sellDate = value;
-                                  },
                                 ),
                               ),
                             ),
@@ -259,19 +324,41 @@ class _CapitalGainUiState extends State<CapitalGainUi> {
                                 ),
                               ),
                             ),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: textWhiteGrey,
-                                borderRadius: BorderRadius.circular(14.0),
-                              ),
-                              child: TextFormField(
-                                controller: buyPrice,
-                                keyboardType: TextInputType.number,
-                                decoration: InputDecoration(
-                                  hintText: 'Buy Price',
-                                  hintStyle: heading6.copyWith(color: textGrey),
-                                  border: const OutlineInputBorder(
-                                    borderSide: BorderSide.none,
+                            Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15)),
+                              color: Color.fromARGB(255, 210, 189, 214),
+                              elevation: 20,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Colors.grey.shade700,
+                                          blurRadius: 5.0,
+                                          offset: Offset(5, 3))
+                                    ],
+                                    // border: Border.all(
+                                    //     color: Colors.blue.shade900),
+                                    shape: BoxShape.rectangle,
+                                    gradient: LinearGradient(
+                                      begin: Alignment.bottomRight,
+                                      end: Alignment.centerLeft,
+                                      colors: [
+                                        Colors.grey.shade100,
+                                        Colors.white,
+                                      ],
+                                    )),
+                                child: TextFormField(
+                                  controller: buyPrice,
+                                  keyboardType: TextInputType.number,
+                                  decoration: InputDecoration(
+                                    hintText: 'Buy Price',
+                                    hintStyle:
+                                        heading6.copyWith(color: textGrey),
+                                    border: const OutlineInputBorder(
+                                      borderSide: BorderSide.none,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -292,19 +379,41 @@ class _CapitalGainUiState extends State<CapitalGainUi> {
                                 ),
                               ),
                             ),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: textWhiteGrey,
-                                borderRadius: BorderRadius.circular(14.0),
-                              ),
-                              child: TextFormField(
-                                controller: sellPrice,
-                                keyboardType: TextInputType.number,
-                                decoration: InputDecoration(
-                                  hintText: 'Sell Price',
-                                  hintStyle: heading6.copyWith(color: textGrey),
-                                  border: const OutlineInputBorder(
-                                    borderSide: BorderSide.none,
+                            Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15)),
+                              color: Color.fromARGB(255, 210, 189, 214),
+                              elevation: 20,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Colors.grey.shade700,
+                                          blurRadius: 5.0,
+                                          offset: Offset(5, 3))
+                                    ],
+                                    // border: Border.all(
+                                    //     color: Colors.blue.shade900),
+                                    shape: BoxShape.rectangle,
+                                    gradient: LinearGradient(
+                                      begin: Alignment.bottomRight,
+                                      end: Alignment.centerLeft,
+                                      colors: [
+                                        Colors.grey.shade100,
+                                        Colors.white,
+                                      ],
+                                    )),
+                                child: TextFormField(
+                                  controller: sellPrice,
+                                  keyboardType: TextInputType.number,
+                                  decoration: InputDecoration(
+                                    hintText: 'Sell Price',
+                                    hintStyle:
+                                        heading6.copyWith(color: textGrey),
+                                    border: const OutlineInputBorder(
+                                      borderSide: BorderSide.none,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -324,7 +433,7 @@ class _CapitalGainUiState extends State<CapitalGainUi> {
                             borderRadius: BorderRadius.circular(14.0),
                           ),
                           child: GFButton(
-                              color: Colors.purple,
+                              color: Colors.blue.shade900,
                               onPressed: () async {
                                 FocusScope.of(context)
                                     .requestFocus(FocusNode());
@@ -388,7 +497,10 @@ class _CapitalGainUiState extends State<CapitalGainUi> {
                               stream: null,
                               builder: (context, snapshot) {
                                 return Card(
-                                  elevation: 5,
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(15)),
+                                  color: Color.fromARGB(255, 210, 189, 214),
+                                  elevation: 20,
                                   child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
@@ -495,8 +607,8 @@ class _CapitalGainUiState extends State<CapitalGainUi> {
   }
 
   Widget buildSpeedDial() => SpeedDial(
-        overlayColor: Colors.purple.shade100,
-        backgroundColor: Colors.deepPurple,
+        overlayColor: Colors.blue.shade900,
+        backgroundColor: Colors.blue.shade900,
         spacing: 12,
         // childrenButtonSize: 60,
         spaceBetweenChildren: 8,

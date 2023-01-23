@@ -41,7 +41,7 @@ class _DepricationUiState extends State<DepricationUi> {
         : Scaffold(
             floatingActionButton: buildSpeedDial(),
             resizeToAvoidBottomInset: true,
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.grey.shade300,
             body: SingleChildScrollView(
               child: SafeArea(
                 child: Padding(
@@ -117,19 +117,41 @@ class _DepricationUiState extends State<DepricationUi> {
                                 ),
                               ),
                             ),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: textWhiteGrey,
-                                borderRadius: BorderRadius.circular(14.0),
-                              ),
-                              child: TextFormField(
-                                keyboardType: TextInputType.number,
-                                controller: purchasePrice,
-                                decoration: InputDecoration(
-                                  hintText: 'Purchase Price',
-                                  hintStyle: heading6.copyWith(color: textGrey),
-                                  border: const OutlineInputBorder(
-                                    borderSide: BorderSide.none,
+                            Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15)),
+                              color: Color.fromARGB(255, 210, 189, 214),
+                              elevation: 20,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Colors.grey.shade700,
+                                          blurRadius: 5.0,
+                                          offset: Offset(5, 3))
+                                    ],
+                                    // border: Border.all(
+                                    //     color: Colors.blue.shade900),
+                                    shape: BoxShape.rectangle,
+                                    gradient: LinearGradient(
+                                      begin: Alignment.bottomRight,
+                                      end: Alignment.centerLeft,
+                                      colors: [
+                                        Colors.grey.shade100,
+                                        Colors.white,
+                                      ],
+                                    )),
+                                child: TextFormField(
+                                  keyboardType: TextInputType.number,
+                                  controller: purchasePrice,
+                                  decoration: InputDecoration(
+                                    hintText: 'Purchase Price',
+                                    hintStyle:
+                                        heading6.copyWith(color: textGrey),
+                                    border: const OutlineInputBorder(
+                                      borderSide: BorderSide.none,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -150,19 +172,41 @@ class _DepricationUiState extends State<DepricationUi> {
                                 ),
                               ),
                             ),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: textWhiteGrey,
-                                borderRadius: BorderRadius.circular(14.0),
-                              ),
-                              child: TextFormField(
-                                controller: scrapValue,
-                                keyboardType: TextInputType.number,
-                                decoration: InputDecoration(
-                                  hintText: 'Scrap Value',
-                                  hintStyle: heading6.copyWith(color: textGrey),
-                                  border: const OutlineInputBorder(
-                                    borderSide: BorderSide.none,
+                            Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15)),
+                              color: Color.fromARGB(255, 210, 189, 214),
+                              elevation: 20,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Colors.grey.shade700,
+                                          blurRadius: 5.0,
+                                          offset: Offset(5, 3))
+                                    ],
+                                    // border: Border.all(
+                                    //     color: Colors.blue.shade900),
+                                    shape: BoxShape.rectangle,
+                                    gradient: LinearGradient(
+                                      begin: Alignment.bottomRight,
+                                      end: Alignment.centerLeft,
+                                      colors: [
+                                        Colors.grey.shade100,
+                                        Colors.white,
+                                      ],
+                                    )),
+                                child: TextFormField(
+                                  controller: scrapValue,
+                                  keyboardType: TextInputType.number,
+                                  decoration: InputDecoration(
+                                    hintText: 'Scrap Value',
+                                    hintStyle:
+                                        heading6.copyWith(color: textGrey),
+                                    border: const OutlineInputBorder(
+                                      borderSide: BorderSide.none,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -183,19 +227,41 @@ class _DepricationUiState extends State<DepricationUi> {
                                 ),
                               ),
                             ),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: textWhiteGrey,
-                                borderRadius: BorderRadius.circular(14.0),
-                              ),
-                              child: TextFormField(
-                                controller: estimatedUsefulLife,
-                                keyboardType: TextInputType.number,
-                                decoration: InputDecoration(
-                                  hintText: 'Estimated Useful Life',
-                                  hintStyle: heading6.copyWith(color: textGrey),
-                                  border: const OutlineInputBorder(
-                                    borderSide: BorderSide.none,
+                            Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15)),
+                              color: Color.fromARGB(255, 210, 189, 214),
+                              elevation: 20,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Colors.grey.shade700,
+                                          blurRadius: 5.0,
+                                          offset: Offset(5, 3))
+                                    ],
+                                    // border: Border.all(
+                                    //     color: Colors.blue.shade900),
+                                    shape: BoxShape.rectangle,
+                                    gradient: LinearGradient(
+                                      begin: Alignment.bottomRight,
+                                      end: Alignment.centerLeft,
+                                      colors: [
+                                        Colors.grey.shade100,
+                                        Colors.white,
+                                      ],
+                                    )),
+                                child: TextFormField(
+                                  controller: estimatedUsefulLife,
+                                  keyboardType: TextInputType.number,
+                                  decoration: InputDecoration(
+                                    hintText: 'Estimated Useful Life',
+                                    hintStyle:
+                                        heading6.copyWith(color: textGrey),
+                                    border: const OutlineInputBorder(
+                                      borderSide: BorderSide.none,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -274,7 +340,10 @@ class _DepricationUiState extends State<DepricationUi> {
                               stream: null,
                               builder: (context, snapshot) {
                                 return Card(
-                                  elevation: 5,
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(15)),
+                                  color: Color.fromARGB(255, 210, 189, 214),
+                                  elevation: 20,
                                   child: Padding(
                                     padding: const EdgeInsets.only(
                                         left: 15, top: 10, bottom: 10),

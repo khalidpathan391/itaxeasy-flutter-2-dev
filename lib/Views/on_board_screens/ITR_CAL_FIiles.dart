@@ -243,6 +243,7 @@ class _CaluiState extends State<Calui> with TickerProviderStateMixin {
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
         children: [
+<<<<<<< HEAD
           // GestureDetector(
           //   onTapDown: _tapDown4,
           //   onTapUp: _tapUp4,
@@ -474,6 +475,239 @@ class _CaluiState extends State<Calui> with TickerProviderStateMixin {
           //     ),
           //   ),
           // ),
+=======
+          GestureDetector(
+            onTapDown: _tapDown4,
+            onTapUp: _tapUp4,
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => HraUI()));
+            },
+            child: Transform.scale(
+              scale: _scale4,
+              child: Column(
+                children: [
+                  Center(
+                      child: Card(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15)),
+                    color: Color.fromARGB(255, 210, 189, 214),
+                    elevation: 20,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.grey.shade700,
+                                blurRadius: 5.0,
+                                offset: Offset(5, 3))
+                          ],
+                          // border: Border.all(
+                          //     color: Colors.blue.shade900),
+                          shape: BoxShape.rectangle,
+                          gradient: LinearGradient(
+                            begin: Alignment.bottomRight,
+                            end: Alignment.centerLeft,
+                            colors: [
+                              Colors.grey.shade100,
+                              Colors.white,
+                            ],
+                          )),
+                      height: 100,
+                      width: 150,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 55,
+                            width: 55,
+                            decoration: BoxDecoration(
+                              // color: Colors.white70,
+                              // border: Border.all(
+                              //     //color: Colors.grey,
+                              //     // width: 2,
+                              //     ),
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                            child: const Icon(
+                              Icons.home_filled,
+                              color: KColors.icon,
+                              size: 30,
+                            ),
+                          ),
+                          Text(
+                            "House Rent \nAllowance",
+                            style: GoogleFonts.dmSans(
+                              fontSize: 13,
+                              fontWeight: FontWeight.bold,
+                              color: const Color(0xFF000000),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  )),
+                ],
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTapDown: _tapDown,
+            onTapUp: _tapUp,
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => DepricationUi()));
+            },
+            child: Transform.scale(
+              scale: _scale,
+              child: Column(
+                children: [
+                  Center(
+                      child: Card(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15)),
+                    color: Color.fromARGB(255, 210, 189, 214),
+                    elevation: 20,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.grey.shade700,
+                                blurRadius: 5.0,
+                                offset: Offset(5, 3))
+                          ],
+                          // border: Border.all(
+                          //     color: Colors.blue.shade900),
+                          shape: BoxShape.rectangle,
+                          gradient: LinearGradient(
+                            begin: Alignment.bottomRight,
+                            end: Alignment.centerLeft,
+                            colors: [
+                              Colors.grey.shade100,
+                              Colors.white,
+                            ],
+                          )),
+                      height: 100,
+                      width: 150,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 55,
+                            width: 55,
+                            decoration: BoxDecoration(
+                              // color: Colors.white70,
+                              // border: Border.all(
+                              //     //color: Colors.grey,
+                              //     // width: 2,
+                              //     ),
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                            child: const Icon(
+                              Icons.money,
+                              color: KColors.icon,
+                              size: 30,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 2,
+                          ),
+                          Text(
+                            "Depreciation \nCalculator",
+                            style: GoogleFonts.dmSans(
+                              fontSize: 13,
+                              fontWeight: FontWeight.bold,
+                              color: const Color(0xFF000000),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  )),
+                ],
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTapDown: _tapDown1,
+            onTapUp: _tapUp1,
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => CapitalGainUi()));
+            },
+            child: Transform.scale(
+              scale: _scale1,
+              child: Column(
+                children: [
+                  Center(
+                      child: Card(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15)),
+                    color: Color.fromARGB(255, 210, 189, 214),
+                    elevation: 20,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.grey.shade700,
+                                blurRadius: 5.0,
+                                offset: Offset(5, 3))
+                          ],
+                          // border: Border.all(
+                          //     color: Colors.blue.shade900),
+                          shape: BoxShape.rectangle,
+                          gradient: LinearGradient(
+                            begin: Alignment.bottomRight,
+                            end: Alignment.centerLeft,
+                            colors: [
+                              Colors.grey.shade100,
+                              Colors.white,
+                            ],
+                          )),
+                      height: 100,
+                      width: 150,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 55,
+                            width: 55,
+                            decoration: BoxDecoration(
+                              // color: Colors.white70,
+                              // border: Border.all(
+                              //     //color: Colors.grey,
+                              //     // width: 2,
+                              //     ),
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                            child: const Icon(
+                              Icons.payment_outlined,
+                              color: KColors.icon,
+                              size: 30,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 2,
+                          ),
+                          Text(
+                            "Capital Gain",
+                            style: GoogleFonts.dmSans(
+                              fontSize: 13,
+                              fontWeight: FontWeight.bold,
+                              color: const Color(0xFF000000),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  )),
+                ],
+              ),
+            ),
+          ),
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
           GestureDetector(
             onTapDown: _tapDown2,
             onTapUp: _tapUp2,
@@ -708,6 +942,7 @@ class _CaluiState extends State<Calui> with TickerProviderStateMixin {
               ),
             ),
           ),
+<<<<<<< HEAD
           // GestureDetector(
           //   onTapDown: _tapDown7,
           //   onTapUp: _tapUp7,
@@ -864,6 +1099,164 @@ class _CaluiState extends State<Calui> with TickerProviderStateMixin {
           //     ),
           //   ),
           // ),
+=======
+          GestureDetector(
+            onTapDown: _tapDown7,
+            onTapUp: _tapUp7,
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => NewRegimeUi()));
+            },
+            child: Transform.scale(
+              scale: _scale7,
+              child: Column(
+                children: [
+                  Center(
+                      child: Card(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15)),
+                    color: Color.fromARGB(255, 210, 189, 214),
+                    elevation: 20,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.grey.shade700,
+                                blurRadius: 5.0,
+                                offset: Offset(5, 3))
+                          ],
+                          // border: Border.all(
+                          //     color: Colors.blue.shade900),
+                          shape: BoxShape.rectangle,
+                          gradient: LinearGradient(
+                            begin: Alignment.bottomRight,
+                            end: Alignment.centerLeft,
+                            colors: [
+                              Colors.grey.shade100,
+                              Colors.white,
+                            ],
+                          )),
+                      height: 100,
+                      width: 150,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 55,
+                            width: 55,
+                            decoration: BoxDecoration(
+                              // color: Colors.white70,
+                              // border: Border.all(
+                              //     //color: Colors.grey,
+                              //     // width: 2,
+                              //     ),
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                            child: const Icon(
+                              Icons.volunteer_activism_sharp,
+                              color: KColors.icon,
+                              size: 30,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 2,
+                          ),
+                          Text(
+                            "Income Tax/\nNew Regime",
+                            style: GoogleFonts.dmSans(
+                              fontSize: 13,
+                              fontWeight: FontWeight.bold,
+                              color: const Color(0xFF000000),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  )),
+                ],
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTapDown: _tapDown8,
+            onTapUp: _tapUp8,
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => OldRegimeUi()));
+            },
+            child: Transform.scale(
+              scale: _scale8,
+              child: Column(
+                children: [
+                  Center(
+                      child: Card(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15)),
+                    color: Color.fromARGB(255, 210, 189, 214),
+                    elevation: 20,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.grey.shade700,
+                                blurRadius: 5.0,
+                                offset: Offset(5, 3))
+                          ],
+                          // border: Border.all(
+                          //     color: Colors.blue.shade900),
+                          shape: BoxShape.rectangle,
+                          gradient: LinearGradient(
+                            begin: Alignment.bottomRight,
+                            end: Alignment.centerLeft,
+                            colors: [
+                              Colors.grey.shade100,
+                              Colors.white,
+                            ],
+                          )),
+                      height: 100,
+                      width: 150,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 55,
+                            width: 55,
+                            decoration: BoxDecoration(
+                              // color: Colors.white70,
+                              // border: Border.all(
+                              //     //color: Colors.grey,
+                              //     // width: 2,
+                              //     ),
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                            child: const Icon(
+                              Icons.volunteer_activism_sharp,
+                              color: KColors.icon,
+                              size: 30,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 2,
+                          ),
+                          Text(
+                            "Income Tax/\nOld Regime",
+                            style: GoogleFonts.dmSans(
+                              fontSize: 13,
+                              fontWeight: FontWeight.bold,
+                              color: const Color(0xFF000000),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  )),
+                ],
+              ),
+            ),
+          ),
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
           GestureDetector(
             onTapDown: _tapDown3,
             onTapUp: _tapUp3,

@@ -1,11 +1,17 @@
 import 'package:animate_do/animate_do.dart';
 import "package:flutter/material.dart";
+<<<<<<< HEAD
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:getwidget/Components/button/gf_button.dart';
 import 'package:getwidget/shape/gf_button_shape.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gst_app/Views/Theme/colors.dart';
+=======
+import 'package:getwidget/Components/button/gf_button.dart';
+import 'package:getwidget/shape/gf_button_shape.dart';
+import 'package:google_fonts/google_fonts.dart';
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
 
 import '../../Calculator/ifsc_calcii/Theme.dart';
 import '../gstn.dart';
@@ -23,7 +29,10 @@ class _GSTTable3BState extends State<GSTTable3B> {
     double width = MediaQuery.of(context).size.width - 40;
     return SafeArea(
       child: Scaffold(
+<<<<<<< HEAD
         floatingActionButton: buildSpeedDial(),
+=======
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
         resizeToAvoidBottomInset: false,
         body: SingleChildScrollView(
           child: Padding(
@@ -606,6 +615,7 @@ class _GSTTable3BState extends State<GSTTable3B> {
       ),
     );
   }
+<<<<<<< HEAD
 
   Widget buildSpeedDial() => SpeedDial(
         overlayColor: Colors.blue.shade100,
@@ -641,4 +651,6 @@ class _GSTTable3BState extends State<GSTTable3B> {
           ),
         ],
       );
+=======
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
 }

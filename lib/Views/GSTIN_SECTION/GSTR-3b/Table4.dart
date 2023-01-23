@@ -1,13 +1,19 @@
 import 'package:animate_do/animate_do.dart';
 import "package:flutter/material.dart";
+<<<<<<< HEAD
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+=======
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
 import 'package:getwidget/Components/button/gf_button.dart';
 import 'package:getwidget/shape/gf_button_shape.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../Calculator/ifsc_calcii/Theme.dart';
+<<<<<<< HEAD
 import '../../Theme/colors.dart';
+=======
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
 import '../gstn.dart';
 
 class Four_Table extends StatefulWidget {
@@ -23,7 +29,10 @@ class _Four_TableState extends State<Four_Table> {
     double width = MediaQuery.of(context).size.width - 40;
     return SafeArea(
       child: Scaffold(
+<<<<<<< HEAD
         floatingActionButton: buildSpeedDial(),
+=======
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
         resizeToAvoidBottomInset: false,
         body: SingleChildScrollView(
           child: Padding(
@@ -1110,6 +1119,7 @@ class _Four_TableState extends State<Four_Table> {
       ),
     );
   }
+<<<<<<< HEAD
 
   Widget buildSpeedDial() => SpeedDial(
         overlayColor: Colors.blue.shade100,
@@ -1145,4 +1155,6 @@ class _Four_TableState extends State<Four_Table> {
           ),
         ],
       );
+=======
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
 }

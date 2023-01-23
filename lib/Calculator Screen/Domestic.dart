@@ -44,7 +44,7 @@ class _DomesticState extends State<Domestic> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.blue[100],
+        backgroundColor: Colors.grey[300],
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.fromLTRB(24.0, 20.0, 24.0, 0),
@@ -53,12 +53,12 @@ class _DomesticState extends State<Domestic> {
               children: <Widget>[
                 Row(
                   children: [
-                    // IconButton(
-                    //   onPressed: () {
-                    //     Navigator.of(context).pop();
-                    //   },
-                    //   icon: const Icon(Icons.arrow_back),
-                    // ),
+                    IconButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                      icon: const Icon(Icons.arrow_back),
+                    ),
                     const SizedBox(
                       width: 20,
                     ),
@@ -130,9 +130,24 @@ class _DomesticState extends State<Domestic> {
                 Container(
                   height: 65,
                   decoration: BoxDecoration(
-                    color: textWhiteGrey,
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
+                      borderRadius: BorderRadius.circular(15),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.shade700,
+                            blurRadius: 5.0,
+                            offset: Offset(5, 3))
+                      ],
+                      // border: Border.all(
+                      //     color: Colors.blue.shade900),
+                      shape: BoxShape.rectangle,
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomRight,
+                        end: Alignment.centerLeft,
+                        colors: [
+                          Colors.grey.shade100,
+                          Colors.white,
+                        ],
+                      )),
                   child: DropdownButton(
                       onChanged: (value) {
                         setState(() {
@@ -279,18 +294,39 @@ class _DomesticState extends State<Domestic> {
                     ),
                   ),
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: textWhiteGrey,
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
-                  child: TextFormField(
-                    controller: incometax,
-                    decoration: InputDecoration(
-                      //hintText: 'Name',
-                      hintStyle: heading6.copyWith(color: textGrey),
-                      border: const OutlineInputBorder(
-                        borderSide: BorderSide.none,
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15)),
+                  color: Color.fromARGB(255, 210, 189, 214),
+                  elevation: 20,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey.shade700,
+                              blurRadius: 5.0,
+                              offset: Offset(5, 3))
+                        ],
+                        // border: Border.all(
+                        //     color: Colors.blue.shade900),
+                        shape: BoxShape.rectangle,
+                        gradient: LinearGradient(
+                          begin: Alignment.bottomRight,
+                          end: Alignment.centerLeft,
+                          colors: [
+                            Colors.grey.shade100,
+                            Colors.white,
+                          ],
+                        )),
+                    child: TextFormField(
+                      controller: incometax,
+                      decoration: InputDecoration(
+                        //hintText: 'Name',
+                        hintStyle: heading6.copyWith(color: textGrey),
+                        border: const OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                        ),
                       ),
                     ),
                   ),
@@ -311,18 +347,39 @@ class _DomesticState extends State<Domestic> {
                     ),
                   ),
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: textWhiteGrey,
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
-                  child: TextFormField(
-                    controller: incometax,
-                    decoration: InputDecoration(
-                      //hintText: 'Name',
-                      hintStyle: heading6.copyWith(color: textGrey),
-                      border: const OutlineInputBorder(
-                        borderSide: BorderSide.none,
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15)),
+                  color: Color.fromARGB(255, 210, 189, 214),
+                  elevation: 20,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey.shade700,
+                              blurRadius: 5.0,
+                              offset: Offset(5, 3))
+                        ],
+                        // border: Border.all(
+                        //     color: Colors.blue.shade900),
+                        shape: BoxShape.rectangle,
+                        gradient: LinearGradient(
+                          begin: Alignment.bottomRight,
+                          end: Alignment.centerLeft,
+                          colors: [
+                            Colors.grey.shade100,
+                            Colors.white,
+                          ],
+                        )),
+                    child: TextFormField(
+                      controller: incometax,
+                      decoration: InputDecoration(
+                        //hintText: 'Name',
+                        hintStyle: heading6.copyWith(color: textGrey),
+                        border: const OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                        ),
                       ),
                     ),
                   ),
@@ -342,18 +399,39 @@ class _DomesticState extends State<Domestic> {
                     ),
                   ),
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: textWhiteGrey,
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
-                  child: TextFormField(
-                    controller: surcharg,
-                    decoration: InputDecoration(
-                      // hintText: 'Address',
-                      hintStyle: heading6.copyWith(color: textGrey),
-                      border: const OutlineInputBorder(
-                        borderSide: BorderSide.none,
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15)),
+                  color: Color.fromARGB(255, 210, 189, 214),
+                  elevation: 20,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey.shade700,
+                              blurRadius: 5.0,
+                              offset: Offset(5, 3))
+                        ],
+                        // border: Border.all(
+                        //     color: Colors.blue.shade900),
+                        shape: BoxShape.rectangle,
+                        gradient: LinearGradient(
+                          begin: Alignment.bottomRight,
+                          end: Alignment.centerLeft,
+                          colors: [
+                            Colors.grey.shade100,
+                            Colors.white,
+                          ],
+                        )),
+                    child: TextFormField(
+                      controller: surcharg,
+                      decoration: InputDecoration(
+                        // hintText: 'Address',
+                        hintStyle: heading6.copyWith(color: textGrey),
+                        border: const OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                        ),
                       ),
                     ),
                   ),
@@ -373,110 +451,43 @@ class _DomesticState extends State<Domestic> {
                     ),
                   ),
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: textWhiteGrey,
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
-                  child: TextFormField(
-                    controller: edu,
-                    decoration: InputDecoration(
-                      // hintText: 'GSTIN No of the party',
-                      hintStyle: heading6.copyWith(color: textGrey),
-                      border: const OutlineInputBorder(
-                        borderSide: BorderSide.none,
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15)),
+                  color: Color.fromARGB(255, 210, 189, 214),
+                  elevation: 20,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey.shade700,
+                              blurRadius: 5.0,
+                              offset: Offset(5, 3))
+                        ],
+                        // border: Border.all(
+                        //     color: Colors.blue.shade900),
+                        shape: BoxShape.rectangle,
+                        gradient: LinearGradient(
+                          begin: Alignment.bottomRight,
+                          end: Alignment.centerLeft,
+                          colors: [
+                            Colors.grey.shade100,
+                            Colors.white,
+                          ],
+                        )),
+                    child: TextFormField(
+                      controller: edu,
+                      decoration: InputDecoration(
+                        // hintText: 'GSTIN No of the party',
+                        hintStyle: heading6.copyWith(color: textGrey),
+                        border: const OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                        ),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: 10,
-                ),
-                // Wrap(
-                //   children: [
-                //     GFRadio(
-                //       size: 20,
-                //       value: 0,
-                //       groupValue: groupValue,
-                //       onChanged: (value) {
-                //         setState(() {
-                //           groupValue = value;
-                //         });
-                //       },
-                //       inactiveIcon: null,
-                //       activeBorderColor: GFColors.SUCCESS,
-                //       radioColor: GFColors.SUCCESS,
-                //     ),
-                //     SizedBox(
-                //       width: 5,
-                //     ),
-                //     Text(
-                //       "Intra",
-                //       style: TextStyle(
-                //         fontFamily: "Poppins",
-                //         fontWeight: FontWeight.w500,
-                //         letterSpacing: 1.5,
-                //         fontSize: 12.5,
-                //       ),
-                //     ),
-                //     SizedBox(
-                //       width: 10,
-                //     ),
-                //     GFRadio(
-                //       size: 20,
-                //       value: 1,
-                //       groupValue: groupValue,
-                //       onChanged: (value) {
-                //         setState(() {
-                //           groupValue = value;
-                //         });
-                //       },
-                //       inactiveIcon: null,
-                //       activeBorderColor: GFColors.SUCCESS,
-                //       radioColor: GFColors.SUCCESS,
-                //     ),
-                //     SizedBox(
-                //       width: 5,
-                //     ),
-                //     Text(
-                //       "Inter",
-                //       style: TextStyle(
-                //         fontFamily: "Poppins",
-                //         fontWeight: FontWeight.w500,
-                //         letterSpacing: 1.5,
-                //         fontSize: 12.5,
-                //       ),
-                //     ),
-                //     SizedBox(
-                //       width: 10,
-                //     ),
-                //     GFRadio(
-                //       size: 20,
-                //       value: 2,
-                //       groupValue: groupValue,
-                //       onChanged: (value) {
-                //         setState(() {
-                //           groupValue = value;
-                //         });
-                //       },
-                //       inactiveIcon: null,
-                //       activeBorderColor: GFColors.SUCCESS,
-                //       radioColor: GFColors.SUCCESS,
-                //     ),
-                //     SizedBox(
-                //       width: 5,
-                //     ),
-                //     Text(
-                //       "UT",
-                //       style: TextStyle(
-                //         fontFamily: "Poppins",
-                //         fontWeight: FontWeight.w500,
-                //         letterSpacing: 1.5,
-                //         fontSize: 12.5,
-                //       ),
-                //     ),
-                //   ],
-                // ),
                 SizedBox(
                   height: 10,
                 ),
@@ -496,18 +507,39 @@ class _DomesticState extends State<Domestic> {
                     ),
                   ),
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: textWhiteGrey,
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
-                  child: TextFormField(
-                    controller: totaltax,
-                    decoration: InputDecoration(
-                      // hintText: 'Quantity',
-                      hintStyle: heading6.copyWith(color: textGrey),
-                      border: const OutlineInputBorder(
-                        borderSide: BorderSide.none,
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15)),
+                  color: Color.fromARGB(255, 210, 189, 214),
+                  elevation: 20,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey.shade700,
+                              blurRadius: 5.0,
+                              offset: Offset(5, 3))
+                        ],
+                        // border: Border.all(
+                        //     color: Colors.blue.shade900),
+                        shape: BoxShape.rectangle,
+                        gradient: LinearGradient(
+                          begin: Alignment.bottomRight,
+                          end: Alignment.centerLeft,
+                          colors: [
+                            Colors.grey.shade100,
+                            Colors.white,
+                          ],
+                        )),
+                    child: TextFormField(
+                      controller: totaltax,
+                      decoration: InputDecoration(
+                        // hintText: 'Quantity',
+                        hintStyle: heading6.copyWith(color: textGrey),
+                        border: const OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                        ),
                       ),
                     ),
                   ),
@@ -528,18 +560,39 @@ class _DomesticState extends State<Domestic> {
                     ),
                   ),
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: textWhiteGrey,
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
-                  child: TextFormField(
-                    controller: relief,
-                    decoration: InputDecoration(
-                      // hintText: 'Price',
-                      hintStyle: heading6.copyWith(color: textGrey),
-                      border: const OutlineInputBorder(
-                        borderSide: BorderSide.none,
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15)),
+                  color: Color.fromARGB(255, 210, 189, 214),
+                  elevation: 20,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey.shade700,
+                              blurRadius: 5.0,
+                              offset: Offset(5, 3))
+                        ],
+                        // border: Border.all(
+                        //     color: Colors.blue.shade900),
+                        shape: BoxShape.rectangle,
+                        gradient: LinearGradient(
+                          begin: Alignment.bottomRight,
+                          end: Alignment.centerLeft,
+                          colors: [
+                            Colors.grey.shade100,
+                            Colors.white,
+                          ],
+                        )),
+                    child: TextFormField(
+                      controller: relief,
+                      decoration: InputDecoration(
+                        // hintText: 'Price',
+                        hintStyle: heading6.copyWith(color: textGrey),
+                        border: const OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                        ),
                       ),
                     ),
                   ),
@@ -559,18 +612,39 @@ class _DomesticState extends State<Domestic> {
                     ),
                   ),
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: textWhiteGrey,
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
-                  child: TextFormField(
-                    controller: tds,
-                    decoration: InputDecoration(
-                      // hintText: 'Quantity',
-                      hintStyle: heading6.copyWith(color: textGrey),
-                      border: const OutlineInputBorder(
-                        borderSide: BorderSide.none,
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15)),
+                  color: Color.fromARGB(255, 210, 189, 214),
+                  elevation: 20,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey.shade700,
+                              blurRadius: 5.0,
+                              offset: Offset(5, 3))
+                        ],
+                        // border: Border.all(
+                        //     color: Colors.blue.shade900),
+                        shape: BoxShape.rectangle,
+                        gradient: LinearGradient(
+                          begin: Alignment.bottomRight,
+                          end: Alignment.centerLeft,
+                          colors: [
+                            Colors.grey.shade100,
+                            Colors.white,
+                          ],
+                        )),
+                    child: TextFormField(
+                      controller: tds,
+                      decoration: InputDecoration(
+                        // hintText: 'Quantity',
+                        hintStyle: heading6.copyWith(color: textGrey),
+                        border: const OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                        ),
                       ),
                     ),
                   ),
@@ -590,110 +664,44 @@ class _DomesticState extends State<Domestic> {
                     ),
                   ),
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: textWhiteGrey,
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
-                  child: TextFormField(
-                    controller: assessed,
-                    decoration: InputDecoration(
-                      // hintText: 'Quantity',
-                      hintStyle: heading6.copyWith(color: textGrey),
-                      border: const OutlineInputBorder(
-                        borderSide: BorderSide.none,
+                Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15)),
+                  color: Color.fromARGB(255, 210, 189, 214),
+                  elevation: 20,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey.shade700,
+                              blurRadius: 5.0,
+                              offset: Offset(5, 3))
+                        ],
+                        // border: Border.all(
+                        //     color: Colors.blue.shade900),
+                        shape: BoxShape.rectangle,
+                        gradient: LinearGradient(
+                          begin: Alignment.bottomRight,
+                          end: Alignment.centerLeft,
+                          colors: [
+                            Colors.grey.shade100,
+                            Colors.white,
+                          ],
+                        )),
+                    child: TextFormField(
+                      controller: assessed,
+                      decoration: InputDecoration(
+                        // hintText: 'Quantity',
+                        hintStyle: heading6.copyWith(color: textGrey),
+                        border: const OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                        ),
                       ),
                     ),
                   ),
                 ),
                 const SizedBox(height: 48),
-                // Container(
-                //   width: double.infinity,
-                //   decoration: BoxDecoration(
-                //     borderRadius: BorderRadius.circular(14.0),
-                //   ),
-                //   child: GFButton(
-                //     color: Colors.blue.shade900,
-                //     text: 'Invoice PDF',
-                //     onPressed: () async {
-                //       final date = DateTime.now();
-                //       final dueDate = date.add(const Duration(days: 7));
-
-                //       final invoice = Invoice(
-                //         supplier: Supplier(
-                //           name: nameCont.text,
-                //           address: 'Sarah Street 9, Beijing, China',
-                //           paymentInfo: 'https://paypal.me/sarahfieldzz',
-                //         ),
-                //         customer: Customer(
-                //           name: NameCont.text,
-                //           address: 'Apple Street, Cupertino, CA 95014',
-                //         ),
-                //         info: InvoiceInfo(
-                //           date: date,
-                //           dueDate: dueDate,
-                //           description: 'My description...',
-                //           number: '${DateTime.now().year}-9999',
-                //         ),
-                //         items: [
-                //           InvoiceItem(
-                //             description: descripCount.text,
-                //             date: DateTime.now(),
-                //             quantity: int.parse(quantity.text),
-                //             vat: double.parse(vat.text),
-                //             unitPrice: double.parse(unit.text),
-                //           ),
-                //           // InvoiceItem(
-                //           //   description: 'Water',
-                //           //   date: DateTime.now(),
-                //           //   quantity: 8,
-                //           //   vat: 0.19,
-                //           //   unitPrice: 0.99,
-                //           // ),
-                //           // InvoiceItem(
-                //           //   description: 'Orange',
-                //           //   date: DateTime.now(),
-                //           //   quantity: 3,
-                //           //   vat: 0.19,
-                //           //   unitPrice: 2.99,
-                //           // ),
-                //           // InvoiceItem(
-                //           //   description: 'Apple',
-                //           //   date: DateTime.now(),
-                //           //   quantity: 8,
-                //           //   vat: 0.19,
-                //           //   unitPrice: 3.99,
-                //           // ),
-                //           // InvoiceItem(
-                //           //   description: 'Mango',
-                //           //   date: DateTime.now(),
-                //           //   quantity: 1,
-                //           //   vat: 0.19,
-                //           //   unitPrice: 1.59,
-                //           // ),
-                //           // InvoiceItem(
-                //           //   description: 'Blue Berries',
-                //           //   date: DateTime.now(),
-                //           //   quantity: 5,
-                //           //   vat: 0.19,
-                //           //   unitPrice: 0.99,
-                //           // ),
-                //           // InvoiceItem(
-                //           //   description: 'Lemon',
-                //           //   date: DateTime.now(),
-                //           //   quantity: 4,
-                //           //   vat: 0.19,
-                //           //   unitPrice: 1.29,
-                //           // ),
-                //         ],
-                //       );
-
-                //       final pdfFile = await PdfInvoiceApi.generate(invoice);
-
-                //       PdfApi.openFile(pdfFile);
-                //     },
-                //   ),
-                // ),
 
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   GestureDetector(

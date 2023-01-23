@@ -1,8 +1,10 @@
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:pdf/pdf.dart';
@@ -57,7 +59,7 @@ class _OCRSystemState extends State<OCRSystem> {
         FirebaseVisionImage.fromFile(_image);
     final TextRecognizer recognizer = FirebaseVision.instance.textRecognizer();
     VisionText visionText = await recognizer.processImage(firebaseVisionImage);
-
+    log("fnd:" + visionText.text.toString());
     result = "";
     setState(() {
       for (TextBlock block in visionText.blocks) {
@@ -77,13 +79,27 @@ class _OCRSystemState extends State<OCRSystem> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.grey.shade300,
+        appBar: AppBar(
+          backgroundColor: Colors.blue.shade900,
+          elevation: 0,
+          toolbarHeight: 250,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(bottomRight: Radius.circular(200)),
+          ),
+          title: Text(
+            'OCR',
+            style:
+                GoogleFonts.dmSans(fontSize: 40, fontWeight: FontWeight.bold),
+          ),
+        ),
         floatingActionButton: buildSpeedDial(),
         body: SingleChildScrollView(
           child: Column(
             children: [
               Padding(
                 padding: const EdgeInsets.only(
-                    left: 20, right: 20, top: 20, bottom: 20),
+                    left: 20, right: 20, top: 10, bottom: 10),
                 child: SizedBox(
                   // height: 280,
                   width: double.infinity,
@@ -91,40 +107,50 @@ class _OCRSystemState extends State<OCRSystem> {
                     child: Center(
                       child: result != ""
                           ? Card(
+                              elevation: 5,
+                              color: Colors.grey.shade300,
                               child: Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 10, right: 10, top: 10),
-                              child: SizedBox(
-                                  width: double.infinity,
-                                  child: Text(
-                                    result,
-                                    textAlign: TextAlign.justify,
-                                  )),
-                            ))
-                          : const Card(
+                                padding: const EdgeInsets.only(
+                                    left: 10, right: 10, top: 10),
+                                child: SizedBox(
+                                    width: double.infinity,
+                                    child: Text(
+                                      result,
+                                      textAlign: TextAlign.justify,
+                                    )),
+                              ))
+                          : Card(
+                              elevation: 5,
+                              color: Colors.grey.shade300,
                               child: Padding(
-                              padding:
-                                  EdgeInsets.only(left: 10, right: 10, top: 10),
-                              child: SizedBox(
-                                  height: 100,
-                                  width: double.infinity,
-                                  child: Center(
-                                      child:
-                                          Text("Your Text Will appear here"))),
-                            )),
+                                padding: EdgeInsets.only(
+                                    left: 10, right: 10, top: 10),
+                                child: SizedBox(
+                                    height: 100,
+                                    width: double.infinity,
+                                    child: Center(
+                                        child: Text(
+                                      "Your Text Will appear here",
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ))),
+                              )),
                     ),
                   ),
                 ),
               ),
               InkWell(
+                //
                 onTap: () {
                   getImagefromGallery();
                 },
                 child: Container(
                   child: _image != null
-                      ? Image.file(_image, width: 200, height: 200)
-                      : const Icon(
+                      ? Image.file(_image, width: 300, height: 300)
+                      : Icon(
                           Icons.camera,
+                          color: Colors.blue.shade900,
                           size: 50,
                         ),
                 ),

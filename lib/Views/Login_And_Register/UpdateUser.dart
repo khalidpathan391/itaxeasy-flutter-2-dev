@@ -42,12 +42,15 @@ class _UpdateUserState extends State<UpdateUser> {
   TextEditingController phoneCount = TextEditingController();
   TextEditingController pinCode = TextEditingController();
   Data user;
+
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     getprofileLocal();
   }
+
+  getStateFromPinCode() {}
 
   getprofileLocal() async {
     String data = await storage.read(key: "user");
@@ -59,6 +62,9 @@ class _UpdateUserState extends State<UpdateUser> {
       emailCount.text = user.email;
       phoneCount.text = user.phone;
       pinCode.text = user.pincode;
+      ApiServices().getStateFromPin(user.pincode).then((value) {
+        if (value.resposeCode == 200) {}
+      });
     });
   }
 

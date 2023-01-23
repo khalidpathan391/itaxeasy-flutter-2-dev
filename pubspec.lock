@@ -7,7 +7,11 @@ packages:
       name: anim_search_bar
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "2.0.3"
+=======
+    version: "1.0.1"
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
   animate_do:
     dependency: "direct main"
     description:
@@ -15,6 +19,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0"
+  animated_text_kit:
+    dependency: "direct main"
+    description:
+      name: animated_text_kit
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.2.1"
   archive:
     dependency: transitive
     description:
@@ -155,6 +166,16 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.0+3"
+<<<<<<< HEAD
+=======
+  dropdown_formfield:
+    dependency: "direct main"
+    description:
+      name: dropdown_formfield
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.4"
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
   eventify:
     dependency: transitive
     description:
@@ -335,6 +356,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "5.1.0"
+  flutter_staggered_animations:
+    dependency: "direct main"
+    description:
+      name: flutter_staggered_animations
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
   flutter_staggered_grid_view:
     dependency: "direct main"
     description:
@@ -355,7 +383,11 @@ packages:
       name: flutter_switch
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "0.2.2"
+=======
+    version: "0.3.2"
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -422,6 +454,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.0.1"
+  google_ml_kit:
+    dependency: "direct main"
+    description:
+      name: google_ml_kit
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.7.3"
   html:
     dependency: transitive
     description:
@@ -590,6 +629,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.0"
+  new_gradient_app_bar:
+    dependency: "direct main"
+    description:
+      name: new_gradient_app_bar
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.5"
   numeric_keyboard:
     dependency: "direct main"
     description:

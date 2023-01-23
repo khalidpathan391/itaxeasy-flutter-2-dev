@@ -43,7 +43,7 @@ class _CalculatorState extends State<Calculator> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.blue[100],
+        backgroundColor: Colors.grey[300],
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.fromLTRB(24.0, 20.0, 24.0, 0),
@@ -52,12 +52,12 @@ class _CalculatorState extends State<Calculator> {
               children: <Widget>[
                 Row(
                   children: [
-                    // IconButton(
-                    //   onPressed: () {
-                    //     Navigator.of(context).pop();
-                    //   },
-                    //   icon: const Icon(Icons.arrow_back),
-                    // ),
+                    IconButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                      icon: const Icon(Icons.arrow_back),
+                    ),
                     const SizedBox(
                       width: 20,
                     ),
@@ -129,9 +129,24 @@ class _CalculatorState extends State<Calculator> {
                 Container(
                   height: 65,
                   decoration: BoxDecoration(
-                    color: textWhiteGrey,
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
+                      borderRadius: BorderRadius.circular(15),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.shade700,
+                            blurRadius: 5.0,
+                            offset: Offset(5, 3))
+                      ],
+                      // border: Border.all(
+                      //     color: Colors.blue.shade900),
+                      shape: BoxShape.rectangle,
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomRight,
+                        end: Alignment.centerLeft,
+                        colors: [
+                          Colors.grey.shade100,
+                          Colors.white,
+                        ],
+                      )),
                   child: DropdownButton(
                       onChanged: (value) {
                         setState(() {
@@ -176,9 +191,24 @@ class _CalculatorState extends State<Calculator> {
                 Container(
                   height: 65,
                   decoration: BoxDecoration(
-                    color: textWhiteGrey,
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
+                      borderRadius: BorderRadius.circular(15),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.shade700,
+                            blurRadius: 5.0,
+                            offset: Offset(5, 3))
+                      ],
+                      // border: Border.all(
+                      //     color: Colors.blue.shade900),
+                      shape: BoxShape.rectangle,
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomRight,
+                        end: Alignment.centerLeft,
+                        colors: [
+                          Colors.grey.shade100,
+                          Colors.white,
+                        ],
+                      )),
                   child: DropdownButton(
                       onChanged: (value) {
                         setState(() {
@@ -222,9 +252,24 @@ class _CalculatorState extends State<Calculator> {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    color: textWhiteGrey,
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
+                      borderRadius: BorderRadius.circular(15),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.shade700,
+                            blurRadius: 5.0,
+                            offset: Offset(5, 3))
+                      ],
+                      // border: Border.all(
+                      //     color: Colors.blue.shade900),
+                      shape: BoxShape.rectangle,
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomRight,
+                        end: Alignment.centerLeft,
+                        colors: [
+                          Colors.grey.shade100,
+                          Colors.white,
+                        ],
+                      )),
                   child: TextFormField(
                     controller: incometax,
                     decoration: InputDecoration(
@@ -254,9 +299,24 @@ class _CalculatorState extends State<Calculator> {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    color: textWhiteGrey,
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
+                      borderRadius: BorderRadius.circular(15),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.shade700,
+                            blurRadius: 5.0,
+                            offset: Offset(5, 3))
+                      ],
+                      // border: Border.all(
+                      //     color: Colors.blue.shade900),
+                      shape: BoxShape.rectangle,
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomRight,
+                        end: Alignment.centerLeft,
+                        colors: [
+                          Colors.grey.shade100,
+                          Colors.white,
+                        ],
+                      )),
                   child: TextFormField(
                     controller: incometax,
                     decoration: InputDecoration(
@@ -285,9 +345,24 @@ class _CalculatorState extends State<Calculator> {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    color: textWhiteGrey,
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
+                      borderRadius: BorderRadius.circular(15),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.shade700,
+                            blurRadius: 5.0,
+                            offset: Offset(5, 3))
+                      ],
+                      // border: Border.all(
+                      //     color: Colors.blue.shade900),
+                      shape: BoxShape.rectangle,
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomRight,
+                        end: Alignment.centerLeft,
+                        colors: [
+                          Colors.grey.shade100,
+                          Colors.white,
+                        ],
+                      )),
                   child: TextFormField(
                     controller: surcharg,
                     decoration: InputDecoration(
@@ -316,9 +391,24 @@ class _CalculatorState extends State<Calculator> {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    color: textWhiteGrey,
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
+                      borderRadius: BorderRadius.circular(15),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.shade700,
+                            blurRadius: 5.0,
+                            offset: Offset(5, 3))
+                      ],
+                      // border: Border.all(
+                      //     color: Colors.blue.shade900),
+                      shape: BoxShape.rectangle,
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomRight,
+                        end: Alignment.centerLeft,
+                        colors: [
+                          Colors.grey.shade100,
+                          Colors.white,
+                        ],
+                      )),
                   child: TextFormField(
                     controller: edu,
                     decoration: InputDecoration(
@@ -438,9 +528,24 @@ class _CalculatorState extends State<Calculator> {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    color: textWhiteGrey,
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
+                      borderRadius: BorderRadius.circular(15),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.shade700,
+                            blurRadius: 5.0,
+                            offset: Offset(5, 3))
+                      ],
+                      // border: Border.all(
+                      //     color: Colors.blue.shade900),
+                      shape: BoxShape.rectangle,
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomRight,
+                        end: Alignment.centerLeft,
+                        colors: [
+                          Colors.grey.shade100,
+                          Colors.white,
+                        ],
+                      )),
                   child: TextFormField(
                     controller: secondry,
                     decoration: InputDecoration(
@@ -469,9 +574,24 @@ class _CalculatorState extends State<Calculator> {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    color: textWhiteGrey,
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
+                      borderRadius: BorderRadius.circular(15),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.shade700,
+                            blurRadius: 5.0,
+                            offset: Offset(5, 3))
+                      ],
+                      // border: Border.all(
+                      //     color: Colors.blue.shade900),
+                      shape: BoxShape.rectangle,
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomRight,
+                        end: Alignment.centerLeft,
+                        colors: [
+                          Colors.grey.shade100,
+                          Colors.white,
+                        ],
+                      )),
                   child: TextFormField(
                     controller: totaltax,
                     decoration: InputDecoration(
@@ -501,9 +621,24 @@ class _CalculatorState extends State<Calculator> {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    color: textWhiteGrey,
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
+                      borderRadius: BorderRadius.circular(15),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.shade700,
+                            blurRadius: 5.0,
+                            offset: Offset(5, 3))
+                      ],
+                      // border: Border.all(
+                      //     color: Colors.blue.shade900),
+                      shape: BoxShape.rectangle,
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomRight,
+                        end: Alignment.centerLeft,
+                        colors: [
+                          Colors.grey.shade100,
+                          Colors.white,
+                        ],
+                      )),
                   child: TextFormField(
                     controller: relief,
                     decoration: InputDecoration(
@@ -532,9 +667,24 @@ class _CalculatorState extends State<Calculator> {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    color: textWhiteGrey,
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
+                      borderRadius: BorderRadius.circular(15),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.shade700,
+                            blurRadius: 5.0,
+                            offset: Offset(5, 3))
+                      ],
+                      // border: Border.all(
+                      //     color: Colors.blue.shade900),
+                      shape: BoxShape.rectangle,
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomRight,
+                        end: Alignment.centerLeft,
+                        colors: [
+                          Colors.grey.shade100,
+                          Colors.white,
+                        ],
+                      )),
                   child: TextFormField(
                     controller: tds,
                     decoration: InputDecoration(
@@ -563,9 +713,24 @@ class _CalculatorState extends State<Calculator> {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    color: textWhiteGrey,
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
+                      borderRadius: BorderRadius.circular(15),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.shade700,
+                            blurRadius: 5.0,
+                            offset: Offset(5, 3))
+                      ],
+                      // border: Border.all(
+                      //     color: Colors.blue.shade900),
+                      shape: BoxShape.rectangle,
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomRight,
+                        end: Alignment.centerLeft,
+                        colors: [
+                          Colors.grey.shade100,
+                          Colors.white,
+                        ],
+                      )),
                   child: TextFormField(
                     controller: assessed,
                     decoration: InputDecoration(

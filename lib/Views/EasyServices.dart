@@ -160,20 +160,25 @@ class _OtherSectionsState extends State<OtherSections>
                           onTap: () {
                             Navigator.pop(context);
                           },
-                          child: Container(
-                            height: 45,
-                            width: 45,
-                            decoration: BoxDecoration(
-                              color: Colors.blue.shade900,
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20)),
-                            ),
-                            child: const Icon(
-                              Icons.chevron_left_rounded,
-                              color: Colors.white,
-                              size: 35,
-                            ),
+                          child: Icon(
+                            Icons.chevron_left_rounded,
+                            color: Colors.blue.shade900,
+                            size: 35,
                           ),
+                          // child: Container(
+                          //   height: 45,
+                          //   width: 45,
+                          //   decoration: BoxDecoration(
+                          //     color: Colors.blue.shade900,
+                          //     borderRadius:
+                          //         BorderRadius.all(Radius.circular(20)),
+                          //   ),
+                          //   child: const Icon(
+                          //     Icons.chevron_left_rounded,
+                          //     color: Colors.white,
+                          //     size: 35,
+                          //   ),
+                          // ),
                         ),
                       ),
                       Padding(
@@ -275,7 +280,7 @@ class _OtherSectionsState extends State<OtherSections>
                                 width: 10,
                               ),
                               Text(
-                                "Investments",
+                                "Easy Investments",
                                 style: TextStyle(
                                     fontFamily: "Poppins",
                                     fontWeight: FontWeight.bold,
@@ -481,7 +486,7 @@ class _OtherSectionsState extends State<OtherSections>
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               childAspectRatio: 1.4,
-              crossAxisSpacing: 10,
+              crossAxisSpacing: 90,
               mainAxisSpacing: 10,
             ),
             shrinkWrap: true,
@@ -537,14 +542,12 @@ class _OtherSectionsState extends State<OtherSections>
                                     blurRadius: 8.0,
                                     offset: Offset(2, 2))
                               ]),
-                          height: 100,
-                          width: 150,
+                          height: 130,
+                          width: 170,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                height: 55,
-                                width: 55,
                                 decoration: BoxDecoration(
                                   // color: Colors.white70,
                                   // border: Border.all(
@@ -565,7 +568,7 @@ class _OtherSectionsState extends State<OtherSections>
                               Text(
                                 "Bank",
                                 style: GoogleFonts.dmSans(
-                                  fontSize: 17,
+                                  fontSize: 13,
                                   fontWeight: FontWeight.bold,
                                   color: const Color(0xFF000000),
                                 ),
@@ -628,14 +631,12 @@ class _OtherSectionsState extends State<OtherSections>
                                     blurRadius: 8.0,
                                     offset: Offset(2, 2))
                               ]),
-                          height: 100,
-                          width: 150,
+                          height: 130,
+                          width: 170,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                height: 55,
-                                width: 55,
                                 decoration: BoxDecoration(
                                   // color: Colors.white70,
                                   // border: Border.all(
@@ -654,9 +655,9 @@ class _OtherSectionsState extends State<OtherSections>
                                 height: 8,
                               ),
                               Text(
-                                "Investments",
+                                "Easy Investments",
                                 style: GoogleFonts.dmSans(
-                                  fontSize: 17,
+                                  fontSize: 13,
                                   fontWeight: FontWeight.bold,
                                   color: const Color(0xFF000000),
                                 ),
@@ -716,14 +717,12 @@ class _OtherSectionsState extends State<OtherSections>
                                     blurRadius: 8.0,
                                     offset: Offset(2, 2))
                               ]),
-                          height: 100,
-                          width: 150,
+                          height: 130,
+                          width: 170,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                height: 55,
-                                width: 55,
                                 decoration: BoxDecoration(
                                   // color: Colors.white70,
                                   // border: Border.all(
@@ -744,7 +743,7 @@ class _OtherSectionsState extends State<OtherSections>
                               Text(
                                 "Fixed Plan",
                                 style: GoogleFonts.dmSans(
-                                  fontSize: 17,
+                                  fontSize: 13,
                                   fontWeight: FontWeight.bold,
                                   color: const Color(0xFF000000),
                                 ),
@@ -807,14 +806,12 @@ class _OtherSectionsState extends State<OtherSections>
                                     blurRadius: 8.0,
                                     offset: Offset(2, 2))
                               ]),
-                          height: 100,
-                          width: 150,
+                          height: 130,
+                          width: 170,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                height: 55,
-                                width: 55,
                                 decoration: BoxDecoration(
                                   // color: Colors.white70,
                                   // border: Border.all(
@@ -835,7 +832,7 @@ class _OtherSectionsState extends State<OtherSections>
                               Text(
                                 "Tax Benifits",
                                 style: GoogleFonts.dmSans(
-                                  fontSize: 17,
+                                  fontSize: 13,
                                   fontWeight: FontWeight.bold,
                                   color: const Color(0xFF000000),
                                 ),
@@ -893,7 +890,7 @@ class _OtherSectionsState extends State<OtherSections>
               //           Text(
               //             "Lic Policy",
               //             style: GoogleFonts.dmSans(
-              //               fontSize: 17,
+              //               fontSize: 13,
               //               fontWeight: FontWeight.bold,
               //               color: const Color(0xff57435C),
               //             ),
@@ -949,7 +946,7 @@ class _OtherSectionsState extends State<OtherSections>
               //             "Star health insurance",
               //             textAlign: TextAlign.center,
               //             style: GoogleFonts.dmSans(
-              //               fontSize: 17,
+              //               fontSize: 13,
               //               fontWeight: FontWeight.bold,
               //               color: const Color(0xff57435C),
               //             ),
@@ -1004,7 +1001,7 @@ class _OtherSectionsState extends State<OtherSections>
               //           Text(
               //             "Personal/Car Loan",
               //             style: GoogleFonts.dmSans(
-              //               fontSize: 17,
+              //               fontSize: 13,
               //               fontWeight: FontWeight.bold,
               //               color: const Color(0xff57435C),
               //             ),

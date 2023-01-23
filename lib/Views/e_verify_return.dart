@@ -108,7 +108,9 @@ class _VerifyReturnState extends State<VerifyReturn> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
-                                  keyboardType: TextInputType.phone,
+                                  maxLength: 10,
+                                  textCapitalization:
+                                      TextCapitalization.characters,
                                   decoration: InputDecoration(
                                     hintText: 'PAN Number',
                                     //hintStyle: heading6.copyWith(color: textGrey),
@@ -214,6 +216,7 @@ class _VerifyReturnState extends State<VerifyReturn> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: TextFormField(
+                                  maxLength: 10,
                                   keyboardType: TextInputType.phone,
                                   decoration: InputDecoration(
                                     hintText: 'Mobile Number',

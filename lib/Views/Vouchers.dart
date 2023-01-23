@@ -43,7 +43,7 @@ class _VouchersState extends State<Vouchers> {
                         Padding(
                           padding: const EdgeInsets.only(top: 20),
                           child: Text(
-                            'Vouchers',
+                            'Voucher',
                             style: heading2.copyWith(color: textBlack),
                           ),
                         ),

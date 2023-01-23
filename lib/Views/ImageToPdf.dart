@@ -7,7 +7,6 @@ import 'package:path_provider/path_provider.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 
-
 class ImageToPdf extends StatefulWidget {
   const ImageToPdf({Key key}) : super(key: key);
 
@@ -24,6 +23,7 @@ class _ImageToPdfState extends State<ImageToPdf> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blue.shade900,
         title: const Text("image to pdf"),
         actions: [
           IconButton(
@@ -35,22 +35,25 @@ class _ImageToPdfState extends State<ImageToPdf> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.add),
+        backgroundColor: Colors.blue.shade900,
+        child: Icon(Icons.add, color: Colors.white),
         onPressed: getImageFromGallery,
       ),
-      body: _image != null
-          ? ListView.builder(
-        itemCount: _image.length,
-        itemBuilder: (context, index) => Container(
-            height: 400,
-            width: double.infinity,
-            margin: const EdgeInsets.all(8),
-            child: Image.file(
-              _image[index],
-              fit: BoxFit.cover,
-            )),
-      )
-          : Container(),
+      body: Container(
+        child: _image != null
+            ? ListView.builder(
+                itemCount: _image.length,
+                itemBuilder: (context, index) => Container(
+                    height: 400,
+                    width: double.infinity,
+                    margin: const EdgeInsets.all(8),
+                    child: Image.file(
+                      _image[index],
+                      fit: BoxFit.cover,
+                    )),
+              )
+            : Container(),
+      ),
     );
   }
 
@@ -74,7 +77,6 @@ class _ImageToPdfState extends State<ImageToPdf> {
           build: (pw.Context contex) {
             return pw.Center(child: pw.Image(image));
           }));
-
     }
   }
 
@@ -89,7 +91,6 @@ class _ImageToPdfState extends State<ImageToPdf> {
     } catch (e) {
       showPrintedMessage('error', e.toString());
     }
-
   }
 
   showPrintedMessage(String title, String msg) {
@@ -102,11 +103,8 @@ class _ImageToPdfState extends State<ImageToPdf> {
     //     color: Colors.blue,
     //   ),
     // )..show(context);
-    ScaffoldMessenger.of(context)
-        .showSnackBar(
-         SnackBar(
-          content: Text(title+msg),
-
-        ));
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+      content: Text(title + msg),
+    ));
   }
 }

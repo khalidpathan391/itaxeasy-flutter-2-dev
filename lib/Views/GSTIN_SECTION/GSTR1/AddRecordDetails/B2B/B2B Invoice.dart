@@ -63,7 +63,30 @@ class _B2bInvoiceState extends State<B2bInvoice> {
                   height: 20,
                 ),
                 Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  color: Color.fromARGB(255, 210, 189, 214),
+                  elevation: 20,
                   child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey.shade700,
+                              blurRadius: 5.0,
+                              offset: Offset(5, 3))
+                        ],
+                        // border: Border.all(
+                        //     color: Colors.blue.shade900),
+                        shape: BoxShape.rectangle,
+                        gradient: LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [
+                            Colors.grey.shade100,
+                            Colors.white,
+                          ],
+                        )),
                     padding: const EdgeInsets.only(
                         top: 20, bottom: 20, left: 10, right: 10),
                     child: Column(
@@ -119,7 +142,7 @@ class _B2bInvoiceState extends State<B2bInvoice> {
                           height: 10,
                         ),
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          // mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: const [
                             Text(
                               "Status - Not Filed",
@@ -130,17 +153,19 @@ class _B2bInvoiceState extends State<B2bInvoice> {
                                 fontSize: 13.5,
                               ),
                             ),
-                            Text(
-                              "Due Date - 11/01/2022",
-                              style: TextStyle(
-                                fontFamily: "Poppins",
-                                fontWeight: FontWeight.w500,
-                                letterSpacing: 1.5,
-                                fontSize: 13.5,
-                              ),
-                            ),
                           ],
                         ),
+                        Row(children: [
+                          Text(
+                            "Due Date - 11/01/2022",
+                            style: TextStyle(
+                              fontFamily: "Poppins",
+                              fontWeight: FontWeight.w500,
+                              letterSpacing: 1.5,
+                              fontSize: 13.5,
+                            ),
+                          ),
+                        ]),
                       ],
                     ),
                   ),
@@ -152,7 +177,7 @@ class _B2bInvoiceState extends State<B2bInvoice> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Colors.blue.shade900.withOpacity(0.5),
+                    color: Colors.blue.shade200.withOpacity(0.5),
                   ),
                   padding: const EdgeInsets.all(10),
                   child: const Text(
@@ -167,7 +192,66 @@ class _B2bInvoiceState extends State<B2bInvoice> {
                   ),
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 10,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    FadeInRight(
+                      delay: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 500),
+                      child: GFButton(
+                          color: Colors.blue.shade900,
+                          padding: const EdgeInsets.all(10),
+                          shape: GFButtonShape.pills,
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const AddRecordB2B()));
+                          },
+                          text: "ADD RECORD"),
+                    ),
+                    FadeInRight(
+                      delay: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 500),
+                      child: GFButton(
+                          color: Colors.blue.shade900,
+                          padding: const EdgeInsets.all(10),
+                          shape: GFButtonShape.pills,
+                          onPressed: () {
+                            AwesomeDialog(
+                              context: context,
+                              animType: AnimType.SCALE,
+                              dialogType: DialogType.ERROR,
+                              body: Column(
+                                children: const [
+                                  Text(
+                                    "Information",
+                                    style: TextStyle(
+                                      fontFamily: "Poppins",
+                                      fontWeight: FontWeight.bold,
+                                      letterSpacing: 1.5,
+                                      fontSize: 16.5,
+                                    ),
+                                  ),
+                                  Text(
+                                    'For current tax period no EWB invoices are available to import.',
+                                    textAlign: TextAlign.center,
+                                    style:
+                                        TextStyle(fontStyle: FontStyle.italic),
+                                  ),
+                                ],
+                              ),
+                              btnOkColor: Colors.red,
+                              btnOkOnPress: () {},
+                            ).show();
+                            // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
+                          },
+                          text: "IMPORT EWB DATA"),
+                    ),
+                  ],
                 ),
                 SizedBox(
                   width: double.infinity,
@@ -192,7 +276,7 @@ class _B2bInvoiceState extends State<B2bInvoice> {
                             width: double.infinity,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              color: Colors.blue.shade900.withOpacity(0.5),
+                              color: Colors.blue.shade200.withOpacity(0.5),
                             ),
                             padding: const EdgeInsets.all(10),
                             child: const Text(
@@ -207,65 +291,6 @@ class _B2bInvoiceState extends State<B2bInvoice> {
                             ),
                           ),
                           const SizedBox(height: 10),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              FadeInRight(
-                                delay: const Duration(milliseconds: 500),
-                                duration: const Duration(milliseconds: 500),
-                                child: GFButton(
-                                    color: Colors.blue.shade900,
-                                    padding: const EdgeInsets.all(10),
-                                    shape: GFButtonShape.pills,
-                                    onPressed: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  const AddRecordB2B()));
-                                    },
-                                    text: "ADD RECORD"),
-                              ),
-                              FadeInRight(
-                                delay: const Duration(milliseconds: 500),
-                                duration: const Duration(milliseconds: 500),
-                                child: GFButton(
-                                    color: Colors.blue.shade900,
-                                    padding: const EdgeInsets.all(10),
-                                    shape: GFButtonShape.pills,
-                                    onPressed: () {
-                                      AwesomeDialog(
-                                        context: context,
-                                        animType: AnimType.SCALE,
-                                        dialogType: DialogType.ERROR,
-                                        body: Column(
-                                          children: const [
-                                            Text(
-                                              "Information",
-                                              style: TextStyle(
-                                                fontFamily: "Poppins",
-                                                fontWeight: FontWeight.bold,
-                                                letterSpacing: 1.5,
-                                                fontSize: 16.5,
-                                              ),
-                                            ),
-                                            Text(
-                                              'For current tax period no EWB invoices are available to import.',
-                                              textAlign: TextAlign.center,
-                                              style: TextStyle(
-                                                  fontStyle: FontStyle.italic),
-                                            ),
-                                          ],
-                                        ),
-                                        btnOkColor: Colors.red,
-                                        btnOkOnPress: () {},
-                                      ).show();
-                                      // Navigator.push(context, MaterialPageRoute(builder: (context)=>Navbar()));
-                                    },
-                                    text: "IMPORT EWB DATA"),
-                              ),
-                            ],
-                          ),
                         ],
                       ),
                     ),

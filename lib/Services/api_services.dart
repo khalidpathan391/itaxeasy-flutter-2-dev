@@ -1,5 +1,7 @@
 import 'dart:convert';
 import 'dart:developer';
+import 'dart:io';
+import 'package:get/get.dart';
 import 'package:gst_app/Models/api_response.dart';
 import 'package:gst_app/Models/bank-response.dart';
 import 'package:gst_app/Models/bank-verify.dart';
@@ -67,7 +69,7 @@ class ApiServices {
   // REGISTER API
   Future<ApiResponse<RegisterUser>> register(Register registers) async {
     // final url = Uri.parse(baseUrl + "/sign-up");
-    final url = Uri.parse("http://59.144.161.72:3500/users/sign-up");
+    final url = Uri.parse("https://api.itaxeasy.com/users/sign-up");
     final headers = {'Content-Type': 'application/json'};
     final jsonBody = jsonEncode(registers);
     final response = await http.post(url, headers: headers, body: jsonBody);
@@ -81,21 +83,23 @@ class ApiServices {
           resposeCode: response.statusCode);
     }
     final jsonData = jsonDecode(response.body);
-    Map<String, dynamic> errorData = jsonData["error"];
-    List<dynamic> errorMessage = errorData["email"];
-    await storage.write(key: "emailMessage", value: errorMessage.toString());
+    // Get.snackbar("Error!", jsonData["message"]);
+    // Map<String, dynamic> errorData = jsonData["message"];
+    // List<dynamic> errorMessage = errorData["email"];
+    await storage.write(
+        key: "emailMessage", value: jsonData["message"] ?? "An error occured");
 
     return ApiResponse<RegisterUser>(
         resposeCode: response.statusCode,
         error: true,
-        errorMessage: "An error occurred");
+        errorMessage: jsonData["message"] ?? "An error occurred");
   }
 
 // LOGIN API
 
   Future<ApiResponse<LoginUser>> login(Login login) async {
     // final url = Uri.parse(baseUrl + "/login");
-    final url = Uri.parse("http://59.144.161.72:3500/users/login");
+    final url = Uri.parse("https://api.itaxeasy.com/users/login");
     final headers = {'Content-Type': 'application/json'};
     final jsonBody = jsonEncode(login);
     final response = await http.post(url, headers: headers, body: jsonBody);
@@ -127,7 +131,7 @@ class ApiServices {
 // Forget Password
   Future<ApiResponse> forget(Map data) async {
     // final url = Uri.parse(baseUrl + "/login");
-    final url = Uri.parse("http://59.144.161.72:3500/users/send-email");
+    final url = Uri.parse("https://api.itaxeasy.com/users/send-email");
     final headers = {'Content-Type': 'application/json'};
     final jsonBody = jsonEncode(data);
     final response = await http.post(url, headers: headers, body: jsonBody);
@@ -146,7 +150,7 @@ class ApiServices {
   //Update Profile
   Future<ApiResponse> update(Map data) async {
     // final url = Uri.parse(baseUrl + "/login");
-    final url = Uri.parse("http://59.144.161.72:3500/users/update");
+    final url = Uri.parse("https://api.itaxeasy.com/users/update");
     String authToken = await storage.read(key: "token");
     final headers = {
       'Content-Type': 'application/json',
@@ -172,7 +176,7 @@ class ApiServices {
 
   Future<ApiResponse> changePass(Map data) async {
     // final url = Uri.parse(baseUrl + "/login");
-    final url = Uri.parse("http://59.144.161.72:3500/users/update-password");
+    final url = Uri.parse("https://api.itaxeasy.com/users/update-password");
     final headers = {'Content-Type': 'application/json'};
     final jsonBody = jsonEncode(data);
     final response = await http.post(url, headers: headers, body: jsonBody);
@@ -189,36 +193,45 @@ class ApiServices {
         errorMessage: "An error occurred");
   }
 
+// get user profile
   Future<ApiResponse> getuserProfile() async {
     // final url = Uri.parse(baseUrl + "/login");
-    String authToken = await storage.read(key: "token");
-    final headers = {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer $authToken',
-    };
-    final url = Uri.parse("http://59.144.161.72:3500/users/getProfile");
+    try {
+      String authToken = await storage.read(key: "token");
+      final headers = {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer $authToken',
+      };
+      final url = Uri.parse("https://api.itaxeasy.com/users/getProfile");
 
-    final response = await http.get(
-      url,
-      headers: headers,
-    );
-    log(response.statusCode.toString());
-    log(response.body);
+      final response = await http.get(
+        url,
+        headers: headers,
+      );
+      log(response.statusCode.toString());
+      log(response.body);
 
-    if (response.statusCode == 200) {
-      return ApiResponse(resposeCode: 200, data: json.encode(response.body));
+      if (response.statusCode == 200) {
+        Map body = jsonDecode(response.body);
+        return ApiResponse(resposeCode: 200, data: body["data"]);
+      }
+      return ApiResponse(
+          resposeCode: response.statusCode,
+          error: true,
+          errorMessage: "An error occurred");
+    } catch (e) {
+      if (e is SocketException) {
+        Get.snackbar("No Internet Connection", e.message,
+            snackPosition: SnackPosition.BOTTOM);
+      }
     }
-    return ApiResponse(
-        resposeCode: response.statusCode,
-        error: true,
-        errorMessage: "An error occurred");
   }
 
   /// Create User Profile
 
   Future<ApiResponse> createuser(Map data) async {
     // final url = Uri.parse(baseUrl + "/login");
-    final url = Uri.parse("http://59.144.161.72:3500/users/update");
+    final url = Uri.parse("https://api.itaxeasy.com/users/createProfile");
     String authToken = await storage.read(key: "token");
     final headers = {
       'Content-Type': 'application/json',
@@ -232,7 +245,111 @@ class ApiServices {
     log(response.body);
     log(jsonBody);
     if (response.statusCode == 200) {
-      await storage.write(key: "user", value: json.encode(data));
+      await storage.write(key: "userProfile", value: json.encode(data));
+      return ApiResponse(resposeCode: 200, data: "create ");
+    }
+    return ApiResponse(
+        resposeCode: response.statusCode,
+        error: true,
+        errorMessage: "An error occurred");
+  }
+
+//// update user profile
+  Future<ApiResponse> updateuser(Map data) async {
+    // final url = Uri.parse(baseUrl + "/login");
+    final url = Uri.parse("https://api.itaxeasy.com/users/update-profile");
+    String authToken = await storage.read(key: "token");
+    final headers = {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer $authToken',
+    };
+    final jsonBody = jsonEncode(data);
+
+    final response = await http.post(url, headers: headers, body: jsonBody);
+
+    log(response.statusCode.toString());
+    log(response.body);
+    if (response.statusCode == 200) {
+      await storage.write(key: "userProfile", value: json.encode(data));
+      return ApiResponse(resposeCode: 200, data: "create ");
+    }
+    return ApiResponse(
+        resposeCode: response.statusCode,
+        error: true,
+        errorMessage: "An error occurred");
+  }
+
+  ///  Create Business Profile
+  Future<ApiResponse> createBusinessuser(Map data) async {
+    // final url = Uri.parse(baseUrl + "/login");
+    final url =
+        Uri.parse("https://api.itaxeasy.com/users/create-business-profile");
+    String authToken = await storage.read(key: "token");
+    final headers = {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer $authToken',
+    };
+    final jsonBody = jsonEncode(data);
+
+    final response = await http.post(url, headers: headers, body: jsonBody);
+
+    log(response.statusCode.toString());
+    log(response.body);
+    log(jsonBody);
+    if (response.statusCode == 200) {
+      await storage.write(key: "userProfile", value: json.encode(data));
+      return ApiResponse(resposeCode: 200, data: "create ");
+    }
+    return ApiResponse(
+        resposeCode: response.statusCode,
+        error: true,
+        errorMessage: "An error occurred");
+  }
+
+  // get Business profile
+  Future<ApiResponse> getBusinessProfile() async {
+    // final url = Uri.parse(baseUrl + "/login");
+    String authToken = await storage.read(key: "token");
+    final headers = {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer $authToken',
+    };
+    final url = Uri.parse("https://api.itaxeasy.com/users/getProfile");
+
+    final response = await http.get(
+      url,
+      headers: headers,
+    );
+    log(response.statusCode.toString());
+    log(response.body);
+
+    if (response.statusCode == 200) {
+      Map body = jsonDecode(response.body);
+      return ApiResponse(resposeCode: 200, data: body["data"]);
+    }
+    return ApiResponse(
+        resposeCode: response.statusCode,
+        error: true,
+        errorMessage: "An error occurred");
+  }
+
+// Update business user
+  Future<ApiResponse> updateBusinessUser(Map data) async {
+    // final url = Uri.parse(baseUrl + "/login");
+    final url = Uri.parse("https://api.itaxeasy.com/users/update-profile");
+    String authToken = await storage.read(key: "token");
+    final headers = {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer $authToken',
+    };
+    final jsonBody = jsonEncode(data);
+
+    final response = await http.post(url, headers: headers, body: jsonBody);
+
+    log(response.statusCode.toString());
+    log(response.body);
+    if (response.statusCode == 200) {
+      await storage.write(key: "userProfile", value: json.encode(data));
       return ApiResponse(resposeCode: 200, data: "create ");
     }
     return ApiResponse(
@@ -516,7 +633,7 @@ class ApiServices {
       print(response.body);
       print(response.statusCode);
       return ApiResponse<SimpleInterestResponse>(
-          data: SimpleInterestResponse.fromJson(jsonData),
+          data: SimpleInterestResponse.fromJson(jsonData["results"]),
           resposeCode: response.statusCode);
     }
     return ApiResponse<SimpleInterestResponse>(
@@ -540,7 +657,7 @@ class ApiServices {
       print(response.body);
       print(response.statusCode);
       return ApiResponse<CompoundInterestResponse>(
-          data: CompoundInterestResponse.fromJson(jsonData),
+          data: CompoundInterestResponse.fromJson(jsonData["results"]),
           resposeCode: response.statusCode);
     }
     return ApiResponse<CompoundInterestResponse>(
@@ -563,7 +680,7 @@ class ApiServices {
       print(response.body);
       print(response.statusCode);
       return ApiResponse<EmiResponse>(
-          data: EmiResponse.fromJson(jsonData),
+          data: EmiResponse.fromJson(jsonData["results"]),
           resposeCode: response.statusCode);
     }
     return ApiResponse<EmiResponse>(
@@ -682,7 +799,7 @@ class ApiServices {
       print(response.body);
       print(response.statusCode);
       return ApiResponse<HraCalResponse>(
-          data: HraCalResponse.fromJson(jsonData),
+          data: HraCalResponse.fromJson(jsonData["results"]),
           resposeCode: response.statusCode);
     }
     return ApiResponse<HraCalResponse>(
@@ -735,7 +852,7 @@ class ApiServices {
       print(response.body);
       print(response.statusCode);
       return ApiResponse<BusinessLoanResponse>(
-          data: BusinessLoanResponse.fromJson(jsonData),
+          data: BusinessLoanResponse.fromJson(jsonData["results"]),
           resposeCode: response.statusCode);
     }
     return ApiResponse<BusinessLoanResponse>(
@@ -785,7 +902,7 @@ class ApiServices {
       print(response.body);
       print(response.statusCode);
       return ApiResponse<HomeLoanResponse>(
-          data: HomeLoanResponse.fromJson(jsonData),
+          data: HomeLoanResponse.fromJson(jsonData["results"]),
           resposeCode: response.statusCode);
     }
     return ApiResponse<HomeLoanResponse>(
@@ -810,7 +927,7 @@ class ApiServices {
       print(response.body);
       print(response.statusCode);
       return ApiResponse<CarLoanResponse>(
-          data: CarLoanResponse.fromJson(jsonData),
+          data: CarLoanResponse.fromJson(jsonData["results"]),
           resposeCode: response.statusCode);
     }
     return ApiResponse<CarLoanResponse>(
@@ -835,7 +952,7 @@ class ApiServices {
       print(response.body);
       print(response.statusCode);
       return ApiResponse<PersonalLoanResponse>(
-          data: PersonalLoanResponse.fromJson(jsonData),
+          data: PersonalLoanResponse.fromJson(jsonData["results"]),
           resposeCode: response.statusCode);
     }
     return ApiResponse<PersonalLoanResponse>(
@@ -864,8 +981,10 @@ class ApiServices {
   Future<ApiResponse<CapitalGainResponse>> capitalGain(
       CapitalGain capitalGain) async {
     String authToken = await storage.read(key: "token");
+    // final url = Uri.parse(
+    //     baseUrl + "/calculator/miscellaneous/capital-gain-calculator");
     final url = Uri.parse(
-        baseUrl + "/calculator/miscellaneous/capital-gain-calculator");
+        "https://api.itaxeasy.com/calculator/capital-gain-calculator");
     final headers = {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer $authToken',
@@ -904,16 +1023,18 @@ class ApiServices {
       print(response.body);
       print(response.statusCode);
       return ApiResponse<NpsResponse>(
-          data: NpsResponse.fromJson(jsonData),
+          data: NpsResponse.fromJson(jsonData["results"]),
           resposeCode: response.statusCode);
     }
     return ApiResponse<NpsResponse>(
         error: true, errorMessage: "An error occurred");
   }
 
-  Future<ApiResponse<GstCalcuResponse>> gstCal(GstCalcu gst) async {
+  Future<ApiResponse> gstCal(Map gst) async {
     String authToken = await storage.read(key: "token");
-    final url = Uri.parse(baseUrl + "/calculator/miscellaneous/gst-calculator");
+    // final url = Uri.parse(baseUrl + "/calculator/miscellaneous/gst-calculator");
+    final url =
+        Uri.parse("https://api.itaxeasy.com" + "/calculator/gst-calculator");
     final headers = {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer $authToken',
@@ -924,13 +1045,10 @@ class ApiServices {
       final jsonData = jsonDecode(response.body);
 
       print(response.body);
-      print(response.statusCode);
-      return ApiResponse<GstCalcuResponse>(
-          data: GstCalcuResponse.fromJson(jsonData),
-          resposeCode: response.statusCode);
+      // print(response.statusCode);
+      return ApiResponse(data: jsonData, resposeCode: response.statusCode);
     }
-    return ApiResponse<GstCalcuResponse>(
-        error: true, errorMessage: "An error occurred");
+    return ApiResponse(error: true, errorMessage: "An error occurred");
   }
 
   Future<ApiResponse<SearchGstByPan>> searchGstByPan(
@@ -1169,5 +1287,36 @@ class ApiServices {
       return ApiResponse<bool>(data: true, resposeCode: response.statusCode);
     }
     return ApiResponse<bool>(error: true, resposeCode: response.statusCode);
+  }
+
+  // REGISTER API
+  Future<ApiResponse> getStateFromPin(String pin) async {
+    // final url = Uri.parse(baseUrl + "/sign-up");
+    final url = Uri.parse("https://api.postalpincode.in/pincode/$pin");
+    final headers = {'Content-Type': 'application/json'};
+
+    final response = await http.get(
+      url,
+      headers: headers,
+    );
+    log(response.statusCode.toString());
+    // log(response.body);
+    if (response.statusCode == 200) {
+      final jsonData = jsonDecode(response.body);
+      log(jsonData.toString());
+      // List data = jsonData["PostOffice"];
+      return ApiResponse(
+          data: jsonData.first["PostOffice"].first["State"],
+          resposeCode: response.statusCode);
+    }
+    final jsonData = jsonDecode(response.body);
+    Map<String, dynamic> errorData = jsonData["error"];
+    List<dynamic> errorMessage = errorData["email"];
+    await storage.write(key: "emailMessage", value: errorMessage.toString());
+
+    return ApiResponse(
+        resposeCode: response.statusCode,
+        error: true,
+        errorMessage: "An error occurred");
   }
 }

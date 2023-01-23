@@ -544,8 +544,8 @@ class _OptionListState extends State<OptionList> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(14.0),
                   ),
-                  child: const GFButton(
-                      color: Colors.purple,
+                  child: GFButton(
+                      color: Colors.blue.shade300,
                       // onPressed: () async {
                       //   setState(() {
                       //     isLoading = true;

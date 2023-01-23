@@ -169,20 +169,25 @@ class _EasyServicesInvestmentState extends State<EasyServicesInvestment>
                           onTap: () {
                             Navigator.pop(context);
                           },
-                          child: Container(
-                            height: 45,
-                            width: 45,
-                            decoration: BoxDecoration(
-                              color: Colors.blue.shade900,
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20)),
-                            ),
-                            child: const Icon(
-                              Icons.chevron_left_rounded,
-                              color: Colors.white,
-                              size: 35,
-                            ),
+                          child: Icon(
+                            Icons.chevron_left_rounded,
+                            color: Colors.blue.shade900,
+                            size: 35,
                           ),
+                          // child: Container(
+                          //   height: 45,
+                          //   width: 45,
+                          //   decoration: BoxDecoration(
+                          //     color: Colors.blue.shade900,
+                          //     borderRadius:
+                          //         BorderRadius.all(Radius.circular(20)),
+                          //   ),
+                          //   child: const Icon(
+                          //     Icons.chevron_left_rounded,
+                          //     color: Colors.white,
+                          //     size: 35,
+                          //   ),
+                          // ),
                         ),
                       ),
                       Padding(
@@ -571,7 +576,7 @@ class _EasyServicesInvestmentState extends State<EasyServicesInvestment>
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               childAspectRatio: 1.4,
-              crossAxisSpacing: 10,
+              crossAxisSpacing: 90,
               mainAxisSpacing: 10,
             ),
             shrinkWrap: true,
@@ -627,14 +632,12 @@ class _EasyServicesInvestmentState extends State<EasyServicesInvestment>
                                     blurRadius: 8.0,
                                     offset: Offset(2, 2))
                               ]),
-                          height: 100,
-                          width: 150,
+                          height: 130,
+                          width: 170,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                height: 55,
-                                width: 55,
                                 decoration: BoxDecoration(
                                   // color: Colors.white70,
                                   // border: Border.all(
@@ -655,7 +658,7 @@ class _EasyServicesInvestmentState extends State<EasyServicesInvestment>
                               Text(
                                 "FBF",
                                 style: GoogleFonts.dmSans(
-                                  fontSize: 17,
+                                  fontSize: 13,
                                   fontWeight: FontWeight.bold,
                                   color: const Color(0xFF000000),
                                 ),
@@ -715,14 +718,12 @@ class _EasyServicesInvestmentState extends State<EasyServicesInvestment>
                                     blurRadius: 8.0,
                                     offset: Offset(2, 2))
                               ]),
-                          height: 100,
-                          width: 150,
+                          height: 130,
+                          width: 170,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                height: 55,
-                                width: 55,
                                 decoration: BoxDecoration(
                                   // color: Colors.white70,
                                   // border: Border.all(
@@ -743,7 +744,7 @@ class _EasyServicesInvestmentState extends State<EasyServicesInvestment>
                               Text(
                                 "NPS",
                                 style: GoogleFonts.dmSans(
-                                  fontSize: 17,
+                                  fontSize: 13,
                                   fontWeight: FontWeight.bold,
                                   color: const Color(0xFF000000),
                                 ),
@@ -803,14 +804,12 @@ class _EasyServicesInvestmentState extends State<EasyServicesInvestment>
                                     blurRadius: 8.0,
                                     offset: Offset(2, 2))
                               ]),
-                          height: 100,
-                          width: 150,
+                          height: 130,
+                          width: 170,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                height: 55,
-                                width: 55,
                                 decoration: BoxDecoration(
                                   // color: Colors.white70,
                                   // border: Border.all(
@@ -831,7 +830,7 @@ class _EasyServicesInvestmentState extends State<EasyServicesInvestment>
                               Text(
                                 "#####",
                                 style: GoogleFonts.dmSans(
-                                  fontSize: 17,
+                                  fontSize: 13,
                                   fontWeight: FontWeight.bold,
                                   color: const Color(0xFF000000),
                                 ),
@@ -891,14 +890,12 @@ class _EasyServicesInvestmentState extends State<EasyServicesInvestment>
                                     blurRadius: 8.0,
                                     offset: Offset(2, 2))
                               ]),
-                          height: 100,
-                          width: 150,
+                          height: 130,
+                          width: 170,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                height: 55,
-                                width: 55,
                                 decoration: BoxDecoration(
                                   // color: Colors.white70,
                                   // border: Border.all(
@@ -919,7 +916,7 @@ class _EasyServicesInvestmentState extends State<EasyServicesInvestment>
                               Text(
                                 "SIP",
                                 style: GoogleFonts.dmSans(
-                                  fontSize: 17,
+                                  fontSize: 13,
                                   fontWeight: FontWeight.bold,
                                   color: const Color(0xFF000000),
                                 ),
@@ -979,14 +976,12 @@ class _EasyServicesInvestmentState extends State<EasyServicesInvestment>
                                     blurRadius: 8.0,
                                     offset: Offset(2, 2))
                               ]),
-                          height: 100,
-                          width: 150,
+                          height: 130,
+                          width: 170,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                height: 55,
-                                width: 55,
                                 decoration: BoxDecoration(
                                   // color: Colors.white70,
                                   // border: Border.all(
@@ -1007,7 +1002,7 @@ class _EasyServicesInvestmentState extends State<EasyServicesInvestment>
                               Text(
                                 "####",
                                 style: GoogleFonts.dmSans(
-                                  fontSize: 17,
+                                  fontSize: 13,
                                   fontWeight: FontWeight.bold,
                                   color: const Color(0xFF000000),
                                 ),
@@ -1095,7 +1090,7 @@ class _EasyServicesInvestmentState extends State<EasyServicesInvestment>
               //                 Text(
               //                   "Sale",
               //                   style: GoogleFonts.dmSans(
-              //                     fontSize: 17,
+              //                     fontSize: 13,
               //                     fontWeight: FontWeight.bold,
               //                     color: const Color(0xFF000000),
               //                   ),
@@ -1183,7 +1178,7 @@ class _EasyServicesInvestmentState extends State<EasyServicesInvestment>
               //                 Text(
               //                   "Purchase",
               //                   style: GoogleFonts.dmSans(
-              //                     fontSize: 17,
+              //                     fontSize: 13,
               //                     fontWeight: FontWeight.bold,
               //                     color: const Color(0xFF000000),
               //                   ),
@@ -1243,14 +1238,12 @@ class _EasyServicesInvestmentState extends State<EasyServicesInvestment>
                                     blurRadius: 8.0,
                                     offset: Offset(2, 2))
                               ]),
-                          height: 100,
-                          width: 150,
+                          height: 130,
+                          width: 170,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                height: 55,
-                                width: 55,
                                 decoration: BoxDecoration(
                                   // color: Colors.white70,
                                   // border: Border.all(
@@ -1271,7 +1264,7 @@ class _EasyServicesInvestmentState extends State<EasyServicesInvestment>
                               Text(
                                 "Capital Gain",
                                 style: GoogleFonts.dmSans(
-                                  fontSize: 17,
+                                  fontSize: 13,
                                   fontWeight: FontWeight.bold,
                                   color: const Color(0xFF000000),
                                 ),

@@ -1,9 +1,13 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+=======
+import 'package:flutter_svg/svg.dart';
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
 import 'package:getwidget/components/button/gf_button.dart';
 import 'package:getwidget/shape/gf_button_shape.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -14,9 +18,13 @@ import 'package:gst_app/Views/GSTIN_SECTION/GSTR-3b/Gstr-4A.dart';
 import 'package:gst_app/Views/GSTIN_SECTION/GSTR-3b/Table5.dart';
 import 'package:gst_app/Views/GSTIN_SECTION/GSTR-3b/Table5_1.dart';
 import 'package:gst_app/Views/GSTIN_SECTION/GSTR-3b/Table_3_2.dart';
+<<<<<<< HEAD
 import 'package:gst_app/Views/Theme/colors.dart';
 import 'package:gst_app/Views/components/constants.dart';
 import 'package:intl/intl.dart';
+=======
+import 'package:gst_app/Views/components/constants.dart';
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
 
 import '../../Calculator/ifsc_calcii/widgets/custom_checkbox.dart';
 import '../GSTR1/prepare_online.dart';
@@ -34,12 +42,18 @@ class GST3b extends StatefulWidget {
 
 class _GST3bState extends State<GST3b> {
   bool isChecked = false;
+<<<<<<< HEAD
   String cdate = DateFormat("yyyy-MM-dd").format(DateTime.now());
+=======
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+<<<<<<< HEAD
         floatingActionButton: buildSpeedDial(),
+=======
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
         backgroundColor: Colors.grey.shade300,
         body: SingleChildScrollView(
           child: Padding(
@@ -82,10 +96,13 @@ class _GST3bState extends State<GST3b> {
                           ),
                         ],
                       ),
+<<<<<<< HEAD
                       SizedBox(
                         width: 50,
                       ),
                       Text(cdate.toString())
+=======
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
                     ],
                   ),
                   const SizedBox(
@@ -1079,6 +1096,7 @@ class _GST3bState extends State<GST3b> {
       ),
     );
   }
+<<<<<<< HEAD
 
   Widget buildSpeedDial() => SpeedDial(
         overlayColor: Colors.blue.shade100,
@@ -1114,4 +1132,6 @@ class _GST3bState extends State<GST3b> {
           ),
         ],
       );
+=======
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
 }

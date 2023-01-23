@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+<<<<<<< HEAD
 
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gst_app/AdhaarLinks.dart';
@@ -37,6 +38,49 @@ import '../SideBar/side_menu.dart';
 
 import '../Theme/colors.dart';
 
+=======
+import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:gst_app/AdhaarLinks.dart';
+import 'package:gst_app/Views/BankLinks.dart';
+import 'package:gst_app/Views/Bottom_Nav_Bar/E-Invoicing.dart';
+import 'package:gst_app/Views/GSTIN_SECTION/gstn.dart';
+import 'package:gst_app/Views/GSTIN_SECTION/gstn_list.dart';
+import 'package:gst_app/Views/Generators.dart';
+import 'package:gst_app/Views/GstinSearch.dart';
+import 'package:gst_app/Views/Invoice-Generator/model/invoice.dart';
+import 'package:gst_app/Views/ItrLinks.dart';
+import 'package:gst_app/Views/OCR.dart';
+import 'package:gst_app/Views/OCR/ocr.dart';
+import 'package:gst_app/Views/company_search.dart';
+import 'package:gst_app/Views/itr.dart';
+import 'package:gst_app/Views/link_aadhaar.dart';
+import 'package:gst_app/Views/on_board_screens/IBIZ.dart';
+import 'package:gst_app/Views/on_board_screens/Invoice.dart';
+import 'package:gst_app/Views/on_board_screens/StartupRegistration.dart';
+import 'package:gst_app/Views/on_board_screens/searchbox.dart';
+import 'package:gst_app/Views/pdf%20converter.dart';
+import 'package:gst_app/Views/search-by-gstin.dart';
+import 'package:path/path.dart';
+import 'package:url_launcher/url_launcher.dart';
+import '../BalanceSheet.dart';
+import '../Calculator/Fi Cal.dart';
+import '../Calculator/Finencial Calculator.dart';
+import '../EasyGadgets.dart';
+import '../EasyLinks.dart';
+import '../EasyTax.dart';
+import '../GSTIN_SECTION/GSTR-3b/Gstr-4A.dart';
+import '../GSTIN_SECTION/ReturnDashboard.dart';
+import '../Purchases.dart';
+import '../Recent_Transactions.dart';
+import '../Sale.dart';
+import '../SideBar/side_menu.dart';
+import '../Tables/CashAndBank.dart';
+import '../Theme/colors.dart';
+import '../TradingAccount.dart';
+import '../Vouchers.dart';
+import '../EasyServices.dart';
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
 import 'package:anim_search_bar/anim_search_bar.dart';
 
 class Dashbord3 extends StatefulWidget {
@@ -296,9 +340,12 @@ class _Dashbord3State extends State<Dashbord3> with TickerProviderStateMixin {
 
     double width = MediaQuery.of(context).size.width - 10;
     // final size = MediaQuery.of(context).size;
+<<<<<<< HEAD
     final text = Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
         ? 'DarkTheme'
         : 'LightTheme';
+=======
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.grey.shade300,
@@ -341,7 +388,10 @@ class _Dashbord3State extends State<Dashbord3> with TickerProviderStateMixin {
                         ),
                       ),
                     ),
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
                     // SizedBox(
                     //   width: 50,
                     // ),
@@ -350,7 +400,10 @@ class _Dashbord3State extends State<Dashbord3> with TickerProviderStateMixin {
                       color: Colors.blue.shade900,
                       size: 35,
                     ),
+<<<<<<< HEAD
                     // ChangeThemeButtonWidget(),
+=======
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
                   ],
                 ),
                 const SizedBox(
@@ -369,7 +422,11 @@ class _Dashbord3State extends State<Dashbord3> with TickerProviderStateMixin {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
+<<<<<<< HEAD
                                       builder: (context) =>  GstLogin()));
+=======
+                                      builder: (context) => ReturnDashboard()));
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
                             },
                             child: Transform.scale(
                               scale: _scale,
@@ -611,7 +668,11 @@ class _Dashbord3State extends State<Dashbord3> with TickerProviderStateMixin {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
+<<<<<<< HEAD
                                     builder: (context) => const IBIZ()));
+=======
+                                    builder: (context) => IBIZ()));
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
                           },
                           child: Transform.scale(
                             scale: _scale2,
@@ -743,10 +804,17 @@ class _Dashbord3State extends State<Dashbord3> with TickerProviderStateMixin {
                           onTapDown: _tapDown4,
                           onTapUp: _tapUp4,
                           onTap: () {
+<<<<<<< HEAD
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => Form3()));
+=======
+                            // Navigator.push(
+                            //     context,
+                            //     MaterialPageRoute(
+                            //         builder: (context) => Generators()));
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
                           },
                           child: Transform.scale(
                             scale: _scale4,
@@ -817,6 +885,7 @@ class _Dashbord3State extends State<Dashbord3> with TickerProviderStateMixin {
                     SizedBox(
                       height: 10,
                     ),
+<<<<<<< HEAD
                     // CarouselSlider(
                     //   options: CarouselOptions(
                     //     height: 30,
@@ -894,6 +963,85 @@ class _Dashbord3State extends State<Dashbord3> with TickerProviderStateMixin {
                     //     ),
                     //   ],
                     // ),
+=======
+                    CarouselSlider(
+                      options: CarouselOptions(
+                        height: 30,
+
+                        aspectRatio: 19 / 5,
+                        viewportFraction: 0.9,
+                        enableInfiniteScroll: true,
+                        autoPlay: true,
+                        autoPlayInterval: const Duration(seconds: 3),
+                        autoPlayAnimationDuration:
+                            const Duration(milliseconds: 800),
+                        autoPlayCurve: Curves.fastOutSlowIn,
+                        // scrollDirection: Axis.horizontal,
+                      ),
+                      items: [
+                        Container(
+                          width: 250,
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                            shadowColor: KColors.icon,
+                            elevation: 2,
+                            child:
+                                Center(child: Text("Some news will show here")),
+                          ),
+                        ),
+                        Container(
+                          width: 250,
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                            shadowColor: KColors.icon,
+                            elevation: 2,
+                            child:
+                                Center(child: Text("Some news will show here")),
+                          ),
+                        ),
+                        Container(
+                          width: 250,
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                            shadowColor: KColors.icon,
+                            elevation: 2,
+                            child:
+                                Center(child: Text("Some news will show here")),
+                          ),
+                        ),
+                        Container(
+                          width: 250,
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                            shadowColor: KColors.icon,
+                            elevation: 2,
+                            child:
+                                Center(child: Text("Some news will show here")),
+                          ),
+                        ),
+                        Container(
+                          width: 250,
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                            shadowColor: KColors.icon,
+                            elevation: 2,
+                            child:
+                                Center(child: Text("Some news will show here")),
+                          ),
+                        ),
+                      ],
+                    ),
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
                     SizedBox(
                       height: 10,
                     ),
@@ -1180,7 +1328,11 @@ class _Dashbord3State extends State<Dashbord3> with TickerProviderStateMixin {
                                             context,
                                             MaterialPageRoute(
                                                 builder: (context) =>
+<<<<<<< HEAD
                                                     const AdhaarLinksUi()));
+=======
+                                                    AdhaarLinksUi()));
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
                                       },
                                       child: Transform.scale(
                                         scale: _scale9,
@@ -1393,7 +1545,11 @@ class _Dashbord3State extends State<Dashbord3> with TickerProviderStateMixin {
                                               alignment: Alignment.center,
                                             ),
                                             const Text(
+<<<<<<< HEAD
                                               "Financial\nCalculator",
+=======
+                                              "Finencial\nCalculator",
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
                                               style: TextStyle(fontSize: 12),
                                             )
                                           ],
@@ -1803,6 +1959,7 @@ class _Dashbord3State extends State<Dashbord3> with TickerProviderStateMixin {
                 SizedBox(
                   height: 10,
                 ),
+<<<<<<< HEAD
                 // Row(
                 //   children: [
                 //     GestureDetector(
@@ -2002,6 +2159,207 @@ class _Dashbord3State extends State<Dashbord3> with TickerProviderStateMixin {
                 //     ),
                 //   ],
                 // )
+=======
+                Row(
+                  children: [
+                    GestureDetector(
+                      onTapDown: _tapDown4,
+                      onTapUp: _tapUp4,
+                      onTap: () {
+                        // Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //         builder: (context) => AdhaarLinksUi()));
+                      },
+                      child: Transform.scale(
+                        scale: _scale4,
+                        child: Column(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(
+                                  top: 10, left: 10, right: 10, bottom: 10),
+                              height: 60,
+                              width: 60,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.grey.shade700,
+                                        blurRadius: 5.0,
+                                        offset: Offset(5, 3))
+                                  ],
+                                  shape: BoxShape.rectangle,
+                                  gradient: LinearGradient(
+                                    begin: Alignment.bottomRight,
+                                    end: Alignment.centerLeft,
+                                    colors: [
+                                      Colors.grey.shade100,
+                                      Colors.white,
+                                    ],
+                                  )),
+                              child: Icon(
+                                Icons.home_mini_outlined,
+                                color: Colors.blue.shade900,
+                                size: 40,
+                              ),
+                              alignment: Alignment.center,
+                            ),
+                            const Text(
+                              "****",
+                              style: TextStyle(fontSize: 12),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTapDown: _tapDown5,
+                      onTapUp: _tapUp5,
+                      onTap: () {
+                        // Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //         builder: (context) => Converter()));
+                      },
+                      child: Transform.scale(
+                        scale: _scale5,
+                        child: Column(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(
+                                  top: 10, left: 10, right: 10, bottom: 10),
+                              height: 60,
+                              width: 60,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.grey.shade700,
+                                        blurRadius: 5.0,
+                                        offset: Offset(5, 3))
+                                  ],
+                                  shape: BoxShape.rectangle,
+                                  gradient: LinearGradient(
+                                    begin: Alignment.bottomRight,
+                                    end: Alignment.centerLeft,
+                                    colors: [
+                                      Colors.grey.shade100,
+                                      Colors.white,
+                                    ],
+                                  )),
+                              child: Icon(
+                                Icons.device_hub_outlined,
+                                color: Colors.blue.shade900,
+                                size: 40,
+                              ),
+                              alignment: Alignment.center,
+                            ),
+                            const Text(
+                              "*******",
+                              style: TextStyle(fontSize: 12),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTapDown: _tapDown6,
+                      onTapUp: _tapUp6,
+                      onTap: () {
+                        // Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //         builder: (context) => StartupRegistrationUI()));
+                      },
+                      child: Transform.scale(
+                        scale: _scale6,
+                        child: Column(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(
+                                  top: 10, left: 10, right: 10, bottom: 10),
+                              height: 60,
+                              width: 60,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.grey.shade700,
+                                        blurRadius: 5.0,
+                                        offset: Offset(5, 3))
+                                  ],
+                                  shape: BoxShape.rectangle,
+                                  gradient: LinearGradient(
+                                    begin: Alignment.bottomRight,
+                                    end: Alignment.centerLeft,
+                                    colors: [
+                                      Colors.grey.shade100,
+                                      Colors.white,
+                                    ],
+                                  )),
+                              child: Icon(
+                                Icons.health_and_safety,
+                                color: Colors.blue.shade900,
+                                size: 40,
+                              ),
+                              alignment: Alignment.center,
+                            ),
+                            const Text(
+                              "****",
+                              style: TextStyle(fontSize: 12),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTapDown: _tapDown7,
+                      onTapUp: _tapUp7,
+                      onTap: () {},
+                      child: Transform.scale(
+                        scale: _scale7,
+                        child: Column(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(
+                                  top: 10, left: 10, right: 10, bottom: 10),
+                              height: 60,
+                              width: 60,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.grey.shade700,
+                                        blurRadius: 5.0,
+                                        offset: Offset(5, 3))
+                                  ],
+                                  shape: BoxShape.rectangle,
+                                  gradient: LinearGradient(
+                                    begin: Alignment.bottomRight,
+                                    end: Alignment.centerLeft,
+                                    colors: [
+                                      Colors.grey.shade100,
+                                      Colors.white,
+                                    ],
+                                  )),
+                              child: Icon(
+                                Icons.lan_outlined,
+                                color: Colors.blue.shade900,
+                                size: 40,
+                              ),
+                              alignment: Alignment.center,
+                            ),
+                            const Text(
+                              "******",
+                              style: TextStyle(fontSize: 12),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                )
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
               ],
             ),
           ),

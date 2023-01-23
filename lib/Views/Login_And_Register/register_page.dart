@@ -2,6 +2,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gst_app/Models/register.dart';
 import 'package:gst_app/Services/api_services.dart';
@@ -33,6 +34,7 @@ class _RegisterPageState extends State<RegisterPage> {
   TextEditingController lastName = TextEditingController();
   TextEditingController emailCount = TextEditingController();
   TextEditingController passwordCount = TextEditingController();
+  TextEditingController cpasswordCount = TextEditingController();
   TextEditingController phoneCount = TextEditingController();
   TextEditingController pinCode = TextEditingController();
 
@@ -81,13 +83,40 @@ class _RegisterPageState extends State<RegisterPage> {
                                   children: [
                                     Container(
                                       decoration: BoxDecoration(
-                                        color: textWhiteGrey,
-                                        borderRadius:
-                                            BorderRadius.circular(14.0),
-                                      ),
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                          boxShadow: [
+                                            BoxShadow(
+                                                color: Colors.grey.shade700,
+                                                blurRadius: 5.0,
+                                                offset: Offset(5, 3))
+                                          ],
+                                          // border: Border.all(
+                                          //     color: Colors.blue.shade900),
+                                          shape: BoxShape.rectangle,
+                                          gradient: LinearGradient(
+                                            begin: Alignment.bottomRight,
+                                            end: Alignment.centerLeft,
+                                            colors: [
+                                              Colors.grey.shade100,
+                                              Colors.white,
+                                            ],
+                                          )),
                                       child: TextFormField(
                                         controller: nameCount,
+                                        textCapitalization:
+                                            TextCapitalization.words,
+
+                                        //               validator: (value) {
+                                        //   if (value == null || value.isEmpty) {
+                                        //     return "*  Required  *";
+                                        //   }
+                                        // },
                                         decoration: InputDecoration(
+                                          prefixIcon: Icon(
+                                            Icons.person,
+                                            color: Colors.blue.shade900,
+                                          ),
                                           hintText: 'First Name',
                                           hintStyle: heading6.copyWith(
                                               color: textGrey),
@@ -102,13 +131,39 @@ class _RegisterPageState extends State<RegisterPage> {
                                     ),
                                     Container(
                                       decoration: BoxDecoration(
-                                        color: textWhiteGrey,
-                                        borderRadius:
-                                            BorderRadius.circular(14.0),
-                                      ),
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                          boxShadow: [
+                                            BoxShadow(
+                                                color: Colors.grey.shade700,
+                                                blurRadius: 5.0,
+                                                offset: Offset(5, 3))
+                                          ],
+                                          // border: Border.all(
+                                          //     color: Colors.blue.shade900),
+                                          shape: BoxShape.rectangle,
+                                          gradient: LinearGradient(
+                                            begin: Alignment.bottomRight,
+                                            end: Alignment.centerLeft,
+                                            colors: [
+                                              Colors.grey.shade100,
+                                              Colors.white,
+                                            ],
+                                          )),
                                       child: TextFormField(
                                         controller: lastName,
+                                        textCapitalization:
+                                            TextCapitalization.words,
+                                        //               validator: (value) {
+                                        //   if (value == null || value.isEmpty) {
+                                        //     return "*  Required  *";
+                                        //   }
+                                        // },
                                         decoration: InputDecoration(
+                                          prefixIcon: Icon(
+                                            Icons.person,
+                                            color: Colors.blue.shade900,
+                                          ),
                                           hintText: 'Last Name',
                                           hintStyle: heading6.copyWith(
                                               color: textGrey),
@@ -123,17 +178,45 @@ class _RegisterPageState extends State<RegisterPage> {
                                     ),
                                     Container(
                                       decoration: BoxDecoration(
-                                        color: textWhiteGrey,
-                                        borderRadius:
-                                            BorderRadius.circular(14.0),
-                                      ),
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                          boxShadow: [
+                                            BoxShadow(
+                                                color: Colors.grey.shade700,
+                                                blurRadius: 5.0,
+                                                offset: Offset(5, 3))
+                                          ],
+                                          // border: Border.all(
+                                          //     color: Colors.blue.shade900),
+                                          shape: BoxShape.rectangle,
+                                          gradient: LinearGradient(
+                                            begin: Alignment.bottomRight,
+                                            end: Alignment.centerLeft,
+                                            colors: [
+                                              Colors.grey.shade100,
+                                              Colors.white,
+                                            ],
+                                          )),
                                       child: TextFormField(
                                         inputFormatters: [
                                           LengthLimitingTextInputFormatter(10),
                                         ],
                                         controller: phoneCount,
+                                        // validator: (Value) {
+                                        //   if (Value == null || Value.isEmpty) {
+                                        //     return "*Required";
+                                        //   } else if (Value.length != 10) {
+                                        //     return "Phone Number should be 10 digit";
+                                        //   } else {
+                                        //     return null;
+                                        //   }
+                                        // },
                                         keyboardType: TextInputType.phone,
                                         decoration: InputDecoration(
+                                          prefixIcon: Icon(
+                                            Icons.phone,
+                                            color: Colors.blue.shade900,
+                                          ),
                                           hintText: 'Mobile No',
                                           hintStyle: heading6.copyWith(
                                               color: textGrey),
@@ -148,13 +231,43 @@ class _RegisterPageState extends State<RegisterPage> {
                                     ),
                                     Container(
                                       decoration: BoxDecoration(
-                                        color: textWhiteGrey,
-                                        borderRadius:
-                                            BorderRadius.circular(14.0),
-                                      ),
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                          boxShadow: [
+                                            BoxShadow(
+                                                color: Colors.grey.shade700,
+                                                blurRadius: 5.0,
+                                                offset: Offset(5, 3))
+                                          ],
+                                          // border: Border.all(
+                                          //     color: Colors.blue.shade900),
+                                          shape: BoxShape.rectangle,
+                                          gradient: LinearGradient(
+                                            begin: Alignment.bottomRight,
+                                            end: Alignment.centerLeft,
+                                            colors: [
+                                              Colors.grey.shade100,
+                                              Colors.white,
+                                            ],
+                                          )),
                                       child: TextFormField(
                                         controller: emailCount,
+                                        textCapitalization:
+                                            TextCapitalization.words,
+                                        // validator: (value) {
+                                        //   if (value == null || value.isEmpty) {
+                                        //     return "*  Required  *";
+                                        //   } else if (value.indexOf("@") == -1) {
+                                        //     return "*  Email is invalid  *";
+                                        //   } else {
+                                        //     return null;
+                                        //   }
+                                        // },
                                         decoration: InputDecoration(
+                                          prefixIcon: Icon(
+                                            Icons.email,
+                                            color: Colors.blue.shade900,
+                                          ),
                                           hintText: 'Email Id',
                                           hintStyle: heading6.copyWith(
                                               color: textGrey),
@@ -169,14 +282,36 @@ class _RegisterPageState extends State<RegisterPage> {
                                     ),
                                     Container(
                                       decoration: BoxDecoration(
-                                        color: textWhiteGrey,
-                                        borderRadius:
-                                            BorderRadius.circular(14.0),
-                                      ),
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                          boxShadow: [
+                                            BoxShadow(
+                                                color: Colors.grey.shade700,
+                                                blurRadius: 5.0,
+                                                offset: Offset(5, 3))
+                                          ],
+                                          // border: Border.all(
+                                          //     color: Colors.blue.shade900),
+                                          shape: BoxShape.rectangle,
+                                          gradient: LinearGradient(
+                                            begin: Alignment.bottomRight,
+                                            end: Alignment.centerLeft,
+                                            colors: [
+                                              Colors.grey.shade100,
+                                              Colors.white,
+                                            ],
+                                          )),
                                       child: TextFormField(
                                         controller: passwordCount,
-                                        obscureText: !passwordVisible,
+                                        obscureText:
+                                            !passwordConfrimationVisible,
+                                        textCapitalization:
+                                            TextCapitalization.words,
                                         decoration: InputDecoration(
+                                          prefixIcon: Icon(
+                                            Icons.password_outlined,
+                                            color: Colors.blue.shade900,
+                                          ),
                                           hintText: 'Password',
                                           hintStyle: heading6.copyWith(
                                               color: textGrey),
@@ -200,15 +335,97 @@ class _RegisterPageState extends State<RegisterPage> {
                                     ),
                                     Container(
                                       decoration: BoxDecoration(
-                                        color: textWhiteGrey,
-                                        borderRadius:
-                                            BorderRadius.circular(14.0),
-                                      ),
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                          boxShadow: [
+                                            BoxShadow(
+                                                color: Colors.grey.shade700,
+                                                blurRadius: 5.0,
+                                                offset: Offset(5, 3))
+                                          ],
+                                          // border: Border.all(
+                                          //     color: Colors.blue.shade900),
+                                          shape: BoxShape.rectangle,
+                                          gradient: LinearGradient(
+                                            begin: Alignment.bottomRight,
+                                            end: Alignment.centerLeft,
+                                            colors: [
+                                              Colors.grey.shade100,
+                                              Colors.white,
+                                            ],
+                                          )),
                                       child: TextFormField(
-                                        controller: pinCode,
-                                        keyboardType: TextInputType.number,
+                                        textCapitalization:
+                                            TextCapitalization.words,
+                                        controller: cpasswordCount,
+                                        obscureText: !passwordVisible,
+                                        validator: (value) {
+                                          if (value == null || value.isEmpty) {
+                                            return "*  Required  *";
+                                          } else if (passwordCount.text !=
+                                              cpasswordCount.text) {
+                                            return "*  Password should be same  *";
+                                          }
+                                        },
                                         decoration: InputDecoration(
-                                          hintText: 'Pin Code',
+                                          prefixIcon: Icon(
+                                            Icons.password_outlined,
+                                            color: Colors.blue.shade900,
+                                          ),
+                                          hintText: 'Confirm Password',
+                                          hintStyle: heading6.copyWith(
+                                              color: textGrey),
+                                          suffixIcon: IconButton(
+                                            color: textGrey,
+                                            splashRadius: 1,
+                                            icon: Icon(passwordVisible
+                                                ? Icons.visibility_outlined
+                                                : Icons
+                                                    .visibility_off_outlined),
+                                            onPressed: togglePassword,
+                                          ),
+                                          border: const OutlineInputBorder(
+                                            borderSide: BorderSide.none,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Container(
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                          boxShadow: [
+                                            BoxShadow(
+                                                color: Colors.grey.shade700,
+                                                blurRadius: 5.0,
+                                                offset: Offset(5, 3))
+                                          ],
+                                          // border: Border.all(
+                                          //     color: Colors.blue.shade900),
+                                          shape: BoxShape.rectangle,
+                                          gradient: LinearGradient(
+                                            begin: Alignment.bottomRight,
+                                            end: Alignment.centerLeft,
+                                            colors: [
+                                              Colors.grey.shade100,
+                                              Colors.white,
+                                            ],
+                                          )),
+                                      child: TextFormField(
+                                        inputFormatters: [
+                                          LengthLimitingTextInputFormatter(6),
+                                        ],
+                                        controller: pinCode,
+                                        keyboardType: TextInputType.phone,
+                                        decoration: InputDecoration(
+                                          prefixIcon: Icon(
+                                            Icons.pin,
+                                            color: Colors.blue.shade900,
+                                          ),
+                                          hintText: 'Pincode',
                                           hintStyle: heading6.copyWith(
                                               color: textGrey),
                                           border: const OutlineInputBorder(
@@ -346,6 +563,13 @@ class _RegisterPageState extends State<RegisterPage> {
                                               .showSnackBar(const SnackBar(
                                             content: Text(
                                                 "Number should be 10  digits!"),
+                                          ));
+                                        }
+                                        if (pinCode.text.length < 6) {
+                                          ScaffoldMessenger.of(context)
+                                              .showSnackBar(const SnackBar(
+                                            content: Text(
+                                                "Number should be 6  digits!"),
                                           ));
                                         } else {
                                           setState(() {

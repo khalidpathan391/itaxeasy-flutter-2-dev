@@ -14,6 +14,7 @@ class BalanceSheet extends StatefulWidget {
 class _BalanceSheetState extends State<BalanceSheet> {
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width - 40;
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
@@ -43,7 +44,7 @@ class _BalanceSheetState extends State<BalanceSheet> {
                           ),
                         ),
                         const SizedBox(
-                          height: 20,
+                          height: 10,
                         ),
                         Image.asset(
                           'assets/images/accent.png',
@@ -56,81 +57,488 @@ class _BalanceSheetState extends State<BalanceSheet> {
                   ],
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                 Text(
                   "Balance Sheet",
                   style: GoogleFonts.recursive(
-                    fontSize: 25.0,
+                    fontSize: 15.0,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 5,
                 ),
                 Text(
                   "Legal name of business profile",
                   style: GoogleFonts.recursive(
-                    fontSize: 25.0,
+                    fontSize: 15.0,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 5,
                 ),
                 Text(
-                  "Financial Year 2021-22",
+                  "Financial Year 2022-23",
                   style: GoogleFonts.recursive(
-                    fontSize: 25.0,
+                    fontSize: 15.0,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-                ScrollableWidget(
-                  child: Card(
-                    child: Column(
+                SizedBox(
+                  height: 20,
+                ),
+                // ScrollableWidget(
+                //   child: Card(
+                //     child: Column(
+                //       children: [
+                //         DataTable(
+                //           columns: [
+                //             DataColumn(
+                //                 label: Text('Particular',
+                //                     style: TextStyle(
+                //                         fontSize: 15,
+                //                         fontWeight: FontWeight.bold))),
+                //             DataColumn(
+                //                 label: Text('Amount',
+                //                     style: TextStyle(
+                //                         fontSize: 15,
+                //                         fontWeight: FontWeight.bold))),
+                //             DataColumn(
+                //                 label: Text('Particular',
+                //                     style: TextStyle(
+                //                         fontSize: 15,
+                //                         fontWeight: FontWeight.bold))),
+                //             DataColumn(
+                //                 label: Text('Amount',
+                //                     style: TextStyle(
+                //                         fontSize: 15,
+                //                         fontWeight: FontWeight.bold))),
+                //           ],
+                //           rows: [
+                //             DataRow(cells: [
+                //               DataCell(Text('')),
+                //               DataCell(Text('')),
+                //               DataCell(Text('')),
+                //               DataCell(Text('')),
+                //             ]),
+                //             DataRow(cells: [
+                //               DataCell(Text('')),
+                //               DataCell(Text('')),
+                //               DataCell(Text('')),
+                //               DataCell(Text('')),
+                //             ]),
+                //           ],
+                //         ),
+                //       ],
+                //     ),
+                //   ),
+                // ),
+                Column(children: [
+                  Container(
+                    padding:
+                        EdgeInsets.only(left: 5, right: 5, top: 5, bottom: 5),
+                    color: Colors.blue,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        DataTable(
-                          columns: [
-                            DataColumn(
-                                label: Text('Particular',
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.bold))),
-                            DataColumn(
-                                label: Text('Amount',
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.bold))),
-                            DataColumn(
-                                label: Text('Particular',
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.bold))),
-                            DataColumn(
-                                label: Text('Amount',
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.bold))),
-                          ],
-                          rows: [
-                            DataRow(cells: [
-                              DataCell(Text('')),
-                              DataCell(Text('')),
-                              DataCell(Text('')),
-                              DataCell(Text('')),
-                            ]),
-                            DataRow(cells: [
-                              DataCell(Text('')),
-                              DataCell(Text('')),
-                              DataCell(Text('')),
-                              DataCell(Text('')),
-                            ]),
-                          ],
+                        Text("Particular",
+                            style: GoogleFonts.dmSans(
+                              fontWeight: FontWeight.w700,
+                            )),
+                        Text("Amount",
+                            style: GoogleFonts.dmSans(
+                              fontWeight: FontWeight.w700,
+                            )),
+                        Text("Particular",
+                            style: GoogleFonts.dmSans(
+                              fontWeight: FontWeight.w700,
+                            )),
+                        Text("Amount",
+                            style: GoogleFonts.dmSans(
+                              fontWeight: FontWeight.w700,
+                            )),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(left: 5, right: 5, bottom: 5),
+                    color: Colors.grey.shade200,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.only(bottom: 5, top: 5),
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 60,
+                                  decoration: BoxDecoration(
+                                    // color: textWhiteGrey,
+                                    borderRadius: BorderRadius.circular(14.0),
+                                  ),
+                                  child: TextFormField(
+                                    decoration: InputDecoration(),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: width * .15,
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.only(bottom: 5, top: 5),
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 60,
+                                  decoration: BoxDecoration(
+                                    // color: textWhiteGrey,
+                                    borderRadius: BorderRadius.circular(14.0),
+                                  ),
+                                  child: TextFormField(
+                                    decoration: InputDecoration(),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: width * .1,
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.only(bottom: 5, top: 5),
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 60,
+                                  decoration: BoxDecoration(
+                                    // color: textWhiteGrey,
+                                    borderRadius: BorderRadius.circular(14.0),
+                                  ),
+                                  child: TextFormField(
+                                    decoration: InputDecoration(),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: width * .1,
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.only(bottom: 5, top: 5),
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 60,
+                                  decoration: BoxDecoration(
+                                    // color: textWhiteGrey,
+                                    borderRadius: BorderRadius.circular(14.0),
+                                  ),
+                                  child: TextFormField(
+                                    decoration: InputDecoration(),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
                       ],
                     ),
                   ),
-                ),
+                  Container(
+                    padding: EdgeInsets.only(left: 5, right: 5, bottom: 5),
+                    color: Colors.grey.shade200,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.only(bottom: 5, top: 5),
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 60,
+                                  decoration: BoxDecoration(
+                                    // color: textWhiteGrey,
+                                    borderRadius: BorderRadius.circular(14.0),
+                                  ),
+                                  child: TextFormField(
+                                    decoration: InputDecoration(),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: width * .15,
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.only(bottom: 5, top: 5),
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 60,
+                                  decoration: BoxDecoration(
+                                    // color: textWhiteGrey,
+                                    borderRadius: BorderRadius.circular(14.0),
+                                  ),
+                                  child: TextFormField(
+                                    decoration: InputDecoration(),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: width * .1,
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.only(bottom: 5, top: 5),
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 60,
+                                  decoration: BoxDecoration(
+                                    // color: textWhiteGrey,
+                                    borderRadius: BorderRadius.circular(14.0),
+                                  ),
+                                  child: TextFormField(
+                                    decoration: InputDecoration(),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: width * .1,
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.only(bottom: 5, top: 5),
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 60,
+                                  decoration: BoxDecoration(
+                                    // color: textWhiteGrey,
+                                    borderRadius: BorderRadius.circular(14.0),
+                                  ),
+                                  child: TextFormField(
+                                    decoration: InputDecoration(),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(left: 5, right: 5, bottom: 5),
+                    color: Colors.grey.shade200,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.only(bottom: 5, top: 5),
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 60,
+                                  decoration: BoxDecoration(
+                                    // color: textWhiteGrey,
+                                    borderRadius: BorderRadius.circular(14.0),
+                                  ),
+                                  child: TextFormField(
+                                    decoration: InputDecoration(),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: width * .15,
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.only(bottom: 5, top: 5),
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 60,
+                                  decoration: BoxDecoration(
+                                    // color: textWhiteGrey,
+                                    borderRadius: BorderRadius.circular(14.0),
+                                  ),
+                                  child: TextFormField(
+                                    decoration: InputDecoration(),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: width * .1,
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.only(bottom: 5, top: 5),
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 60,
+                                  decoration: BoxDecoration(
+                                    // color: textWhiteGrey,
+                                    borderRadius: BorderRadius.circular(14.0),
+                                  ),
+                                  child: TextFormField(
+                                    decoration: InputDecoration(),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: width * .1,
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.only(bottom: 5, top: 5),
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 60,
+                                  decoration: BoxDecoration(
+                                    // color: textWhiteGrey,
+                                    borderRadius: BorderRadius.circular(14.0),
+                                  ),
+                                  child: TextFormField(
+                                    decoration: InputDecoration(),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(left: 5, right: 5, bottom: 5),
+                    color: Colors.grey.shade200,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.only(bottom: 5, top: 5),
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 60,
+                                  decoration: BoxDecoration(
+                                    // color: textWhiteGrey,
+                                    borderRadius: BorderRadius.circular(14.0),
+                                  ),
+                                  child: TextFormField(
+                                    decoration: InputDecoration(),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: width * .15,
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.only(bottom: 5, top: 5),
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 60,
+                                  decoration: BoxDecoration(
+                                    // color: textWhiteGrey,
+                                    borderRadius: BorderRadius.circular(14.0),
+                                  ),
+                                  child: TextFormField(
+                                    decoration: InputDecoration(),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: width * .1,
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.only(bottom: 5, top: 5),
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 60,
+                                  decoration: BoxDecoration(
+                                    // color: textWhiteGrey,
+                                    borderRadius: BorderRadius.circular(14.0),
+                                  ),
+                                  child: TextFormField(
+                                    decoration: InputDecoration(),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: width * .1,
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.only(bottom: 5, top: 5),
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 60,
+                                  decoration: BoxDecoration(
+                                    // color: textWhiteGrey,
+                                    borderRadius: BorderRadius.circular(14.0),
+                                  ),
+                                  child: TextFormField(
+                                    decoration: InputDecoration(),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ]),
                 SizedBox(
                   height: 20,
                 ),
@@ -138,7 +546,7 @@ class _BalanceSheetState extends State<BalanceSheet> {
                   padding: const EdgeInsets.only(left: 20, right: 20),
                   child: Container(
                     decoration: BoxDecoration(
-                      color: textWhiteGrey,
+                      color: Colors.grey.shade400,
                       borderRadius: BorderRadius.circular(14.0),
                     ),
                     child: TextFormField(

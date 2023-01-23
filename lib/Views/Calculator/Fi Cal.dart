@@ -1,12 +1,31 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:gst_app/Views/Calculator/recursiveDeposit.dart';
 
 import 'package:gst_app/Views/Calculator/sip-gain.dart';
+=======
+import 'package:gst_app/AdhaarLinks.dart';
+import 'package:gst_app/Models/personal-loan-emi.dart';
+import 'package:gst_app/Views/Calculator/recursiveDeposit.dart';
+import 'package:gst_app/Views/Calculator/simple-interest.dart';
+import 'package:gst_app/Views/Calculator/sip-gain.dart';
+import 'package:gst_app/Views/ItrLinks.dart';
+import 'package:gst_app/Views/e-pay-tax.dart';
+import 'package:gst_app/Views/e_verify_return.dart';
+import 'package:gst_app/Views/know_your_ao.dart';
+import 'package:gst_app/Views/know_your_tan.dart';
+import 'package:gst_app/Views/link_aadhaar_status.dart';
+import 'package:gst_app/Views/verify_your_pan.dart';
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
 
 import 'BusinessLoan.dart';
 import 'Cagr.dart';
 import 'CarLoanEmi.dart';
+<<<<<<< HEAD
 
+=======
+import 'DepriciationCal.dart';
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
 import 'Emi-Cal.dart';
 import 'Gst-Calculator.dart';
 import 'Home-Loan-Emi.dart';

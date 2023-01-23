@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -6,6 +7,16 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../Bottom_Nav_Bar/MainPage.dart';
 import '../Theme/colors.dart';
+=======
+import 'package:gst_app/AdhaarLinks.dart';
+import 'package:gst_app/Views/ItrLinks.dart';
+import 'package:gst_app/Views/e-pay-tax.dart';
+import 'package:gst_app/Views/e_verify_return.dart';
+import 'package:gst_app/Views/know_your_ao.dart';
+import 'package:gst_app/Views/know_your_tan.dart';
+import 'package:gst_app/Views/link_aadhaar_status.dart';
+import 'package:gst_app/Views/verify_your_pan.dart';
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
 
 class StartupRegistrationUI extends StatefulWidget {
   const StartupRegistrationUI({Key key}) : super(key: key);
@@ -20,7 +31,10 @@ class _StartupRegistrationUIState extends State<StartupRegistrationUI> {
     double width = MediaQuery.of(context).size.width - 40;
     return Scaffold(
         backgroundColor: Colors.grey.shade300,
+<<<<<<< HEAD
         floatingActionButton: buildSpeedDial(),
+=======
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
         appBar: AppBar(
           automaticallyImplyLeading: false,
           backgroundColor: Colors.blue.shade900,
@@ -63,6 +77,57 @@ class _StartupRegistrationUIState extends State<StartupRegistrationUI> {
           child: ListView(children: [
             Column(
               children: [
+<<<<<<< HEAD
+=======
+                // GestureDetector(
+                //   onTap: () {
+                //     // Navigator.push(
+                //     //     context,
+                //     //     MaterialPageRoute(
+                //     //         builder: (context) => VerifyReturn()));
+                //   },
+                //   child: Container(
+                //       padding: EdgeInsets.all(15),
+                //       margin: EdgeInsets.only(left: 5, right: 5, top: 10),
+                //       decoration: BoxDecoration(
+                //         borderRadius: BorderRadius.circular(10.0),
+                //         color: Color.fromARGB(235, 255, 255, 255),
+                //         boxShadow: [
+                //           BoxShadow(
+                //             color: Colors.black26,
+                //             blurRadius: 2.0,
+                //           ),
+                //         ],
+                //       ),
+                //       child: Row(
+                //         //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //         children: [
+                //           Icon(
+                //             Icons.verified_user,
+                //             color: Colors.blue.shade900,
+                //           ),
+                //           SizedBox(
+                //             width: width * .12,
+                //           ),
+                //           Container(
+                //             //  margin: EdgeInsets.only(right: 180),
+                //             child: Column(
+                //               crossAxisAlignment: CrossAxisAlignment.start,
+                //               children: [
+                //                 Text(
+                //                   "PF & ESI Monthly Return",
+                //                   style: TextStyle(
+                //                       fontWeight: FontWeight.bold,
+                //                       fontSize: 15,
+                //                       color: Colors.black),
+                //                 ),
+                //               ],
+                //             ),
+                //           ),
+                //         ],
+                //       )),
+                // ),
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
                 GestureDetector(
                   onTap: () {
                     // Navigator.push(
@@ -230,7 +295,104 @@ class _StartupRegistrationUIState extends State<StartupRegistrationUI> {
                         ],
                       )),
                 ),
+<<<<<<< HEAD
 
+=======
+                // GestureDetector(
+                //   onTap: () {
+                //     // Navigator.push(
+                //     //     context,
+                //     //     MaterialPageRoute(
+                //     //         builder: (context) => VerifyYourPan()));
+                //   },
+                //   child: Container(
+                //       padding: EdgeInsets.all(15),
+                //       margin: EdgeInsets.only(left: 5, right: 5, top: 10),
+                //       decoration: BoxDecoration(
+                //         borderRadius: BorderRadius.circular(10.0),
+                //         color: Color.fromARGB(235, 255, 255, 255),
+                //         boxShadow: [
+                //           BoxShadow(
+                //             color: Colors.black26,
+                //             blurRadius: 2.0,
+                //           ),
+                //         ],
+                //       ),
+                //       child: Row(
+                //         //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //         children: [
+                //           Icon(
+                //             Icons.verified_rounded,
+                //             color: Colors.blue.shade900,
+                //           ),
+                //           SizedBox(
+                //             width: width * .12,
+                //           ),
+                //           Container(
+                //             //  margin: EdgeInsets.only(right: 180),
+                //             child: Column(
+                //               crossAxisAlignment: CrossAxisAlignment.start,
+                //               children: [
+                //                 Text(
+                //                   "Accounting",
+                //                   style: TextStyle(
+                //                       fontWeight: FontWeight.bold,
+                //                       fontSize: 15,
+                //                       color: Colors.black),
+                //                 ),
+                //               ],
+                //             ),
+                //           ),
+                //         ],
+                //       )),
+                // ),
+                // GestureDetector(
+                //   onTap: () {
+                //     // Navigator.push(context,
+                //     //     MaterialPageRoute(builder: (context) => KnowYourTan()));
+                //   },
+                //   child: Container(
+                //       padding: EdgeInsets.all(15),
+                //       margin: EdgeInsets.only(left: 5, right: 5, top: 10),
+                //       decoration: BoxDecoration(
+                //         borderRadius: BorderRadius.circular(10.0),
+                //         color: Color.fromARGB(235, 255, 255, 255),
+                //         boxShadow: [
+                //           BoxShadow(
+                //             color: Colors.black26,
+                //             blurRadius: 2.0,
+                //           ),
+                //         ],
+                //       ),
+                //       child: Row(
+                //         //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //         children: [
+                //           Icon(
+                //             Icons.details_outlined,
+                //             color: Colors.blue.shade900,
+                //           ),
+                //           SizedBox(
+                //             width: width * .12,
+                //           ),
+                //           Container(
+                //             //  margin: EdgeInsets.only(right: 180),
+                //             child: Column(
+                //               crossAxisAlignment: CrossAxisAlignment.start,
+                //               children: [
+                //                 Text(
+                //                   "Audit",
+                //                   style: TextStyle(
+                //                       fontWeight: FontWeight.bold,
+                //                       fontSize: 15,
+                //                       color: Colors.black),
+                //                 ),
+                //               ],
+                //             ),
+                //           ),
+                //         ],
+                //       )),
+                // ),
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
                 GestureDetector(
                   onTap: () {
                     //  Navigator.push(
@@ -288,7 +450,58 @@ class _StartupRegistrationUIState extends State<StartupRegistrationUI> {
                         ],
                       )),
                 ),
+<<<<<<< HEAD
 
+=======
+                // GestureDetector(
+                //   onTap: () {
+                //     //  Navigator.push(
+                //     //             context,
+                //     //             MaterialPageRoute(
+                //     //                 builder: (context) => TaxInfo()));
+                //   },
+                //   child: Container(
+                //       padding: EdgeInsets.all(15),
+                //       margin: EdgeInsets.only(left: 5, right: 5, top: 10),
+                //       decoration: BoxDecoration(
+                //         borderRadius: BorderRadius.circular(10.0),
+                //         color: Color.fromARGB(235, 255, 255, 255),
+                //         boxShadow: [
+                //           BoxShadow(
+                //             color: Colors.black26,
+                //             blurRadius: 2.0,
+                //           ),
+                //         ],
+                //       ),
+                //       child: Row(
+                //         //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //         children: [
+                //           Icon(
+                //             Icons.info,
+                //             color: Colors.blue.shade900,
+                //           ),
+                //           SizedBox(
+                //             width: width * .12,
+                //           ),
+                //           Container(
+                //             //  margin: EdgeInsets.only(right: 180),
+                //             child: Column(
+                //               crossAxisAlignment: CrossAxisAlignment.start,
+                //               children: [
+                //                 Text(
+                //                   "DSC(Digital Signature Certification)",
+                //                   style: TextStyle(
+                //                       fontWeight: FontWeight.bold,
+                //                       fontSize: 15,
+                //                       color: Colors.black),
+                //                 ),
+                //               ],
+                //             ),
+                //           ),
+                //         ],
+                //       )),
+                // ),
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
                 GestureDetector(
                   onTap: () {
                     // Navigator.push(
@@ -1156,6 +1369,7 @@ class _StartupRegistrationUIState extends State<StartupRegistrationUI> {
           ]),
         ));
   }
+<<<<<<< HEAD
 
   Widget buildSpeedDial() => SpeedDial(
         overlayColor: Colors.grey.shade100,
@@ -1247,4 +1461,6 @@ class _StartupRegistrationUIState extends State<StartupRegistrationUI> {
           ),
         ],
       );
+=======
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
 }

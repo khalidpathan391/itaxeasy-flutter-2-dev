@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'dart:io';
 // import 'package:qr_code_scanner/qr_code_scanner.dart';
@@ -6,8 +5,6 @@ import 'package:flutter/foundation.dart';
 
 class QrCode extends StatefulWidget {
   const QrCode({Key key}) : super(key: key);
-
-
 
   @override
   State<QrCode> createState() => _QrCodeState();

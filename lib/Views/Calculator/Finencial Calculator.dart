@@ -1,7 +1,10 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+=======
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
 import 'package:getwidget/Components/button/gf_button.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gst_app/Models/Emi.dart';
@@ -14,9 +17,13 @@ import 'package:gst_app/Views/Calculator/recursiveDeposit.dart';
 import 'package:gst_app/Views/Calculator/simple-interest.dart';
 import 'package:gst_app/Views/Calculator/sip-gain.dart';
 import 'package:gst_app/Views/Theme/colors.dart';
+<<<<<<< HEAD
 import 'package:url_launcher/url_launcher.dart';
 
 import '../Bottom_Nav_Bar/MainPage.dart';
+=======
+
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
 import 'BusinessLoan.dart';
 import 'Cagr.dart';
 import 'CapitalGain.dart';
@@ -50,7 +57,10 @@ class _FiCalculatorState extends State<FiCalculator> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
+<<<<<<< HEAD
       floatingActionButton: buildSpeedDial(),
+=======
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 0),
@@ -74,7 +84,11 @@ class _FiCalculatorState extends State<FiCalculator> {
                       Padding(
                         padding: const EdgeInsets.only(top: 10),
                         child: Text(
+<<<<<<< HEAD
                           ' Financial Calculator',
+=======
+                          'Finencial Calculator',
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
                           style: heading2.copyWith(color: textBlack),
                         ),
                       ),
@@ -683,8 +697,13 @@ class _FiCalculatorState extends State<FiCalculator> {
                                 begin: Alignment.bottomRight,
                                 end: Alignment.centerLeft,
                                 colors: [
+<<<<<<< HEAD
                                   Colors.grey.shade100,
                                   Colors.white,
+=======
+                                  Colors.red.shade100,
+                                  Colors.grey.shade100,
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
                                 ],
                               )),
                           height: 50,
@@ -1685,6 +1704,7 @@ class _FiCalculatorState extends State<FiCalculator> {
       ),
     ));
   }
+<<<<<<< HEAD
 
   Widget buildSpeedDial() => SpeedDial(
         overlayColor: Colors.grey.shade100,
@@ -1776,4 +1796,6 @@ class _FiCalculatorState extends State<FiCalculator> {
           ),
         ],
       );
+=======
+>>>>>>> 5c70dd0b38bc34b2dfe9ac7cf60209168df9db80
 }
